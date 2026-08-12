@@ -93,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 centeredSlides: true,
                 slidesPerView: 'auto',
                 loop: true,
-                speed: 600,
+                speed: 800,
                 watchSlidesProgress: true,
                 passiveListeners: true,
                 autoplay: {
-                    delay: 2500, // 自動スライドの間隔（2.5秒）
+                    delay: 3000, // 自動スライドの間隔（3秒）
                     disableOnInteraction: false, // ユーザーが操作しても自動スライドを止めない
                     pauseOnMouseEnter: true, // マウスホバーで一時停止
                 },

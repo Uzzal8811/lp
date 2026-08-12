@@ -1,0 +1,8 @@
+# Landing Page Project (lp)
+
+GitHub Repository: [kebita-creator/lp](https://github.com/kebita-creator/lp)
+
+## ルール
+- 依頼された実装タスクやリファクタリングが正常に完了した後は、必ず自律的にGitコミット（およびプッシュ）を実行すること。
+- コミットメッセージは変更内容を要約し、日本語でわかりやすく自動生成すること。
+- 編集時には文字化けを起こさないこと　ファイル破損をさせないこと

@@ -150,14 +150,27 @@
             border-radius: 50%;
             background: radial-gradient(circle at 40% 30%, #1F3650 0%, #101c2a 85%);
             border: 1.5px solid #C97A6D;
-            outline: 1px dashed rgba(247, 244, 238, 0.45);
-            outline-offset: -4px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 4px 2px;
             overflow: hidden;
+        }
+
+        .theme-badge-inner::after {
+            content: '';
+            position: absolute;
+            inset: 2.5px;
+            border-radius: 50%;
+            border: 1px dashed rgba(247, 244, 238, 0.45);
+            pointer-events: none;
+            animation: badge-spin 12s linear infinite;
+        }
+
+        @keyframes badge-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .theme-badge-inner::before {
@@ -588,34 +601,46 @@
 
                     <div class="space-y-4">
                         <div class="fade-right" style="transition-delay: 100ms;">
-                            <div class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
-                                <div class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
+                            <div
+                                class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
                                     01</div>
-                                <p class="text-sm md:text-base font-bold text-navy leading-snug">年齢によるボディラインや姿勢の崩れが気になる</p>
+                                <p class="text-sm md:text-base font-bold text-navy leading-snug">年齢によるボディラインや姿勢の崩れが気になる
+                                </p>
                             </div>
                         </div>
 
                         <div class="fade-left" style="transition-delay: 300ms;">
-                            <div class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
-                                <div class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
+                            <div
+                                class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
                                     02</div>
-                                <p class="text-sm md:text-base font-bold text-navy leading-snug">整体に行っても肩こりや腰の違和感が繰り返す</p>
+                                <p class="text-sm md:text-base font-bold text-navy leading-snug">整体に行っても肩こりや腰の違和感が繰り返す
+                                </p>
                             </div>
                         </div>
 
                         <div class="fade-right" style="transition-delay: 500ms;">
-                            <div class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
-                                <div class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
+                            <div
+                                class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
                                     03</div>
-                                <p class="text-sm md:text-base font-bold text-navy leading-snug">自己流のトレーニングではうまく続けられない</p>
+                                <p class="text-sm md:text-base font-bold text-navy leading-snug">自己流のトレーニングではうまく続けられない
+                                </p>
                             </div>
                         </div>
 
                         <div class="fade-left" style="transition-delay: 700ms;">
-                            <div class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
-                                <div class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
+                            <div
+                                class="flex items-start gap-4 bg-ivory p-4 rounded-xl border border-greige/40 shadow-sm hover:bg-coral-soft hover:border-coral transition-colors duration-300">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-coral text-white flex items-center justify-center font-en font-bold text-xs shrink-0 mt-0.5">
                                     04</div>
-                                <p class="text-sm md:text-base font-bold text-navy leading-snug">運動が苦手で何から始めればよいかわからない</p>
+                                <p class="text-sm md:text-base font-bold text-navy leading-snug">運動が苦手で何から始めればよいかわからない
+                                </p>
                             </div>
                         </div>
                     </div>

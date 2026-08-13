@@ -455,6 +455,39 @@
                 .animate-dash-reverse {
                     animation: dash-move 15s linear infinite reverse;
                 }
+
+                /* --- Safari & iOS Compatibility Fixes --- */
+                
+                /* Gallery Swiper hardware acceleration for smooth animation on iOS Safari */
+                .gallery-swiper-container .swiper-wrapper {
+                    -webkit-transition-timing-function: linear !important;
+                    transition-timing-function: linear !important;
+                    transform: translate3d(0, 0, 0);
+                    -webkit-transform: translate3d(0, 0, 0);
+                    will-change: transform;
+                }
+
+                /* Fixed Background Fix for iOS Safari */
+                @supports (-webkit-touch-callout: none) {
+                    .safari-fixed-bg {
+                        background-attachment: scroll !important;
+                        position: relative;
+                        clip-path: inset(0);
+                        z-index: 0;
+                    }
+                    .safari-fixed-bg::before {
+                        content: "";
+                        position: fixed;
+                        top: 0; left: 0;
+                        width: 100vw; height: 100vh;
+                        background-image: inherit;
+                        background-size: cover;
+                        background-position: center;
+                        z-index: -1;
+                        pointer-events: none;
+                        will-change: transform;
+                    }
+                }
             </style>
         </div>
 
@@ -631,6 +664,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
+                <!-- Mobile Fallback Image (Moved above text for SP) -->
+                <div class="lg:hidden flex justify-center fade-up">
+                    <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-lg border border-greige/40">
+                        <img src="img/tv.png" alt="身体の不調や姿勢の悩みに向き合う女性" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
                 <!-- Left Side: 4 Trouble Cards Box (col-span-6) -->
                 <div
                     class="lg:col-span-6 bg-white/90 backdrop-blur-sm rounded-2xl p-7 sm:p-9 border border-greige/60 shadow-md space-y-6 fade-right">
@@ -722,6 +762,13 @@
                 <!-- Left offset for desktop left bleed image -->
                 <div class="hidden lg:block lg:col-span-5"></div>
 
+                <!-- Mobile Fallback Image (Moved above text for SP) -->
+                <div class="lg:hidden flex justify-center fade-up">
+                    <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-lg border border-greige/40">
+                        <img src="img/3.jpg" alt="スマートゴリラの落ち着いたプライベート空間" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
                 <!-- Right Side: Text & Badges (col-span-7) -->
                 <div
                     class="lg:col-span-7 space-y-6 text-center lg:text-left fade-left bg-white/90 backdrop-blur-sm lg:bg-transparent p-6 lg:p-0 rounded-2xl">
@@ -741,13 +788,6 @@
                         <span class="bg-ivory px-4 py-2 rounded-lg border border-greige/40">✓ 奥渋エリア</span>
                         <span class="bg-ivory px-4 py-2 rounded-lg border border-greige/40">✓ 靴不要・手ぶらOK</span>
                         <span class="bg-ivory px-4 py-2 rounded-lg border border-greige/40">✓ 完全プライベート空間</span>
-                    </div>
-                </div>
-
-                <!-- Mobile Fallback Image -->
-                <div class="lg:hidden flex justify-center fade-up">
-                    <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-lg border border-greige/40">
-                        <img src="img/3.jpg" alt="スマートゴリラの落ち着いたプライベート空間" class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -1023,8 +1063,8 @@
     </section>
 
     <!-- Sticky Background CTA Component (Below Service) -->
-    <section class="relative py-16 sm:py-20 bg-fixed bg-cover bg-center text-white overflow-hidden"
-        style="background-image: url('img/ctabg.png');">
+    <section class="relative py-16 sm:py-20 bg-fixed safari-fixed-bg bg-cover bg-center text-white overflow-hidden"
+        style="background-image: url('img/1.jpg');">
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-navy/80 backdrop-blur-[1px] z-0"></div>
 
@@ -1439,6 +1479,13 @@
                 <!-- Left offset for desktop left bleed image -->
                 <div class="hidden lg:block lg:col-span-5"></div>
 
+                <!-- Mobile Fallback Image (Moved above text for SP) -->
+                <div class="lg:hidden flex justify-center fade-up">
+                    <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-lg border border-greige/40">
+                        <img src="img/8.jpg" alt="トレーナーの温かい笑顔" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
                 <!-- Right Side: Message Content (col-span-7) -->
                 <div
                     class="lg:col-span-7 space-y-5 text-center lg:text-left fade-left bg-white/90 backdrop-blur-sm lg:bg-transparent p-6 lg:p-0 rounded-2xl">
@@ -1462,13 +1509,6 @@
                     </div>
                 </div>
 
-                <!-- Mobile Fallback Image -->
-                <div class="lg:hidden flex justify-center fade-up">
-                    <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-lg border border-greige/40">
-                        <img src="img/8.jpg" alt="トレーナーの温かい笑顔" class="w-full h-full object-cover">
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -1476,8 +1516,8 @@
     <!-- 12 スタッフ紹介 (Gym Brand Theme) -->
     <section id="staff" class="py-20 sm:py-28 bg-navy text-white relative overflow-hidden">
         <!-- Background Image with Navy Overlay -->
-        <div class="absolute inset-0 w-full h-full z-0 opacity-15 bg-fixed bg-cover bg-center"
-            style="background-image: url('img/3.jpg');"></div>
+        <div class="absolute inset-0 w-full h-full z-0 opacity-15 bg-fixed safari-fixed-bg bg-cover bg-center"
+            style="background-image: url('img/2.jpg');"></div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <!-- Section Header -->
@@ -1500,7 +1540,7 @@
                         <!-- Photo Container -->
                         <div
                             class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-white/20 shadow-lg">
-                            <img src="img/宗田トレーナー.jpg" alt="宗田智美 チーフトレーナー"
+                            <img src="img/6.jpg" alt="宗田智美 チーフトレーナー"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent">
                             </div>
@@ -1552,7 +1592,7 @@
                         <!-- Photo Container -->
                         <div
                             class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-white/20 shadow-lg">
-                            <img src="img/渡辺愛トレーナー.jpg" alt="渡辺愛 トレーナー"
+                            <img src="img/7.jpg" alt="渡辺愛 トレーナー"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent">
                             </div>
@@ -1722,10 +1762,7 @@
                 <!-- Logo & Info -->
                 <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2">
                     <img src="img/logo.webp" alt="スマートゴリラ" class="h-10 w-auto object-contain brightness-0 invert">
-                    <p class="text-[11px] text-ivory/60">
-                        〒151-0063 東京都渋谷区富ケ谷1丁目14−20 代々木公園セレナビル402<br>
-                        営業時間：8:00〜22:00（不定休）
-                    </p>
+
                 </div>
 
                 <!-- Nav Links -->

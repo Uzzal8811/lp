@@ -169,8 +169,13 @@
         }
 
         @keyframes badge-spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .theme-badge-inner::before {
@@ -434,12 +439,19 @@
             </svg>
             <style>
                 @keyframes dash-move {
-                    from { stroke-dashoffset: 0; }
-                    to { stroke-dashoffset: -16; }
+                    from {
+                        stroke-dashoffset: 0;
+                    }
+
+                    to {
+                        stroke-dashoffset: -16;
+                    }
                 }
+
                 .animate-dash {
                     animation: dash-move 15s linear infinite;
                 }
+
                 .animate-dash-reverse {
                     animation: dash-move 15s linear infinite reverse;
                 }
@@ -449,18 +461,19 @@
         <!-- Layer 3 (z-20): Content Container (Bottom block on SP / Overlay on PC) -->
         <div
             class="relative lg:absolute lg:inset-0 max-w-7xl mx-auto w-full z-20 py-8 lg:py-16 flex items-center bg-navy lg:bg-transparent">
-            
+
             <!-- Mobile Horizontal SVG Overlay (sticks out the top) -->
-            <div class="block lg:hidden absolute top-0 left-0 w-full h-[4vw] -translate-y-[99%] z-10 pointer-events-none">
+            <div
+                class="block lg:hidden absolute top-0 left-0 w-full h-[6vw] -translate-y-[99%] z-10 pointer-events-none">
                 <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 10">
                     <!-- Coral accent border line (bottom edge) -->
-                    <line x1="0" y1="10" x2="100" y2="10" stroke="url(#coralLineGrad)" stroke-width="2" />
+                    <line x1="0" y1="10" x2="100" y2="10" stroke="url(#coralLineGrad)" stroke-width="2.5" />
                     <!-- Inner dashed accent line 1 -->
-                    <line x1="0" y1="7" x2="100" y2="7" stroke="#F5EBE8" stroke-width="0.5"
-                        stroke-dasharray="0.8 0.8" class="animate-dash" />
+                    <line x1="0" y1="6" x2="100" y2="6" stroke="#F5EBE8" stroke-width="0.8" stroke-dasharray="1.6 1.6"
+                        class="animate-dash" />
                     <!-- Inner dashed accent line 2 -->
-                    <line x1="0" y1="4" x2="100" y2="4" stroke="#F5EBE8" stroke-width="0.5"
-                        stroke-dasharray="0.8 0.8" class="animate-dash-reverse" />
+                    <line x1="0" y1="2" x2="100" y2="2" stroke="#F5EBE8" stroke-width="0.8" stroke-dasharray="1.6 1.6"
+                        class="animate-dash-reverse" />
                 </svg>
             </div>
 

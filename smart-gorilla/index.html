@@ -448,8 +448,25 @@
 
         <!-- Layer 3 (z-20): Content Container (Bottom block on SP / Overlay on PC) -->
         <div
-            class="relative lg:absolute lg:inset-0 max-w-7xl mx-auto px-4 sm:px-6 w-full z-20 py-8 lg:py-16 flex items-center bg-navy lg:bg-transparent">
-            <div class="w-full flex justify-center lg:justify-end">
+            class="relative lg:absolute lg:inset-0 max-w-7xl mx-auto w-full z-20 py-8 lg:py-16 flex items-center bg-navy lg:bg-transparent mt-8 lg:mt-0">
+            
+            <!-- Mobile Diagonal SVG Overlay (sticks out the top) -->
+            <div class="block lg:hidden absolute top-0 left-0 w-full h-[16vw] -translate-y-[99%] z-10 pointer-events-none">
+                <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+                    <!-- Polygon for angled background (Navy) -->
+                    <polygon points="0,90 100,10 100,100 0,100" fill="#1F3650" />
+                    <!-- Coral accent border line -->
+                    <line x1="0" y1="90" x2="100" y2="10" stroke="url(#coralLineGrad)" stroke-width="1.5" />
+                    <!-- Inner dashed accent line 1 -->
+                    <line x1="0" y1="94" x2="100" y2="14" stroke="#F5EBE8" stroke-width="0.5"
+                        stroke-dasharray="0.8 0.8" class="animate-dash" />
+                    <!-- Inner dashed accent line 2 -->
+                    <line x1="0" y1="97" x2="100" y2="17" stroke="#F5EBE8" stroke-width="0.5"
+                        stroke-dasharray="0.8 0.8" class="animate-dash-reverse" />
+                </svg>
+            </div>
+
+            <div class="w-full flex justify-center lg:justify-end px-4 sm:px-6">
                 <div
                     class="max-w-2xl text-white space-y-6 text-center lg:text-right flex flex-col items-center lg:items-end">
 

@@ -673,15 +673,13 @@ p {
     position: relative;
     width: 100%;
     max-width: 100vw;
-    min-height: 560px;
-    height: 78vh;
-    max-height: 660px;
+    min-height: 700px;
     overflow: hidden;
 }
 
 @supports (-webkit-touch-callout: none) {
     #fv {
-        height: 78vh;
+        min-height: 700px;
     }
 }
 

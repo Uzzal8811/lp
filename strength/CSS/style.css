@@ -42,10 +42,7 @@ p {
 
 /* Safari & WebKit Compatibility Fixes */
 @supports (-webkit-touch-callout: none) {
-    #fv {
-        height: -webkit-fill-available;
-        min-height: -webkit-fill-available;
-    }
+
 
     body {
         min-height: -webkit-fill-available;
@@ -171,7 +168,7 @@ p {
     height: 100vh;
     height: 100dvh;
     background-color: rgba(8, 8, 8, 0.98);
-    background-image: linear-gradient(rgba(8, 8, 8, 0.7), rgba(8, 8, 8, 0.9)), url('../img/menubg_premium.png');
+    background-image: linear-gradient(rgba(8, 8, 8, 0.7), rgba(8, 8, 8, 0.9)), url('../img/cta.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

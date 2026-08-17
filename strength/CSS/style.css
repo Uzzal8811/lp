@@ -1,7 +1,11 @@
-/* Smooth Scrolling */
+/* Smooth Scrolling & Prevent Safari Auto-Font Inflation */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
 }
 
 /* Prevent Text Copying and Horizontal Scroll */
@@ -11,6 +15,10 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
 }
 
 /* Font size for Paragraphs: PC 16px, SP 14px */

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
 
 <head>
@@ -306,12 +306,12 @@
         /* ギャラリー無限スライダー */
         @keyframes scroll-gallery {
             0% {
-                transform: translateX(0);
+                transform: translate3d(0, 0, 0);
             }
 
             100% {
                 /* gap-4 (1rem) を使用する場合、50%に0.5remを足して完全にループさせる */
-                transform: translateX(calc(-50% - 0.5rem));
+                transform: translate3d(calc(-50% - 0.5rem), 0, 0);
             }
         }
 
@@ -319,6 +319,9 @@
             display: flex;
             width: max-content;
             animation: scroll-gallery 40s linear infinite;
+            will-change: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
 
         .gallery-track:hover {
@@ -332,6 +335,29 @@
         /* ゆっくりとしたフェードアニメーション用 */
         .wow {
             animation-duration: 1.5s !important;
+        }
+
+        /* iOS Safari Background Fixed Fix */
+        .parallax-bg {
+            clip-path: inset(0);
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+        .parallax-bg::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: var(--bg-url);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            will-change: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
     </style>
 </head>
@@ -489,7 +515,7 @@
     <section class="py-20 md:py-32 relative z-10 bg-white">
         <!-- Background Image -->
         <div
-            class="absolute inset-0 z-0 overflow-hidden bg-[url('img/about.jpg')] bg-cover bg-center bg-no-repeat bg-fixed opacity-80">
+            class="absolute inset-0 z-0 overflow-hidden parallax-bg opacity-80" style="--bg-url: url('img/about.jpg');">
             <div class="absolute inset-0 bg-theme-dark/20 backdrop-blur-[1px]"></div>
         </div>
 
@@ -1141,8 +1167,8 @@
     </section>
 
     <!-- Message Section -->
-    <section id="staff" class="py-24 md:py-32 px-4 relative bg-cover bg-center bg-fixed"
-        style="background-image: url('img/main2.png');">
+    <section id="staff" class="py-24 md:py-32 px-4 relative parallax-bg"
+        style="--bg-url: url('img/main2.png');">
         <!-- Light overlay to make the image visible but keep text readable -->
         <div class="absolute inset-0 bg-white/40"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-white via-white/20 to-white"></div>

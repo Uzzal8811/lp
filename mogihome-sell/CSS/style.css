@@ -4149,3 +4149,229 @@ nav {
     line-height: 1.4 !important;
   }
 }
+
+/* =========================================
+   VOICE (GOOGLE REVIEWS) SECTION STYLING
+   ========================================= */
+#voice {
+  background: #fcfdfe;
+  padding: 80px 0;
+}
+
+.g-rating-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 18px 30px;
+  border-radius: 50px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.g-rating-score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.g-score-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #202124;
+  line-height: 1;
+}
+
+.g-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.g-stars i,
+.g-stars svg {
+  width: 18px;
+  height: 18px;
+  color: #f4b400;
+  fill: #f4b400;
+}
+
+.g-rating-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.g-rating-label span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #202124;
+}
+
+.g-rating-label small {
+  font-size: 11px;
+  color: #666;
+}
+
+/* Swiper Container Wrap */
+.voice-swiper-wrap {
+  position: relative;
+  padding: 10px 5px 50px;
+}
+
+.voice-swiper {
+  padding-bottom: 50px !important;
+}
+
+.voice-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* Google Review Card */
+.g-review-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 24px;
+  border: 1px solid #e8ece9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 102, 0, 0.1);
+}
+
+.g-review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.g-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.g-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.g-avatar-orange { background: #d94d3a; }
+.g-avatar-green { background: #558b2f; font-size: 20px; }
+.g-avatar-blue { background: #1976d2; font-size: 13px; letter-spacing: -1px; }
+.g-avatar-teal { background: #00897b; font-size: 20px; }
+
+.g-user-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #202124;
+  line-height: 1.3;
+}
+
+.g-user-meta {
+  font-size: 12px;
+  color: #70757a;
+}
+
+.g-more-icon {
+  width: 20px;
+  height: 20px;
+  color: #70757a;
+}
+
+.g-review-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.g-date {
+  font-size: 13px;
+  color: #70757a;
+}
+
+.g-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #dadce0;
+  color: #3c4043;
+  background: #f8f9fa;
+  font-weight: 500;
+}
+
+.g-review-text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #3c4043;
+  margin: 0;
+  flex: 1;
+}
+
+/* Google Maps Review Link Button */
+.voice-btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.r-btn-google-maps {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--r-green) 0%, #004d00 100%);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 102, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.r-btn-google-maps:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 102, 0, 0.35);
+  color: #ffd700;
+}
+
+.r-btn-google-maps i {
+  width: 20px;
+  height: 20px;
+}
+
+.r-btn-google-maps .icon-ext {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.voice-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--r-green) !important;
+}
+
+.voice-swiper-next, .voice-swiper-prev {
+  color: var(--r-green) !important;
+}

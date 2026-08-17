@@ -57,7 +57,6 @@
           <li><a href="#pricing">Price</a></li>
           <li><a href="#voice">Voice</a></li>
           <li><a href="#message">Message</a></li>
-          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
@@ -332,40 +331,175 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="sec" id="gallery">
+  <!-- VOICE / CUSTOMER REVIEWS -->
+  <section class="sec" id="voice">
     <div class="container">
       <div class="r-heading reveal reveal-up">
-        <span class="r-en">gallery</span>
-        <h2 class="r-ja">物件ギャラリー</h2>
+        <span class="r-en">voice</span>
+        <h2 class="r-ja">お客様の声</h2>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item reveal reveal-up delay-1">
-          <div class="gallery-img-wrap"><img src="img/gallery1.jpg" alt="ギャラリー画像1"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
+      <!-- Google Rating Summary Header -->
+      <div class="g-rating-header reveal reveal-up delay-1">
+        <div class="g-rating-score">
+          <span class="g-score-num">5.0</span>
+          <div class="g-stars">
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
         </div>
-        <div class="gallery-item reveal reveal-up delay-2">
-          <div class="gallery-img-wrap"><img src="img/gallery2.jpg" alt="ギャラリー画像2"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
-        </div>
-        <div class="gallery-item reveal reveal-up delay-3">
-          <div class="gallery-img-wrap"><img src="img/gallery3.jpg" alt="ギャラリー画像3"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
-        </div>
-        <div class="gallery-item reveal reveal-up delay-1">
-          <div class="gallery-img-wrap"><img src="img/gallery4.jpg" alt="ギャラリー画像4"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
-        </div>
-        <div class="gallery-item reveal reveal-up delay-2">
-          <div class="gallery-img-wrap"><img src="img/gallery5.jpg" alt="ギャラリー画像5"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
-        </div>
-        <div class="gallery-item reveal reveal-up delay-3">
-          <div class="gallery-img-wrap"><img src="img/gallery6.jpg" alt="ギャラリー画像6"></div>
-          <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
+        <div class="g-rating-label">
+          <span>Googleクチコミ評価</span>
+          <small>高評価のお声をいただいております</small>
         </div>
       </div>
+
+      <!-- Voice Swiper Slider -->
+      <div class="voice-swiper-wrap reveal reveal-up delay-2">
+        <div class="swiper voice-swiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Slide 1: Naoko M -->
+            <div class="swiper-slide">
+              <div class="g-review-card">
+                <div class="g-review-top">
+                  <div class="g-user-info">
+                    <div class="g-avatar g-avatar-orange">N</div>
+                    <div class="g-user-text">
+                      <div class="g-user-name">Naoko M</div>
+                      <div class="g-user-meta">5 件のクチコミ</div>
+                    </div>
+                  </div>
+                  <i data-lucide="more-vertical" class="g-more-icon"></i>
+                </div>
+                <div class="g-review-rating">
+                  <div class="g-stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                  </div>
+                  <span class="g-date">1 週間前</span>
+                  <span class="g-badge">新規</span>
+                </div>
+                <p class="g-review-text">
+                  不動産を探していた時にこちらの仲介業者にお世話になりました。スタッフの方の接客がとても丁寧で、安心して相談できました。特に、わかりやすい説明と親身なサポートが印象的でした。おすすめの業者です！
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2: はるひろ -->
+            <div class="swiper-slide">
+              <div class="g-review-card">
+                <div class="g-review-top">
+                  <div class="g-user-info">
+                    <div class="g-avatar g-avatar-green">🦥</div>
+                    <div class="g-user-text">
+                      <div class="g-user-name">はるひろ</div>
+                      <div class="g-user-meta">3 件のクチコミ</div>
+                    </div>
+                  </div>
+                  <i data-lucide="more-vertical" class="g-more-icon"></i>
+                </div>
+                <div class="g-review-rating">
+                  <div class="g-stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                  </div>
+                  <span class="g-date">1 週間前</span>
+                  <span class="g-badge">新規</span>
+                </div>
+                <p class="g-review-text">
+                  不動産売却のためにこちらを利用しました。とても親切な接客で、雰囲気も落ち着いていて良かったです。担当の方が丁寧に説明してくれたので安心してお任せできました。おすすめの業者です！
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3: 山口将次 -->
+            <div class="swiper-slide">
+              <div class="g-review-card">
+                <div class="g-review-top">
+                  <div class="g-user-info">
+                    <div class="g-avatar g-avatar-blue">将次</div>
+                    <div class="g-user-text">
+                      <div class="g-user-name">山口将次</div>
+                      <div class="g-user-meta">2 件のクチコミ・1 枚の写真</div>
+                    </div>
+                  </div>
+                  <i data-lucide="more-vertical" class="g-more-icon"></i>
+                </div>
+                <div class="g-review-rating">
+                  <div class="g-stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                  </div>
+                  <span class="g-date">2 週間前</span>
+                  <span class="g-badge">新規</span>
+                </div>
+                <p class="g-review-text">
+                  接客も丁寧で、親身に対応をしてくださって安心してお任せできました。<br><br>また不動産のことでお世話になる際はこちらでご相談したいと思います。
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 4: かねたい -->
+            <div class="swiper-slide">
+              <div class="g-review-card">
+                <div class="g-review-top">
+                  <div class="g-user-info">
+                    <div class="g-avatar g-avatar-teal">🦡</div>
+                    <div class="g-user-text">
+                      <div class="g-user-name">かねたい</div>
+                      <div class="g-user-meta">1 件のクチコミ</div>
+                    </div>
+                  </div>
+                  <i data-lucide="more-vertical" class="g-more-icon"></i>
+                </div>
+                <div class="g-review-rating">
+                  <div class="g-stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                  </div>
+                  <span class="g-date">3 週間前</span>
+                  <span class="g-badge">新規</span>
+                </div>
+                <p class="g-review-text">
+                  不動産売却でお世話になりました。担当の方の接客がとても丁寧で、安心してお任せできました。店内の雰囲気も落ち着いていて、リラックスしながら相談できました。売却のプロセスもスムーズで、こちらの希望をしっかりと聞いてくれたのが良かったです。おすすめの不動産仲介業者です！
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination voice-swiper-pagination"></div>
+          <div class="swiper-button-prev voice-swiper-prev"></div>
+          <div class="swiper-button-next voice-swiper-next"></div>
+        </div>
+      </div>
+
+      <!-- Google Maps Reviews Button -->
+      <div class="voice-btn-wrap reveal reveal-up delay-3">
+        <a href="https://www.google.com/maps/place/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEMOGI%E2%88%92HOME/@35.4379824,139.6351746,17z/data=!3m1!5s0x60185cee815ffe19:0x1d6a66bc6a04468c!4m8!3m7!1s0x60185df2f118d807:0xde65ff70569dafc2!8m2!3d35.4379824!4d139.6351746!9m1!1b1!16s%2Fg%2F11zc2w921z?hl=ja&entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="r-btn-google-maps">
+          <i data-lucide="map-pin"></i>
+          <span>Googleマップでクチコミをもっと見る</span>
+          <i data-lucide="external-link" class="icon-ext"></i>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -470,7 +604,6 @@
         <li><a href="#pricing">Price</a></li>
         <li><a href="#voice">Voice</a></li>
         <li><a href="#message">Message</a></li>
-        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <p class="copyright en" style="text-align: center; color: #999;">&copy; 2026 株式会社 ＭＯＧＩ－ＨＯＭＥ <br class="sp-br">ALL

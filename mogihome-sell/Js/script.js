@@ -102,6 +102,31 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       });
 
+      // Voice Swiper Initialization (Google Reviews)
+      const voiceSwiper = new Swiper('.voice-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.voice-swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.voice-swiper-next',
+          prevEl: '.voice-swiper-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          }
+        }
+      });
+
       // Back to Top Button Logic
       const backToTopBtn = document.getElementById('back-to-top');
       if (backToTopBtn) {

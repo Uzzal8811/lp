@@ -3343,18 +3343,21 @@ nav {
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.5s;
-}
-
-.r-point:hover .r-point-img img {
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-wave 10s ease-in-out infinite;
 }
 
 .r-point:nth-child(2) .r-point-img img {
-  border-radius: 40% 60% 30% 70% / 50% 50% 50% 50%;
+  animation-delay: -3.3s;
 }
 
 .r-point:nth-child(3) .r-point-img img {
-  border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+  animation-delay: -6.6s;
+}
+
+@keyframes blob-wave {
+  0%, 100% { border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%; }
+  33% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  66% { border-radius: 60% 40% 30% 70% / 50% 50% 50% 50%; }
 }
 
 .r-point-content {

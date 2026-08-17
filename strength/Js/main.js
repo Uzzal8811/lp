@@ -44,32 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intersection Observer for Fade-in animation
+    // Scroll animation for Fade-in elements
     const faders = document.querySelectorAll('.fade-in');
-
-    if ('IntersectionObserver' in window) {
-        const appearOptions = {
-            threshold: 0.05,
-            rootMargin: "0px 0px 50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-
+    const handleScrollAnim = () => {
+        const triggerBottom = window.innerHeight * 0.95;
         faders.forEach(fader => {
-            appearOnScroll.observe(fader);
+            const top = fader.getBoundingClientRect().top;
+            if (top < triggerBottom) {
+                fader.classList.add('appear');
+            }
         });
-    } else {
-        faders.forEach(fader => {
-            fader.classList.add('appear');
-        });
-    }
+    };
+
+    // Run immediately on load and on scroll
+    handleScrollAnim();
+    window.addEventListener('scroll', handleScrollAnim, { passive: true });
 
     // Initialize Swiper for FV
     if (typeof Swiper !== 'undefined') {

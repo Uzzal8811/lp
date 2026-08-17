@@ -3894,8 +3894,8 @@ nav {
   display: flex;
   position: relative;
   background: #fff;
-  min-height: 540px;
-  align-items: stretch;
+  min-height: 660px;
+  align-items: flex-start;
 }
 
 .r-msg-left {
@@ -3905,11 +3905,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 50px 40px;
+  padding: 60px 40px;
   position: relative;
   z-index: 2;
   margin-right: -8vw;
   box-shadow: 15px 0 40px rgba(0, 0, 0, 0.03);
+  min-height: 640px;
 }
 
 .r-msg-content {
@@ -3963,20 +3964,24 @@ nav {
 
 .r-msg-right {
   flex: 5;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
   z-index: 1;
-  min-height: 540px;
+  min-height: 620px;
+  height: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
+  align-self: flex-start;
 }
 
 .r-msg-card {
   position: relative;
   width: 100%;
-  max-width: 440px;
-  height: 500px;
+  max-width: 480px;
+  height: 600px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 45px rgba(0, 80, 0, 0.16), 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -3993,88 +3998,22 @@ nav {
 .r-msg-img-box {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 120%;
+  top: -10%;
   overflow: hidden;
+  will-change: transform;
 }
 
 .r-msg-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .r-msg-card:hover .r-msg-img-box img {
   transform: scale(1.05);
-}
-
-.r-msg-tag {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  background: rgba(0, 102, 0, 0.88);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.r-msg-tag i {
-  width: 16px;
-  height: 16px;
-  color: #ffd700;
-}
-
-.r-msg-badge {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  right: 18px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.r-msg-badge i {
-  width: 24px;
-  height: 24px;
-  color: var(--r-green);
-  flex-shrink: 0;
-  background: rgba(0, 102, 0, 0.08);
-  padding: 6px;
-  box-sizing: content-box;
-  border-radius: 50%;
-}
-
-.r-msg-badge div {
-  display: flex;
-  flex-direction: column;
-}
-
-.r-msg-badge strong {
-  font-size: 13px;
-  color: #1a331a;
-  font-weight: 700;
-}
-
-.r-msg-badge small {
-  font-size: 11px;
-  color: #555;
-  margin-top: 1px;
 }
 
 @media(max-width: 900px) {
@@ -4090,6 +4029,7 @@ nav {
     margin-top: -40px;
     justify-content: center;
     padding: 60px 20px 40px;
+    min-height: auto;
   }
 
   .r-msg-content {
@@ -4103,15 +4043,22 @@ nav {
   }
 
   .r-msg-right {
-    height: 420px;
+    position: relative;
+    top: 0;
+    height: 480px;
     flex: none;
     padding: 15px;
     min-height: auto;
   }
 
   .r-msg-card {
-    height: 390px;
+    height: 450px;
     border-radius: 18px;
+  }
+
+  .r-msg-img-box {
+    height: 100%;
+    top: 0;
   }
 }
 

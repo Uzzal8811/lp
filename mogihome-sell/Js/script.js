@@ -85,6 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', updateParallax, { passive: true });
       }
 
+      // Message Parallax Logic (iOS/Safari/PC共通)
+      const msgBgJs = document.querySelector('.r-msg-bg-js img');
+      const msgSec = document.querySelector('#message');
+      if (msgBgJs && msgSec) {
+        const updateMsgParallax = () => {
+          const rect = msgSec.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          if (rect.top <= windowHeight && rect.bottom >= 0) {
+            const scrollDistance = windowHeight - rect.top;
+            msgBgJs.style.transform = `translate3d(0, ${scrollDistance * 0.15}px, 0)`;
+          }
+        };
+        updateMsgParallax();
+        window.addEventListener('scroll', updateMsgParallax, { passive: true });
+      }
+
       // Pricing Swiper Initialization
       const pricingSwiper = new Swiper('.pricing-swiper', {
         loop: true,

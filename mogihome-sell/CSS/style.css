@@ -3311,14 +3311,14 @@ nav {
 }
 
 .r-point-img {
-  flex: 0 0 340px;
-  max-width: 340px;
+  flex: 0 0 420px;
+  max-width: 420px;
   width: 100%;
 }
 
 .r-point-img img {
   width: 100%;
-  height: 250px;
+  height: 290px;
   border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);

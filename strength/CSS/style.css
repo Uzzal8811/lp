@@ -635,8 +635,9 @@ p {
 }
 
 /* FV Continuous Slide for 3 Machine Images (24s total, 8s each slide: 0s, 8s, 16s) */
-@keyframes fv-slide-infinite {
+@-webkit-keyframes fv-slide-infinite {
     0% {
+        -webkit-transform: translate3d(50px, 0, 0) scale(0.96);
         transform: translate3d(50px, 0, 0) scale(0.96);
         opacity: 0;
     }
@@ -644,24 +645,60 @@ p {
         opacity: 1;
     }
     6% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
         transform: translate3d(0, 0, 0) scale(1);
         opacity: 1;
     }
     28% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
         transform: translate3d(0, 0, 0) scale(1);
         opacity: 1;
     }
     32.5% {
+        -webkit-transform: translate3d(-30px, 0, 0) scale(1.02);
         transform: translate3d(-30px, 0, 0) scale(1.02);
         opacity: 0;
     }
     33.33%, 100% {
+        -webkit-transform: translate3d(50px, 0, 0) scale(0.96);
+        transform: translate3d(50px, 0, 0) scale(0.96);
+        opacity: 0;
+    }
+}
+
+@keyframes fv-slide-infinite {
+    0% {
+        -webkit-transform: translate3d(50px, 0, 0) scale(0.96);
+        transform: translate3d(50px, 0, 0) scale(0.96);
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
+    6% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+    28% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+    32.5% {
+        -webkit-transform: translate3d(-30px, 0, 0) scale(1.02);
+        transform: translate3d(-30px, 0, 0) scale(1.02);
+        opacity: 0;
+    }
+    33.33%, 100% {
+        -webkit-transform: translate3d(50px, 0, 0) scale(0.96);
         transform: translate3d(50px, 0, 0) scale(0.96);
         opacity: 0;
     }
 }
 
 .animate-fv-slide {
+    -webkit-animation: fv-slide-infinite 24s cubic-bezier(0.16, 1, 0.3, 1) infinite backwards;
     animation: fv-slide-infinite 24s cubic-bezier(0.16, 1, 0.3, 1) infinite backwards;
     will-change: transform, opacity;
     max-width: 100%;

@@ -150,70 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // Lightbox Logic
-      const galleryItems = document.querySelectorAll('.gallery-item');
-      const lightbox = document.getElementById('gallery-lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      const lightboxClose = document.querySelector('.lightbox-close');
-      const lightboxPrev = document.querySelector('.lightbox-prev');
-      const lightboxNext = document.querySelector('.lightbox-next');
-      
-      let currentGalleryIndex = 0;
-      const galleryImages = [
-        "img/gallery1.jpg",
-        "img/gallery2.jpg",
-        "img/gallery3.jpg",
-        "img/gallery4.jpg",
-        "img/gallery5.jpg",
-        "img/gallery6.jpg"
-      ];
 
-      if (lightbox && galleryItems.length > 0) {
-        const openLightbox = (index) => {
-          currentGalleryIndex = index;
-          lightboxImg.src = galleryImages[currentGalleryIndex];
-          lightbox.classList.add('is-active');
-          document.body.style.overflow = 'hidden';
-        };
-
-        const closeLightbox = () => {
-          lightbox.classList.remove('is-active');
-          document.body.style.overflow = '';
-        };
-
-        const showPrevImage = (e) => {
-          e.stopPropagation();
-          currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
-          lightboxImg.src = galleryImages[currentGalleryIndex];
-        };
-
-        const showNextImage = (e) => {
-          e.stopPropagation();
-          currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
-          lightboxImg.src = galleryImages[currentGalleryIndex];
-        };
-
-        galleryItems.forEach((item, index) => {
-          item.addEventListener('click', () => {
-            openLightbox(index);
-          });
-        });
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', closeLightbox);
-        lightboxImg.addEventListener('click', (e) => e.stopPropagation());
-        
-        lightboxPrev.addEventListener('click', showPrevImage);
-        lightboxNext.addEventListener('click', showNextImage);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-          if (!lightbox.classList.contains('is-active')) return;
-          if (e.key === 'Escape') closeLightbox();
-          if (e.key === 'ArrowLeft') showPrevImage(e);
-          if (e.key === 'ArrowRight') showNextImage(e);
-        });
-      }
 
       // Pricing slider image click logic to change Recommended Menu Box image
       const pricingSliderImgs = document.querySelectorAll('.pricing-slider-img');

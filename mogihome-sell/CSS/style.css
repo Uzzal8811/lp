@@ -3311,11 +3311,14 @@ nav {
 }
 
 .r-point-img {
-  flex: 1;
+  flex: 0 0 340px;
+  max-width: 340px;
+  width: 100%;
 }
 
 .r-point-img img {
   width: 100%;
+  height: 250px;
   border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -3330,16 +3333,8 @@ nav {
   border-radius: 40% 60% 30% 70% / 50% 50% 50% 50%;
 }
 
-.r-point:nth-child(3) .r-point-img {
-  flex: 0 0 260px;
-  max-width: 260px;
-}
-
 .r-point:nth-child(3) .r-point-img img {
   border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
-  max-width: 260px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 .r-point-content {

@@ -3696,7 +3696,6 @@ nav {
 .r-fv-badge-inner {
   width: 150px;
   height: 150px;
-  border: 2px dashed rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -3704,6 +3703,24 @@ nav {
   justify-content: center;
   text-align: center;
   position: relative;
+}
+
+.r-fv-badge::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: spin-dash-fv 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin-dash-fv {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .r-fv-badge .b-t1 {
@@ -3884,6 +3901,11 @@ nav {
   }
 
   .r-fv-badge-inner {
+    width: 86px !important;
+    height: 86px !important;
+  }
+
+  .r-fv-badge::before {
     width: 86px !important;
     height: 86px !important;
     border: 1px dashed rgba(255, 255, 255, 0.8) !important;

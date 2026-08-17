@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Voice Swiper Initialization (Google Reviews)
       const voiceSwiper = new Swiper('.voice-swiper', {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
           delay: 4500,
@@ -120,9 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
           prevEl: '.voice-swiper-prev',
         },
         breakpoints: {
-          768: {
+          640: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
           }
         }
       });

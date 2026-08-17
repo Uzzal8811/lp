@@ -4219,7 +4219,7 @@ nav {
 /* Swiper Container Wrap */
 .voice-swiper-wrap {
   position: relative;
-  padding: 10px 5px 50px;
+  padding: 10px 50px 50px;
 }
 
 .voice-swiper {
@@ -4229,6 +4229,53 @@ nav {
 .voice-swiper .swiper-slide {
   height: auto;
   display: flex;
+}
+
+.voice-swiper-prev,
+.voice-swiper-next {
+  color: var(--r-green) !important;
+  top: 42% !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.voice-swiper-prev {
+  left: 0 !important;
+}
+
+.voice-swiper-next {
+  right: 0 !important;
+}
+
+.voice-swiper-prev::after,
+.voice-swiper-next::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.voice-swiper-prev:hover,
+.voice-swiper-next:hover {
+  background: var(--r-green);
+  color: #fff !important;
+  border-color: var(--r-green);
+  box-shadow: 0 6px 20px rgba(0, 102, 0, 0.3);
+}
+
+@media(max-width: 768px) {
+  .voice-swiper-wrap {
+    padding: 10px 20px 40px;
+  }
+  .voice-swiper-prev {
+    left: -5px !important;
+  }
+  .voice-swiper-next {
+    right: -5px !important;
+  }
 }
 
 /* Google Review Card */
@@ -4370,8 +4417,4 @@ nav {
 
 .voice-swiper-pagination .swiper-pagination-bullet-active {
   background: var(--r-green) !important;
-}
-
-.voice-swiper-next, .voice-swiper-prev {
-  color: var(--r-green) !important;
 }

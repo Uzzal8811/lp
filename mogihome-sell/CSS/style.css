@@ -3240,8 +3240,8 @@ nav {
 .r-circle {
   width: 170px;
   height: 170px;
-  border: 7px dashed var(--r-green);
   border-radius: 50%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3250,6 +3250,26 @@ nav {
   padding: 10px;
   background: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.r-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 7px dashed var(--r-green);
+  box-sizing: border-box;
+  animation: spin-dash 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin-dash {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .r-circle:hover {
@@ -4134,8 +4154,11 @@ nav {
     width: calc(50% - 7.5px) !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
-    border-width: 5px !important;
     padding: 5px !important;
+  }
+
+  .r-circle::before {
+    border-width: 5px !important;
   }
 
   .r-circle i {

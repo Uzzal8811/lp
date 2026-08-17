@@ -851,3 +851,23 @@ p {
 .font-serif-jp {
     font-family: "Noto Serif JP", serif !important;
 }
+
+/* All-time moving diagonal lines - sequential and clearly visible */
+@keyframes slide-sequence {
+    0% { transform: translateX(-15%); opacity: 0.15; }
+    15% { transform: translateX(15%); opacity: 0.9; box-shadow: 0 0 15px rgba(255, 153, 0, 0.8); }
+    30% { transform: translateX(-15%); opacity: 0.15; box-shadow: none; }
+    100% { transform: translateX(-15%); opacity: 0.15; box-shadow: none; }
+}
+
+.animate-diagonal-line-1 {
+    animation: slide-sequence 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-diagonal-line-2 {
+    animation: slide-sequence 9s cubic-bezier(0.4, 0, 0.2, 1) infinite 3s;
+}
+
+.animate-diagonal-line-3 {
+    animation: slide-sequence 9s cubic-bezier(0.4, 0, 0.2, 1) infinite 6s;
+}

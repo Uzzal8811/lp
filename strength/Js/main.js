@@ -120,10 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Back to Top Button Logic
+    // Scroll events for Back to Top and Mobile CTA
     const backToTopBtn = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
+    const mobileCta = document.getElementById('mobile-fixed-cta');
+    const fvSection = document.getElementById('fv');
+
+    window.addEventListener('scroll', () => {
+        // Back to top logic
+        if (backToTopBtn) {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'scale-90', 'pointer-events-none');
                 backToTopBtn.classList.add('opacity-100', 'translate-y-0', 'scale-100');
@@ -131,8 +135,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'scale-90', 'pointer-events-none');
                 backToTopBtn.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
             }
-        }, { passive: true });
+        }
 
+        // Mobile fixed CTA logic (shows exactly when FV ends)
+        if (mobileCta && fvSection) {
+            const fvHeight = fvSection.offsetHeight;
+            if (window.scrollY > (fvHeight * 0.9)) {
+                mobileCta.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileCta.classList.add('translate-y-0', 'opacity-100');
+            } else {
+                mobileCta.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileCta.classList.remove('translate-y-0', 'opacity-100');
+            }
+        }
+    }, { passive: true });
+
+    if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,

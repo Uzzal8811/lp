@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -221,7 +221,7 @@
     <main>
         <!-- 01. FIRST VIEW -->
         <section id="fv"
-            class="relative w-full max-w-full bg-black overflow-hidden min-h-[700px] h-auto md:min-h-[650px] md:h-[650px] lg:min-h-[720px] lg:h-[720px] mt-14 md:mt-20 flex flex-col md:flex-row items-start md:items-center justify-start pb-10 sm:pb-14 md:pb-0">
+            class="relative w-full max-w-full bg-black overflow-hidden h-auto md:min-h-[650px] md:h-[650px] lg:min-h-[720px] lg:h-[720px] mt-14 md:mt-20 flex flex-col md:flex-row items-start md:items-center justify-start pb-10 sm:pb-14 md:pb-0">
 
             <!-- Dark Premium Designed Background -->
             <div class="absolute inset-0 w-full h-full z-0 bg-black overflow-hidden pointer-events-none">
@@ -235,10 +235,16 @@
                 </div>
 
                 <!-- Subtle Geometric Diagonal Accent Lines -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center -rotate-[35deg] opacity-15">
-                    <div class="w-[200%] h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mb-24"></div>
-                    <div class="w-[200%] h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-                    <div class="w-[200%] h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mt-24"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center -rotate-[35deg]">
+                    <div
+                        class="w-[200%] h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mb-24 animate-diagonal-line-1">
+                    </div>
+                    <div
+                        class="w-[200%] h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent animate-diagonal-line-2">
+                    </div>
+                    <div
+                        class="w-[200%] h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mt-24 animate-diagonal-line-3">
+                    </div>
                 </div>
 
                 <!-- Dark Vignette Overlay for Depth -->
@@ -248,24 +254,24 @@
 
             <!-- 3 PNG Image Slider (Relative on Mobile for natural stacking, Absolute on PC) -->
             <div
-                class="relative md:absolute inset-x-0 top-0 md:inset-0 z-10 pointer-events-none w-full h-[300px] sm:h-[340px] md:h-full">
+                class="relative md:absolute inset-x-0 top-0 md:inset-0 z-10 pointer-events-none w-full h-[65vw] sm:h-[340px] md:h-full">
                 <!-- Slide 1: fv1.1.png -->
                 <div class="absolute inset-0 w-full h-full opacity-0 animate-fv-slide flex items-start justify-center md:items-end md:justify-end pt-4 sm:pt-6 md:pt-0 pb-0 md:pb-8 lg:pb-12 md:pr-8 lg:pr-16"
                     style="animation-delay: 0s;">
                     <img src="img/fv1.1.png" alt="FV Element 1"
-                        class="w-auto h-[280px] sm:h-[310px] md:h-[580px] lg:h-[640px] object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
+                        class="w-auto h-[60vw] sm:h-[310px] md:h-[580px] lg:h-[640px] max-w-[90vw] md:max-w-none flex-shrink-0 object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
                 </div>
                 <!-- Slide 2: fv1.2.png -->
                 <div class="absolute inset-0 w-full h-full opacity-0 animate-fv-slide flex items-start justify-center md:items-end md:justify-end pt-4 sm:pt-6 md:pt-0 pb-0 md:pb-8 lg:pb-12 md:pr-8 lg:pr-16"
                     style="animation-delay: 8s;">
                     <img src="img/fv1.2.png" alt="FV Element 2"
-                        class="w-auto h-[260px] sm:h-[290px] md:h-[580px] lg:h-[620px] object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
+                        class="w-auto h-[55vw] sm:h-[290px] md:h-[580px] lg:h-[620px] max-w-[90vw] md:max-w-none flex-shrink-0 object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
                 </div>
                 <!-- Slide 3: fv1.3.png -->
                 <div class="absolute inset-0 w-full h-full opacity-0 animate-fv-slide flex items-start justify-center md:items-end md:justify-end pt-4 sm:pt-6 md:pt-0 pb-0 md:pb-8 lg:pb-12 md:pr-8 lg:pr-16"
                     style="animation-delay: 16s;">
                     <img src="img/fv1.3.png" alt="FV Element 3"
-                        class="w-auto h-[280px] sm:h-[310px] md:h-[600px] lg:h-[660px] object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
+                        class="w-auto h-[60vw] sm:h-[310px] md:h-[600px] lg:h-[660px] max-w-[90vw] md:max-w-none flex-shrink-0 object-contain drop-shadow-[0_0_40px_rgba(255,153,0,0.35)] opacity-90 md:opacity-100 transition-all duration-300">
                 </div>
             </div>
 
@@ -276,74 +282,73 @@
                 class="relative z-[99] w-full px-4 sm:px-8 lg:px-12 xl:px-16 pt-2 sm:pt-4 md:pt-8 lg:pt-12 pb-0 md:pb-8 flex flex-col justify-center items-start">
                 <div class="w-full max-w-3xl lg:max-w-4xl text-left">
                     <!-- Logo -->
-                    <div class="mb-6 md:mb-8 hero-anim-logo">
+                    <div class="mb-[6vw] md:mb-8 hero-anim-logo">
                         <img src="img/logo.png" alt="STRENGTH"
-                            class="h-9 sm:h-11 md:h-14 w-auto opacity-95 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                            class="h-[8vw] sm:h-11 md:h-14 w-auto opacity-95 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                     </div>
 
                     <!-- Main Catchphrase -->
-                    <div class="mb-6 sm:mb-8 flex flex-col items-start">
+                    <div class="mb-6 sm:mb-8 flex flex-col items-start w-full">
                         <p
-                            class="text-white-off text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.2em] whitespace-nowrap drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] hero-anim-top mb-1 sm:mb-3">
+                            class="text-white-off text-[5.3vw] sm:text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.2em] whitespace-nowrap drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] hero-anim-top mb-[1.5vw] sm:mb-3">
                             神経にアプローチし</p>
                         <h1
-                            class="mb-2 sm:mb-4 leading-none flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 whitespace-nowrap hero-anim-title">
+                            class="mb-[2vw] sm:mb-4 leading-none flex flex-nowrap items-baseline gap-x-[2vw] sm:gap-x-3 whitespace-nowrap hero-anim-title">
                             <span
-                                class="font-serif-jp text-gold font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-[0.1em] whitespace-nowrap inline-block drop-shadow-[0_4px_16px_rgba(255,153,0,0.4)] hero-anim-gold-glow">動ける身体</span><span
-                                class="text-white font-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0.1em] whitespace-nowrap inline-block drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">を作る</span>
+                                class="font-serif-jp text-gold font-bold text-[9.5vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-[0.1em] whitespace-nowrap inline-block drop-shadow-[0_4px_16px_rgba(255,153,0,0.4)] hero-anim-gold-glow">動ける身体</span><span
+                                class="text-white font-light text-[6.4vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0.1em] whitespace-nowrap inline-block drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">を作る</span>
                         </h1>
                         <p
-                            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-[0.22em] text-white-off whitespace-nowrap drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] hero-anim-sub">
+                            class="text-[5.3vw] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-[0.22em] text-white-off whitespace-nowrap drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] hero-anim-sub">
                             トレーニングマシン</p>
                     </div>
 
                     <!-- Accent Line -->
                     <div
-                        class="w-20 sm:w-28 h-[3px] sm:h-[4px] bg-gold my-6 sm:my-8 rounded-full shadow-[0_0_15px_rgba(255,153,0,0.6)] hero-anim-line">
+                        class="w-[15vw] sm:w-28 h-[3px] sm:h-[4px] bg-gold my-[6vw] sm:my-8 rounded-full shadow-[0_0_15px_rgba(255,153,0,0.6)] hero-anim-line">
                     </div>
 
                     <!-- 3 Badges Row -->
                     <div
-                        class="flex items-stretch gap-4 sm:gap-8 lg:gap-10 border-l-2 sm:border-l-3 border-gold/50 pl-4 sm:pl-6 mb-3 sm:mb-5 bg-black/30 backdrop-blur-xs rounded-r-xl py-2 w-fit pr-4">
+                        class="flex items-stretch gap-[3vw] sm:gap-8 lg:gap-10 border-l-[3px] sm:border-l-3 border-gold/50 pl-[4vw] sm:pl-6 mb-[3vw] sm:mb-5 bg-black/30 backdrop-blur-xs rounded-r-xl py-[2vw] w-fit pr-[4vw]">
                         <!-- Badge 1: 8月新規オープン -->
                         <div class="flex flex-col justify-center items-start font-light hero-anim-badge-1 h-full">
-                            <span class="text-xs sm:text-sm text-gray-300 whitespace-nowrap">2026年</span>
+                            <span class="text-[3vw] sm:text-sm text-gray-300 whitespace-nowrap">2026年</span>
                             <span
-                                class="text-gold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-en leading-none my-1 drop-shadow-[0_0_10px_rgba(255,153,0,0.3)]">8<span
-                                    class="text-xs sm:text-sm lg:text-base font-sans text-white font-normal ml-0.5">月</span></span>
-                            <span class="text-xs sm:text-sm text-gray-300 whitespace-nowrap">新規オープン</span>
+                                class="text-gold text-[7vw] sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-en leading-none my-[1vw] drop-shadow-[0_0_10px_rgba(255,153,0,0.3)]">8<span
+                                    class="text-[3.5vw] sm:text-sm lg:text-base font-sans text-white font-normal ml-0.5">月</span></span>
+                            <span class="text-[3vw] sm:text-sm text-gray-300 whitespace-nowrap">新規オープン</span>
                         </div>
 
-                        <div class="h-auto w-[1px] bg-white/25 self-stretch my-2"></div>
+                        <div class="h-auto w-[1px] bg-white/25 self-stretch my-[1.5vw] sm:my-2"></div>
 
                         <!-- Badge 2: 無料体験 -->
                         <div class="flex flex-col items-center justify-start text-center hero-anim-badge-2 h-full pt-1">
                             <div
-                                class="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-gold/80 flex items-center justify-center mb-2 sm:mb-3 text-gold shadow-[0_0_12px_rgba(255,153,0,0.25)] bg-black/40">
-                                <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
+                                class="w-[10vw] h-[10vw] sm:w-12 sm:h-12 rounded-full border border-gold/80 flex items-center justify-center mb-[2vw] sm:mb-3 text-gold shadow-[0_0_12px_rgba(255,153,0,0.25)] bg-black/40">
+                                <svg class="w-[5vw] h-[5vw] sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                             </div>
                             <span
-                                class="text-xs sm:text-sm lg:text-base text-white-off font-light whitespace-nowrap">無料体験</span>
+                                class="text-[3.2vw] sm:text-sm lg:text-base text-white-off font-light whitespace-nowrap">無料体験</span>
                         </div>
 
-                        <div class="h-auto w-[1px] bg-white/25 self-stretch my-2"></div>
+                        <div class="h-auto w-[1px] bg-white/25 self-stretch my-[1.5vw] sm:my-2"></div>
 
                         <!-- Badge 3: 朝4時から利用可 -->
                         <div class="flex flex-col items-center justify-start text-center hero-anim-badge-3 h-full pt-1">
                             <div
-                                class="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-gold/80 flex items-center justify-center mb-2 sm:mb-3 text-gold shadow-[0_0_12px_rgba(255,153,0,0.25)] bg-black/40">
-                                <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
+                                class="w-[10vw] h-[10vw] sm:w-12 sm:h-12 rounded-full border border-gold/80 flex items-center justify-center mb-[2vw] sm:mb-3 text-gold shadow-[0_0_12px_rgba(255,153,0,0.25)] bg-black/40">
+                                <svg class="w-[5vw] h-[5vw] sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <span
-                                class="text-xs sm:text-sm lg:text-base text-white-off font-light leading-snug whitespace-nowrap">朝<span
+                            <span class="text-xs sm:text-sm lg:text-base text-white-off font-light leading-snug">朝<span
                                     class="text-gold font-bold">4</span>時から<br>利用可</span>
                         </div>
                     </div>
@@ -351,13 +356,13 @@
                     <!-- Bottom Watermark & Quote -->
                     <div class="relative z-[99] pb-3 pt-0">
                         <span
-                            class="absolute -top-6 sm:-top-12 left-0 text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-en font-black text-white/[0.06] pointer-events-none select-none tracking-widest whitespace-nowrap hero-anim-watermark">STRONGER</span>
+                            class="absolute -top-[6vw] sm:-top-12 left-0 text-[16vw] sm:text-8xl md:text-9xl lg:text-[10rem] font-en font-black text-white/[0.06] pointer-events-none select-none tracking-widest whitespace-nowrap hero-anim-watermark">STRONGER</span>
                         <p
-                            class="text-base sm:text-lg md:text-xl font-en tracking-[0.3em] text-white/95 font-medium whitespace-nowrap mb-1 sm:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] hero-anim-slogan">
+                            class="text-[4vw] sm:text-lg md:text-xl font-en tracking-[0.3em] text-white/95 font-medium whitespace-nowrap mb-[1vw] sm:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] hero-anim-slogan">
                             STRONGER
                             EVERYDAY.</p>
                         <p
-                            class="text-xs sm:text-sm md:text-base lg:text-lg text-gold/90 tracking-[0.2em] font-light whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] hero-anim-slogan">
+                            class="text-[3.2vw] sm:text-sm md:text-base lg:text-lg text-gold/90 tracking-[0.2em] font-light whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] hero-anim-slogan">
                             昨日の自分を超える、すべての人へ。</p>
                     </div>
                 </div>
@@ -370,7 +375,7 @@
         </section>
 
         <!-- 06. FOR EVERY PURPOSE -->
-        <section class="py-32 bg-animated-gradient text-white-off relative overflow-hidden">
+        <section class="py-16 md:py-32 bg-animated-gradient text-white-off relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="flex flex-col-reverse lg:flex-row-reverse items-stretch gap-12 lg:gap-4">
                     <!-- Right Column (Text) -->
@@ -479,7 +484,7 @@
         </section>
 
         <!-- 02. INTRODUCTION -->
-        <section class="py-32 bg-radial-glow">
+        <section class="py-16 md:py-32 bg-radial-glow">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 fade-in">
                 <div class="animated-title-wrapper mb-16">
                     <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Concept
@@ -521,7 +526,7 @@
                 </div>
             </div>
 
-            <div class="px-6 pt-12 pb-32 md:py-32 md:pr-[17.5rem] relative z-10 w-full max-w-7xl mx-auto">
+            <div class="px-6 pt-12 pb-16 md:py-32 md:pr-[17.5rem] relative z-10 w-full max-w-7xl mx-auto">
                 <span
                     class="fade-in from-left delay-100 text-gold font-en text-xs md:text-sm tracking-[0.3em] block mb-6">CONTACT</span>
                 <h2
@@ -563,7 +568,7 @@
         </section>
     </main>
     <!-- 03. ABOUT STRENGTH -->
-    <section id="about" class="py-32 bg-grid-pattern">
+    <section id="about" class="py-16 md:py-32 bg-grid-pattern">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-16">
                 <!-- Left Column -->
@@ -636,7 +641,7 @@
     </section>
 
     <!-- 04. NEURO TRAINING -->
-    <section id="neuro" class="py-32 bg-radial-glow-left relative overflow-hidden">
+    <section id="neuro" class="py-16 md:py-32 bg-radial-glow-left relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col-reverse md:flex-row-reverse items-center gap-16">
                 <div class="w-full md:w-1/2 fade-in from-left relative z-10">
@@ -810,7 +815,7 @@
     </main>
 
     <!-- 07. THREE FEATURES -->
-    <section id="features" class="py-32 bg-radial-glow-center">
+    <section id="features" class="py-16 md:py-32 bg-radial-glow-center">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="animated-title-wrapper mb-24 fade-in">
                 <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Features
@@ -895,7 +900,7 @@
     </section>
 
     <!-- 08. FACILITY GALLERY -->
-    <section id="gallery" class="py-32 bg-cool-dark overflow-hidden">
+    <section id="gallery" class="py-16 md:py-32 bg-cool-dark overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="animated-title-wrapper mb-16 fade-in">
                 <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Gallery
@@ -999,7 +1004,7 @@
     </section>
 
     <!-- 09. MEMBERSHIP PLAN -->
-    <section id="plan" class="py-32 bg-radial-glow">
+    <section id="plan" class="py-16 md:py-32 bg-radial-glow">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
             <div class="animated-title-wrapper mb-16 fade-in">
                 <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Plan</h2>
@@ -1188,7 +1193,7 @@
     </section>
 
     <!-- 10. FLOW -->
-    <section id="flow" class="py-32 bg-warm-dark overflow-hidden">
+    <section id="flow" class="py-16 md:py-32 bg-warm-dark overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
             <div class="animated-title-wrapper mb-16 fade-in">
                 <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Flow</h2>
@@ -1359,7 +1364,7 @@
             </div>
         </div>
 
-        <div class="px-6 pt-12 pb-32 md:py-32 md:pr-[17.5rem] relative z-10 w-full max-w-7xl mx-auto">
+        <div class="px-6 pt-12 pb-16 md:py-32 md:pr-[17.5rem] relative z-10 w-full max-w-7xl mx-auto">
             <span
                 class="fade-in from-left delay-100 text-gold font-en text-xs md:text-sm tracking-[0.3em] block mb-6">CONTACT</span>
             <h2
@@ -1457,7 +1462,7 @@
 
 
     <!-- 12. ACCESS -->
-    <section id="access" class="py-32 bg-grid-pattern border-t border-white/5">
+    <section id="access" class="py-16 md:py-32 bg-grid-pattern border-t border-white/5">
         <div class="max-w-5xl mx-auto px-6 lg:px-8 fade-in from-scale">
             <div class="animated-title-wrapper mb-16">
                 <h2 class="text-3xl md:text-5xl font-en font-light text-gold tracking-[0.2em] capitalize">Access
@@ -1548,8 +1553,8 @@
     </footer>
 
     <!-- Fixed CTA Button (Mobile only) -->
-    <div
-        class="md:hidden fixed bottom-0 left-0 w-full z-40 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] bg-transparent flex gap-2">
+    <div id="mobile-fixed-cta"
+        class="md:hidden fixed bottom-0 left-0 w-full z-40 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] bg-transparent flex gap-2 transform translate-y-full opacity-0 pointer-events-none transition-all duration-500">
         <a href="jump01.html" target="_blank" rel="noopener noreferrer"
             class="flex-1 flex items-center justify-center py-3 bg-black/90 backdrop-blur-md border border-white-off/60 text-white-off text-xs font-medium tracking-widest rounded-sm hover:border-white transition">
             LINE相談
@@ -1621,7 +1626,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Scripts -->
-    <script src="Js/main.js"></script>
+    <script src="Js/main.js?v=2"></script>
 </body>
 
 </html>

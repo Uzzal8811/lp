@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>富沢歯科クリニック | 春日駅徒歩5分・文京区小石川の家族で通える歯医者さん</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!-- OGP -->
+    <meta property="og:site_name" content="富沢歯科クリニック">
+    <meta property="og:title" content="富沢歯科クリニック | 春日駅徒歩5分・文京区小石川の家族で通える歯医者さん">
+    <meta property="og:description" content="春日駅徒歩5分・文京区小石川の家族で通える歯医者さん、富沢歯科クリニックの公式ページです。<br>">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tomizawa-dental.happytry.fun/img/icatch.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://tomizawa-dental.happytry.fun/img/icatch.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            main: '#0693e3',       // メインカラー：Vivid cyan blue (清潔感・信頼感)
+                            light: '#f0f9ff',      // メインの極薄背景：Pale cyan blue
+                            pink: '#ff6900',       // アクセントカラー：Luminous vivid orange (親しみやすさ・温かみ)
+                            pinkLight: '#fff7ed',  // アクセントの極薄背景：Pale orange
+                            green: '#00d084',      // サブカラー：Vivid green cyan (安心感・健康)
+                            greenLight: '#f0fdf4', // サブの極薄背景：Pale green
+                            blue: '#0693e3',       // 青：Vivid cyan blue
+                            blueLight: '#f0f9ff',  // 薄青：Pale cyan blue
+                            text: '#2d3748',       // テキスト基本色 (視認性の高いダークグレー)
+                            dark: '#000000'        // タイトルや強調色 (黒)
+                        },
+                        gutenberg: {
+                            black: '#000000',
+                            gray: '#abb8c3',
+                            white: '#ffffff',
+                            red: '#cf2e2e',
+                            orange: '#ff6900',
+                            yellow: '#fcb900',
+                            lightGreen: '#7bdcb5',
+                            green: '#00d084',
+                            lightBlue: '#8ed1fc',
+                            blue: '#0693e3',
+                            purple: '#9b51e0'
+                        },
+                        line: '#06C755'            // LINEカラー
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', '"Hiragino Maru Gothic ProN"', '"Rounded Mplus 1c"', 'sans-serif'],
+                        en: ['"Quicksand"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        /* Custom Overrides for Text Sizing */
+        @media (min-width: 1024px) {
+            .lg\:text-5xl {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+            }
+        }
+
+        /* Base (SP) Text Sizing */
+        p,
+        li,
+        .text-theme-text {
+            font-size: 14px !important;
+        }
+
+        /* SP Custom Padding Overrides */
+        @media (max-width: 767px) {
+
+            .p-8,
+            .p-6 {
+                padding: 1.5rem 1rem !important;
+            }
+
+            .px-12 {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .md\:text-lg {
+                font-size: 16px !important;
+                line-height: 1.5rem !important;
+            }
+
+            .md\:text-3xl {
+                font-size: 30px !important;
+                line-height: 2rem !important;
+            }
+
+            .md\:p-10 {
+                padding: 1rem !important;
+            }
+
+            /* PC Text Sizing */
+            p,
+            li,
+            .text-theme-text {
+                font-size: 16px !important;
+            }
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #2d3748;
+            background-color: #ffffff;
+        }
+
+        .font-en {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        /* ハンバーガーアイコン */
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: #0693e3;
+            margin: 5px 0;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Feature Section Dot Pattern */
+        .bg-dot-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* セクション見出し */
+        .section-title {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            color: #000000;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 6px;
+            background-color: #0693e3;
+            border-radius: 10px;
+        }
+
+        .section-title-left::after {
+            left: 0;
+            transform: none;
+        }
+
+        .img-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ふわふわアニメーション */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* チェックマークリスト */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .check-list li {
+                padding-left: 2.5rem;
+            }
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            background-color: #00d084;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+        }
+
+        /* ヘッダースクロール */
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* FVスライダー */
+        .slide-img {
+            opacity: 0;
+            animation: fv-slider 18s infinite ease-in-out;
+        }
+
+        .slide-1 {
+            animation-delay: 0s;
+        }
+
+        .slide-2 {
+            animation-delay: 6s;
+        }
+
+        .slide-3 {
+            animation-delay: 12s;
+        }
+
+        @keyframes fv-slider {
+            0% {
+                opacity: 0;
+                transform: scale(1.0);
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            38% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* ギャラリー無限スライダー (iPhone Safari 60fps最適化) */
+        @-webkit-keyframes scroll-gallery {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        @keyframes scroll-gallery {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            -webkit-animation: scroll-gallery 40s linear infinite;
+            animation: scroll-gallery 40s linear infinite;
+            will-change: transform;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* PCでのみホバー停止（iOS Safariでのタッチによる停止フリーズを防止） */
+        @media (hover: hover) {
+            .gallery-track:hover {
+                -webkit-animation-play-state: paused;
+                animation-play-state: paused;
+            }
+        }
+
+        .gallery-track img {
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        /* 高級感のあるスムーススクロールアニメーション設定 */
+        .wow {
+            animation-duration: 1.2s !important;
+            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+            will-change: transform, opacity;
+        }
+
+        /* iOS Safari Sticky Background Image Optimization */
+        .parallax-bg {
+            clip-path: inset(0);
+            -webkit-clip-path: inset(0);
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
+        .parallax-bg::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            height: -webkit-fill-available;
+            background-image: var(--bg-url);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            pointer-events: none;
+            will-change: transform;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            height: -webkit-fill-available;
+            background-image: url('img/bodyBg.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            pointer-events: none;
+            will-change: transform;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden select-none" oncontextmenu="return false;" oncopy="return false;"
+    onselectstart="return false;" oncut="return false;">
+
+    <!-- Header -->
+    <header id="header"
+        class="fixed w-full top-0 z-50 transition-all duration-300 py-3 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <!-- ロゴ/医院名 -->
+            <a href="#" class="flex items-center z-50 h-6 md:h-8">
+                <img src="img/logo.png" alt="富沢歯科クリニック" class="h-full w-auto object-contain" />
+            </a>
+
+            <!-- PC Nav -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-theme-text">
+                <a href="#about" class="hover:text-theme-main transition">当院について</a>
+                <a href="#feature" class="hover:text-theme-main transition">特徴</a>
+                <a href="#service" class="hover:text-theme-main transition">診療案内</a>
+                <a href="#staff" class="hover:text-theme-main transition">院長紹介</a>
+                <a href="#access" class="hover:text-theme-main transition">アクセス</a>
+                <a href="../index.html" class="hover:text-theme-pink transition text-theme-pink flex items-center gap-1 font-bold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    採用情報
+                </a>
+
+                <div class="flex items-center gap-3 ml-4">
+                    <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                        class="bg-line text-white px-6 py-2.5 rounded-full shadow-md transition flex items-center justify-center font-bold transform hover:-translate-y-0.5 hover:shadow-lg">
+                        LINEで予約
+                    </a>
+                </div>
+            </nav>
+
+            <!-- SP Hamburger -->
+            <button id="menu-btn" class="lg:hidden hamburger focus:outline-none z-50">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- SP Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 h-[100dvh] bg-theme-light z-40 hidden flex-col items-center justify-start space-y-6 pt-28 pb-24 overflow-y-auto">
+            <a href="#about" class="text-xl font-bold text-theme-dark mobile-link">当院について</a>
+            <a href="#feature" class="text-xl font-bold text-theme-dark mobile-link">特徴</a>
+            <a href="#service" class="text-xl font-bold text-theme-dark mobile-link">診療案内</a>
+            <a href="#staff" class="text-xl font-bold text-theme-dark mobile-link">院長紹介</a>
+            <a href="#access" class="text-xl font-bold text-theme-dark mobile-link">アクセス</a>
+            <a href="../index.html" class="text-xl font-bold text-theme-pink mobile-link flex items-center gap-2">👔 採用情報・求人サイトへ</a>
+
+            <div class="mt-8 flex flex-col gap-4 w-full px-8">
+                <a href="tel:05054485076"
+                    class="bg-white text-theme-main border-2 border-theme-main font-bold py-4 rounded-full text-center shadow-sm text-lg flex justify-center items-center gap-2">
+                    📞 050-5448-5076
+                </a>
+                <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                    class="bg-line text-white font-bold py-4 rounded-full text-center shadow-md text-lg flex justify-center items-center gap-2">
+                    LINEで予約する
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FV (First View) -->
+    <section
+        class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[90vh] bg-theme-light overflow-hidden flex items-center">
+        <!-- Decorative element similar to image -->
+        <div class="absolute top-[20%] left-[5%] opacity-[0.15] pointer-events-none hidden md:block animate-float">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor" class="text-theme-main">
+                <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+            </svg>
+        </div>
+
+        <div
+            class="w-full px-4 sm:px-6 lg:pl-8 xl:pl-16 relative z-20 flex flex-col-reverse lg:flex-row items-center justify-between py-12 lg:py-0 lg:h-[calc(90vh-72px)]">
+
+            <!-- Left: Text Content -->
+            <div class="w-full lg:w-5/12 xl:w-1/2 flex flex-col justify-center z-20 lg:py-20 relative lg:h-full">
+
+                <span
+                    class="text-theme-main font-bold text-xs md:text-sm tracking-[0.2em] mb-4 inline-block relative z-10 animate__animated animate__fadeInDown">
+                    文京区小石川の地域密着型歯科医院。<br>
+                </span>
+
+                <h1 class="text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.5rem] font-sans font-bold text-theme-dark leading-[1.3] mb-6 tracking-tight relative z-10 animate__animated animate__fadeInLeft"
+                    style="animation-delay: 0.2s;">
+                    春日駅徒歩5分。<br>
+                    <span
+                        class="font-medium text-theme-text/90 text-2xl md:text-3xl lg:text-[2rem] xl:text-[2rem] block mt-3 mb-1">家族で通える、</span>
+                    やさしい歯医者さん。<br>
+                </h1>
+
+                <p class="text-theme-text/80 text-sm md:text-base leading-loose font-medium mb-10 max-w-lg relative z-10 animate__animated animate__fadeInUp"
+                    style="animation-delay: 0.4s;">
+                    虫歯治療から小児歯科、予防、ホワイトニングまで。<br>
+                    お口の健康ときれいな笑顔をトータルでサポートします。<br>
+                </p>
+
+                <!-- CTA -->
+                <div class="hidden md:flex flex-wrap gap-4 mb-12 relative z-10 animate__animated animate__zoomIn"
+                    style="animation-delay: 0.6s;">
+                    <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                        class="bg-theme-main text-white font-bold py-3.5 px-8 rounded-full text-center shadow-lg hover:shadow-xl hover:bg-theme-main/90 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                        LINEでかんたん予約
+                    </a>
+                </div>
+
+
+            </div>
+
+            <!-- Mobile: Image -->
+            <div
+                class="w-full lg:hidden mb-12 relative h-[400px] sm:h-[500px] animate__animated animate__fadeInRight z-10">
+                <div class="w-full h-full overflow-hidden rounded-[2.5rem] relative shadow-2xl">
+                    <img src="img/fv1.png" alt="背景画像1"
+                        class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
+                    <img src="img/fv2.png" alt="背景画像2"
+                        class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
+                    <img src="img/fv3.png" alt="背景画像3"
+                        class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Desktop: Absolute Right Image -->
+        <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[65%] xl:w-[70%] h-[105%] -mt-[2.5%] z-10 animate__animated animate__fadeInRight"
+            style="animation-delay: 0.2s;">
+            <div
+                class="w-full h-full overflow-hidden rounded-tl-[300px] xl:rounded-tl-[400px] rounded-bl-[300px] xl:rounded-bl-[400px] relative shadow-2xl">
+                <img src="img/fv1.png" alt="背景画像1"
+                    class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
+                <img src="img/fv2.png" alt="背景画像2"
+                    class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
+                <img src="img/fv3.png" alt="背景画像3"
+                    class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section 1 -->
+    <section class="py-12 px-4 bg-theme-light relative z-20">
+        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_15px_40px_rgba(6,147,227,0.12)] border border-theme-main/15 text-center relative z-10 wow animate__zoomIn"
+            data-wow-delay="0.1s">
+
+            <!-- Logo -->
+            <div class="h-8 md:h-10 mb-6 inline-flex justify-center items-center wow animate__fadeInDown"
+                data-wow-delay="0.2s">
+                <img src="img/logo.png" alt="富沢歯科クリニック" class="h-full w-auto object-contain" />
+            </div>
+
+            <!-- Phone Number H3 -->
+            <div class="mb-4 wow animate__fadeInUp" data-wow-delay="0.3s">
+                <a href="tel:05054485076"
+                    class="inline-flex items-center justify-center gap-2 text-theme-main hover:text-theme-dark transition">
+                    <span class="text-2xl md:text-3xl">📞</span>
+                    <h3
+                        class="text-2xl md:text-4xl font-black tracking-wider text-theme-dark hover:text-theme-main transition">
+                        050-5448-5076
+                    </h3>
+                </a>
+            </div>
+
+            <!-- Consultation Hours Paragraph -->
+            <p class="text-theme-text font-medium text-sm md:text-base leading-relaxed mb-8 max-w-2xl mx-auto wow animate__fadeInUp"
+                data-wow-delay="0.4s">
+                <span class="font-bold text-theme-dark">【診療時間】</span> 9:30～12:30 / 14:30～18:00
+                <span class="text-theme-pink font-bold text-xs md:text-sm block md:inline md:ml-2">※土曜は午前のみ診療</span>
+                <span class="block text-xs md:text-sm opacity-80 mt-1">休診日: 日曜・祝日</span>
+            </p>
+
+            <!-- 2 Buttons: LINE for Reservation & Official Website -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-xl mx-auto wow animate__fadeInUp"
+                data-wow-delay="0.5s">
+                <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-line text-white font-bold py-4 px-6 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex justify-center items-center gap-2 text-base md:text-lg">
+                    <span>💬</span> LINEで予約する
+                </a>
+                <a href="https://tomizawa-dental.happytry.fun/jump03.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-white text-theme-dark border-2 border-gray-200 font-bold py-4 px-6 rounded-full shadow-sm hover:bg-gray-50 hover:border-gray-300 transition transform hover:-translate-y-0.5 flex justify-center items-center gap-2 text-base md:text-lg">
+                    <span>🌐</span> 公式ホームページ
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORRIES (こんなお悩みありませんか) -->
+    <section class="py-20 md:py-32 relative z-10 bg-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 overflow-hidden parallax-bg opacity-80"
+            style="--bg-url: url('img/about.jpg');">
+            <div class="absolute inset-0 bg-theme-dark/20 backdrop-blur-[1px]"></div>
+        </div>
+
+        <!-- Top Curve SVG -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-[20px] md:h-[40px]">
+                <path d="M0,0 Q720,100 1440,0 L1440,0 L0,0 Z" fill="#f0f9ff" />
+            </svg>
+        </div>
+
+        <!-- Decor: Floating Jellyfish -->
+        <img src="img/jellyfish.jpg"
+            class="absolute top-10 right-10 md:top-20 md:right-20 w-24 h-24 md:w-32 md:h-32 object-contain mix-blend-multiply opacity-60 z-10 animate-pulse pointer-events-none"
+            alt="" />
+
+        <div
+            class="max-w-[1200px] mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+
+            <!-- Left Image Wrapper -->
+            <div class="w-full md:w-[45%] lg:w-[45%] wow animate__fadeInLeft">
+                <img src="img/WORRIES.jpg" alt="こんなお悩みありませんか" class="w-full h-auto object-contain drop-shadow-2xl" />
+            </div>
+
+            <!-- Floating Card Wrapper -->
+            <div class="w-full md:w-[50%] lg:w-[50%] relative wow animate__fadeInRight my-2" data-wow-delay="0.2s">
+
+                <!-- Cyan Offset Background -->
+                <div
+                    class="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 w-full h-full bg-theme-main shadow-lg z-0 rounded-sm">
+                </div>
+
+                <!-- Main White Card -->
+                <div class="bg-white p-6 md:p-8 relative z-10 shadow-xl rounded-sm">
+
+                    <!-- Quotation Icon Top Right -->
+                    <div
+                        class="absolute -top-4 -right-2 md:-right-4 bg-white text-theme-main w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-sm shadow-md">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-black text-theme-dark mb-6 leading-tight border-b-2 border-theme-main/10 pb-4 wow animate__fadeInDown"
+                        data-wow-delay="0.3s">
+                        こんなお悩みありませんか？
+                    </h3>
+
+                    <ul class="text-theme-dark font-medium text-sm md:text-base space-y-2.5">
+                        <li class="flex items-start gap-3 wow animate__fadeInLeft" data-wow-delay="0.4s">
+                            <svg class="w-5 h-5 text-theme-main flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            虫歯や歯の痛みが気になる
+                        </li>
+                        <li class="flex items-start gap-3 wow animate__fadeInRight" data-wow-delay="0.5s">
+                            <svg class="w-5 h-5 text-theme-main flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            子どもが安心して通える歯医者を探している
+                        </li>
+                        <li class="flex items-start gap-3 wow animate__fadeInLeft" data-wow-delay="0.6s">
+                            <svg class="w-5 h-5 text-theme-main flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            歯ぐきの出血や口臭が気になる
+                        </li>
+                        <li class="flex items-start gap-3 wow animate__fadeInRight" data-wow-delay="0.7s">
+                            <svg class="w-5 h-5 text-theme-main flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            定期検診やクリーニングを受けたい
+                        </li>
+                        <li class="flex items-start gap-3 wow animate__fadeInLeft" data-wow-delay="0.8s">
+                            <svg class="w-5 h-5 text-theme-main flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            歯の黄ばみや色味が気になる
+                        </li>
+                    </ul>
+
+                    <!-- Decorative Stars (mimicking the review in the image) -->
+                    <div class="mt-5 flex gap-1 text-yellow-400 justify-center md:justify-start wow animate__zoomIn"
+                        data-wow-delay="0.9s">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+
+                    <!-- Mini Author tag mimicking the image -->
+                    <div class="absolute -bottom-4 left-10 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full py-1 px-3 flex items-center gap-2 shadow-sm z-20 wow animate__zoomIn"
+                        data-wow-delay="1.0s">
+                        <div
+                            class="w-6 h-6 rounded-full bg-theme-main/10 flex items-center justify-center text-theme-main text-xs">
+                            🦷</div>
+                        <span class="text-xs font-bold text-gray-700">富沢歯科クリニック</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Curve SVG -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-[20px] md:h-[40px]">
+                <path d="M0,100 Q720,0 1440,100 L1440,100 L0,100 Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ABOUT (どんなお店か) -->
+    <section id="about"
+        class="py-24 md:py-32 px-4 bg-white relative overflow-hidden flex items-center justify-center min-h-[80vh]">
+        <!-- Central Text Content -->
+        <div class="relative z-20 text-center max-w-[600px] xl:max-w-[800px] mx-auto px-4">
+            <span
+                class="font-en text-theme-main font-bold tracking-widest mb-4 block text-sm uppercase wow animate__fadeInDown">About
+                Us</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-8 leading-tight text-theme-dark tracking-tight wow animate__fadeInLeft"
+                data-wow-delay="0.2s">
+                小石川で家族みんなが<br>通いやすい歯科医院
+            </h2>
+            <p class="text-left md:text-center text-theme-text leading-relaxed text-base md:text-lg font-medium mb-12 max-w-[550px] xl:max-w-[750px] mx-auto opacity-90 wow animate__fadeInRight"
+                data-wow-delay="0.4s">
+                富沢歯科は、東京都文京区小石川にある地域密着の歯科医院です。<br><br>
+                一般歯科・小児歯科を中心に、予防治療、歯周病治療、ホワイトニングまで幅広く対応。<br>
+                小さなお子様からご年配の方まで、安心して通える歯科医院を目指しています。<br><br>
+                春日駅から徒歩5分、後楽園駅からも通いやすく、土曜午前も診療しています。<br>
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 wow animate__fadeInUp"
+                data-wow-delay="0.6s">
+                <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-auto bg-theme-main text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-theme-main/90 transition flex items-center justify-center gap-2 text-sm md:text-base">
+                    LINEで予約する
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="#feature"
+                    class="w-full sm:w-auto bg-white text-theme-dark font-bold py-3.5 px-8 rounded-full shadow-sm border border-gray-200 hover:bg-gray-50 transition text-sm md:text-base">
+                    当院について
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Images Desktop -->
+        <!-- Top Left -->
+        <div class="hidden lg:block absolute top-[10%] xl:top-[15%] right-[calc(50%+330px)] xl:right-[calc(50%+430px)] w-40 h-32 xl:w-56 xl:h-48 z-10 transform -rotate-[8deg] hover:rotate-0 transition-transform duration-500 wow animate__fadeInLeft"
+            data-wow-delay="0.3s">
+            <div class="w-full h-full bg-white rounded-3xl p-2 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <img src="img/about.jpg" class="w-full h-full object-cover rounded-2xl" alt="診療風景1" />
+            </div>
+        </div>
+
+        <!-- Top Right -->
+        <div class="hidden lg:block absolute top-[10%] xl:top-[15%] left-[calc(50%+330px)] xl:left-[calc(50%+430px)] w-36 h-36 xl:w-48 xl:h-48 z-10 transform rotate-[10deg] hover:rotate-0 transition-transform duration-500 wow animate__fadeInDown"
+            data-wow-delay="0.4s">
+            <div class="w-full h-full bg-white rounded-3xl p-2 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <img src="img/fv1.png" class="w-full h-full object-cover rounded-2xl" alt="診療風景2" />
+            </div>
+        </div>
+
+        <!-- Bottom Left -->
+        <div class="hidden lg:block absolute bottom-[10%] xl:bottom-[15%] right-[calc(50%+330px)] xl:right-[calc(50%+430px)] w-32 h-40 xl:w-48 xl:h-56 z-10 transform -rotate-[5deg] hover:rotate-0 transition-transform duration-500 wow animate__fadeInUp"
+            data-wow-delay="0.5s">
+            <div class="w-full h-full bg-white rounded-3xl p-2 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <img src="img/fv2.png" class="w-full h-full object-cover rounded-2xl" alt="診療風景3" />
+            </div>
+        </div>
+
+        <!-- Bottom Right -->
+        <div class="hidden lg:block absolute bottom-[10%] xl:bottom-[15%] left-[calc(50%+330px)] xl:left-[calc(50%+430px)] w-44 h-32 xl:w-60 xl:h-44 z-10 transform rotate-[8deg] hover:rotate-0 transition-transform duration-500 wow animate__fadeInRight"
+            data-wow-delay="0.6s">
+            <div class="w-full h-full bg-white rounded-3xl p-2 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <img src="img/fv3.png" class="w-full h-full object-cover rounded-2xl" alt="診療風景4" />
+            </div>
+        </div>
+
+        <!-- Mobile Floating Image (Shows only on small screens) -->
+        <div class="lg:hidden absolute top-[-5%] right-[-10%] w-40 h-40 z-0 opacity-20 transform rotate-12 blur-[1px]">
+            <img src="img/about.jpg" class="w-full h-full object-cover rounded-3xl shadow-xl" alt="背景装飾" />
+        </div>
+        <div
+            class="lg:hidden absolute bottom-[-5%] left-[-10%] w-48 h-48 z-0 opacity-20 transform -rotate-12 blur-[1px]">
+            <img src="img/fv2.png" class="w-full h-full object-cover rounded-3xl shadow-xl" alt="背景装飾" />
+        </div>
+    </section>
+
+    <!-- FEATURE (特徴) -->
+    <section id="feature" class="py-24 md:py-32 px-4 bg-dot-pattern relative overflow-hidden">
+
+        <!-- Top Wave Divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-[30px] md:h-[60px]">
+                <path d="M0,0 Q720,100 1440,0 L1440,0 L0,0 Z" fill="#ffffff" />
+            </svg>
+        </div>
+        <!-- Decorative Background Blob -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-theme-main/5 rounded-full blur-3xl z-0 translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-theme-pink/5 rounded-full blur-3xl z-0 -translate-x-1/3 translate-y-1/3">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20 md:mb-28">
+                <span
+                    class="font-en text-theme-main font-black tracking-widest mb-3 block text-sm md:text-base uppercase wow animate__fadeInDown">Features</span>
+                <h2 class="text-3xl md:text-5xl font-black text-theme-dark tracking-tight wow animate__zoomIn"
+                    data-wow-delay="0.2s">富沢歯科の特徴</h2>
+                <div class="w-16 h-1 bg-theme-main mx-auto mt-6 rounded-full wow animate__fadeInUp"
+                    data-wow-delay="0.4s"></div>
+            </div>
+
+            <div class="space-y-24 md:space-y-32">
+                <!-- 01 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 group relative">
+                    <!-- Fish decoration -->
+                    <img src="img/fish.jpg"
+                        class="absolute -top-10 md:-top-20 left-1/4 w-20 h-20 md:w-32 md:h-32 object-contain opacity-80 mix-blend-multiply animate-pulse z-0 wow animate__zoomIn"
+                        data-wow-delay="0.5s" alt="" />
+
+                    <div class="w-full md:w-1/2 relative flex justify-center wow animate__fadeInLeft"
+                        data-wow-delay="0.1s">
+                        <!-- Dashed circle decoration -->
+                        <div
+                            class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-dashed border-theme-main opacity-60 transform translate-x-4 -translate-y-4 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                        </div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full p-2 shadow-xl relative z-10">
+                            <img src="img/featur1.png" alt="特徴1" class="w-full h-full object-cover rounded-full" />
+                            <!-- Seaweed decoration -->
+                            <img src="img/seaweed.jpg"
+                                class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-28 h-28 md:w-40 md:h-40 object-contain mix-blend-multiply opacity-90 z-20 pointer-events-none transform -scale-x-100"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute -top-16 -left-10 text-[8rem] md:text-[10rem] font-en font-black text-theme-pink/10 leading-none z-0 select-none hidden sm:block wow animate__fadeInDown"
+                            data-wow-delay="0.2s">
+                            01</div>
+                        <div class="relative z-10">
+                            <span class="font-en text-theme-pink font-black text-xl mb-2 block sm:hidden">01</span>
+                            <h3 class="text-2xl md:text-3xl font-black text-theme-dark mb-6 leading-tight wow animate__fadeInRight"
+                                data-wow-delay="0.3s">
+                                家族で通いやすい地域の歯医者</h3>
+                            <p class="text-theme-text font-medium leading-relaxed wow animate__fadeInUp"
+                                data-wow-delay="0.4s">
+                                一般歯科から小児歯科まで対応しているため、お子様から大人の方まで通いやすい歯科医院です。<br>
+                                地域の皆さまのお口の健康を、長くサポートできる存在を目指しています。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 group relative">
+                    <!-- Fish decoration -->
+                    <img src="img/fish.jpg"
+                        class="absolute -left-4 md:-left-12 top-1/3 w-24 h-24 md:w-32 md:h-32 object-contain opacity-80 mix-blend-multiply animate-bounce z-0 wow animate__fadeInDown"
+                        data-wow-delay="0.6s" alt="" style="animation-duration: 4s;" />
+
+                    <!-- Jellyfish decoration -->
+                    <img src="img/jellyfish.jpg"
+                        class="absolute right-1/4 -bottom-10 md:-bottom-16 w-20 h-20 md:w-28 md:h-28 object-contain opacity-80 mix-blend-multiply animate-pulse z-0 wow animate__fadeInUp"
+                        data-wow-delay="0.4s" alt="" />
+
+                    <div class="w-full md:w-1/2 relative flex justify-center wow animate__fadeInRight"
+                        data-wow-delay="0.1s">
+                        <!-- Dashed circle decoration -->
+                        <div
+                            class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-dashed border-theme-main opacity-60 transform -translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
+                        </div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full p-2 shadow-xl relative z-10">
+                            <img src="img/featur2.jpg" alt="特徴2" class="w-full h-full object-cover rounded-full" />
+                            <!-- Seaweed decoration -->
+                            <img src="img/seaweed.jpg"
+                                class="absolute -top-4 -right-4 md:-top-8 md:-right-8 w-24 h-24 md:w-36 md:h-36 object-contain mix-blend-multiply opacity-90 z-20 pointer-events-none transform rotate-90"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative text-left">
+                        <div class="absolute -top-16 -left-10 text-[8rem] md:text-[10rem] font-en font-black text-theme-green/10 leading-none z-0 select-none hidden sm:block wow animate__fadeInDown"
+                            data-wow-delay="0.2s">
+                            02</div>
+                        <div class="relative z-10">
+                            <span class="font-en text-theme-green font-black text-xl mb-2 block sm:hidden">02</span>
+                            <h3 class="text-2xl md:text-3xl font-black text-theme-dark mb-6 leading-tight wow animate__fadeInLeft"
+                                data-wow-delay="0.3s">
+                                予防から見た目のケアまで相談できる</h3>
+                            <p class="text-theme-text font-medium leading-relaxed wow animate__fadeInUp"
+                                data-wow-delay="0.4s">
+                                虫歯や歯周病の治療だけでなく、定期検診やクリーニング、ホワイトニングにも対応。<br>
+                                健康な歯を守りながら、清潔感のある口元づくりもサポートします。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 group relative">
+                    <!-- Jellyfish decoration -->
+                    <img src="img/jellyfish.jpg"
+                        class="absolute left-1/4 -top-16 md:-top-24 w-28 h-28 md:w-40 md:h-40 object-contain opacity-80 mix-blend-multiply animate-pulse z-0 wow animate__zoomIn"
+                        data-wow-delay="0.4s" alt="" />
+
+                    <div class="w-full md:w-1/2 relative flex justify-center wow animate__zoomIn" data-wow-delay="0.1s">
+                        <!-- Dashed circle decoration -->
+                        <div
+                            class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-dashed border-theme-main opacity-60 transform translate-x-4 -translate-y-4 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                        </div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full p-2 shadow-xl relative z-10">
+                            <img src="img/featur3.jpg" alt="特徴3" class="w-full h-full object-cover rounded-full" />
+                            <!-- Seaweed decoration -->
+                            <img src="img/seaweed.jpg"
+                                class="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-multiply opacity-90 z-20 pointer-events-none"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute -top-16 -left-10 text-[8rem] md:text-[10rem] font-en font-black text-theme-blue/10 leading-none z-0 select-none hidden sm:block wow animate__fadeInDown"
+                            data-wow-delay="0.2s">
+                            03</div>
+                        <div class="relative z-10">
+                            <span class="font-en text-theme-blue font-black text-xl mb-2 block sm:hidden">03</span>
+                            <h3 class="text-2xl md:text-3xl font-black text-theme-dark mb-6 leading-tight wow animate__fadeInRight"
+                                data-wow-delay="0.3s">
+                                通いやすさと丁寧な対応を大切に</h3>
+                            <p class="text-theme-text font-medium leading-relaxed wow animate__fadeInUp"
+                                data-wow-delay="0.4s">
+                                春日駅から徒歩5分、土曜午前も診療しているため、平日忙しい方も通いやすい環境です。<br>
+                                清潔で落ち着いた院内で、スタッフが笑顔で丁寧に対応いたします。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-[30px] md:h-[60px]">
+                <path d="M0,100 Q720,0 1440,100 Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- SERVICE (診療案内) -->
+    <section id="service" class="py-24 md:py-32 px-4 bg-transparent relative">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20 md:mb-28">
+                <span
+                    class="font-en text-theme-main font-black tracking-widest mb-3 block text-sm md:text-base uppercase wow animate__fadeInDown">Services</span>
+                <h2 class="text-3xl md:text-5xl font-black text-theme-dark tracking-tight wow animate__zoomIn"
+                    data-wow-delay="0.2s">診療案内</h2>
+                <div class="w-16 h-1 bg-theme-main mx-auto mt-6 rounded-full wow animate__fadeInUp"
+                    data-wow-delay="0.3s"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+                <!-- 01 一般歯科 -->
+                <div class="relative bg-white rounded-[2rem] p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group overflow-hidden wow animate__fadeInLeft"
+                    data-wow-delay="0.1s">
+                    <div
+                        class="absolute -right-12 -top-12 w-48 h-48 bg-theme-main/5 rounded-full transition-transform duration-700 group-hover:scale-150 z-0">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-8 relative z-10">
+                        <div class="w-full sm:w-2/5 relative">
+                            <!-- Dashed border -->
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-theme-main opacity-50 transform translate-x-2 translate-y-2 z-0">
+                            </div>
+                            <div class="aspect-square rounded-full overflow-hidden shadow-sm relative z-10 bg-white">
+                                <img src="img/service1.png" alt="一般歯科"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+                            </div>
+                            <!-- Decor -->
+                            <img src="img/fish.jpg"
+                                class="absolute -top-6 -left-6 w-16 h-16 object-contain mix-blend-multiply opacity-80 z-20 pointer-events-none animate-pulse"
+                                alt="" />
+                            <div
+                                class="absolute -bottom-4 -right-4 w-12 h-12 bg-theme-main text-white rounded-full flex items-center justify-center font-en font-black text-xl shadow-lg shadow-theme-main/30 border-4 border-white">
+                                01</div>
+                        </div>
+                        <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                            <h3
+                                class="text-xl md:text-2xl font-black text-theme-main mb-4 border-b border-gray-100 pb-4">
+                                一般歯科</h3>
+                            <p class="text-theme-text font-medium leading-relaxed">
+                                虫歯や歯の痛み、詰め物・被せ物の不具合など、日常的なお口のトラブルに対応しています。<br>
+                                患者様のお悩みを伺いながら、分かりやすい説明と丁寧な診療を心がけています。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 小児歯科 -->
+                <div class="relative bg-white rounded-[2rem] p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group overflow-hidden wow animate__fadeInRight"
+                    data-wow-delay="0.2s">
+                    <div
+                        class="absolute -right-12 -top-12 w-48 h-48 bg-theme-pink/5 rounded-full transition-transform duration-700 group-hover:scale-150 z-0">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-8 relative z-10">
+                        <div class="w-full sm:w-2/5 relative">
+                            <!-- Dashed border -->
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-theme-pink opacity-50 transform -translate-x-2 -translate-y-2 z-0">
+                            </div>
+                            <div class="aspect-square rounded-full overflow-hidden shadow-sm relative z-10 bg-white">
+                                <img src="img/service2.png" alt="小児歯科"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+                            </div>
+                            <!-- Decor -->
+                            <img src="img/jellyfish.jpg"
+                                class="absolute -bottom-6 -left-6 w-20 h-20 object-contain mix-blend-multiply opacity-80 z-20 pointer-events-none animate-bounce"
+                                alt="" style="animation-duration: 3s;" />
+                            <div
+                                class="absolute -bottom-4 -right-4 w-12 h-12 bg-theme-pink text-white rounded-full flex items-center justify-center font-en font-black text-xl shadow-lg shadow-theme-pink/30 border-4 border-white">
+                                02</div>
+                        </div>
+                        <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                            <h3
+                                class="text-xl md:text-2xl font-black text-theme-pink mb-4 border-b border-gray-100 pb-4">
+                                小児歯科</h3>
+                            <p class="text-theme-text font-medium leading-relaxed">
+                                お子様が歯医者に慣れることを大切にしながら、虫歯予防やお口の健康管理をサポートします。<br>
+                                怖がらずに通えるよう、やさしい声かけと落ち着いた対応を大切にしています。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 予防治療 -->
+                <div class="relative bg-white rounded-[2rem] p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group overflow-hidden wow animate__fadeInLeft"
+                    data-wow-delay="0.3s">
+                    <div
+                        class="absolute -right-12 -top-12 w-48 h-48 bg-theme-green/5 rounded-full transition-transform duration-700 group-hover:scale-150 z-0">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-8 relative z-10">
+                        <div class="w-full sm:w-2/5 relative">
+                            <!-- Dashed border -->
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-theme-green opacity-50 transform translate-x-2 -translate-y-2 z-0">
+                            </div>
+                            <div class="aspect-square rounded-full overflow-hidden shadow-sm relative z-10 bg-white">
+                                <img src="img/service3.png" alt="予防治療"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+                            </div>
+                            <!-- Decor -->
+                            <img src="img/seaweed.jpg"
+                                class="absolute -top-8 -right-8 w-24 h-24 object-contain mix-blend-multiply opacity-80 z-20 pointer-events-none"
+                                alt="" />
+                            <div
+                                class="absolute -bottom-4 -right-4 w-12 h-12 bg-theme-green text-white rounded-full flex items-center justify-center font-en font-black text-xl shadow-lg shadow-theme-green/30 border-4 border-white">
+                                03</div>
+                        </div>
+                        <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                            <h3
+                                class="text-xl md:text-2xl font-black text-theme-green mb-4 border-b border-gray-100 pb-4">
+                                予防治療</h3>
+                            <p class="text-theme-text font-medium leading-relaxed">
+                                虫歯や歯周病を防ぐためには、定期的な検診やクリーニングが大切です。<br>
+                                お口の状態を確認しながら、健康な歯を長く保つためのケアをご案内します。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 歯周病治療 -->
+                <div class="relative bg-white rounded-[2rem] p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group overflow-hidden wow animate__fadeInRight"
+                    data-wow-delay="0.4s">
+                    <div
+                        class="absolute -right-12 -top-12 w-48 h-48 bg-theme-blue/5 rounded-full transition-transform duration-700 group-hover:scale-150 z-0">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-8 relative z-10">
+                        <div class="w-full sm:w-2/5 relative">
+                            <!-- Dashed border -->
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-theme-blue opacity-50 transform -translate-x-2 translate-y-2 z-0">
+                            </div>
+                            <div class="aspect-square rounded-full overflow-hidden shadow-sm relative z-10 bg-white">
+                                <img src="img/service4.png" alt="歯周病治療"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+                            </div>
+                            <!-- Decor -->
+                            <img src="img/fish.jpg"
+                                class="absolute -bottom-8 -right-4 w-20 h-20 object-contain mix-blend-multiply opacity-80 z-20 pointer-events-none animate-pulse"
+                                alt="" />
+                            <div
+                                class="absolute -bottom-4 -right-4 w-12 h-12 bg-theme-blue text-white rounded-full flex items-center justify-center font-en font-black text-xl shadow-lg shadow-theme-blue/30 border-4 border-white">
+                                04</div>
+                        </div>
+                        <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                            <h3
+                                class="text-xl md:text-2xl font-black text-theme-blue mb-4 border-b border-gray-100 pb-4">
+                                歯周病治療</h3>
+                            <p class="text-theme-text font-medium leading-relaxed">
+                                歯ぐきの出血、口臭、歯のぐらつきなどが気になる方はご相談ください。<br>
+                                お口の状態に合わせて、必要な処置やご自宅でのケア方法を分かりやすくお伝えします。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ホワイトニング補足 (フルワイドバナー) -->
+                <div class="lg:col-span-2 relative bg-theme-main/5 rounded-[2rem] p-8 md:p-12 border border-theme-main/10 flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden mt-4 group wow animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <!-- Right-side fading image -->
+                    <div
+                        class="absolute right-0 top-0 bottom-0 w-full md:w-1/2 lg:w-2/5 z-0 pointer-events-none opacity-40">
+                        <div class="w-full h-full"
+                            style="-webkit-mask-image: linear-gradient(to right, transparent, black 80%); mask-image: linear-gradient(to right, transparent, black 80%);">
+                            <img src="img/recommend.png" alt="ホワイトニング" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute right-0 top-0 w-64 h-64 bg-white/60 blur-3xl rounded-full z-0 transition-transform duration-1000 group-hover:scale-150 pointer-events-none">
+                    </div>
+                    <div
+                        class="flex-shrink-0 bg-white w-16 h-16 rounded-2xl shadow-sm text-theme-main flex items-center justify-center relative z-10 transform -rotate-12 group-hover:rotate-0 transition duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow text-center md:text-left relative z-10">
+                        <h4 class="text-xl md:text-2xl font-black text-theme-dark mb-3">ホワイトニングについて<br></h4>
+                        <p class="text-theme-text font-medium leading-relaxed">
+                            歯の色味が気になる方、笑顔の印象を明るくしたい方に向けて、ホワイトニングのご相談にも対応しています。<br>
+                            自然で清潔感のある口元を目指したい方は、お気軽にご相談ください。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center wow animate__zoomIn" data-wow-delay="0.6s">
+                <a href="https://tomizawa-dental.happytry.fun/jump02.html" target="_blank"
+                    class="inline-flex items-center justify-center gap-3 bg-white border-2 border-theme-main text-theme-main font-bold text-lg px-12 py-5 rounded-full shadow-[0_8px_20px_rgba(6,147,227,0.15)] transition-all duration-300 hover:bg-theme-main hover:text-white hover:shadow-[0_12px_25px_rgba(6,147,227,0.25)] hover:-translate-y-1">
+                    診療案内をさらに詳しく見る
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- RECOMMEND (一番オススメ) -->
+    <section class="py-24 md:py-32 px-4 bg-gray-50 relative overflow-hidden">
+        <!-- Giant background watermark -->
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[12vw] md:text-[15vw] font-en font-black text-theme-main/[0.03] whitespace-nowrap z-0 pointer-events-none select-none">
+            RECOMMEND</div>
+
+        <div class="absolute right-0 bottom-0 w-96 h-96 bg-theme-pink/10 rounded-full blur-3xl z-0 pointer-events-none">
+        </div>
+        <div class="absolute left-10 top-10 w-64 h-64 bg-theme-main/10 rounded-full blur-3xl z-0 pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+
+            <div class="text-center mb-16 md:mb-24">
+                <span
+                    class="font-en text-theme-main font-black tracking-widest mb-3 block text-sm md:text-base uppercase wow animate__fadeInDown">Recommend</span>
+                <h2 class="text-3xl md:text-5xl font-black text-theme-dark tracking-tight wow animate__zoomIn"
+                    data-wow-delay="0.2s">おすすめメニュー</h2>
+                <div class="w-16 h-1 bg-theme-main mx-auto mt-6 rounded-full wow animate__fadeInUp"
+                    data-wow-delay="0.4s"></div>
+            </div>
+
+            <!-- Premium Card Design -->
+            <div class="relative bg-white/90 backdrop-blur-2xl rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-white flex flex-col lg:flex-row items-stretch wow animate__fadeInUp"
+                data-wow-delay="0.2s">
+
+                <!-- Floating Badge -->
+                <div class="absolute -top-5 -left-2 md:-top-8 md:-left-8 bg-gradient-to-r from-theme-pink to-[#ff7eb3] text-white font-black px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-xl shadow-[0_10px_20px_rgba(255,105,180,0.3)] transform -rotate-6 z-20 wow animate__bounceIn"
+                    data-wow-delay="0.5s">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        人気のケア
+                    </span>
+                </div>
+
+                <!-- Left Content -->
+                <div
+                    class="w-full lg:w-1/2 p-8 md:p-16 lg:pr-12 flex flex-col justify-center relative z-10 order-2 lg:order-1">
+                    <h3 class="text-3xl md:text-4xl font-black text-theme-main mb-4 leading-tight wow animate__fadeInLeft"
+                        data-wow-delay="0.3s">ホワイトニング<br></h3>
+                    <p class="text-xl md:text-2xl font-bold text-theme-dark mb-8 wow animate__fadeInLeft"
+                        data-wow-delay="0.4s">歯の色味が気になる方へ<br></p>
+
+                    <p class="text-theme-text font-medium leading-relaxed mb-10 text-base md:text-lg wow animate__fadeInLeft"
+                        data-wow-delay="0.5s">
+                        特許成分である炭酸水素塩を配合した薬剤を使用し、自然で清潔感のある白い歯を目指します。<br>
+                        専用の薬剤と光照射器を使用し、患者様のお口の状態に合わせたホワイトニングをご案内しています。<br>
+                    </p>
+
+                    <!-- Price Box (Glass/Gradient) -->
+                    <div class="relative overflow-hidden rounded-[2rem] p-8 shadow-md border border-gray-100 bg-gradient-to-br from-white to-theme-light group transition hover:shadow-lg wow animate__zoomIn"
+                        data-wow-delay="0.6s">
+                        <div
+                            class="absolute inset-0 bg-theme-main opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500">
+                        </div>
+                        <p
+                            class="text-theme-main font-bold text-sm md:text-base tracking-widest mb-3 flex items-center gap-3">
+                            <span class="w-8 h-[2px] bg-theme-main inline-block"></span>
+                            ホワイトニング 1回
+                        </p>
+                        <div class="flex items-baseline gap-2 text-theme-dark">
+                            <span class="text-5xl md:text-6xl font-black tracking-tighter">15,000</span>
+                            <span class="text-xl md:text-2xl font-bold">円</span>
+                        </div>
+                        <p class="text-sm text-theme-text font-medium mt-2 opacity-80">(税込 16,500円)</p>
+                        <p class="text-xs md:text-sm text-theme-text font-medium mt-4 opacity-70 leading-relaxed">
+                            ※自由診療です。<br>効果には個人差があります。<br>しみる症状が出る場合があります。<br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full lg:w-1/2 relative z-0 order-1 lg:order-2 wow animate__fadeInRight"
+                    data-wow-delay="0.3s">
+                    <div
+                        class="w-full h-[300px] sm:h-[400px] lg:h-full lg:absolute lg:inset-0 rounded-t-[3rem] lg:rounded-l-none lg:rounded-r-[3rem] overflow-hidden group">
+                        <!-- Fade gradient overlay to blend image into the white card -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-white/40 lg:from-white/0 via-transparent to-transparent lg:to-transparent z-10">
+                        </div>
+                        <img src="img/Whitening.jpg" alt="ホワイトニング"
+                            class="w-full h-full object-cover transform transition duration-1000 group-hover:scale-105" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA Section 2  -->
+    <section class="py-16 px-4 relative z-20 overflow-hidden parallax-bg" style="--bg-url: url('img/bodyBg.jpg');">
+        <!-- Soft Overlay -->
+        <div class="absolute inset-0 bg-theme-dark/15 backdrop-blur-[2px]"></div>
+
+        <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-white text-center relative z-10 wow animate__zoomIn"
+            data-wow-delay="0.1s">
+
+            <!-- Logo -->
+            <div class="h-8 md:h-10 mb-6 inline-flex justify-center items-center wow animate__fadeInDown"
+                data-wow-delay="0.2s">
+                <img src="img/logo.png" alt="富沢歯科クリニック" class="h-full w-auto object-contain" />
+            </div>
+
+            <!-- Phone Number H3 -->
+            <div class="mb-4 wow animate__fadeInUp" data-wow-delay="0.3s">
+                <a href="tel:05054485076"
+                    class="inline-flex items-center justify-center gap-2 text-theme-main hover:text-theme-dark transition">
+                    <span class="text-2xl md:text-3xl">📞</span>
+                    <h3
+                        class="text-2xl md:text-4xl font-black tracking-wider text-theme-dark hover:text-theme-main transition">
+                        050-5448-5076
+                    </h3>
+                </a>
+            </div>
+
+            <!-- Consultation Hours Paragraph -->
+            <p class="text-theme-text font-medium text-sm md:text-base leading-relaxed mb-8 max-w-2xl mx-auto wow animate__fadeInUp"
+                data-wow-delay="0.4s">
+                <span class="font-bold text-theme-dark">【診療時間】</span> 9:30～12:30 / 14:30～18:00
+                <span class="text-theme-pink font-bold text-xs md:text-sm block md:inline md:ml-2">※土曜は午前のみ診療</span>
+                <span class="block text-xs md:text-sm opacity-80 mt-1">休診日: 日曜・祝日</span>
+            </p>
+
+            <!-- 2 Buttons: LINE for Reservation & Official Website -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-xl mx-auto wow animate__fadeInUp"
+                data-wow-delay="0.5s">
+                <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-line text-white font-bold py-4 px-6 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex justify-center items-center gap-2 text-base md:text-lg">
+                    <span>💬</span> LINEで予約する
+                </a>
+                <a href="https://tomizawa-dental.happytry.fun/jump03.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-white text-theme-dark border-2 border-gray-200 font-bold py-4 px-6 rounded-full shadow-sm hover:bg-gray-50 hover:border-gray-300 transition transform hover:-translate-y-0.5 flex justify-center items-center gap-2 text-base md:text-lg">
+                    <span>🌐</span> 公式ホームページ
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="staff" class="py-24 md:py-32 px-4 relative parallax-bg" style="--bg-url: url('img/main2.png');">
+        <!-- Light overlay to make the image visible but keep text readable -->
+        <div class="absolute inset-0 bg-white/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/20 to-white"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div
+                class="relative bg-white/85 backdrop-blur-2xl rounded-[3rem] p-8 md:p-16 lg:p-20 shadow-[0_30px_60px_rgba(6,147,227,0.15)] border border-white overflow-hidden group">
+                <!-- Decorative background elements -->
+                <div
+                    class="absolute -top-20 -left-20 w-64 h-64 bg-theme-main/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000 pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-20 -right-20 w-64 h-64 bg-theme-pink/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000 pointer-events-none">
+                </div>
+
+                <!-- Quote Icon -->
+                <div class="absolute top-10 right-10 opacity-5 pointer-events-none">
+                    <svg class="w-32 h-32 text-theme-main" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M14.017 21v-7.391c0-5.714 4.135-8.472 8.483-11.39l.999 1.834c-4.148 2.668-5.327 5.09-5.327 7.747h5.828v9.2h-10v-9.2zm-14 0v-7.391c0-5.714 4.135-8.472 8.483-11.39l.999 1.834c-4.148 2.668-5.327 5.09-5.327 7.747h5.828v9.2h-10v-9.2z" />
+                    </svg>
+                </div>
+
+                <!-- Decor: Seaweed -->
+                <img src="img/seaweed.jpg"
+                    class="absolute -bottom-10 -right-10 md:bottom-0 md:right-0 w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-multiply opacity-50 z-0 pointer-events-none"
+                    alt="" />
+
+                <div class="relative z-10">
+                    <div class="text-center mb-10">
+                        <span
+                            class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-sm md:text-base mb-4 tracking-widest uppercase wow animate__fadeInDown">Message</span>
+                        <h2 class="text-2xl md:text-4xl font-black text-theme-dark leading-snug tracking-tight wow animate__fadeInRight"
+                            data-wow-delay="0.2s">
+                            お口のお悩みは<br class="md:hidden">お気軽にご相談ください<br>
+                        </h2>
+                    </div>
+
+                    <div class="max-w-3xl mx-auto text-theme-text font-medium text-center leading-loose space-y-6 md:text-lg wow animate__fadeInLeft"
+                        data-wow-delay="0.4s">
+                        <p>
+                            虫歯や歯の痛み、歯ぐきのお悩み、<br class="md:hidden">お子様の歯のこと<br>予防ケアなど、<br
+                                class="md:hidden">お口に関するお悩みは人それぞれです。<br>
+                            富沢歯科では、<br class="md:hidden">患者様のお口の状態を確認しながら、<br>必要な治療やケアについて<br
+                                class="md:hidden">分かりやすくご案内いたします。<br>
+                        </p>
+                    </div>
+
+                    <!-- Callout Box -->
+                    <div class="max-w-2xl mx-auto mt-12 relative wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div
+                            class="bg-gradient-to-br from-theme-main to-[#007acc] rounded-3xl p-8 md:p-10 shadow-[0_15px_30px_rgba(6,147,227,0.3)] text-white text-center transform transition duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(6,147,227,0.4)]">
+                            <!-- Icon inside callout -->
+                            <div
+                                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white/30">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="text-xl md:text-2xl font-bold leading-relaxed tracking-wide">
+                                「この症状は相談していいのかな」<br>
+                                「まずは診てもらいたい」<br>
+                            </p>
+                            <p class="mt-4 font-medium text-white/90 text-sm md:text-base">
+                                そんな小さなお悩みも、<br class="md:hidden">ぜひお気軽にお問い合わせください。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (院内ギャラリー) -->
+    <section id="gallery" class="py-24 bg-theme-main/5 relative overflow-hidden border-t border-b border-theme-main/10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="font-en text-theme-main font-black tracking-widest mb-2 block text-sm wow animate__fadeInDown">GALLERY</span>
+                <h2 class="text-2xl md:text-4xl font-black text-theme-dark section-title wow animate__zoomIn"
+                    data-wow-delay="0.2s">院内・診療イメージギャラリー</h2>
+            </div>
+        </div>
+
+        <div class="w-full relative wow animate__fadeIn">
+            <div class="gallery-track gap-4 px-2">
+                <!-- 1周目 -->
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery1.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery2.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery3.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery4.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery5.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery6.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery7.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery8.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery9.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery10.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+
+                <!-- 2周目 (無限ループ用) -->
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery1.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery2.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery3.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery4.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery5.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery6.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery7.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery8.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery9.png" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+                <div
+                    class="w-[220px] md:w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+                    <img src="img/gallery10.jpg" alt="院内風景"
+                        class="w-full h-full object-cover transition transform hover:scale-110 duration-500" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-gray-50 relative">
+        <div class="max-w-6xl mx-auto">
+            <!-- Staff -->
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+                <!-- 写真プレースホルダー -->
+                <div class="w-full md:w-2/5 h-[400px] wow animate__fadeInLeft" data-wow-delay="0.1s">
+                    <div
+                        class="w-full h-full bg-gray-200 rounded-[3rem] overflow-hidden shadow-lg border-8 border-white relative flex items-center justify-center">
+                        <!-- 実際の院長写真の代わりに歯科医イメージ -->
+                        <img src="img/message.png" alt="歯科医師" class="img-cover opacity-90" />
+                        <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full shadow-md font-bold text-theme-main text-sm wow animate__zoomIn"
+                            data-wow-delay="0.3s">
+                            院長 富澤 一浩
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-3/5">
+                    <span
+                        class="font-en text-theme-main font-black tracking-widest mb-2 block text-sm wow animate__fadeInDown"
+                        data-wow-delay="0.2s">GREETING</span>
+                    <h2 class="text-xl md:text-3xl font-black text-theme-dark mb-6 leading-tight wow animate__fadeInRight"
+                        data-wow-delay="0.3s">
+                        健康な歯と、<br>明るい笑顔を守るために。<br>
+                    </h2>
+
+                    <div class="space-y-5 text-theme-text leading-relaxed font-medium mb-8">
+                        <p class="wow animate__fadeInUp" data-wow-delay="0.4s">
+                            お口のお悩みは、虫歯や歯ぐきのことだけではありません。<br>
+                            歯の色味や見た目、予防のことなど、気になる内容は人それぞれです。<br>
+                        </p>
+                        <p class="wow animate__fadeInUp" data-wow-delay="0.5s">
+                            富沢歯科では、患者様のお話をしっかり伺いながら、分かりやすい説明と丁寧な診療を大切にしています。<br>
+                        </p>
+                        <p class="font-bold text-theme-dark bg-white p-4 rounded-xl border-l-4 border-theme-main shadow-sm wow animate__zoomIn"
+                            data-wow-delay="0.6s">
+                            「これくらいで相談していいのかな」<br>
+                            そんな小さなお悩みも、<br class="md:hidden">まずはお気軽にご相談ください。<br>
+                        </p>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-6 wow animate__fadeInRight" data-wow-delay="0.7s">
+                        <p class="text-sm text-theme-text mb-1">富沢歯科クリニック 院長</p>
+                        <p class="text-2xl font-black text-theme-dark tracking-widest">富澤 一浩</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECRUIT EYE-CATCH BANNER (採用求人案内) -->
+    <section class="py-16 px-4 bg-gradient-to-r from-orange-500 via-theme-pink to-amber-500 relative overflow-hidden text-white shadow-xl">
+        <div class="max-w-6xl mx-auto relative z-10 wow animate__fadeInUp">
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-10 border border-white/20 shadow-2xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <!-- Left Eyecatch Image -->
+                <div class="w-full lg:w-1/2 overflow-hidden rounded-2xl shadow-xl group relative">
+                    <a href="../index.html" class="block overflow-hidden rounded-2xl">
+                        <img src="img/icatch.png" alt="富沢歯科クリニック 採用情報・求人特設サイト" class="w-full h-auto object-cover transform transition duration-500 group-hover:scale-105" />
+                    </a>
+                    <div class="absolute top-4 left-4 bg-theme-main text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                        スタッフ募集・求人案内
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="w-full lg:w-1/2 text-left space-y-4">
+                    <div class="inline-block bg-white/20 text-white font-en font-bold text-xs tracking-widest px-3 py-1 rounded-full uppercase">
+                        Recruit & Careers
+                    </div>
+                    <h2 class="text-2xl md:text-4xl font-black leading-tight text-white drop-shadow">
+                        富沢歯科クリニック<br>
+                        <span class="text-yellow-300">採用情報・求人サイトはこちら</span>
+                    </h2>
+                    <p class="text-white/90 text-sm md:text-base leading-relaxed font-medium">
+                        富沢歯科クリニックでは、患者様に寄り添い明るい笑顔で対応していただける新しいスタッフ（歯科助手・歯科衛生士）を募集しています。未経験・ブランク歓迎！週1日・3時間〜相談可能です。
+                    </p>
+                    <div class="pt-4">
+                        <a href="../index.html" class="inline-flex items-center gap-3 bg-white text-theme-pink font-black text-base md:text-lg px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-300 hover:text-gray-900 transform hover:-translate-y-1 group">
+                            <span>採用情報・求人特設サイトを見る</span>
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & ACCESS (店舗情報・アクセス) -->
+    <section id="access" class="py-24 px-4 bg-theme-light border-t border-theme-main/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span
+                    class="font-en text-theme-main font-black tracking-widest mb-2 block text-sm wow animate__fadeInDown">ACCESS</span>
+                <h2 class="text-2xl md:text-3xl font-black text-theme-dark section-title wow animate__zoomIn"
+                    data-wow-delay="0.2s">医院情報・アクセス</h2>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row gap-8 bg-white rounded-[3rem] shadow-md border border-white overflow-hidden p-2">
+                <!-- Info -->
+                <div class="w-full lg:w-1/2 p-6 md:p-10 flex flex-col justify-between wow animate__fadeInLeft"
+                    data-wow-delay="0.3s">
+                    <div>
+                        <div class="mb-6 flex items-center h-6 md:h-8">
+                            <img src="img/logo.png" alt="富沢歯科クリニック" class="h-full w-auto object-contain" />
+                        </div>
+
+                        <table
+                            class="w-full text-left text-sm md:text-base border-collapse text-theme-text font-medium mb-6">
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <th class="py-4 text-theme-main w-24 align-top font-bold">住所</th>
+                                    <td class="py-4 leading-relaxed">
+                                        〒112-0002<br>
+                                        東京都文京区小石川１丁目１３−１１ 岩井ビル3階
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <th class="py-4 text-theme-main align-top font-bold">電話番号</th>
+                                    <td class="py-4">
+                                        <a href="tel:05054485076"
+                                            class="font-black hover:text-theme-main transition text-xl tracking-wider text-theme-dark">050-5448-5076</a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <th class="py-4 text-theme-main align-top font-bold">診療時間</th>
+                                    <td class="py-4 leading-relaxed text-sm">
+                                        9:30～12:30 / 14:30～18:00<br>
+                                        <span class="text-theme-pink font-bold text-xs">※土曜は午前のみ診療</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 text-theme-main align-top font-bold">休診日</th>
+                                    <td class="py-4 font-bold text-theme-dark">日曜・祝日</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+                            class="bg-line text-white font-bold text-center py-4 rounded-full shadow-md hover:shadow-lg transition flex justify-center items-center gap-2 transform hover:-translate-y-1">
+                            LINEで診療予約する
+                        </a>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="tel:05054485076"
+                                class="bg-white border-2 border-theme-main text-theme-main font-bold text-center py-3 rounded-full hover:bg-theme-light transition shadow-sm text-sm">
+                                電話をかける
+                            </a>
+                            <a href="https://tomizawa-dental.happytry.fun/jump03.html" target="_blank"
+                                class="bg-gray-100 border border-gray-200 text-theme-dark font-bold text-center py-3 rounded-full hover:bg-gray-200 transition shadow-sm text-sm">
+                                公式ホームページ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="w-full lg:w-1/2 h-[350px] lg:h-auto rounded-[2.5rem] overflow-hidden bg-gray-200 wow animate__fadeInRight"
+                    data-wow-delay="0.4s">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5413762089183!2d139.75213!3d35.712902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c4b557e7813%3A0xbb71bab621b7be2d!2z5a-M5rKi5q2v56eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1782879558347!5m2!1sja!2sjp"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-theme-main text-white text-center py-12">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center wow animate__zoomIn">
+            <div class="h-8 md:h-10 mb-4 bg-white px-4 py-2 rounded-xl inline-flex justify-center items-center">
+                <img src="img/logo.png" alt="富沢歯科クリニック" class="h-full w-auto object-contain" />
+            </div>
+            <p class="text-sm font-en opacity-80">&copy; Tomizawa Dental Clinic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating CTA (SP Only) -->
+    <div
+        class="lg:hidden fixed bottom-0 w-full z-50 flex gap-2 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] bg-white p-2 border-t border-gray-100">
+        <a href="tel:05054485076"
+            class="w-1/2 bg-white border-2 border-theme-main text-theme-main text-center font-bold py-2.5 text-sm flex items-center justify-center gap-1 rounded-full shadow-sm transition hover:bg-theme-light">
+            <span class="text-base">📞</span>
+            <span>電話予約</span>
+        </a>
+        <a href="https://tomizawa-dental.happytry.fun/jump01.html" target="_blank"
+            class="w-1/2 bg-line text-white text-center font-bold py-2.5 text-sm flex items-center justify-center gap-1 rounded-full shadow-sm">
+            <span class="text-base">💬</span>
+            <span>LINE予約</span>
+        </a>
+    </div>
+
+    <!-- Go To Top Button -->
+    <button id="go-top"
+        class="fixed bottom-24 right-4 lg:bottom-12 lg:right-12 w-14 h-14 bg-theme-main/90 backdrop-blur-sm text-white rounded-full shadow-xl border-2 border-white flex items-center justify-center z-40 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none hover:bg-theme-dark hover:scale-105">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <!-- Image Modal -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/90 flex justify-center items-center opacity-0 transition-opacity duration-300">
+        <button id="close-modal"
+            class="absolute top-4 right-4 text-white text-4xl font-bold cursor-pointer hover:text-gray-300 transition z-50">&times;</button>
+        <img id="modal-img" src="" alt="拡大画像"
+            class="max-w-[90%] max-h-[90%] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // WOW.js Initialization (Animate.css v4 + Smooth offset)
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animate__animated',
+            offset: 60,
+            mobile: true,
+            live: true
+        }).init();
+
+        // Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            if (mobileMenu.classList.contains('flex')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 20) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Go To Top Logic
+        const goTopBtn = document.getElementById('go-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                goTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                goTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                goTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                goTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        goTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Image Modal Logic
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = document.getElementById('close-modal');
+        const galleryImages = document.querySelectorAll('.gallery-track img');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            // setTimeout to allow display:flex to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', (e) => {
+                openModal(e.target.src);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

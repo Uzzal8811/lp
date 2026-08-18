@@ -511,11 +511,12 @@
         }
     </style>
 
-    <!-- FV (First View) - FastView Section (Seamless Below Header, No Gap) -->
+    <!-- FV (First View) - FastView Section (SP: Top Image + Bottom Text with Gentle S-Wave Divider) -->
     <section
-        class="relative pt-20 md:pt-24 lg:pt-28 w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
-        <!-- Fullscreen Background Image Slider -->
-        <div class="absolute inset-0 z-0">
+        class="relative pt-16 md:pt-20 lg:pt-28 w-full min-h-screen lg:min-h-[92vh] overflow-hidden flex flex-col lg:flex-row lg:items-center bg-white">
+        
+        <!-- Top Image Slider Container (SP: Block Top Area / Desktop: Fullscreen Absolute) -->
+        <div class="relative w-full h-[45vh] sm:h-[50vh] lg:absolute lg:inset-0 lg:h-full z-0 overflow-hidden">
             <img src="img/fv1.png" alt="富沢歯科クリニック 院内"
                 class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
             <img src="img/fv2.png" alt="富沢歯科クリニック 診療"
@@ -523,8 +524,8 @@
             <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気"
                 class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
 
-            <!-- S-Curve Multi-Fold Fabric Drape (Static) -->
-            <div class="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
+            <!-- Desktop Vertical S-Curve Multi-Fold Fabric Drape (Hidden on Mobile) -->
+            <div class="hidden lg:block absolute inset-0 pointer-events-none z-[1] overflow-hidden">
                 <!-- Layer 1: Deep Theme Accent Cloth Fold Shadow -->
                 <svg class="absolute top-0 left-0 w-full h-full text-theme-main fill-current" viewBox="0 0 1440 900"
                     preserveAspectRatio="none">
@@ -546,10 +547,17 @@
                         opacity="0.96" />
                 </svg>
             </div>
+
+            <!-- Mobile SP Horizontal Gentle S-Curve Wave Divider (Left to Right) -->
+            <div class="block lg:hidden absolute bottom-0 left-0 w-full overflow-hidden leading-none z-[2]">
+                <svg class="w-full h-12 text-white fill-current" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M 0,40 C 360,95 1080,0 1440,45 L 1440,120 L 0,120 Z" />
+                </svg>
+            </div>
         </div>
 
-        <!-- Content Container (Flush to Absolute Left Viewport Edge) -->
-        <div class="w-full relative z-10 py-12 lg:py-20 flex justify-start pl-4 sm:pl-6 lg:pl-10 xl:pl-16">
+        <!-- Content Container (SP: Bottom Text Column / Desktop: Left Floating) -->
+        <div class="w-full relative z-10 py-6 px-4 sm:px-6 lg:py-20 lg:pl-10 xl:pl-16 flex justify-start bg-white lg:bg-transparent">
             <div class="w-full lg:w-7/12 xl:w-8/12 max-w-3xl animate__animated animate__fadeInLeft ml-0 pl-0">
 
                 <!-- Top Subtitle Badge -->

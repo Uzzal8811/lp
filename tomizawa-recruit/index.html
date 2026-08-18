@@ -476,17 +476,34 @@
 
     <style>
         @keyframes waveClothS1 {
-            0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
-            50% { transform: translateY(-16px) scale(1.02) rotate(-1.2deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-16px) scale(1.02) rotate(-1.2deg);
+            }
         }
+
         @keyframes waveClothS2 {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(14px) scale(1.02); }
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(14px) scale(1.02);
+            }
         }
+
         .animate-s-wave-1 {
             animation: waveClothS1 8s ease-in-out infinite;
             transform-origin: top left;
         }
+
         .animate-s-wave-2 {
             animation: waveClothS2 6s ease-in-out infinite alternate;
             transform-origin: top left;
@@ -494,32 +511,39 @@
     </style>
 
     <!-- FV (First View) - Animated S-Wave Glass Hero Section -->
-    <section class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
+    <section
+        class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
         <!-- Fullscreen Background Image Slider -->
         <div class="absolute inset-0 z-0">
-            <img src="img/fv1.png" alt="富沢歯科クリニック 院内" class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
-            <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
-            <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
-            
+            <img src="img/fv1.png" alt="富沢歯科クリニック 院内"
+                class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
+            <img src="img/fv2.png" alt="富沢歯科クリニック 診療"
+                class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
+            <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気"
+                class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+
             <!-- Animated S-Curve Multi-Fold Fabric Drape (Continuous Motion) -->
             <div class="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
                 <!-- Layer 1: Deep Theme Accent Cloth Fold Shadow -->
                 <svg class="absolute top-0 left-0 w-full h-full text-theme-main fill-current animate-s-wave-2"
                     viewBox="0 0 1440 900" preserveAspectRatio="none">
-                    <path d="M 0,0 L 760,0 C 580,190 780,440 580,700 C 480,800 380,860 280,900 L 0,900 Z" opacity="0.25" />
+                    <path d="M 0,0 L 760,0 C 580,190 780,440 580,700 C 480,800 380,860 280,900 L 0,900 Z"
+                        opacity="0.25" />
                 </svg>
 
                 <!-- Layer 2: Secondary Soft Fold Curve -->
                 <svg class="absolute top-0 left-0 w-full h-full text-[#007acc] fill-current animate-s-wave-1"
                     viewBox="0 0 1440 900" preserveAspectRatio="none">
-                    <path d="M 0,0 L 710,0 C 540,180 730,420 540,680 C 450,780 350,850 240,900 L 0,900 Z" opacity="0.18" />
+                    <path d="M 0,0 L 710,0 C 540,180 730,420 540,680 C 450,780 350,850 240,900 L 0,900 Z"
+                        opacity="0.18" />
                 </svg>
 
                 <!-- Layer 3: Primary Crisp White S-Curve Fold (Continuous Motion) -->
                 <svg class="absolute top-0 left-0 w-full h-full text-white fill-current filter drop-shadow-2xl animate-s-wave-1"
                     viewBox="0 0 1440 900" preserveAspectRatio="none">
                     <!-- True S-curve path: Wide S-shape to accommodate far-left expanded text without bg box -->
-                    <path d="M 0,0 L 660,0 C 500,170 700,380 500,650 C 410,760 310,840 200,900 L 0,900 Z" opacity="0.96" />
+                    <path d="M 0,0 L 660,0 C 500,170 700,380 500,650 C 410,760 310,840 200,900 L 0,900 Z"
+                        opacity="0.96" />
                 </svg>
             </div>
         </div>
@@ -530,13 +554,15 @@
 
                 <!-- Top Subtitle Badge -->
                 <div class="mb-4">
-                    <span class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider">
+                    <span
+                        class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider">
                         RECRUIT 2026 ｜ 富沢歯科クリニック 採用情報
                     </span>
                 </div>
 
                 <!-- Headline -->
-                <h1 class="text-3xl sm:text-4xl lg:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight">
+                <h1
+                    class="text-3xl sm:text-4xl lg:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight">
                     春日駅徒歩5分。<br>
                     地域に寄り添う歯科医院で、<br>
                     <span class="text-theme-main font-black">あなたらしく働きませんか。</span>
@@ -544,18 +570,22 @@
 
                 <!-- Lead text -->
                 <p class="text-theme-text font-medium text-base sm:text-lg leading-relaxed mb-8 opacity-90">
-                    小さなお子様からご年配の方まで、安心して通える歯科医院を一緒につくるお仕事です。未経験の方も、ブランクのある方も大歓迎です。
+                    小さなお子様からご年配の方まで、安心して通える歯科医院を一緒につくるお仕事です。<br>
+                    未経験の方も、ブランクのある方も大歓迎です。
                 </p>
 
                 <!-- Key highlights bar -->
                 <div class="flex flex-wrap gap-2 sm:gap-3 mb-8">
-                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                    <span
+                        class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
                         ✨ 未経験・ブランクOK
                     </span>
-                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                    <span
+                        class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
                         ⏰ 週1日・3時間〜相談可
                     </span>
-                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                    <span
+                        class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
                         🦷 助手・衛生士 募集
                     </span>
                 </div>
@@ -576,10 +606,12 @@
         </div>
 
         <!-- Floating Offer Card (Bottom Right Desktop) -->
-        <div class="hidden lg:block absolute bottom-8 right-8 z-10 bg-white/95 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl border border-white max-w-sm animate__animated animate__fadeInUp">
+        <div
+            class="hidden lg:block absolute bottom-8 right-8 z-10 bg-white/95 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl border border-white max-w-sm animate__animated animate__fadeInUp">
             <p class="text-xs font-bold text-theme-main mb-1">【パート・アルバイト採用中】</p>
             <p class="text-sm font-black text-theme-dark">歯科助手 ｜ 歯科衛生士</p>
-            <p class="text-xs font-bold text-theme-pink mt-1">時給 1,300円〜2,300円 <span class="font-normal text-gray-500">（見習い期間あり）</span></p>
+            <p class="text-xs font-bold text-theme-pink mt-1">時給 1,300円〜2,300円 <span
+                    class="font-normal text-gray-500">（見習い期間あり）</span></p>
         </div>
     </section>
 

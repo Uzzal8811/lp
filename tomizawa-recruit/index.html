@@ -482,9 +482,16 @@
             <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
             <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
             
-            <!-- Gradient Overlay: Fades gently on the left for text readability, keeping the right side 100% full vibrant image -->
-            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent w-full lg:w-3/5 pointer-events-none z-[1]"></div>
-            <div class="absolute inset-0 bg-black/10 pointer-events-none z-[1] hidden lg:block"></div>
+            <!-- Organic Fabric Fold Drape Shape (Top-Left to Bottom-Center Curve) -->
+            <div class="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
+                <svg class="absolute top-0 left-0 w-full h-full text-white fill-current filter drop-shadow-2xl"
+                    viewBox="0 0 1440 900" preserveAspectRatio="none">
+                    <!-- Subtle secondary background drape accent for cloth depth -->
+                    <path d="M 0,0 L 990,0 C 840,260 800,610 670,900 L 0,900 Z" opacity="0.2" class="text-theme-main" />
+                    <!-- Primary Crisp White Fabric Drape Curve from top-left (0,0) to bottom-center (650,900) -->
+                    <path d="M 0,0 L 950,0 C 810,250 770,600 630,900 L 0,900 Z" opacity="0.96" />
+                </svg>
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 lg:py-20">

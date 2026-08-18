@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja" class="scroll-smooth overflow-x-hidden w-full max-w-full">
 
 <head>
     <meta charset="UTF-8">
@@ -412,10 +412,17 @@
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
+
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+            width: 100% !important;
+            position: relative;
+        }
     </style>
 </head>
 
-<body class="antialiased overflow-x-hidden select-none" oncontextmenu="return false;" oncopy="return false;"
+<body class="antialiased overflow-x-hidden w-full max-w-full select-none" oncontextmenu="return false;" oncopy="return false;"
     onselectstart="return false;" oncut="return false;">
 
     <!-- Header -->

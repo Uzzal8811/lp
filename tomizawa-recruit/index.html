@@ -482,8 +482,9 @@
             <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
             <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
             
-            <!-- Soft White Overlay for optimal readability on left side -->
-            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/30 lg:via-white/80 lg:to-transparent"></div>
+            <!-- Gradient Overlay: Fades gently on the left for text readability, keeping the right side 100% full vibrant image -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent w-full lg:w-3/5 pointer-events-none z-[1]"></div>
+            <div class="absolute inset-0 bg-black/10 pointer-events-none z-[1] hidden lg:block"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 lg:py-20">

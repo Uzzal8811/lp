@@ -413,7 +413,8 @@
             transform: translate3d(0, 0, 0);
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden !important;
             max-width: 100vw !important;
             width: 100% !important;
@@ -422,8 +423,8 @@
     </style>
 </head>
 
-<body class="antialiased overflow-x-hidden w-full max-w-full select-none" oncontextmenu="return false;" oncopy="return false;"
-    onselectstart="return false;" oncut="return false;">
+<body class="antialiased overflow-x-hidden w-full max-w-full select-none" oncontextmenu="return false;"
+    oncopy="return false;" onselectstart="return false;" oncut="return false;">
 
     <!-- Header -->
     <header id="header"
@@ -528,7 +529,7 @@
     <!-- FV (First View) - FastView Section (SP: Top Image + Bottom Text with Gentle S-Wave Divider) -->
     <section
         class="relative pt-16 md:pt-20 lg:pt-28 w-full min-h-screen lg:min-h-[92vh] overflow-hidden flex flex-col lg:flex-row lg:items-center bg-white">
-        
+
         <!-- Top Image Slider Container (SP: Reduced Compact Height / Desktop: Fullscreen Absolute) -->
         <div class="relative w-full h-[30vh] sm:h-[36vh] lg:absolute lg:inset-0 lg:h-full z-0 overflow-hidden">
             <img src="img/fv1.png" alt="富沢歯科クリニック 院内"
@@ -554,11 +555,11 @@
                         opacity="0.18" />
                 </svg>
 
-                <!-- Layer 3: Primary Crisp White S-Curve Fold (Static) -->
+                <!-- Layer 3: Semi-Translucent White S-Curve Fold (Reveals bodyBg.jpg softly on PC) -->
                 <svg class="absolute top-0 left-0 w-full h-full text-white fill-current filter drop-shadow-2xl"
                     viewBox="0 0 1440 900" preserveAspectRatio="none">
                     <path d="M 0,0 L 660,0 C 500,170 700,380 500,650 C 410,760 310,840 200,900 L 0,900 Z"
-                        opacity="0.96" />
+                        opacity="0.88" />
                 </svg>
             </div>
 
@@ -571,7 +572,8 @@
         </div>
 
         <!-- Content Container (SP: Bottom Text Column / Desktop: Left Floating) -->
-        <div class="w-full relative z-10 py-6 px-4 sm:px-6 lg:py-20 lg:pl-10 xl:pl-16 flex justify-start bg-white lg:bg-transparent">
+        <div
+            class="w-full relative z-10 py-6 px-4 sm:px-6 lg:py-20 lg:pl-10 xl:pl-16 flex justify-start bg-white lg:bg-transparent">
             <div class="w-full lg:w-7/12 xl:w-8/12 max-w-3xl animate__animated animate__fadeInLeft ml-0 pl-0">
 
                 <!-- Top Subtitle Badge -->

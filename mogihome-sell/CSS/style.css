@@ -119,36 +119,59 @@ br.sp-br {
   will-change: opacity, transform, filter;
 }
 
-.reveal-up {
+.reveal-up,
+.reveal-bottom {
   transform: translateY(50px);
 }
 
+.reveal-down,
+.reveal-top {
+  transform: translateY(-50px);
+}
+
 .reveal-left {
-  transform: translateX(-50px);
+  transform: translateX(-60px);
 }
 
 .reveal-right {
-  transform: translateX(50px);
+  transform: translateX(60px);
+}
+
+.reveal-zoom,
+.reveal-scale {
+  transform: scale(0.82);
+}
+
+.reveal-pop {
+  transform: scale(0.65);
+  transition: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 1s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-rotate {
+  transform: translateY(40px) rotate(-6deg);
+}
+
+.reveal-fade {
+  transform: none;
 }
 
 .reveal.active {
   opacity: 1;
   visibility: visible;
   filter: blur(0);
-  transform: translate(0, 0);
+  transform: translate(0, 0) scale(1) rotate(0deg);
 }
 
-.delay-1 {
-  transition-delay: 0.1s;
-}
-
-.delay-2 {
-  transition-delay: 0.2s;
-}
-
-.delay-3 {
-  transition-delay: 0.3s;
-}
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
 
 /* =========================================
        BUTTONS

@@ -119,6 +119,13 @@ br.sp-br {
   will-change: opacity, transform, filter;
 }
 
+/* Disable GPU-heavy blur filter on iOS Safari for 60fps performance */
+@supports (-webkit-touch-callout: none) {
+  .reveal {
+    filter: none !important;
+  }
+}
+
 .reveal-up,
 .reveal-bottom {
   transform: translateY(50px);
@@ -1273,7 +1280,7 @@ nav .container {
        SERVICE (Normale Style)
        ========================================= */
 #service {
-  background-image: url(../img/fvbg.jpg);
+  background-image: url('../img/bodybg.jpg');
   padding: 0;
   opacity: 1 !important;
 }
@@ -1547,7 +1554,7 @@ nav .container {
   left: 0;
   width: 100%;
   height: 180%;
-  background-image: url('../img/rever_dt_column_bg.jpg');
+  background-image: url('../img/bodybg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2164,7 +2171,7 @@ section#gallery {
        ========================================= */
 #message {
   position: relative;
-  background-image: linear-gradient(rgba(0, 51, 0, 0.7), rgba(0, 51, 0, 0.7)), url('../img/bodybg.webp');
+  background-image: linear-gradient(rgba(0, 51, 0, 0.7), rgba(0, 51, 0, 0.7)), url('../img/bodybg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3606,7 +3613,7 @@ nav {
 .r-fv-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/fvbg.jpg');
+  background-image: url('../img/bodybg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 1 !important;
@@ -4139,7 +4146,7 @@ nav {
 /* Pricing Section Background */
 #pricing {
   position: relative;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), url('../img/menu1.jpg');
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), url('../img/bodybg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -4488,4 +4495,46 @@ nav {
 
 .voice-swiper-pagination .swiper-pagination-bullet-active {
   background: var(--r-green) !important;
+}
+
+/* =========================================
+   IOS SAFARI COMPATIBILITY & HARDWARE ACCELERATION
+   ========================================= */
+.swiper,
+.swiper-wrapper,
+.swiper-slide,
+.g-review-card,
+.voice-swiper-wrap,
+.r-point-img img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  touch-action: pan-y;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    height: -webkit-fill-available;
+    background-image: url('../img/bodybg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -999;
+    pointer-events: none;
+  }
+  #message,
+  .r-cta-striky-banner {
+    background-attachment: scroll !important;
+  }
 }

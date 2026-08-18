@@ -71,23 +71,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const pricingBgJs = document.querySelector('.pricing-bg-js');
       const pricingSec = document.querySelector('#pricing');
       if (pricingBgJs && pricingSec) {
+        let ticking = false;
         const updateParallax = () => {
           const rect = pricingSec.getBoundingClientRect();
           const windowHeight = window.innerHeight;
           if (rect.top <= windowHeight && rect.bottom >= 0) {
-            // 移動量を0.15から0.4に増やし、よりはっきりとパララックスが分かるように調整
             const scrollDistance = windowHeight - rect.top;
             pricingBgJs.style.transform = `translate3d(0, ${scrollDistance * 0.4}px, 0)`;
           }
+          ticking = false;
         };
-        // 初期化時とスクロール時に実行
+        const onScroll = () => {
+          if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+          }
+        };
         updateParallax();
-        window.addEventListener('scroll', updateParallax, { passive: true });
+        window.addEventListener('scroll', onScroll, { passive: true });
       }
 
       // Pricing Swiper Initialization
       const pricingSwiper = new Swiper('.pricing-swiper', {
         loop: true,
+        speed: 600,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        passiveListeners: true,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
@@ -107,6 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
+        speed: 600,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        passiveListeners: true,
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,

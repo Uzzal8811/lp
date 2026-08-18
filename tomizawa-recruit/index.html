@@ -474,77 +474,73 @@
         </div>
     </header>
 
-    <!-- FV (First View) - Clean & Minimalist Recruit Hero Section -->
-    <section
-        class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex items-center bg-gradient-to-b from-white via-sky-50/40 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full py-12 lg:py-16">
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-12">
+    <!-- FV (First View) - Fullscreen Background Slider Hero Section -->
+    <section class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
+        <!-- Fullscreen Background Image Slider -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/fv1.png" alt="富沢歯科クリニック 院内" class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
+            <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
+            <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+            
+            <!-- Soft White Overlay for optimal readability on left side -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/30 lg:via-white/80 lg:to-transparent"></div>
+        </div>
 
-                <!-- Left: Text & Application CTAs -->
-                <div class="w-full lg:w-1/2 flex flex-col justify-center text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 lg:py-20">
+            <div class="max-w-2xl bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/80 animate__animated animate__fadeInLeft">
 
-                    <!-- Top Subtitle Badge -->
-                    <div class="mb-4">
-                        <span class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider">
-                            RECRUIT 2026 ｜ 富沢歯科クリニック 採用情報
-                        </span>
-                    </div>
-
-                    <!-- Headline -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight">
-                        春日駅徒歩5分。<br>
-                        地域に寄り添う歯科医院で、<br>
-                        <span class="text-theme-main font-black">あなたらしく働きませんか。</span>
-                    </h1>
-
-                    <!-- Lead text -->
-                    <p class="text-theme-text font-medium text-base sm:text-lg leading-relaxed mb-8 opacity-90">
-                        小さなお子様からご年配の方まで、安心して通える歯科医院を一緒につくるお仕事です。未経験の方も、ブランクのある方も大歓迎です。
-                    </p>
-
-                    <!-- Key highlights bar -->
-                    <div class="flex flex-wrap gap-2 sm:gap-3 mb-8">
-                        <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
-                            ✨ 未経験・ブランクOK
-                        </span>
-                        <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
-                            ⏰ 週1日・3時間〜相談可
-                        </span>
-                        <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
-                            🦷 助手・衛生士 募集
-                        </span>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-                        <a href="mailto:tomizawasika1985@gmail.com"
-                            class="bg-theme-main text-white font-bold py-4 px-8 rounded-full text-center shadow-md hover:shadow-lg hover:bg-theme-main/90 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base md:text-lg">
-                            <span>✉️</span> メールで応募する
-                        </a>
-                        <a href="tel:05054485076"
-                            class="bg-white text-theme-dark border-2 border-gray-200 font-bold py-4 px-6 rounded-full text-center shadow-sm hover:bg-gray-50 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
-                            <span>📞</span> 050-5448-5076
-                        </a>
-                    </div>
-
+                <!-- Top Subtitle Badge -->
+                <div class="mb-4">
+                    <span class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider">
+                        RECRUIT 2026 ｜ 富沢歯科クリニック 採用情報
+                    </span>
                 </div>
 
-                <!-- Right: Image Slider -->
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="relative w-full max-w-md mx-auto aspect-[4/3] sm:aspect-[14/10] rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white bg-white">
-                        <img src="img/fv1.png" alt="富沢歯科クリニック 院内" class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
-                        <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
-                        <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+                <!-- Headline -->
+                <h1 class="text-3xl sm:text-4xl lg:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight">
+                    春日駅徒歩5分。<br>
+                    地域に寄り添う歯科医院で、<br>
+                    <span class="text-theme-main font-black">あなたらしく働きませんか。</span>
+                </h1>
 
-                        <!-- Bottom Simple Badge -->
-                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-gray-100 text-center z-10">
-                            <span class="text-xs font-bold text-theme-main">【パート・アルバイト採用中】</span>
-                            <span class="text-xs sm:text-sm font-black text-theme-dark block sm:inline sm:ml-2">時給 1,300円〜2,300円</span>
-                        </div>
-                    </div>
+                <!-- Lead text -->
+                <p class="text-theme-text font-medium text-base sm:text-lg leading-relaxed mb-8 opacity-90">
+                    小さなお子様からご年配の方まで、安心して通える歯科医院を一緒につくるお仕事です。未経験の方も、ブランクのある方も大歓迎です。
+                </p>
+
+                <!-- Key highlights bar -->
+                <div class="flex flex-wrap gap-2 sm:gap-3 mb-8">
+                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                        ✨ 未経験・ブランクOK
+                    </span>
+                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                        ⏰ 週1日・3時間〜相談可
+                    </span>
+                    <span class="bg-white border border-gray-200 text-theme-dark font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-sm">
+                        🦷 助手・衛生士 募集
+                    </span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                    <a href="mailto:tomizawasika1985@gmail.com"
+                        class="bg-theme-main text-white font-bold py-4 px-8 rounded-full text-center shadow-md hover:shadow-lg hover:bg-theme-main/90 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base md:text-lg">
+                        <span>✉️</span> メールで応募する
+                    </a>
+                    <a href="tel:05054485076"
+                        class="bg-white text-theme-dark border-2 border-gray-200 font-bold py-4 px-6 rounded-full text-center shadow-sm hover:bg-gray-50 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
+                        <span>📞</span> 050-5448-5076
+                    </a>
                 </div>
 
             </div>
+        </div>
+
+        <!-- Floating Offer Card (Bottom Right Desktop) -->
+        <div class="hidden lg:block absolute bottom-8 right-8 z-10 bg-white/95 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl border border-white max-w-sm animate__animated animate__fadeInUp">
+            <p class="text-xs font-bold text-theme-main mb-1">【パート・アルバイト採用中】</p>
+            <p class="text-sm font-black text-theme-dark">歯科助手 ｜ 歯科衛生士</p>
+            <p class="text-xs font-bold text-theme-pink mt-1">時給 1,300円〜2,300円 <span class="font-normal text-gray-500">（見習い期間あり）</span></p>
         </div>
     </section>
 

@@ -509,6 +509,13 @@
             animation: waveClothS2 6s ease-in-out infinite alternate;
             transform-origin: top left;
         }
+
+        @media (max-width: 639px) {
+            .text-3xl {
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+            }
+        }
     </style>
 
     <!-- FV (First View) - FastView Section (SP: Top Image + Bottom Text with Gentle S-Wave Divider) -->
@@ -561,7 +568,7 @@
             <div class="w-full lg:w-7/12 xl:w-8/12 max-w-3xl animate__animated animate__fadeInLeft ml-0 pl-0">
 
                 <!-- Top Subtitle Badge -->
-                <div class="mb-4 text-center sm:text-left">
+                <div class="mb-4">
                     <span
                         class="inline-block bg-theme-light text-theme-main font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider">
                         RECRUIT 2026 ｜ 富沢歯科クリニック 採用情報
@@ -570,24 +577,24 @@
 
                 <!-- Headline -->
                 <h1
-                    class="text-3xl sm:text-4xl lg:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight text-center sm:text-left">
+                    class="text-3xl sm:text-4xl lg:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.35] mb-6 tracking-tight">
                     春日駅徒歩5分。<br>
                     地域に寄り添う歯科医院で、<br>
                     <span class="text-theme-main font-black">あなたらしく働きませんか。</span>
                 </h1>
 
                 <!-- Lead text -->
-                <p class="text-theme-text font-medium text-base sm:text-lg leading-relaxed mb-8 opacity-90 text-center sm:text-left">
+                <p class="text-theme-text font-medium text-base sm:text-lg leading-relaxed mb-8 opacity-90">
                     小さなお子様からご年配の方まで、安心して通える歯科医院を一緒につくるお仕事です。<br>
                     未経験の方も、ブランクのある方も大歓迎です。
                 </p>
 
-                <!-- Key highlights bar (Friendly Round Design - SP: Same Size & Centered) -->
-                <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-start gap-3 mb-8 w-full">
+                <!-- Key highlights bar (Friendly Round Design) -->
+                <div class="flex flex-wrap gap-3 mb-8">
                     <span
-                        class="w-full sm:w-auto bg-white/95 border-2 border-theme-main/20 text-theme-dark font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow-md flex items-center justify-center gap-2 transform transition hover:scale-105">
+                        class="bg-white/95 border-2 border-theme-main/20 text-theme-dark font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow-md flex items-center gap-2 transform transition hover:scale-105">
                         <span
-                            class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-black shrink-0">✨</span>
+                            class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-black">✨</span>
                         <span>未経験・ブランクOK</span>
                     </span>
                     <span

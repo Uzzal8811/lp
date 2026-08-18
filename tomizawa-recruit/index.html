@@ -476,27 +476,30 @@
 
     <!-- FV (First View) -->
     <section
-        class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex items-center parallax-bg"
+        class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center parallax-bg"
         style="--bg-url: url('img/bodyBg.jpg');">
-        <!-- Decorative element similar to image -->
-        <div class="absolute top-[20%] left-[5%] opacity-[0.15] pointer-events-none hidden md:block animate-float">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor" class="text-theme-main">
-                <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-            </svg>
+        <!-- Giant background watermark -->
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 text-[14vw] font-en font-black text-theme-main/[0.04] pointer-events-none select-none z-0">
+            RECRUIT
         </div>
 
         <div
-            class="w-full px-4 sm:px-6 lg:pl-8 xl:pl-16 relative z-20 flex flex-col-reverse lg:flex-row items-center justify-between py-12 lg:py-0 lg:h-[calc(90vh-72px)]">
+            class="w-full px-4 sm:px-6 lg:pl-8 xl:pl-16 relative z-20 flex flex-col-reverse lg:flex-row items-center justify-between py-12 lg:py-0 lg:h-[calc(92vh-72px)]">
 
             <!-- Left: Text Content -->
-            <div class="w-full lg:w-5/12 xl:w-1/2 flex flex-col justify-center z-20 lg:py-20 relative lg:h-full">
+            <div class="w-full lg:w-5/12 xl:w-1/2 flex flex-col justify-center z-20 lg:py-16 relative lg:h-full">
 
-                <span
-                    class="text-theme-main font-bold text-xs md:text-sm tracking-[0.2em] mb-4 inline-block relative z-10 animate__animated animate__fadeInDown">
-                    文京区小石川の地域密着型歯科医院 採用情報<br>
-                </span>
+                <!-- Recruit Badge -->
+                <div class="flex flex-wrap items-center gap-2 mb-4 animate__animated animate__fadeInDown">
+                    <span class="bg-theme-main text-white font-black px-3.5 py-1 rounded-full text-xs tracking-wider uppercase shadow-sm">
+                        RECRUIT 採用情報
+                    </span>
+                    <span class="bg-theme-light border border-theme-main/30 text-theme-main font-bold px-3 py-1 rounded-full text-xs">
+                        歯科助手・歯科衛生士 募集中
+                    </span>
+                </div>
 
-                <h1 class="text-3xl md:text-4xl lg:text-[2.3rem] xl:text-[2.5rem] font-sans font-bold text-theme-dark leading-[1.3] mb-6 tracking-tight relative z-10 animate__animated animate__fadeInLeft"
+                <h1 class="text-3xl md:text-4xl lg:text-[2.4rem] xl:text-[2.6rem] font-sans font-bold text-theme-dark leading-[1.3] mb-6 tracking-tight relative z-10 animate__animated animate__fadeInLeft"
                     style="animation-delay: 0.2s;">
                     春日駅徒歩5分。<br>
                     <span
@@ -504,31 +507,43 @@
                     あなたらしく働きませんか。<br>
                 </h1>
 
-                <p class="text-theme-text/90 text-sm md:text-base leading-loose font-medium mb-10 max-w-lg relative z-10 animate__animated animate__fadeInUp"
+                <p class="text-theme-text/90 text-sm md:text-base leading-loose font-medium mb-6 max-w-lg relative z-10 animate__animated animate__fadeInUp"
                     style="animation-delay: 0.4s;">
                     小さなお子様からご年配の方まで、<br>
                     安心して通える歯科医院を一緒につくるお仕事です。<br>
                 </p>
 
-                <!-- CTA -->
-                <div class="hidden md:flex flex-wrap gap-4 mb-12 relative z-10 animate__animated animate__zoomIn"
+                <!-- Key Advantage Pills -->
+                <div class="flex flex-wrap gap-2 mb-8 relative z-10 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <span class="bg-white/90 border border-gray-200 text-gray-700 font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-sm flex items-center gap-1.5">
+                        <span class="text-theme-main">✓</span> 未経験・ブランクOK
+                    </span>
+                    <span class="bg-white/90 border border-gray-200 text-gray-700 font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-sm flex items-center gap-1.5">
+                        <span class="text-theme-main">✓</span> 週1日・3時間〜OK
+                    </span>
+                    <span class="bg-white/90 border border-gray-200 text-gray-700 font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-sm flex items-center gap-1.5">
+                        <span class="text-theme-main">✓</span> 駅チカ春日駅5分
+                    </span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex flex-wrap gap-3.5 mb-8 relative z-10 animate__animated animate__zoomIn"
                     style="animation-delay: 0.6s;">
                     <a href="mailto:tomizawasika1985@gmail.com"
-                        class="bg-theme-main text-white font-bold py-3.5 px-8 rounded-full text-center shadow-lg hover:shadow-xl hover:bg-theme-main/90 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                        class="bg-theme-main text-white font-bold py-3.5 px-8 rounded-full text-center shadow-lg hover:shadow-xl hover:bg-theme-main/90 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm md:text-base">
                         ✉️ メールで応募する
                     </a>
                     <a href="tel:05054485076"
-                        class="bg-white text-theme-dark border-2 border-gray-200 font-bold py-3.5 px-8 rounded-full text-center shadow-md hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm">
+                        class="bg-white text-theme-dark border-2 border-gray-200 font-bold py-3.5 px-7 rounded-full text-center shadow-md hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm md:text-base">
                         📞 050-5448-5076
                     </a>
                 </div>
 
-
             </div>
 
-            <!-- Mobile: Image -->
+            <!-- Mobile: Image with Floating Recruit Badge -->
             <div
-                class="w-full lg:hidden mb-12 relative h-[400px] sm:h-[500px] animate__animated animate__fadeInRight z-10">
+                class="w-full lg:hidden mb-12 relative h-[380px] sm:h-[480px] animate__animated animate__fadeInRight z-10">
                 <div class="w-full h-full overflow-hidden rounded-[2.5rem] relative shadow-2xl">
                     <img src="img/fv1.png" alt="背景画像1"
                         class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
@@ -537,21 +552,36 @@
                     <img src="img/fv3.png" alt="背景画像3"
                         class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
                 </div>
+                <!-- Floating Badge for Mobile -->
+                <div class="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-gray-100 text-center z-20">
+                    <p class="text-xs font-bold text-theme-main">【パート・アルバイト採用中】</p>
+                    <p class="text-sm font-black text-theme-dark">時給1,300円〜 / 未経験者歓迎！</p>
+                </div>
             </div>
 
         </div>
 
-        <!-- Desktop: Absolute Right Image -->
-        <div class="hidden lg:block absolute right-0 top-[80px] lg:top-[88px] bottom-4 lg:bottom-6 w-[65%] xl:w-[70%] z-10 animate__animated animate__fadeInRight"
+        <!-- Desktop: Absolute Right Image with Floating Recruit Badge -->
+        <div class="hidden lg:block absolute right-0 top-[80px] lg:top-[88px] bottom-4 lg:bottom-6 w-[60%] xl:w-[65%] z-10 animate__animated animate__fadeInRight"
             style="animation-delay: 0.2s;">
             <div
-                class="w-full h-full overflow-hidden rounded-tl-[300px] xl:rounded-tl-[400px] rounded-bl-[300px] xl:rounded-bl-[400px] relative shadow-2xl">
+                class="w-full h-full overflow-hidden rounded-tl-[300px] xl:rounded-tl-[380px] rounded-bl-[300px] xl:rounded-bl-[380px] relative shadow-2xl">
                 <img src="img/fv1.png" alt="背景画像1"
                     class="absolute inset-0 w-full h-full object-cover slide-img slide-1" />
                 <img src="img/fv2.png" alt="背景画像2"
                     class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
                 <img src="img/fv3.png" alt="背景画像3"
                     class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
+
+                <!-- Floating Recruit Card on Image -->
+                <div class="absolute bottom-10 left-10 bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white max-w-xs z-20 transform -rotate-2 hover:rotate-0 transition duration-300">
+                    <span class="bg-theme-pink text-white font-bold text-xs px-3 py-1 rounded-full inline-block mb-2">パート・アルバイト募集</span>
+                    <h3 class="text-lg font-black text-theme-dark mb-1">歯科助手 / 歯科衛生士</h3>
+                    <p class="text-xs text-theme-text font-medium leading-relaxed">
+                        時給 1,300円〜2,300円<br>
+                        週1日・1日3時間〜勤務OK！
+                    </p>
+                </div>
             </div>
         </div>
     </section>

@@ -474,7 +474,26 @@
         </div>
     </header>
 
-    <!-- FV (First View) - Fullscreen Background Slider Hero Section -->
+    <style>
+        @keyframes waveClothS1 {
+            0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+            50% { transform: translateY(-16px) scale(1.02) rotate(-1.2deg); }
+        }
+        @keyframes waveClothS2 {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(14px) scale(1.02); }
+        }
+        .animate-s-wave-1 {
+            animation: waveClothS1 8s ease-in-out infinite;
+            transform-origin: top left;
+        }
+        .animate-s-wave-2 {
+            animation: waveClothS2 6s ease-in-out infinite alternate;
+            transform-origin: top left;
+        }
+    </style>
+
+    <!-- FV (First View) - Animated S-Wave Glass Hero Section -->
     <section class="relative pt-[64px] md:pt-[72px] w-full min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
         <!-- Fullscreen Background Image Slider -->
         <div class="absolute inset-0 z-0">
@@ -482,20 +501,32 @@
             <img src="img/fv2.png" alt="富沢歯科クリニック 診療" class="absolute inset-0 w-full h-full object-cover slide-img slide-2" />
             <img src="img/fv3.png" alt="富沢歯科クリニック 雰囲気" class="absolute inset-0 w-full h-full object-cover slide-img slide-3" />
             
-            <!-- Organic Fabric Fold Drape Shape (Top-Left to Bottom-Center Curve) -->
+            <!-- Animated S-Curve Multi-Fold Fabric Drape (Continuous Motion) -->
             <div class="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
-                <svg class="absolute top-0 left-0 w-full h-full text-white fill-current filter drop-shadow-2xl"
+                <!-- Layer 1: Deep Theme Accent Cloth Fold Shadow -->
+                <svg class="absolute top-0 left-0 w-full h-full text-theme-main fill-current animate-s-wave-2"
                     viewBox="0 0 1440 900" preserveAspectRatio="none">
-                    <!-- Subtle secondary background drape accent for cloth depth -->
-                    <path d="M 0,0 L 720,0 C 580,240 520,580 430,900 L 0,900 Z" opacity="0.2" class="text-theme-main" />
-                    <!-- Primary Crisp White Fabric Drape Curve shifted further left (top-left to x=680 to x=400 bottom) -->
-                    <path d="M 0,0 L 670,0 C 540,230 480,570 390,900 L 0,900 Z" opacity="0.96" />
+                    <path d="M 0,0 L 640,0 C 480,180 700,420 520,680 C 430,790 350,850 260,900 L 0,900 Z" opacity="0.25" />
+                </svg>
+
+                <!-- Layer 2: Secondary Soft Fold Curve -->
+                <svg class="absolute top-0 left-0 w-full h-full text-[#007acc] fill-current animate-s-wave-1"
+                    viewBox="0 0 1440 900" preserveAspectRatio="none">
+                    <path d="M 0,0 L 590,0 C 440,170 650,400 480,660 C 400,770 320,840 220,900 L 0,900 Z" opacity="0.18" />
+                </svg>
+
+                <!-- Layer 3: Primary Crisp White S-Curve Fold (Continuous Motion) -->
+                <svg class="absolute top-0 left-0 w-full h-full text-white fill-current filter drop-shadow-2xl animate-s-wave-1"
+                    viewBox="0 0 1440 900" preserveAspectRatio="none">
+                    <!-- True S-curve path: Starts top-left (0,0), curves out in an S shape (540,0 -> 600,320 -> 440,640 -> 180,900) -->
+                    <path d="M 0,0 L 540,0 C 410,160 600,350 440,640 C 370,750 290,830 180,900 L 0,900 Z" opacity="0.96" />
                 </svg>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 lg:py-20">
-            <div class="w-full lg:max-w-3xl bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/80 animate__animated animate__fadeInLeft">
+        <!-- Content Container (Shifted Far Left with Ultra Glassmorphism) -->
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 xl:pl-12 relative z-10 py-12 lg:py-20 flex justify-start">
+            <div class="w-full lg:w-6/12 max-w-xl bg-white/60 backdrop-blur-xl p-6 sm:p-10 lg:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/80 animate__animated animate__fadeInLeft ml-0">
 
                 <!-- Top Subtitle Badge -->
                 <div class="mb-4">

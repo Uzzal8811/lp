@@ -236,51 +236,91 @@
 
 <body class="antialiased">
 
-    <!-- Header -->
+    <!-- Header / Sidebar Navigation (Desktop Left Sidebar, Mobile Top Header) -->
     <header id="header"
-        class="fixed w-full z-50 transition-all duration-500 bg-black/80 backdrop-blur-md border-b border-brandRed/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#"
-                        class="text-2xl font-bold tracking-widest text-white font-serif flex items-center gap-2">
-                        <span class="bg-brandRed text-black px-2 py-0.5 rounded text-lg font-bold">居酒家</span>
-                        <span class="text-white">一喜</span>
+        class="fixed top-0 left-0 z-50 w-full lg:w-64 xl:w-72 lg:h-screen bg-black/95 lg:bg-[#0a0908]/95 backdrop-blur-md border-b lg:border-b-0 lg:border-r border-brandRed/20 lg:border-gray-900 transition-all duration-300">
+        <div class="h-full flex flex-col justify-between px-4 lg:px-6 py-3 lg:py-8 max-w-7xl mx-auto lg:max-w-none">
+            <!-- Mobile Header Top Bar / Desktop Sidebar Top Logo -->
+            <div class="flex lg:flex-col justify-between items-center lg:items-stretch w-full">
+                <!-- Logo Frame -->
+                <a href="#"
+                    class="group block text-center border border-brandGold/30 bg-black/80 p-2.5 lg:p-4 rounded-sm transition-all hover:border-brandRed shadow-lg">
+                    <span class="block text-[10px] lg:text-xs font-serif text-brandGold tracking-[0.25em] mb-0.5 lg:mb-1">松阪・宮町</span>
+                    <span class="text-lg lg:text-2xl font-bold tracking-widest text-white font-serif block">
+                        居酒家 <span class="text-brandRed">一喜</span>
+                    </span>
+                </a>
+
+                <!-- Mobile Header Right Actions (Phone & Hamburger) -->
+                <div class="lg:hidden flex items-center space-x-2">
+                    <a href="tel:0598-31-1034" class="text-brandRed text-base p-2 border border-brandRed/30 rounded-sm">
+                        <i class="fa-solid fa-phone"></i>
                     </a>
-                </div>
-
-                <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
-                    <a href="#about"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">当店について</a>
-                    <a href="#recommend"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">こんな方におすすめ</a>
-                    <a href="#service"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">選ばれる理由</a>
-                    <a href="#menu"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">お品書き</a>
-                    <a href="#gallery"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">ギャラリー</a>
-                    <a href="#message"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">店主の想い</a>
-                    <a href="#contact"
-                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">店舗情報</a>
-                </nav>
-
-                <!-- Header Action Buttons -->
-                <div class="hidden lg:flex items-center space-x-6">
-                    <a href="jump01.html" target="_blank"
-                        class="bg-brandRed hover:bg-brandRed-dark text-white px-6 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-sm whitespace-nowrap">
-                        ホットペッパー予約
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Toggle -->
-                <div class="lg:hidden flex items-center space-x-4">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2 text-xl">
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
+            </div>
+
+            <!-- Desktop Sidebar Phone Section -->
+            <div class="hidden lg:block text-center py-4 border-y border-gray-900/80 my-4">
+                <span class="block text-[11px] text-gray-400 font-serif mb-1 tracking-wider"><i class="fa-solid fa-phone text-brandRed mr-1"></i> ご予約・お問合せ</span>
+                <a href="tel:0598-31-1034"
+                    class="inline-block text-brandGold hover:text-white font-serif text-base font-bold tracking-widest transition-colors">
+                    0598-31-1034
+                </a>
+            </div>
+
+            <!-- Desktop Sidebar Vertical Navigation -->
+            <nav class="hidden lg:flex flex-col space-y-3.5 my-auto font-serif">
+                <a href="#"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>ホーム</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Home</span>
+                </a>
+                <a href="#about"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>当店について</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">About</span>
+                </a>
+                <a href="#recommend"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>おすすめ</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Recommend</span>
+                </a>
+                <a href="#service"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>選ばれる理由</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Features</span>
+                </a>
+                <a href="#menu"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>お品書き</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Menu</span>
+                </a>
+                <a href="#gallery"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>ギャラリー</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Gallery</span>
+                </a>
+                <a href="#message"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>店主の想い</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Message</span>
+                </a>
+                <a href="#contact"
+                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
+                    <span>店舗情報</span>
+                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Access</span>
+                </a>
+            </nav>
+
+            <!-- Desktop Sidebar Reserve Button -->
+            <div class="hidden lg:block pt-2">
+                <a href="jump01.html" target="_blank"
+                    class="block bg-gradient-to-r from-brandRed via-brandRed-dark to-brandRed hover:brightness-110 text-white w-full py-3 rounded-sm text-xs font-bold tracking-widest text-center shadow-lg transition-all border border-brandGold/30">
+                    ホットペッパー予約
+                </a>
             </div>
         </div>
     </header>
@@ -318,83 +358,65 @@
         </nav>
     </div>
 
-    <!-- First View (Hero) -->
-    <section class="relative h-[100dvh] flex flex-col md:block overflow-hidden bg-black">
-        <!-- Background Slideshow -->
-        <div class="relative md:absolute top-0 right-0 w-full h-[55vh] md:h-full flex-shrink-0 z-0">
-            <div class="slideshow-container">
-                <div class="slideshow-image active"
-                    style="--pc-img: url('img/fv1.png'); --sp-img: url('img/fv1.png');"></div>
-                <div class="slideshow-image" style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');">
-                </div>
-                <div class="slideshow-image" style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');">
+    <!-- Main Content Wrapper (Shifted right on Desktop for Sidebar) -->
+    <div class="lg:pl-64 xl:pl-72 w-full min-h-screen">
+
+        <!-- First View (Hero Section) -->
+        <section class="relative h-[100dvh] flex flex-col justify-center overflow-hidden bg-black pt-16 lg:pt-0">
+            <!-- Top Right Tagline Banner (As in Reference Image) -->
+            <div class="absolute top-20 right-4 lg:top-8 lg:right-10 z-30 pointer-events-none text-right">
+                <span class="inline-block text-white/90 text-[11px] md:text-sm font-serif tracking-[0.2em] shadow-lg bg-black/60 px-3.5 py-1.5 rounded-sm backdrop-blur-sm border border-white/10">
+                    三重県松阪市「居酒家 一喜」で愉しむ 鮮魚と日替わり料理
+                </span>
+            </div>
+
+            <!-- Background Slideshow -->
+            <div class="absolute inset-0 z-0">
+                <div class="slideshow-container">
+                    <div class="slideshow-image active"
+                        style="--pc-img: url('img/fv1.png'); --sp-img: url('img/spfv1.png');"></div>
+                    <div class="slideshow-image" style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');">
+                    </div>
+                    <div class="slideshow-image" style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Overlay Gradients for Desktop Readability -->
-        <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-transparent z-10 pointer-events-none"></div>
+            <!-- Dark Overlay & Left Blend Gradient for Sidebar -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40 z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50 z-10 pointer-events-none"></div>
 
-        <!-- Contents -->
-        <div
-            class="fv-text-sp relative z-10 w-full flex-grow md:h-full px-6 md:px-12 lg:px-20 flex flex-col justify-center items-start md:pt-20 bg-black md:bg-transparent pb-6 md:pb-0">
-            <!-- Foreground Content -->
-            <div class="relative z-20 flex flex-col items-start fade-in" style="transition-delay: 400ms;">
-
+            <!-- Contents Overlay -->
+            <div class="relative z-20 px-6 md:px-12 lg:px-16 w-full max-w-5xl flex flex-col justify-center items-start fade-in" style="transition-delay: 200ms;">
                 <!-- Vertical Line Decor & Content -->
-                <div class="relative pl-5 md:pl-8 border-l-[4px] border-transparent space-y-4 max-w-2xl"
+                <div class="relative pl-5 md:pl-8 border-l-[4px] border-transparent"
                     style="border-image: linear-gradient(to bottom, #B91C1C, #D6A84F) 1;">
-                    
-                    <!-- Sub-brand Tag Header -->
-                    <div class="text-brandGold text-xs md:text-sm font-serif tracking-[0.3em] font-bold">
-                        仕事帰り、ふらっと一杯。
+                    <!-- Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 bg-white text-black font-bold tracking-widest px-3 py-1.5 text-[10px] md:text-xs mb-6 shadow-md">
+                        <span class="w-1.5 h-1.5 bg-brandRed rounded-full animate-pulse"></span>
+                        気軽により道・ちょい飲み歓迎
                     </div>
 
                     <!-- Main Title -->
                     <h1
-                        class="text-3xl md:text-5xl lg:text-[4rem] font-bold tracking-widest leading-[1.3] text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] font-serif">
-                        居酒家 一喜<br>
-                        <span class="text-2xl md:text-4xl lg:text-[2.8rem] text-gray-100 font-serif font-normal block mt-2">
-                            明日は<span class="text-brandRed font-bold">良い日</span>になりますように。
-                        </span>
+                        class="text-2xl md:text-4xl lg:text-[3.2rem] font-bold tracking-widest leading-[1.5] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] font-serif">
+                        今日いい日だった方、<br class="md:hidden">イマイチだった方、<br>
+                        明日は<span class="text-brandRed">良い日</span>になりますように。
                     </h1>
 
                     <!-- Descriptions -->
-                    <div class="pt-2 flex flex-col gap-2 font-serif">
-                        <p class="text-gray-200 text-sm md:text-base tracking-[0.15em] font-medium drop-shadow-md">
-                            気軽に立ち寄れる、昭和風の居酒家。
+                    <div class="mt-6 md:mt-10 flex flex-col gap-2.5 md:gap-3.5">
+                        <p class="text-gray-100 text-xs md:text-sm tracking-[0.2em] font-medium drop-shadow-md">
+                            気軽に立ち寄れる、元気なおじさんがいる居酒家。
                         </p>
-                        <p class="text-brandGold/90 text-xs md:text-sm italic tracking-widest">
-                            〜 今日も元気にお待ちしています。〜
+                        <p class="text-gray-100 text-xs md:text-sm tracking-[0.2em] font-medium drop-shadow-md">
+                            ボリューム満点の鮮魚や日替わりメニューでおもてなしいたします。
                         </p>
-                    </div>
-
-                    <!-- Supporting Text Tags -->
-                    <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="bg-black/60 border border-brandRed/40 text-gray-200 text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
-                            鮮魚・日替わり
-                        </span>
-                        <span class="bg-black/60 border border-brandGold/40 text-brandGold text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
-                            ちょい飲み歓迎
-                        </span>
-                        <span class="bg-black/60 border border-brandRed/40 text-gray-200 text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
-                            ご要望もお気軽に
-                        </span>
-                    </div>
-
-                    <!-- Refined Dark Burgundy & Gold CTA Button -->
-                    <div class="pt-4">
-                        <a href="jump01.html" target="_blank"
-                            class="inline-flex items-center justify-center bg-brandRed-dark hover:bg-brandRed text-white px-8 py-3.5 text-xs md:text-sm font-bold tracking-widest transition-all duration-300 rounded-sm border border-brandGold/60 shadow-lg group">
-                            <span>WEB予約はこちら</span>
-                            <i class="fa-solid fa-chevron-right ml-3 text-brandGold group-hover:translate-x-1 transition-transform"></i>
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
+        </section>
 
     <!-- Header overlap spacer for desktop to avoid jumps -->
     <div id="header-spacer" class="h-0 bg-transparent"></div>
@@ -985,6 +1007,8 @@
             </p>
         </div>
     </footer>
+
+    </div><!-- End Main Content Wrapper -->
 
     <!-- Lightbox Modal -->
     <div id="lightbox"

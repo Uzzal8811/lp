@@ -178,6 +178,7 @@
         }
 
         @media (min-width: 768px) {
+
             .slideshow-image.active,
             .slideshow-image.prev {
                 animation: slideRight 10s ease-out forwards;
@@ -198,6 +199,7 @@
             0% {
                 transform: scale(1.1) translateX(-3%);
             }
+
             100% {
                 transform: scale(1.1) translateX(2%);
             }
@@ -207,6 +209,7 @@
             .p-8 {
                 padding: 30px 10px !important;
             }
+
             .px-4 {
                 padding-left: 10px !important;
                 padding-right: 10px !important;
@@ -321,13 +324,16 @@
         <div class="relative md:absolute top-0 right-0 w-full h-[55vh] md:h-full flex-shrink-0 z-0">
             <div class="slideshow-container">
                 <div class="slideshow-image active"
-                    style="--pc-img: url('img/fv1.png'); --sp-img: url('img/spfv1.png');"></div>
+                    style="--pc-img: url('img/fv1.png'); --sp-img: url('img/fv1.png');"></div>
                 <div class="slideshow-image" style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');">
                 </div>
                 <div class="slideshow-image" style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');">
                 </div>
             </div>
         </div>
+
+        <!-- Overlay Gradients for Desktop Readability -->
+        <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-transparent z-10 pointer-events-none"></div>
 
         <!-- Contents -->
         <div
@@ -336,30 +342,53 @@
             <div class="relative z-20 flex flex-col items-start fade-in" style="transition-delay: 400ms;">
 
                 <!-- Vertical Line Decor & Content -->
-                <div class="relative pl-5 md:pl-8 border-l-[4px] border-transparent"
+                <div class="relative pl-5 md:pl-8 border-l-[4px] border-transparent space-y-4 max-w-2xl"
                     style="border-image: linear-gradient(to bottom, #B91C1C, #D6A84F) 1;">
-                    <!-- Badge -->
-                    <div
-                        class="inline-flex items-center gap-2 bg-white text-black font-bold tracking-widest px-3 py-1.5 text-[10px] md:text-xs mb-6 shadow-md">
-                        <span class="w-1.5 h-1.5 bg-brandRed rounded-full animate-pulse"></span>
-                        気軽により道・ちょい飲み歓迎
+                    
+                    <!-- Sub-brand Tag Header -->
+                    <div class="text-brandGold text-xs md:text-sm font-serif tracking-[0.3em] font-bold">
+                        仕事帰り、ふらっと一杯。
                     </div>
 
                     <!-- Main Title -->
                     <h1
-                        class="text-3xl md:text-5xl lg:text-[4rem] font-bold tracking-widest leading-[1.4] text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] font-serif">
-                        今日いい日だった方、<br class="md:hidden">イマイチだった方、<br>
-                        明日は<span class="text-brandRed">良い日</span>になりますように。
+                        class="text-3xl md:text-5xl lg:text-[4rem] font-bold tracking-widest leading-[1.3] text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] font-serif">
+                        居酒家 一喜<br>
+                        <span class="text-2xl md:text-4xl lg:text-[2.8rem] text-gray-100 font-serif font-normal block mt-2">
+                            明日は<span class="text-brandRed font-bold">良い日</span>になりますように。
+                        </span>
                     </h1>
 
                     <!-- Descriptions -->
-                    <div class="mt-8 md:mt-12 flex flex-col gap-3 md:gap-4">
-                        <p class="text-gray-100 text-xs md:text-sm tracking-[0.2em] font-medium drop-shadow-md">
-                            気軽に立ち寄れる、元気なおじさんがいる居酒家。
+                    <div class="pt-2 flex flex-col gap-2 font-serif">
+                        <p class="text-gray-200 text-sm md:text-base tracking-[0.15em] font-medium drop-shadow-md">
+                            気軽に立ち寄れる、昭和風の居酒家。
                         </p>
-                        <p class="text-gray-100 text-xs md:text-sm tracking-[0.2em] font-medium drop-shadow-md">
-                            ボリューム満点の鮮魚や日替わりメニューでおもてなしいたします。
+                        <p class="text-brandGold/90 text-xs md:text-sm italic tracking-widest">
+                            〜 今日も元気にお待ちしています。〜
                         </p>
+                    </div>
+
+                    <!-- Supporting Text Tags -->
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-black/60 border border-brandRed/40 text-gray-200 text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
+                            鮮魚・日替わり
+                        </span>
+                        <span class="bg-black/60 border border-brandGold/40 text-brandGold text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
+                            ちょい飲み歓迎
+                        </span>
+                        <span class="bg-black/60 border border-brandRed/40 text-gray-200 text-[11px] md:text-xs px-3 py-1 rounded-sm font-serif">
+                            ご要望もお気軽に
+                        </span>
+                    </div>
+
+                    <!-- Refined Dark Burgundy & Gold CTA Button -->
+                    <div class="pt-4">
+                        <a href="jump01.html" target="_blank"
+                            class="inline-flex items-center justify-center bg-brandRed-dark hover:bg-brandRed text-white px-8 py-3.5 text-xs md:text-sm font-bold tracking-widest transition-all duration-300 rounded-sm border border-brandGold/60 shadow-lg group">
+                            <span>WEB予約はこちら</span>
+                            <i class="fa-solid fa-chevron-right ml-3 text-brandGold group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
                 </div>
             </div>

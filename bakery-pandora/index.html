@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベーカリーパンドラ | 仙台で出会うアメリカンベイク</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
+    <meta name="description" content="仙台市宮城野区にある、アメリカンベイクを楽しめるベーカリーカフェ。ドーナツやクッキー、サンドイッチなど、見た目も味も楽しいメニューをご用意しています。">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="apple-touch-icon" href="img/favicon.jpg">
+
+    <!-- OGP -->
+    <meta property="og:title" content="ベーカリーパンドラ | 仙台で出会うアメリカンベイク">
+    <meta property="og:description"
+        content="仙台市宮城野区にある、アメリカンベイクを楽しめるベーカリーカフェ。ドーナツやクッキー、サンドイッチなど、見た目も味も楽しいメニューをご用意しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bakery-pandora.happytry.fun/">
+    <meta property="og:image" content="https://bakery-pandora.happytry.fun/img/eyecatch.png">
+    <meta property="og:site_name" content="ベーカリーパンドラ">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ベーカリーパンドラ | 仙台で出会うアメリカンベイク">
+    <meta name="twitter:description" content="仙台市宮城野区にある、アメリカンベイクを楽しめるベーカリーカフェ。">
+    <meta name="twitter:image" content="https://bakery-pandora.happytry.fun/img/eyecatch.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Allura&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        craft: {
+                            DEFAULT: '#D8C4A9',
+                            light: '#E2D2BC',
+                            dark: '#C8B397'
+                        },
+                        cream: {
+                            DEFAULT: '#EFE6D8',
+                            light: '#FFFBF5'
+                        },
+                        greige: {
+                            light: '#8B847E',
+                            DEFAULT: '#242321',
+                            dark: '#242321'
+                        },
+                        terracotta: {
+                            DEFAULT: '#C86D3B',
+                            dark: '#A65325'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Shippori Mincho"', 'serif'],
+                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'craft': '0 8px 30px -5px rgba(36, 35, 33, 0.08)',
+                        'elevated': '0 16px 36px -8px rgba(36, 35, 33, 0.14)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-craft-base: #D8C4A9;
+            --bg-craft-light: #E2D2BC;
+            --bg-craft-dark: #C8B397;
+            --bg-cream-card: #EFE6D8;
+            --color-charcoal: #242321;
+            --color-terracotta: #C86D3B;
+            --color-brown-warm: #7A5135;
+            --color-brown-dark: #4A2E1B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        /* ベーススタイル - クラフトペーパー風テクスチャ */
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            color: #242321;
+            background-color: #D8C4A9;
+            background-image: radial-gradient(rgba(36, 35, 33, 0.035) 1px, transparent 0);
+            background-size: 16px 16px;
+            letter-spacing: 0.06em;
+            line-height: 1.85;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* 縦書きセクション英語ラベル (コナとスパイス風演出) */
+        .vertical-side-label {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 4.25rem;
+            font-weight: 700;
+            letter-spacing: 0.35em;
+            color: #242321;
+            opacity: 0.85;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            user-select: none;
+        }
+
+        .vertical-side-label span {
+            opacity: 0;
+            display: inline-block;
+            filter: blur(4px);
+            transform: translateY(-15px);
+            transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .vertical-side-label.is-visible span {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1023px) {
+            .vertical-side-label {
+                writing-mode: horizontal-tb !important;
+                font-size: 1.5rem !important;
+                letter-spacing: 0.3em !important;
+                text-align: center !important;
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 0.5rem !important;
+            }
+        }
+
+        @keyframes float-stamp {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-12deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(-8deg);
+            }
+        }
+
+        .animate-float-stamp {
+            animation: float-stamp 3.5s ease-in-out infinite;
+        }
+
+        /* 本文のfont size指定 */
+        p {
+            font-size: 14px !important;
+        }
+
+        @media (min-width: 768px) {
+            p {
+                font-size: 16px !important;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        /* スクロールアニメーション用クラス (ハイエンド演出) */
+        .fade-up,
+        .fade-down,
+        .fade-left,
+        .fade-right,
+        .zoom-in,
+        .rotate-in-left,
+        .rotate-in-right,
+        .flip-up {
+            opacity: 0;
+            will-change: opacity, transform;
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up {
+            transform: translateY(45px);
+        }
+
+        .fade-down {
+            transform: translateY(-45px);
+        }
+
+        .fade-left {
+            transform: translateX(50px);
+        }
+
+        .fade-right {
+            transform: translateX(-50px);
+        }
+
+        .zoom-in {
+            transform: scale(0.88);
+        }
+
+        .rotate-in-left {
+            transform: translateX(-45px) rotate(-4deg);
+        }
+
+        .rotate-in-right {
+            transform: translateX(45px) rotate(4deg);
+        }
+
+        .flip-up {
+            transform: perspective(800px) rotateX(20deg) translateY(35px);
+        }
+
+        .fade-up.is-visible,
+        .fade-down.is-visible,
+        .fade-left.is-visible,
+        .fade-right.is-visible,
+        .zoom-in.is-visible,
+        .rotate-in-left.is-visible,
+        .rotate-in-right.is-visible,
+        .flip-up.is-visible {
+            opacity: 1;
+            transform: translate(0) scale(1) rotate(0deg) perspective(800px) rotateX(0deg);
+        }
+
+        /* 段階的遅延 (Staggered Delays) */
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-150 {
+            transition-delay: 150ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-250 {
+            transition-delay: 250ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-350 {
+            transition-delay: 350ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        .delay-500 {
+            transition-delay: 500ms;
+        }
+
+        /* 画像プレースホルダーの装飾 */
+        .img-placeholder {
+            background-color: #E8DED0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B847E;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* セクション見出しの装飾 */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: #7A5135;
+        }
+
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+
+        /* FV Slideshow Animations */
+        @keyframes fvFade {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            38% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .animate-fv-slide-1 {
+            animation: fvFade 12s infinite;
+        }
+
+        .animate-fv-slide-2 {
+            animation: fvFade 12s infinite;
+            animation-delay: 4s;
+        }
+
+        .animate-fv-slide-3 {
+            animation: fvFade 12s infinite;
+            animation-delay: 8s;
+        }
+
+        /* Hero Corner Items Outward Burst Animation */
+        @keyframes flyToTopLeft {
+            0% {
+                opacity: 0;
+                transform: translate(calc(50vw - 120px), calc(40vh - 120px)) scale(0.1) rotate(-35deg);
+            }
+
+            70% {
+                opacity: 1;
+                transform: translate(-12px, -12px) scale(1.05) rotate(4deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes flyToTopRight {
+            0% {
+                opacity: 0;
+                transform: translate(calc(-50vw + 120px), calc(40vh - 120px)) scale(0.1) rotate(35deg);
+            }
+
+            70% {
+                opacity: 1;
+                transform: translate(12px, -12px) scale(1.05) rotate(-4deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes flyToBottomLeft {
+            0% {
+                opacity: 0;
+                transform: translate(calc(50vw - 120px), calc(-40vh + 120px)) scale(0.1) rotate(-35deg);
+            }
+
+            70% {
+                opacity: 1;
+                transform: translate(-12px, 12px) scale(1.05) rotate(4deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes flyToBottomRight {
+            0% {
+                opacity: 0;
+                transform: translate(calc(-50vw + 120px), calc(-40vh + 120px)) scale(0.1) rotate(35deg);
+            }
+
+            70% {
+                opacity: 1;
+                transform: translate(12px, 12px) scale(1.05) rotate(-4deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes floatTopLeft {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(8vw, 12vh) rotate(15deg);
+            }
+
+            66% {
+                transform: translate(-3vw, 5vh) rotate(-5deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        @keyframes floatTopRight {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(4vw, 10vh) rotate(-10deg);
+            }
+
+            50% {
+                transform: translate(-12vw, 5vh) rotate(-25deg);
+            }
+
+            75% {
+                transform: translate(-5vw, -3vh) rotate(5deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        @keyframes floatBottomLeft {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(10vw, -8vh) rotate(20deg);
+            }
+
+            50% {
+                transform: translate(-4vw, 5vh) rotate(-10deg);
+            }
+
+            75% {
+                transform: translate(12vw, -15vh) rotate(10deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        @keyframes floatBottomRight {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(-8vw, -12vh) rotate(-20deg);
+            }
+
+            66% {
+                transform: translate(5vw, -4vh) rotate(15deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        .animate-corner-top-left {
+            animation: flyToTopLeft 3.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both, floatTopLeft 25s ease-in-out 3.7s infinite;
+        }
+
+        .animate-corner-top-right {
+            animation: flyToTopRight 3.5s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both, floatTopRight 28s ease-in-out 3.85s infinite;
+        }
+
+        .animate-corner-bottom-left {
+            animation: flyToBottomLeft 3.5s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both, floatBottomLeft 26s ease-in-out 4.0s infinite;
+        }
+
+        .animate-corner-bottom-right {
+            animation: flyToBottomRight 3.5s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both, floatBottomRight 30s ease-in-out 4.15s infinite;
+        }
+
+        /* Gallery Marquee Animation */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        #gallery img {
+            cursor: pointer;
+        }
+
+        /* SP (Mobile) Overrides */
+        @media (max-width: 767px) {
+
+            .p-10,
+            .p-8,
+            .p-6,
+            .px-4,
+            .px-6 {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            .p-5 {
+                padding: 1rem !important;
+            }
+
+            [class~="max-w-[280px]"] {
+                max-width: 320px !important;
+            }
+        }
+
+        /* 100% iOS Safari Compatible Sticky Fixed Background Parallax Engine */
+        .clip-bg {
+            clip-path: inset(0 0 0 0);
+            -webkit-clip-path: inset(0 0 0 0);
+            position: relative;
+        }
+
+        .sticky-bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 0;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        @keyframes dashedMoveLeft {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -20px 0;
+            }
+        }
+
+        @keyframes dashedMoveRight {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 20px 0;
+            }
+        }
+
+        .moving-dashed-border-y {
+            position: relative;
+            border-top: none !important;
+            border-bottom: none !important;
+        }
+
+        .moving-dashed-border-y::before,
+        .moving-dashed-border-y::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(to right, rgba(36, 35, 33, 0.4), rgba(36, 35, 33, 0.4) 10px, transparent 10px, transparent 20px);
+            z-index: 20;
+        }
+
+        .moving-dashed-border-y::before {
+            top: 0;
+            animation: dashedMoveLeft 1s linear infinite;
+        }
+
+        .moving-dashed-border-y::after {
+            bottom: 1px;
+            animation: dashedMoveRight 1s linear infinite;
+        }
+
+        @media (min-width: 640px) {
+            .sm\:p-10 {
+                padding: 3rem 2rem !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .md\:w-5\/12 {
+                width: 50% !important;
+            }
+
+            .md\:w-7\/12 {
+                width: 50% !important;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .sp\:only {
+                display: inline !important;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .sp\:only {
+                display: none !important;
+            }
+        }
+
+        /* Gallery GPU Hardware Compositing for iPhone Safari */
+        .moving-card {
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+    </style>
+</head>
+
+<body class="antialiased" oncontextmenu="return false;" oncopy="return false;" oncut="return false;"
+    onpaste="return false;">
+
+    <!-- Header -->
+    <header class="w-full sticky top-0 z-50 bg-[#D8C4A9]" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 md:h-24 flex justify-between items-center relative z-20">
+            <!-- Logo -->
+            <a href="#" class="hover:opacity-80 transition-opacity flex items-center gap-3">
+                <img src="img/logo.jpg" alt="Logo"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-sm mix-blend-multiply">
+                <span
+                    class="font-serif font-bold text-lg md:text-xl text-[#242321] tracking-widest hidden sm:block">BAKERY
+                    PANDORA</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <nav class="flex items-center space-x-4 lg:space-x-6 text-[13px] font-bold text-[#242321]">
+                    <a href="#about" class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">About</a>
+                    <a href="#features"
+                        class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">Service</a>
+                    <a href="#menu" class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">Menu</a>
+                    <a href="#gallery"
+                        class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">Gallery</a>
+                    <a href="#message"
+                        class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">Message</a>
+                    <a href="#access" class="hover:text-[#C86D3B] transition-colors uppercase tracking-wider">Access</a>
+                </nav>
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                        class="text-[#242321] hover:text-[#C86D3B] hover:scale-110 transition-all duration-300 block p-1"
+                        title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 sm:w-10 sm:h-10" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-[#242321] focus:outline-none hover:text-[#C86D3B] transition-colors"
+                id="mobile-menu-btn">
+                <svg id="menu-icon-open" class="block" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-[#D8C4A9] shadow-lg border-t border-[#242321]/15 z-40"
+            id="mobile-menu">
+            <nav
+                class="flex flex-col items-center justify-center p-8 space-y-6 text-center text-[15px] font-bold tracking-widest text-[#242321]">
+                <a href="#about" class="hover:text-[#C86D3B] transition-colors uppercase">About</a>
+                <a href="#features" class="hover:text-[#C86D3B] transition-colors uppercase">Service</a>
+                <a href="#menu" class="hover:text-[#C86D3B] transition-colors uppercase">Menu</a>
+                <a href="#gallery" class="hover:text-[#C86D3B] transition-colors uppercase">Gallery</a>
+                <a href="#message" class="hover:text-[#C86D3B] transition-colors uppercase">Message</a>
+                <a href="#access" class="hover:text-[#C86D3B] transition-colors uppercase">Access</a>
+                <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                    class="text-[#242321] hover:text-[#C86D3B] hover:scale-105 transition-all flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span class="tracking-widest text-lg font-bold">Instagram</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Torn Paper at Bottom of Sticky Header -->
+        <div class="absolute top-full left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none -mt-px">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#D8C4A9"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- First View (Hero) -->
+    <section
+        class="relative min-h-[92vh] bg-[#C86D3B] flex flex-col items-center justify-center pt-10 pb-16 overflow-hidden">
+
+        <!-- Corner Images -->
+        <img src="img/left-top.png" alt=""
+            class="animate-corner-top-left absolute top-0 left-0 w-40 md:w-64 lg:w-80 object-contain z-0 pointer-events-none drop-shadow-md">
+        <img src="img/right-top.png" alt=""
+            class="animate-corner-top-right absolute top-0 right-0 w-40 md:w-64 lg:w-80 object-contain z-0 pointer-events-none drop-shadow-md">
+        <img src="img/left-bottom.png" alt=""
+            class="animate-corner-bottom-left absolute bottom-0 left-0 w-40 md:w-64 lg:w-80 object-contain z-0 pointer-events-none drop-shadow-md">
+        <img src="img/right-bottom.png" alt=""
+            class="animate-corner-bottom-right absolute bottom-0 right-0 w-40 md:w-64 lg:w-80 object-contain z-0 pointer-events-none drop-shadow-md">
+
+        <!-- Arch Window Hero Container (Pane Delicia Style) -->
+        <div
+            class="relative z-10 w-[92%] sm:w-full max-w-[350px] sm:max-w-xl md:max-w-4xl mx-auto flex flex-col items-center mt-8 sm:mt-0">
+
+            <!-- Arch Portal Frame with Animated Border -->
+            <div
+                class="relative w-full h-[320px] sm:h-[460px] md:h-[540px] rounded-t-[175px] sm:rounded-t-[210px] md:rounded-t-[280px] rounded-b-[24px] sm:rounded-b-[30px] shadow-2xl p-[4px] sm:p-[5px] group overflow-hidden scale-[0.85] sm:scale-100 origin-top mb-[-48px] sm:mb-0 transition-transform">
+
+                <!-- Spinning Border Background (Neon Effect) -->
+                <div
+                    class="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0_90deg,#F59E0B_160deg,#FEF08A_180deg,transparent_180deg_270deg,#C86D3B_340deg,#FEF08A_360deg)] animate-[spin_4s_linear_infinite] z-0 blur-[3px]">
+                </div>
+                <!-- Base border color underneath the moving lines -->
+                <div class="absolute inset-0 bg-[#242321]/50 z-0 pointer-events-none"></div>
+
+                <!-- Inner Content Container -->
+                <div
+                    class="relative w-full h-full rounded-t-[170px] sm:rounded-t-[210px] md:rounded-t-[280px] rounded-b-[20px] sm:rounded-b-[25px] overflow-hidden z-10 bg-[#242321]">
+
+                    <!-- Background Image Slideshow -->
+                    <div class="absolute inset-0 bg-cover bg-center animate-fv-slide-1"
+                        style="background-image: url('img/fv1.png');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center animate-fv-slide-2"
+                        style="background-image: url('img/fv2.png');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center animate-fv-slide-3"
+                        style="background-image: url('img/fv3.png');"></div>
+
+                    <!-- Dark Warm Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/30"></div>
+
+                    <!-- Content inside Arch Window -->
+                    <div
+                        class="relative w-full h-full flex flex-col items-center justify-center text-center px-3 py-4 sm:px-6 sm:py-8 text-[#FFF8EF] z-10">
+
+                        <!-- Japanese Script Tagline -->
+                        <p
+                            class="font-serif italic text-[10px] sm:text-base md:text-lg tracking-widest text-[#EFE6D8] mb-1 sm:mb-2 opacity-95">
+                            <span class="hidden sm:inline">〜 </span>おいしい、たのしい、<br class="sp:only">しあわせのベーカリー<span
+                                class="hidden sm:inline"> 〜</span>
+                        </p>
+
+                        <!-- Cursive Script Main Title -->
+                        <h1
+                            class="font-allura text-4xl sm:text-7xl md:text-8xl lg:text-9xl text-[#FFF8EF] drop-shadow-lg leading-tight my-0.5 sm:my-1">
+                            Bakery Pandora
+                        </h1>
+
+                        <!-- Japanese Title & Subtitle -->
+                        <p
+                            class="font-serif text-sm sm:text-2xl font-bold tracking-widest text-[#EFE6D8] uppercase mb-0.5 sm:mb-1 drop-shadow">
+                            ベーカリー パンドラ
+                        </p>
+                        <span
+                            class="text-[8px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] font-semibold text-[#EFE6D8]/80 uppercase mb-2 sm:mb-4">
+                            AMERICAN BAKE & CAFE
+                        </span>
+
+                        <!-- Scroll Down Indicator -->
+                        <div
+                            class="absolute bottom-2.5 sm:bottom-4 flex flex-col items-center opacity-85 hover:opacity-100 transition-opacity">
+                            <span
+                                class="text-[9px] sm:text-[10px] tracking-widest font-serif uppercase text-[#EFE6D8] mb-0.5 sm:mb-1">scroll</span>
+                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#EFE6D8] animate-bounce" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Description & CTA below Arch Window -->
+            <div class="mt-8 flex flex-col items-center text-center max-w-2xl px-4">
+                <p class="text-[#242321] text-sm sm:text-base leading-loose tracking-wider mb-6 font-medium">
+                    アメリカンベイクのベーカリーカフェ。<br class="hidden sm:inline">
+                    朝に美味しいモーニングを<br class="sp:only">楽しみたい方や、<br>ドーナツ・クッキーで<br class="sp:only">ちょっとワクワクする日常を。
+                </p>
+
+                <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                    class="bg-[#242321] text-[#EFE6D8] px-10 py-4 rounded-full font-bold text-sm md:text-base tracking-widest hover:bg-[#3D3833] hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center gap-2 group">
+                    <span>Official Instagram</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Abstract shape in background -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#C86D3B] rounded-full blur-3xl opacity-40 z-0 pointer-events-none">
+        </div>
+
+        <!-- Torn Paper Bottom -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20"
+            style="transform: rotate(180deg);">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L440,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#EFE6D8"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Strength Bar (売りにできる数字) -->
+    <div class="bg-[#EFE6D8] py-4 relative z-10 overflow-hidden flex w-full moving-dashed-border-y">
+        <!-- 1st Marquee Block -->
+        <ul
+            class="flex items-center justify-around space-x-6 md:space-x-10 px-3 md:px-5 text-xs md:text-[13px] whitespace-nowrap text-[#242321] font-medium tracking-wider shrink-0 min-w-full animate-marquee">
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>朝に美味しいモーニングを
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>仙台駅東口から徒歩10分
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>アメリカンベイクが楽しめる
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>イートインスペース完備
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>見た目も味も楽しいメニュー
+            </li>
+        </ul>
+        <!-- 2nd Marquee Block (Duplicate) -->
+        <ul aria-hidden="true"
+            class="flex items-center justify-around space-x-6 md:space-x-10 px-3 md:px-5 text-xs md:text-[13px] whitespace-nowrap text-[#242321] font-medium tracking-wider shrink-0 min-w-full animate-marquee">
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>朝に美味しいモーニングを
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>仙台駅東口から徒歩10分
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>アメリカンベイクが楽しめる
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>イートインスペース完備
+            </li>
+            <li class="flex items-center"><span class="text-[#C86D3B] mr-1.5 font-serif text-sm">✦</span>見た目も味も楽しいメニュー
+            </li>
+        </ul>
+    </div>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 lg:py-32 relative overflow-hidden text-center text-[#EFE6D8] bg-[#242321] clip-bg">
+        <!-- Background Overlay/Image -->
+        <div class="sticky-bg-img opacity-40 sm:hidden" style="background-image: url('img/ctaSpbg-1.jpg');"></div>
+        <div class="sticky-bg-img opacity-40 hidden sm:block" style="background-image: url('img/ctabg-1.jpg');"></div>
+
+        <!-- Torn Paper Top (matches ACCESS bg) -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#EFE6D8"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <!-- Shop Name h3 (Enters from Left) -->
+            <h3
+                class="font-serif text-lg sm:text-2xl font-bold tracking-[0.3em] mb-3 text-[#C86D3B] drop-shadow-md rotate-in-left delay-100">
+                ベーカリー パンドラ
+            </h3>
+
+            <!-- Tel h3 (Enters from Right) -->
+            <a href="tel:050-5385-5227"
+                class="block font-serif text-[26px] sm:text-5xl lg:text-5xl font-bold tracking-widest sm:tracking-[0.2em] mb-4 drop-shadow-lg hover:text-[#C86D3B] transition-colors rotate-in-right delay-200">
+                050-5385-5227
+            </a>
+
+            <!-- Info Text (Enters from Left) -->
+            <div class="drop-shadow-md font-bold rotate-in-left delay-300">
+                <p>営業時間： 9:00 ～ 17:00<br>
+                    パン売り切れ次第終了<br>
+                    ドリンクL.O 16:30</p>
+                <p>定休日　： 月曜日 / 木曜日</p>
+            </div><br>
+
+            <!-- Buttons (Enters from Right) -->
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl mx-auto rotate-in-right delay-400">
+                <!-- Button: Official Instagram -->
+                <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-[#C86D3B] border-2 border-[#C86D3B] text-white hover:bg-transparent hover:text-[#C86D3B] transition-colors py-4 rounded font-bold text-sm sm:text-base tracking-widest flex items-center justify-center gap-2 shadow-lg group">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>公式Instagram</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Torn Paper Bottom (matches Footer bg) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 rotate-180">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#D8C4A9"></path>
+            </svg>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Problems / Troubles Section (Pane Delicia Style Clone) -->
+    <section id="troubles" class="py-20 lg:py-28 bg-[#D8C4A9] relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="w-full lg:w-auto lg:shrink-0 lg:pt-4 text-center lg:text-left">
+                <span class="vertical-side-label">RECOMMEND</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <!-- Section Header -->
+                <div class="mb-14 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        こんな方におすすめ
+                    </h2>
+                </div>
+
+                <!-- Content Grid Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+
+                    <!-- Left Side: 3D Rounded Photo Card with Badge -->
+                    <div class="lg:col-span-5 relative flex justify-center items-center rotate-in-left w-full h-full">
+                        <!-- Photo Card Container -->
+                        <div
+                            class="relative w-full max-w-sm lg:max-w-none h-full min-h-[350px] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#242321]">
+                            <img src="img/problem.png" alt="ベーカリーパンドラのご利用" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/10 mix-blend-multiply pointer-events-none">
+                            </div>
+                        </div>
+
+                        <!-- Floating Circular Watermark Stamp Overlay on Top-Right Corner -->
+                        <div
+                            class="absolute -top-5 -right-3 sm:-top-7 sm:-right-5 md:-top-8 md:-right-6 z-30 pointer-events-none">
+                            <div
+                                class="animate-float-stamp relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-[#C86D3B] text-white shadow-2xl flex flex-col justify-center items-center text-center p-2 border-2 border-[#EFE6D8]">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-dashed border-white/80 animate-[spin_15s_linear_infinite] pointer-events-none">
+                                </div>
+                                <span
+                                    class="font-allura text-2xl sm:text-3xl text-[#FFF8EF] leading-none relative z-10">Pandora</span>
+                                <span
+                                    class="text-[9px] sm:text-[10px] font-serif font-bold leading-tight tracking-wider text-[#FFF8EF] mt-0.5 relative z-10">仙台で出会う<br>ベーカリーカフェ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Warm Cream Checklist Card -->
+                    <div
+                        class="lg:col-span-7 bg-[#EFE6D8] rounded-3xl p-8 sm:p-10 border border-[#242321]/25 shadow-md flex flex-col justify-between fade-left delay-150">
+                        <div>
+                            <h3
+                                class="font-serif text-xl sm:text-2xl font-bold tracking-widest border-b border-dashed border-[#242321]/20 pb-5 mb-6 text-[#242321] text-center sm:text-left">
+                                心ときめくパンの時間を<br class="sp:only">お届けします
+                            </h3>
+
+                            <div
+                                class="space-y-4 text-xs sm:text-sm tracking-wider leading-relaxed text-[#242321] font-medium">
+                                <div
+                                    class="flex items-start gap-3.5 border-b border-dashed border-[#242321]/15 pb-3 fade-up delay-100">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">朝に美味しいモーニング</strong>を楽しみたい方</p>
+                                </div>
+                                <div
+                                    class="flex items-start gap-3.5 border-b border-dashed border-[#242321]/15 pb-3 fade-up delay-150">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">仙台駅東口周辺</strong>でパン屋を探している方</p>
+                                </div>
+                                <div
+                                    class="flex items-start gap-3.5 border-b border-dashed border-[#242321]/15 pb-3 fade-up delay-200">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">ドーナツやクッキー</strong>が好きな方
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex items-start gap-3.5 border-b border-dashed border-[#242321]/15 pb-3 fade-up delay-250">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">サンドイッチ</strong>を気軽に楽しみたい方</p>
+                                </div>
+                                <div
+                                    class="flex items-start gap-3.5 border-b border-dashed border-[#242321]/15 pb-3 fade-up delay-300">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">イートイン</strong>でゆっくり過ごしたい方</p>
+                                </div>
+                                <div class="flex items-start gap-3.5 pb-1 fade-up delay-350">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-[#C86D3B]/20 text-[#C86D3B] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                    <p class="flex-1"><strong class="text-[#242321]">珍しいパンや面白いメニュー</strong>に出会いたい方
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-6 border-t border-[#242321]/15">
+                            <a href="#features"
+                                class="bg-[#242321] text-[#EFE6D8] block w-full text-center py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-widest hover:bg-[#3D3833] hover:scale-[1.02] transition-all shadow-md">
+                                詳しくはこちら →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Concept & News Section (Pane Delicia Style with Original Site Text) -->
+    <section id="about" class="py-20 lg:py-28 relative overflow-hidden clip-bg">
+        <div class="sticky-bg-img" style="background-image: url('img/fv2.jpg');"></div>
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-[#E2D2BC]/85 z-0"></div>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="w-full lg:w-auto lg:shrink-0 lg:pt-4 text-center lg:text-left">
+                <span class="vertical-side-label">ABOUT</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <!-- Section Header Icon & Title -->
+                <div class="mb-14 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        ベーカリーパンドラに<br class="sp:only">ついて
+                    </h2>
+                </div>
+
+                <!-- About Grid Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                    <!-- Left Side: Illustration Sketch & Text (Order 2 on SP, Order 1 on Desktop) -->
+                    <div
+                        class="order-2 lg:order-1 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left fade-right">
+
+                        <!-- Description Text -->
+                        <div class="space-y-4 max-w-lg mb-6 text-[#242321]">
+                            <h3
+                                class="text-lg sm:text-xl font-serif leading-relaxed font-bold text-[#242321] text-center lg:text-left">
+                                ちょっと不思議で、ちょっと楽しい。<br>
+                                仙台で出会う、<br class="sp:only">アメリカンベイクのベーカリーカフェ。
+                            </h3>
+                            <div
+                                class="space-y-3 text-xs sm:text-sm leading-loose tracking-wider text-[#242321]/90 font-medium text-left">
+                                <p>仙台市宮城野区にある、アメリカンベイクを楽しめるベーカリーカフェです。</p>
+                                <p>ドーナツやクッキー、サンドイッチなど、見た目も味も楽しいメニューをご用意。<br>
+                                    仙台駅東口から徒歩10分、国道沿いにあるので立ち寄りやすいお店です。
+                                </p>
+                                <p>イートインスペースもあり、モーニングやカフェタイムにゆっくりパンを楽しめます。</p>
+                            </div>
+                        </div>
+
+                        <!-- Sketch Art (Placed right before Details Button) -->
+                        <div
+                            class="w-48 sm:w-56 mb-6 p-2 bg-[#EFE6D8] rounded-full border border-[#242321]/20 shadow-sm">
+                            <img src="img/gallery2.jpg" alt="ベーカリーパンドラ"
+                                class="w-full h-auto object-contain rounded-full">
+                        </div>
+
+                        <!-- Details Button -->
+                        <a href="#features"
+                            class="bg-[#242321] text-[#EFE6D8] px-10 py-3.5 rounded-full font-bold text-sm tracking-widest hover:bg-[#3D3833] hover:scale-105 transition-all shadow-md inline-flex items-center gap-2 group">
+                            <span>詳しくはこちら</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+
+                    </div>
+
+                    <!-- Right Side: Layered Photo Cards & Circular Stamp Badges (Order 1 on SP, Order 2 on Desktop) -->
+                    <div
+                        class="order-1 lg:order-2 lg:col-span-6 relative flex justify-center items-center py-6 rotate-in-right">
+
+                        <!-- Container for Photo Cards -->
+                        <div
+                            class="relative w-full max-w-md flex items-center justify-center min-h-[340px] sm:min-h-[400px]">
+
+                            <!-- Top Left Photo Card -->
+                            <div
+                                class="absolute top-0 left-0 w-44 sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-[#242321] transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-10">
+                                <img src="img/gallery5.jpg" alt="Bakery Shelf" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Bottom Right Vertical Photo Card -->
+                            <div
+                                class="absolute bottom-0 right-0 w-52 sm:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-[#242321] transform rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
+                                <img src="img/gallery6.jpg" alt="Bakery Counter" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Circular Stamp Badges Overlay -->
+                            <div
+                                class="absolute z-20 top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none">
+                                <div
+                                    class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#EFE6D8] shadow-xl flex flex-col justify-center items-center text-center p-2">
+                                    <div
+                                        class="absolute inset-0 rounded-full border-2 border-dashed border-[#C86D3B] animate-[spin_12s_linear_infinite] pointer-events-none">
+                                    </div>
+                                    <span
+                                        class="font-allura text-2xl sm:text-3xl text-[#C86D3B] leading-none select-none relative z-10">Pandora</span>
+                                    <span
+                                        class="text-[9px] font-serif text-[#242321] font-bold tracking-widest mt-0.5 select-none relative z-10">パンドラ</span>
+                                </div>
+
+                                <div
+                                    class="w-22 h-22 sm:w-26 sm:h-26 rounded-full border-2 border-[#242321] bg-[#C86D3B] text-white shadow-xl flex flex-col justify-center items-center text-center rotate-[8deg] p-2 -ml-4">
+                                    <span
+                                        class="font-allura text-2xl sm:text-3xl text-[#FFF8EF] leading-none">Bakery</span>
+                                    <span
+                                        class="text-[9px] font-serif text-[#FFF8EF] font-bold tracking-wider mt-0.5">アメリカンベイク</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- News Section -->
+                <div
+                    class="mt-20 bg-[#EFE6D8] rounded-3xl p-6 sm:p-10 border border-[#242321]/25 shadow-md max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-10 flip-up delay-150">
+
+                    <!-- Left News Badge -->
+                    <div
+                        class="bg-[#D8C4A9] rounded-2xl p-6 w-36 sm:w-40 flex flex-col items-center justify-center text-center shrink-0 shadow-sm border border-[#242321]/20">
+                        <svg class="w-6 h-6 text-[#C86D3B] mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 3v3m0 12v3M3 12h3m12 0h3M5.636 5.636l2.122 2.122m8.484 8.484l2.122 2.122M5.636 18.364l2.122-2.122m8.484-8.484l2.122-2.122" />
+                        </svg>
+                        <span class="font-allura text-2xl text-[#C86D3B] leading-none">News</span>
+                        <span class="font-serif font-bold text-sm text-[#242321] tracking-widest mt-1">お知らせ</span>
+                    </div>
+
+                    <!-- Right News Items List -->
+                    <div class="flex-1 w-full space-y-4 text-xs sm:text-sm">
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 border-b border-dashed border-[#242321]/20 pb-3.5 fade-up delay-100">
+                            <span
+                                class="font-bold text-[#C86D3B] tracking-wider shrink-0 font-serif text-xs sm:text-sm">2026.07.23</span>
+                            <p class="text-[#242321] leading-relaxed font-medium">ベーカリーパンドラ グランドオープン！</p>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 border-b border-dashed border-[#242321]/20 pb-3.5 fade-up delay-200">
+                            <span
+                                class="font-bold text-[#C86D3B] tracking-wider shrink-0 font-serif text-xs sm:text-sm">2026.06.15</span>
+                            <p class="text-[#242321] leading-relaxed font-medium">新作アメリカンベイクドーナツ＆クッキー好評販売中！
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 pb-1 fade-up delay-300">
+                            <span
+                                class="font-bold text-[#C86D3B] tracking-wider shrink-0 font-serif text-xs sm:text-sm">2026.05.20</span>
+                            <p class="text-[#242321] leading-relaxed font-medium">
+                                イートインスペース完備！<br class="sp:only">仙台駅東口から徒歩10分でお立ち寄りいただけます
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Service Section (Matching About Theme) -->
+    <section id="features" class="py-20 lg:py-28 bg-[#D8C4A9] relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="w-full lg:w-auto lg:shrink-0 lg:pt-4 text-center lg:text-left">
+                <span class="vertical-side-label">FEATURE</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <!-- Section Header -->
+                <div class="mb-16 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        ベーカリーパンドラの<br class="sp:only">3つのこだわり
+                    </h2>
+                </div>
+
+                <!-- Features List -->
+                <div class="space-y-16 sm:space-y-24">
+
+                    <!-- Feature 01 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <!-- Image -->
+                        <div class="lg:col-span-6 relative rotate-in-left px-3 sm:px-0">
+                            <div
+                                class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#242321] group">
+                                <img src="img/service1.jpg" alt="アメリカンベイク"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div
+                                class="absolute -top-3 left-1 sm:-top-5 sm:-left-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#EFE6D8] shadow-xl flex items-center justify-center text-center p-2 z-20">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-dashed border-[#242321] animate-[spin_12s_linear_infinite] pointer-events-none">
+                                </div>
+                                <span
+                                    class="font-allura text-xl sm:text-2xl text-[#C86D3B] font-bold leading-none text-center select-none drop-shadow-sm">01.
+                                    Bake</span>
+                            </div>
+                        </div>
+                        <!-- Text Card -->
+                        <div class="lg:col-span-6 fade-left delay-150 px-3 sm:px-0">
+                            <div
+                                class="p-8 sm:p-10 bg-[#EFE6D8] rounded-3xl border border-[#242321]/25 shadow-md space-y-4">
+                                <span class="font-allura text-4xl text-[#C86D3B]">01.</span>
+                                <h3
+                                    class="text-xl sm:text-2xl font-serif text-[#242321] font-bold tracking-widest leading-relaxed">
+                                    アメリカンベイクが楽しめる
+                                </h3>
+                                <p class="text-xs sm:text-sm text-[#242321] leading-loose tracking-wider font-medium">
+                                    ドーナツやクッキー、サンドイッチなど、アメリカンベイクを中心にご用意しています。<br>
+                                    いつものパン屋とは少し違う、ワクワクするメニューに出会えるお店です。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 02 (Alternating Order) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <!-- Text Card -->
+                        <div class="lg:col-span-6 order-2 lg:order-1 fade-right px-3 sm:px-0">
+                            <div
+                                class="p-8 sm:p-10 bg-[#EFE6D8] rounded-3xl border border-[#242321]/25 shadow-md space-y-4">
+                                <span class="font-allura text-4xl text-[#C86D3B]">02.</span>
+                                <h3
+                                    class="text-xl sm:text-2xl font-serif text-[#242321] font-bold tracking-widest leading-relaxed">
+                                    モーニングやカフェ利用にも<br class="sp:only">おすすめ
+                                </h3>
+                                <p class="text-xs sm:text-sm text-[#242321] leading-loose tracking-wider font-medium">
+                                    朝の時間に美味しいパンを楽しみたい方や、ちょっと休憩したい方にもぴったりです。<br>
+                                    ドリンクもご用意しているので、パンと一緒にゆっくりお過ごしいただけます。
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Image -->
+                        <div class="lg:col-span-6 order-1 lg:order-2 relative rotate-in-right delay-150 px-3 sm:px-0">
+                            <div
+                                class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#242321] group">
+                                <img src="img/service2.png" alt="モーニング・カフェ"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div
+                                class="absolute -top-3 right-1 sm:-top-5 sm:-right-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#EFE6D8] shadow-xl flex items-center justify-center text-center p-2 z-20">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-dashed border-[#242321] animate-[spin_12s_linear_infinite] pointer-events-none">
+                                </div>
+                                <span
+                                    class="font-allura text-xl sm:text-2xl text-[#C86D3B] font-bold leading-none text-center select-none drop-shadow-sm">02.
+                                    Cafe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 03 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <!-- Image -->
+                        <div class="lg:col-span-6 relative zoom-in px-3 sm:px-0">
+                            <div
+                                class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#242321] group">
+                                <img src="img/service3.png" alt="イートイン限定メニュー"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div
+                                class="absolute -top-3 left-1 sm:-top-5 sm:-left-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#EFE6D8] shadow-xl flex items-center justify-center text-center p-2 z-20">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-dashed border-[#242321] animate-[spin_12s_linear_infinite] pointer-events-none">
+                                </div>
+                                <span
+                                    class="font-allura text-xl sm:text-2xl text-[#C86D3B] font-bold leading-none text-center select-none drop-shadow-sm">03.
+                                    Dine</span>
+                            </div>
+                        </div>
+                        <!-- Text Card -->
+                        <div class="lg:col-span-6 flip-up delay-150 px-3 sm:px-0">
+                            <div
+                                class="p-8 sm:p-10 bg-[#EFE6D8] rounded-3xl border border-[#242321]/25 shadow-md space-y-4">
+                                <span class="font-allura text-4xl text-[#C86D3B]">03.</span>
+                                <h3
+                                    class="text-xl sm:text-2xl font-serif text-[#242321] font-bold tracking-widest leading-relaxed">
+                                    イートイン限定メニューも<br class="sp:only">楽しめる
+                                </h3>
+                                <p class="text-xs sm:text-sm text-[#242321] leading-loose tracking-wider font-medium">
+                                    店内にはイートインスペースがあり、買ったパンをその場で楽しめます。<br>
+                                    イートイン限定メニューもあるため、店内でしか味わえない楽しさも魅力です。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommend Menu -->
+    <!-- Menu / Product Intro Section (Pane Delicia Style Clone) -->
+    <section id="menu" class="py-24 md:py-32 relative overflow-hidden clip-bg">
+        <div class="sticky-bg-img" style="background-image: url('img/fv1.jpg');"></div>
+        <!-- Background Dark Warm Overlay -->
+        <div class="absolute inset-0 bg-[#242321]/80 z-0"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
+
+            <!-- Central White Floating Card Window (Pane Delicia Style) -->
+            <div
+                class="relative w-full max-w-xl bg-[#EFE6D8] rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-[#242321] text-center zoom-in">
+
+                <!-- Corner Botanical Sprig Accents -->
+                <div class="absolute -top-4 -left-4 w-12 h-12 pointer-events-none text-[#7A5135]/40 rotate-12">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10,90 Q40,50 80,10 M25,65 Q35,45 50,40 M45,45 Q55,25 70,20 M15,80 Q30,70 35,55"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div
+                    class="absolute -bottom-4 -right-4 w-12 h-12 pointer-events-none text-[#7A5135]/40 rotate-[192deg]">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10,90 Q40,50 80,10 M25,65 Q35,45 50,40 M45,45 Q55,25 70,20 M15,80 Q30,70 35,55"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <!-- Icon Badge -->
+                <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1 block">ベーカリー
+                    パンドラ</span>
+
+                <!-- Title -->
+                <h2 class="text-2xl sm:text-3xl font-serif text-[#4A2E1B] font-bold tracking-widest mb-6">
+                    商品紹介
+                </h2>
+
+                <!-- Center Bread Basket Sketch Art -->
+                <div class="w-64 sm:w-80 md:w-96 mx-auto mb-6 fade-down delay-150">
+                    <img src="img/menu.jpg" alt="メニューイラスト"
+                        class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm">
+                </div>
+
+                <!-- Description Text -->
+                <p
+                    class="text-xs sm:text-sm text-[#4A2E1B]/90 leading-relaxed tracking-wider mb-8 font-medium max-w-md mx-auto text-left sm:text-center">
+                    ベーカリーパンドラで食べられるパンは種類豊富！<br class="hidden sm:inline">
+                    朝に嬉しいモーニングセットやドーナツ・クッキー、<br class="hidden sm:inline">
+                    アメリカンベイクのメニューが勢ぞろい。
+                </p>
+
+                <!-- Button -->
+                <a href="#gallery"
+                    class="bg-[#4A2E1B] text-[#E8DED0] px-10 py-3.5 rounded-md font-bold text-sm tracking-widest hover:bg-[#2D1810] hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2 group">
+                    <span>詳しくはこちら</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+
+            <!-- Menu Price List Dropdown / Card -->
+            <div
+                class="w-full max-w-xl mt-12 bg-white/90 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#7A5135]/20 shadow-xl flip-up delay-200">
+                <h3 class="text-lg font-serif text-center text-[#4A2E1B] mb-6 font-bold tracking-widest">
+                    おすすめ人気メニュー
+                </h3>
+                <ul class="divide-y divide-[#7A5135]/15 text-xs sm:text-sm text-[#242321]">
+                    <li class="py-3 flex justify-between items-center font-medium fade-up delay-100">
+                        <span>ドーナツ＆コーヒーセット</span>
+                        <span class="font-serif font-bold text-[#7A5135]">800円 (税込)</span>
+                    </li>
+                    <li class="py-3 flex justify-between items-center font-medium fade-up delay-150">
+                        <span>ドーナツ各種</span>
+                        <span class="font-serif font-bold text-[#7A5135]">300円〜</span>
+                    </li>
+                    <li class="py-3 flex justify-between items-center font-medium">
+                        <span>サンドイッチ各種</span>
+                        <span class="font-serif font-bold text-[#7A5135]">500円〜</span>
+                    </li>
+                    <li class="py-3 flex justify-between items-center font-medium">
+                        <span>クッキー各種</span>
+                        <span class="font-serif font-bold text-[#7A5135]">200円〜</span>
+                    </li>
+                    <li class="py-3 flex justify-between items-center font-medium">
+                        <span>ブレンドコーヒー / カフェラテ</span>
+                        <span class="font-serif font-bold text-[#7A5135]">400円〜</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 lg:py-32 relative overflow-hidden text-center text-[#EFE6D8] bg-[#242321] clip-bg">
+        <!-- Background Overlay/Image -->
+        <div class="sticky-bg-img opacity-40" style="background-image: url('img/ctabg-2.jpg');"></div>
+
+        <!-- Torn Paper Top (matches ACCESS bg) -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#E2D2BC"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <!-- Shop Name h3 (Enters from Left) -->
+            <h3
+                class="font-serif text-lg sm:text-2xl font-bold tracking-[0.3em] mb-3 text-[#C86D3B] drop-shadow-md rotate-in-left delay-100">
+                ベーカリー パンドラ
+            </h3>
+
+            <!-- Tel h3 (Enters from Right) -->
+            <a href="tel:050-5385-5227"
+                class="block font-serif text-4xl sm:text-5xl lg:text-5xl font-bold tracking-[0.2em] mb-4 drop-shadow-lg hover:text-[#C86D3B] transition-colors rotate-in-right delay-200">
+                050-5385-5227
+            </a>
+
+            <!-- Info Text (Enters from Left) -->
+            <div class="drop-shadow-md font-bold rotate-in-left delay-300">
+                <p>営業時間： 9:00 ～ 17:00<br>
+                    パン売り切れ次第終了<br>
+                    ドリンクL.O 16:30</p>
+                <p>定休日　： 月曜日 / 木曜日</p>
+            </div><br>
+
+            <!-- Buttons (Enters from Right) -->
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl mx-auto rotate-in-right delay-400">
+                <!-- Button: Official Instagram -->
+                <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-[#C86D3B] border-2 border-[#C86D3B] text-white hover:bg-transparent hover:text-[#C86D3B] transition-colors py-4 rounded font-bold text-sm sm:text-base tracking-widest flex items-center justify-center gap-2 shadow-lg group">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>公式Instagram</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Torn Paper Bottom (matches Footer bg) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 rotate-180">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#D8C4A9"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Voice (お客様の声) Section (Pane Delicia Style Theme) -->
+    <section id="voice" class="hidden py-20 lg:py-28 bg-[#E2D2BC] relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="shrink-0 pt-4 w-8 sm:w-auto">
+                <span class="vertical-side-label">VOICE</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <!-- Section Header -->
+                <div class="mb-16 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        お客様の声
+                    </h2>
+                </div>
+
+                <!-- Review Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Review 1 -->
+                    <div
+                        class="bg-[#EFE6D8] rounded-3xl p-8 border-t-4 border-t-[#C86D3B] border-x border-b border-[#242321]/25 shadow-md flex flex-col justify-between rotate-in-left delay-100 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div>
+                            <div class="flex text-[#C86D3B] mb-4 space-x-1">
+                                <span class="text-sm">★</span><span class="text-sm">★</span><span
+                                    class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
+                            </div>
+                            <p
+                                class="text-[#242321] text-xs sm:text-sm leading-loose tracking-wider mb-8 text-left font-medium">
+                                プレオープン行かせていただきました。アメリカンな雰囲気の店内に駐車場も完備、なんと言ってもドーナツが美味しかったです！
+                                スタッフさんも気さくで落ち着いて過ごせます。
+                                この辺りでは珍しいアメリカンベイク、今後いろんな人に体験してもらえるといいですね！
+                            </p>
+                        </div>
+                        <div
+                            class="text-xs font-serif font-bold text-[#242321] tracking-widest border-t border-dashed border-[#242321]/20 pt-4 flex justify-between items-center">
+                            <span>神田美登里 様</span>
+                            <span class="text-[10px] text-[#C86D3B] uppercase tracking-wider font-sans">Verified</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div
+                        class="bg-[#EFE6D8] rounded-3xl p-8 border-t-4 border-t-[#C86D3B] border-x border-b border-[#242321]/25 shadow-md flex flex-col justify-between zoom-in delay-250 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div>
+                            <div class="flex text-[#C86D3B] mb-4 space-x-1">
+                                <span class="text-sm">★</span><span class="text-sm">★</span><span
+                                    class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
+                            </div>
+                            <p
+                                class="text-[#242321] text-xs sm:text-sm leading-loose tracking-wider mb-8 text-left font-medium">
+                                宮城野区にあるベーカリーに行ってきました！アクセスも良くて、店内の雰囲気もおしゃれで落ち着いています。サンドイッチとコーヒーをお願いしました。
+                                スタッフの方の接客がとても丁寧で、安心してお任せできました。ドーナツのおかげで朝から気分が上がりました。価格もリーズナブルでコスパが良いので、またぜひ利用したいと思います！おすすめのカフェです。
+                            </p>
+                        </div>
+                        <div
+                            class="text-xs font-serif font-bold text-[#242321] tracking-widest border-t border-dashed border-[#242321]/20 pt-4 flex justify-between items-center">
+                            <span>山上明美 様</span>
+                            <span class="text-[10px] text-[#C86D3B] uppercase tracking-wider font-sans">Verified</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div
+                        class="bg-[#EFE6D8] rounded-3xl p-8 border-t-4 border-t-[#C86D3B] border-x border-b border-[#242321]/25 shadow-md flex flex-col justify-between rotate-in-right delay-400 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div>
+                            <div class="flex text-[#C86D3B] mb-4 space-x-1">
+                                <span class="text-sm">★</span><span class="text-sm">★</span><span
+                                    class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
+                            </div>
+                            <p
+                                class="text-[#242321] text-xs sm:text-sm leading-loose tracking-wider mb-8 text-left font-medium">
+                                宮城野区のベーカリーに行ってきました！雰囲気もとても良く、リラックスできる空間でした。クッキーを買ったのですが、スタッフの方が丁寧に説明してくれて、味も大満足です。価格もリーズナブルでコスパが良いと感じました。リピートしたいと思える素敵なお店です！おすすめです。
+                            </p>
+                        </div>
+                        <div
+                            class="text-xs font-serif font-bold text-[#242321] tracking-widest border-t border-dashed border-[#242321]/20 pt-4 flex justify-between items-center">
+                            <span>ちーずけーき 様</span>
+                            <span class="text-[10px] text-[#C86D3B] uppercase tracking-wider font-sans">Verified</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Google Reviews Button -->
+                <div class="mt-14 text-center flip-up delay-200">
+                    <a href="https://bakery-pandora.happytry.fun/jump02.html" target="_blank" rel="noopener noreferrer"
+                        class="bg-[#242321] text-[#EFE6D8] px-10 py-4 rounded-full font-bold text-xs sm:text-sm tracking-widest hover:bg-[#3D3833] hover:scale-105 transition-all shadow-xl inline-flex items-center gap-2 group">
+                        <span>Googleのクチコミを見る</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Gallery & Instagram Section (Pane Delicia Style Clone) -->
+    <section id="gallery" class="py-20 lg:py-28 bg-[#D8C4A9] overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="w-full lg:w-auto lg:shrink-0 lg:pt-4 text-center lg:text-left">
+                <span class="vertical-side-label">GALLERY</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <!-- Section Header -->
+                <div class="mb-12 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        ギャラリー
+                    </h2>
+                </div>
+
+                <!-- Instagram Grid Frame Container -->
+                <div id="gallery-grid-container"
+                    class="bg-[#EFE6D8] p-4 sm:p-6 md:p-8 rounded-3xl shadow-xl border border-[#242321]/25 max-w-7xl mx-auto zoom-in relative">
+
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-3.5 sm:gap-4 md:gap-6">
+
+                        <!-- Left Big Featured Card (Spans 2 columns on desktop) -->
+                        <div
+                            class="col-span-1 md:col-span-2 relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden group shadow-md zoom-in delay-100 border-2 border-[#242321]">
+                            <img src="img/gallery4.jpg" alt="Featured Apple Pie"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                            <!-- Circular Stamp Badge Overlay Centered on Left Image -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+                                <div
+                                    class="animate-float-stamp relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-[#242321]/75 backdrop-blur-sm text-white shadow-2xl flex flex-col justify-center items-center text-center p-2.5 sm:p-4 border-2 border-[#EFE6D8]">
+                                    <div
+                                        class="absolute inset-0 rounded-full border-2 border-dashed border-white/70 animate-[spin_15s_linear_infinite] pointer-events-none">
+                                    </div>
+                                    <span
+                                        class="font-allura text-2xl sm:text-4xl md:text-5xl text-[#E2D2BC] leading-none relative z-10">Bakery</span>
+                                    <span
+                                        class="font-serif font-extrabold text-xs sm:text-base md:text-xl tracking-widest text-[#FFF8EF] relative z-10 mt-0.5">Pandora</span>
+                                    <span
+                                        class="text-[7px] sm:text-[9px] md:text-[10px] tracking-widest opacity-80 uppercase mt-0.5 relative z-10 text-[#E2D2BC]">PREMIUM
+                                        BAKERY</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right 6 Tiles Container (Strictly Isolated to Columns 3, 4, 5) -->
+                        <div id="gallery-right-container" class="col-span-1 md:col-span-3 relative">
+                            <div class="grid grid-cols-3 gap-3.5 sm:gap-4 md:gap-6">
+                                <!-- 6 Grid Slots with Native Moving Cards Inside (Instant 0ms Reload Rendering) -->
+                                <div data-slot="0"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="0"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/gallery2.jpg" alt="Bakery 1"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                                <div data-slot="1"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="1"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/gallery3.jpg" alt="Bakery 2"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                                <div data-slot="2"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="2"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/gallery1.jpg" alt="Bakery 3"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                                <div data-slot="5"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="5"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/gallery5.jpg" alt="Bakery 6"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                                <div data-slot="4"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="4"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/gallery6.jpg" alt="Bakery 5"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                                <div data-slot="3"
+                                    class="gallery-slot col-span-1 aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl relative">
+                                    <div data-card-id="3"
+                                        class="moving-card absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-md group border border-[#242321]/20 cursor-pointer z-10">
+                                        <img src="img/fv1.jpg" alt="Bakery 4"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Instagram Button & Check! callout -->
+                <div class="mt-8 flex flex-col items-center justify-center flip-up delay-200">
+                    <div class="relative inline-flex items-center">
+                        <span
+                            class="font-allura text-2xl text-[#242321] absolute -top-5 -right-6 rotate-12">Check!</span>
+                        <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                            class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#242321] text-[#EFE6D8] font-bold text-xs sm:text-sm tracking-wider shadow-md hover:bg-[#3D3833] hover:scale-105 transition-all">
+                            <svg class="w-4 h-4 text-[#C86D3B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span>公式Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact & Reservation Banner CTA Card -->
+                <div
+                    class="mt-20 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-2 border-[#242321] flex flex-col-reverse md:flex-row">
+                    <div
+                        class="w-full md:w-5/12 bg-[#242321] p-8 sm:p-10 flex flex-col justify-center items-center text-center text-[#EFE6D8] relative">
+                        <h3
+                            class="text-2xl sm:text-3xl font-serif font-bold tracking-widest my-2.5 text-[#EFE6D8] rotate-in-left delay-100">
+                            ご予約・お問い合わせ
+                        </h3>
+                        <p
+                            class="text-xs sm:text-sm text-[#EFE6D8]/80 leading-relaxed font-medium rotate-in-right delay-200">
+                            パンのお取り置きや各種お問い合わせはこちら。
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-7/12 bg-[#EFE6D8] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 relative">
+                        <div
+                            class="w-full sm:w-2/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-[#242321]/20 rotate-in-left delay-300">
+                            <img src="img/fv3.jpg" alt="Bakery Pandora Breads" class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="flex flex-col items-center sm:items-end text-center sm:text-right w-full sm:w-1/3 justify-between h-full py-2 rotate-in-right delay-400">
+                            <p
+                                class="font-serif italic font-medium text-xs sm:text-sm text-[#242321] leading-relaxed mb-4">
+                                お気軽にご連絡ください！</p>
+                            <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                                class="w-10 h-10 rounded-full bg-[#242321] text-[#EFE6D8] flex items-center justify-center shadow-lg hover:bg-[#3D3833] hover:scale-110 transition-all group">
+                                <span
+                                    class="group-hover:translate-x-0.5 transition-transform text-sm font-bold">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Message & Concept Name -->
+    <section id="message" class="py-24 relative overflow-hidden clip-bg">
+        <div class="sticky-bg-img" style="background-image: url('img/messagebg.jpg');"></div>
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-[#EFE6D8]/85 z-0"></div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center zoom-in relative z-10">
+            <div class="bg-[#FFF8EF]/90 backdrop-blur-sm rounded-3xl p-6 sm:p-10 border border-[#242321]/20 shadow-xl">
+                <div class="mb-8 flex flex-col items-center space-y-3">
+                    <span
+                        class="text-[#C86D3B] text-[10px] md:text-xs tracking-[0.3em] font-serif uppercase">Message</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] tracking-widest text-center font-bold">
+                        メッセージ
+                    </h2>
+                    <div class="w-12 h-[2px] bg-[#C86D3B]"></div>
+                </div>
+
+                <p
+                    class="text-[13px] md:text-base leading-loose tracking-wider text-[#242321] text-left md:text-center font-medium">
+                    パンで、ちょっと面白い一日を<br><br>
+                    毎日の朝ごはんやカフェ時間に、少しだけワクワクを。<br>
+                    当店では、ドーナツやサンドイッチ、クッキーなど、<br class="hidden sm:block">
+                    ここにしかないメニューを楽しんでいただけるよう心を込めてご用意しています。<br><br>
+                    仙台駅東口から歩いて行けるベーカリーカフェとして、<br class="hidden sm:block">
+                    モーニングやお出かけの合間にぜひ気軽にお立ち寄りください。<br>
+                    皆様との素敵なご縁を心よりお待ちしております。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop & Staff / Recruit Split Section (Pane Delicia Style Clone) -->
+    <section id="staff" class="w-full relative overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 w-full relative">
+            <div
+                class="bg-[#EFE6D8] py-16 md:py-24 pb-20 md:pb-28 px-6 sm:px-10 flex flex-col items-center justify-center text-center rotate-in-left border-b md:border-b-0 md:border-r border-[#242321]/15">
+                <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                    パンドラ</span>
+                <h2 class="text-2xl sm:text-3xl font-serif text-[#242321] font-bold tracking-widest mb-8">
+                    店舗紹介</h2>
+                <div class="w-48 sm:w-56 mb-8">
+                    <img src="img/favicon.jpg" alt="店舗イラスト"
+                        class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm">
+                </div>
+                <p class="text-xs sm:text-sm text-[#242321]/90 leading-loose tracking-wider max-w-md font-medium">
+                    アメリカンベイクの温かみを感じる店舗デザイン。<br>
+                    地域のみなさまに、<br>元気とパンのおいしさをお届けします。
+                </p>
+            </div>
+            <div
+                class="bg-[#D4BF9F] py-16 md:py-24 pb-20 md:pb-28 px-6 sm:px-10 flex flex-col items-center justify-center text-center rotate-in-right delay-150">
+                <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                    パンドラ</span>
+                <h2 class="text-2xl sm:text-3xl font-serif text-[#242321] font-bold tracking-widest mb-8">
+                    スタッフ紹介・採用情報
+                </h2>
+                <div class="relative w-full max-w-xs mb-8">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-[#242321]">
+                        <img src="img/service2.jpg" alt="ベーカリースタッフ" class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="absolute -top-5 -left-3 sm:-top-6 sm:-left-4 md:-left-6 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#242321] text-[#EFE6D8] shadow-2xl flex flex-col justify-center items-center text-center p-2 rotate-[-12deg] z-10 backdrop-blur-sm animate-float-stamp">
+                        <div
+                            class="absolute inset-0 rounded-full border-2 border-dashed border-[#EFE6D8] animate-[spin_10s_linear_infinite] pointer-events-none">
+                        </div>
+                        <span
+                            class="text-[9px] sm:text-[10px] font-serif font-bold leading-tight tracking-wider relative z-10">本物のベイクを<br>目指す方へ</span>
+                    </div>
+                </div>
+                <p class="text-xs sm:text-sm text-[#242321]/90 leading-loose tracking-wider max-w-md font-medium">
+                    どうやったらいっと美味しくなるか、<br>
+                    どうしたらお客さまにもっと喜んでいただけるか。<br>
+                    プロフェッショナルとして日々考えながら、<br>
+                    最高のパンと笑顔をお客様に届けましょう。
+                </p>
+            </div>
+
+            <!-- Single Floating Centered Button (Bridging Both Columns) -->
+            <div class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 w-max text-center">
+                <a href="#access"
+                    class="bg-[#242321] text-[#EFE6D8] px-10 py-3.5 sm:px-12 sm:py-4 rounded-full font-bold text-xs sm:text-sm tracking-widest hover:bg-[#3D3833] hover:scale-105 transition-all shadow-2xl inline-flex items-center gap-2 group border-2 border-[#EFE6D8]/40">
+                    <span>詳しくはこちら</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access & Contact Section (Pane Delicia Style Theme) -->
+    <section id="access" class="py-20 lg:py-28 bg-[#D8C4A9] text-[#242321] relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-12">
+            <!-- Vertical Section Side Label -->
+            <div class="w-full lg:w-auto lg:shrink-0 lg:pt-4 text-center lg:text-left">
+                <span class="vertical-side-label">ACCESS</span>
+            </div>
+
+            <div class="flex-1 w-full min-w-0">
+                <div class="mb-16 flex flex-col items-center justify-center text-center fade-down">
+                    <span class="text-[11px] font-serif text-[#7A5135] tracking-widest uppercase mb-1">ベーカリー
+                        パンドラ</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-[#242321] font-bold tracking-widest text-center">
+                        店舗情報
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+                    <div
+                        class="lg:col-span-6 bg-[#EFE6D8] rounded-3xl p-8 sm:p-10 border border-[#242321]/25 shadow-xl flex flex-col justify-between fade-right">
+                        <div>
+                            <h3
+                                class="font-serif text-2xl sm:text-3xl font-bold tracking-widest border-b border-dashed border-[#242321]/20 pb-6 mb-8 text-[#242321] flex items-center gap-2">
+                                <span>ベーカリーパンドラ</span>
+                            </h3>
+                            <div
+                                class="space-y-6 text-xs sm:text-sm tracking-wider leading-loose text-[#242321] font-medium">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 mr-3 shrink-0 mt-1 text-[#C86D3B]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="font-bold text-[#242321]">〒983-0803</p>
+                                        <p>宮城県仙台市宮城野区小田原１丁目４−２６</p>
+                                        <span class="text-xs text-[#7A5135] mt-1 block">（小田原４５ビル 1F 102号）</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 mr-3 shrink-0 mt-1 text-[#C86D3B]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <p><strong class="text-[#242321]">営業時間：</strong> 9:00 ～ 17:00<br>
+                                        パン売り切れ次第終了<br>
+                                        ドリンクL.O 16:30</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-3 shrink-0 text-[#C86D3B]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <p><strong class="text-[#242321]">定休日：</strong> 月曜日 / 木曜日</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-8 mt-8 border-t border-[#242321]/15">
+                            <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                                class="bg-[#242321] text-[#EFE6D8] block w-full text-center py-4 rounded-full font-bold text-xs sm:text-sm tracking-widest hover:bg-[#3D3833] hover:scale-[1.02] transition-all shadow-md">
+                                公式Instagramはこちら →
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:col-span-6 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#242321] aspect-square lg:aspect-auto min-h-[350px] lg:min-h-[400px] relative zoom-in delay-200 w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.6258195641094!2d140.88699337642987!3d38.26498348377027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8987c817ff68dd%3A0xafa27c8393d01561!2z44OZ44O844Kr44Oq44O844OR44Oz44OJ44Op!5e0!3m2!1sja!2sjp!4v1785743359762!5m2!1sja!2sjp"
+                            class="absolute inset-0 w-full h-full border-0 block" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 lg:py-32 relative overflow-hidden text-center text-[#EFE6D8] bg-[#242321] clip-bg">
+        <!-- Background Overlay/Image -->
+        <div class="sticky-bg-img opacity-40"
+            style="background-image: url('img/ctabg-3.jpg'); background-position: center 20%;"></div>
+
+        <!-- Torn Paper Top (matches ACCESS bg) -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#D8C4A9"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <!-- Shop Name h3 (Enters from Left) -->
+            <h3
+                class="font-serif text-lg sm:text-2xl font-bold tracking-[0.3em] mb-3 text-[#C86D3B] drop-shadow-md rotate-in-left delay-100">
+                ベーカリー パンドラ
+            </h3>
+
+            <!-- Tel h3 (Enters from Right) -->
+            <a href="tel:050-5385-5227"
+                class="block font-serif text-4xl sm:text-5xl lg:text-5xl font-bold tracking-[0.2em] mb-4 drop-shadow-lg hover:text-[#C86D3B] transition-colors rotate-in-right delay-200">
+                050-5385-5227
+            </a>
+
+            <!-- Info Text (Enters from Left) -->
+            <div class="drop-shadow-md font-bold rotate-in-left delay-300">
+                <p>営業時間： 9:00 ～ 17:00<br>
+                    パン売り切れ次第終了<br>
+                    ドリンクL.O 16:30</p>
+                <p>定休日　： 月曜日 / 木曜日</p>
+            </div><br>
+
+            <!-- Buttons (Enters from Right) -->
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl mx-auto rotate-in-right delay-400">
+                <!-- Button: Official Instagram -->
+                <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+                    class="w-full sm:w-1/2 bg-[#C86D3B] border-2 border-[#C86D3B] text-white hover:bg-transparent hover:text-[#C86D3B] transition-colors py-4 rounded font-bold text-sm sm:text-base tracking-widest flex items-center justify-center gap-2 shadow-lg group">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>公式Instagram</span>
+                </a>
+
+
+            </div>
+        </div>
+
+        <!-- Torn Paper Bottom (matches Footer bg) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 rotate-180">
+            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" class="w-full h-3 sm:h-5">
+                <path
+                    d="M0,0 L0,10 L15,16 L30,4 L45,15 L60,8 L75,19 L90,6 L105,14 L120,4 L135,18 L150,7 L165,16 L180,5 L195,17 L210,9 L225,19 L240,6 L255,15 L270,4 L285,18 L300,8 L315,16 L330,5 L345,19 L360,7 L375,15 L390,4 L405,18 L420,9 L435,17 L450,5 L465,16 L480,7 L495,18 L510,4 L525,15 L540,6 L555,19 L570,8 L585,15 L600,5 L615,16 L630,7 L645,18 L660,4 L675,15 L690,6 L705,19 L720,8 L735,15 L750,5 L765,16 L780,7 L795,18 L810,4 L825,15 L840,6 L855,19 L870,8 L885,15 L900,5 L915,16 L930,7 L945,18 L960,4 L975,15 L990,6 L1000,10 L1000,0 Z"
+                    fill="#C8B397"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#C8B397] text-[#242321] py-10 text-center text-[11px] tracking-widest font-medium">
+        <p>&copy; 2026 ベーカリーパンドラ. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fixed Bottom Button for Mobile -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-[#EFE6D8]/95 backdrop-blur-md border-t border-[#242321]/20 p-3 flex gap-2">
+        <a href="tel:050-5385-5227"
+            class="flex-1 bg-[#EFE6D8] border border-[#242321] text-[#242321] text-center py-3 font-bold text-xs tracking-widest flex justify-center items-center gap-1 shadow-sm rounded-full">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+            </svg>
+            電話
+        </a>
+        <a href="https://bakery-pandora.happytry.fun/jump01.html" target="_blank"
+            class="flex-1 bg-[#242321] text-[#EFE6D8] text-center py-3 font-bold text-xs tracking-widest shadow-sm flex justify-center items-center gap-1.5 rounded-full">
+            <svg class="w-4 h-4 text-[#C86D3B]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            Instagram
+        </a>
+    </div>
+    <!-- モバイル用下部余白（固定ボタンの分） -->
+    <div class="h-20 md:hidden bg-[#D8C4A9]"></div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <!-- Close Button -->
+        <button id="lightbox-close"
+            class="absolute top-6 right-6 text-white/80 hover:text-white focus:outline-none transition-colors"
+            aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <!-- Modal Image -->
+        <img id="lightbox-img" src="" alt="Gallery Preview"
+            class="max-w-full max-h-[85vh] rounded-xl object-contain shadow-2xl transition-transform duration-300 scale-95">
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="ページ上部へ戻る"
+        class="fixed bottom-24 right-6 md:bottom-8 md:right-8 bg-[#242321] text-[#EFE6D8] w-12 h-12 rounded-full shadow-lg flex items-center justify-center z-50 transition-all duration-300 opacity-0 pointer-events-none hover:bg-[#3D3833] hover:scale-110 active:scale-95 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // ハンバーガーメニューの切り替え
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        if (btn && menu && iconOpen && iconClose) {
+            function toggleMenuState(open) {
+                if (open) {
+                    menu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconOpen.classList.remove('block');
+                    iconClose.classList.remove('hidden');
+                    iconClose.classList.add('block');
+                } else {
+                    menu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconOpen.classList.add('block');
+                    iconClose.classList.add('hidden');
+                    iconClose.classList.remove('block');
+                }
+            }
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = menu.classList.contains('hidden');
+                toggleMenuState(isHidden);
+            });
+
+            const menuLinks = menu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    toggleMenuState(false);
+                });
+            });
+        }
+
+        // ナビバーのアンカーリンク Smooth Scroll 処理（ヘッダー高さオフセット計算）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (!targetId || targetId === '#') return;
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    const headerHeight = document.getElementById('header')?.offsetHeight || 80;
+                    const elementPosition = targetElem.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight - 10;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // スクロール時のヘッダー表示調整
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (header) {
+                header.classList.remove('shadow-md', 'shadow-sm', 'shadow-lg');
+            }
+        });
+
+        // スクロールアニメーション (ハイエンド演出用 IntersectionObserver)
+        const animClasses = '.fade-up, .fade-down, .fade-left, .fade-right, .zoom-in, .rotate-in-left, .rotate-in-right, .flip-up, .vertical-side-label';
+        const fadeElements = document.querySelectorAll(animClasses);
+
+        if (fadeElements.length > 0) {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ギャラリーポップアップ (Lightbox) の処理
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const galleryImages = document.querySelectorAll('#gallery img');
+
+        if (lightboxModal && lightboxImg && lightboxClose) {
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    const src = img.getAttribute('src');
+                    lightboxImg.setAttribute('src', src);
+                    lightboxModal.classList.remove('hidden');
+                    // アニメーション用のクラスを追加
+                    setTimeout(() => {
+                        lightboxImg.classList.remove('scale-95');
+                        lightboxImg.classList.add('scale-100');
+                    }, 10);
+                });
+            });
+
+            // モダルを閉じる関数
+            const closeLightbox = () => {
+                lightboxImg.classList.remove('scale-100');
+                lightboxImg.classList.add('scale-95');
+                setTimeout(() => {
+                    lightboxModal.classList.add('hidden');
+                    lightboxImg.setAttribute('src', '');
+                }, 200);
+            };
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+
+            // Escキーで閉じる処理
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // Scroll to Top Button Logic
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollTopBtn.classList.add('opacity-100');
+                } else {
+                    scrollTopBtn.classList.remove('opacity-100');
+                    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // ギャラリー物理移動（フィジカル・ラウンド・スライドアニメーション）
+        const gallerySlots = Array.from(document.querySelectorAll('.gallery-slot')).sort(
+            (a, b) => parseInt(a.getAttribute('data-slot')) - parseInt(b.getAttribute('data-slot'))
+        );
+        const movingCards = Array.from(document.querySelectorAll('.moving-card'));
+        const galleryContainer = document.getElementById('gallery-right-container') || document.getElementById('gallery-grid-container');
+
+        if (gallerySlots.length === 6 && movingCards.length === 6 && galleryContainer) {
+            let cardStep = 0;
+            let isPaused = false;
+
+            galleryContainer.addEventListener('mouseenter', () => { isPaused = true; });
+            galleryContainer.addEventListener('mouseleave', () => { isPaused = false; });
+            galleryContainer.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+            galleryContainer.addEventListener('touchend', () => { isPaused = false; }, { passive: true });
+
+            function positionCards(animate = true) {
+                movingCards.forEach((card) => {
+                    const cardId = parseInt(card.getAttribute('data-card-id'));
+                    const homeSlot = card.parentElement;
+                    if (!homeSlot) return;
+
+                    const currentSlotIndex = (cardId + cardStep) % 6;
+                    const targetSlot = gallerySlots[currentSlotIndex];
+                    if (!targetSlot) return;
+
+                    const homeRect = homeSlot.getBoundingClientRect();
+                    const targetRect = targetSlot.getBoundingClientRect();
+
+                    const top = targetRect.top - homeRect.top;
+                    const left = targetRect.left - homeRect.left;
+
+                    if (!animate) {
+                        card.style.transition = 'none';
+                    } else {
+                        card.style.transition = 'transform 0.85s cubic-bezier(0.25, 1, 0.5, 1)';
+                    }
+
+                    card.style.transform = `translate3d(${left.toFixed(2)}px, ${top.toFixed(2)}px, 0)`;
+                });
+            }
+
+            // Immediate position lock on load/resize
+            positionCards(false);
+            requestAnimationFrame(() => positionCards(false));
+            setTimeout(() => positionCards(false), 50);
+            setTimeout(() => positionCards(false), 200);
+
+            window.addEventListener('load', () => positionCards(false));
+            window.addEventListener('resize', () => positionCards(false));
+
+            // Start circular animation after initial 3.5s delay ("1st ei bose thakbe than move hobe")
+            setTimeout(() => {
+                setInterval(() => {
+                    if (isPaused) return;
+                    cardStep++;
+                    positionCards(true);
+                }, 2400);
+            }, 3500);
+        }
+
+        // 本文の「。」で改行処理および縦書きラベルの文字分割処理
+        document.addEventListener("DOMContentLoaded", function () {
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach(p => {
+                // "。"の後に<br>が続いていなければ<br>を挿入する
+                p.innerHTML = p.innerHTML.replace(/。(?!<br\s*\/?>)/g, '。<br>');
+            });
+
+            // 縦書きラベルの1文字ずつアニメーション用のスパン分割
+            const verticalLabels = document.querySelectorAll('.vertical-side-label');
+            verticalLabels.forEach(label => {
+                const text = label.textContent.trim();
+                label.textContent = '';
+                [...text].forEach((char, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    // delayを0.15sずつ増やす
+                    span.style.transitionDelay = `${index * 0.15}s`;
+                    label.appendChild(span);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -461,9 +461,17 @@
                 data-wow-duration="1.2s">
                 <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">CAMPAIGN</span>
                 <h2 class="text-2xl md:text-3xl section-title">キャンペーン情報</h2>
-                <div class="w-full max-w-sm mt-6 px-4">
+                <div class="w-full max-w-4xl mt-6 px-4">
                     <div class="swiper campaignSwiper cursor-pointer" onclick="openCampaignModal()">
                         <div class="swiper-wrapper mb-8">
+                            <div class="swiper-slide group">
+                                <img src="./img/campaign.jpg" alt="サロン画像1"
+                                    class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                            </div>
+                            <div class="swiper-slide group">
+                                <img src="./img/campaign2.jpg" alt="サロン画像2"
+                                    class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                            </div>
                             <div class="swiper-slide group">
                                 <img src="./img/campaign.jpg" alt="サロン画像1"
                                     class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
@@ -1329,7 +1337,7 @@
 
         // Swiper Initialization
         const campaignSwiper = new Swiper('.campaignSwiper', {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 10,
             loop: true,
             pagination: {
@@ -1340,6 +1348,11 @@
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+                768: {
+                    spaceBetween: 20
+                }
+            }
         });
 
         const campaignModalSwiper = new Swiper('.campaignModalSwiper', {

@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠セラピーwelina | 東京都稲城市のドライヘッドスパサロン</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+
+    <!-- OGP (Eyecatch & Sharing Metadata) -->
+    <meta property="og:title" content="睡眠セラピーwelina | 東京都稲城市のドライヘッドスパサロン">
+    <meta property="og:description" content="心と身体にやさしく寄り添うケアで、深く休める時間をサポートします。東京都稲城市にあるドライヘッドスパと全身ケアのプライベートサロンです。">
+    <meta property="og:image" content="https://welina-sleep.happytry.fun/img/eyecatch.jpg">
+    <meta property="og:url" content="https://welina-sleep.happytry.fun/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="睡眠セラピーwelina">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="睡眠セラピーwelina | 東京都稲城市のドライヘッドスパサロン">
+    <meta name="twitter:description" content="心と身体にやさしく寄り添うケアで、深く休める時間をサポートします。東京都稲城市にあるドライヘッドスパと全身ケアのプライベートサロンです。">
+    <meta name="twitter:image" content="https://welina-sleep.happytry.fun/img/eyecatch.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        welina: {
+                            bg: '#F8F5F1',         // Warm Ivory
+                            bgLight: '#F2EFEA',    // Soft ivory-gray/beige
+                            accent: '#C9A66B',     // Gold Beige
+                            accentDark: '#5B4636', // Dark Brown
+                            textMain: '#333333',   // Charcoal Gray
+                            textMuted: '#5B4636',  // Dark Brown
+                        },
+                        line: '#06C755'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Serif JP"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'], // スタイリッシュ・リラックス感を出す明朝体
+                        sansGothic: ['"Noto Sans JP"', 'sans-serif'], // 一部見やすさ重視のゴシック
+                        en: ['"Cinzel"', '"Playfair Display"', 'serif'],
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #ebd6b3 0%, #C9A66B 50%, #5B4636 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            font-family: 'Noto Serif JP', serif;
+            color: #333333;
+            background-color: #F8F5F1;
+            line-height: 1.8;
+        }
+
+        .font-gothic {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .font-en {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.1em;
+        }
+
+        /* ハンバーガーアイコン */
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 1px;
+            background-color: #5B4636;
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled .hamburger span {
+            background-color: #5B4636;
+        }
+
+        .hamburger.active span {
+            background-color: #5B4636 !important;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* セクション見出し */
+        .section-title {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            color: #5B4636;
+            font-weight: 300;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: #C9A66B;
+        }
+
+        .section-title-left::after {
+            left: 0;
+            transform: none;
+        }
+
+        .img-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* チェックリスト */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333333;
+        }
+
+        .check-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            background-color: #C9A66B;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(201, 166, 107, 0.8);
+        }
+
+        /* Custom Header Styles */
+        #header {
+            transition: background-color 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .header-light {
+            background-color: #F8F5F1;
+            height: 96px;
+            /* h-24 */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-scrolled {
+            background-color: rgba(248, 245, 241, 0.95) !important;
+            backdrop-filter: blur(10px);
+            height: 80px;
+            /* h-20 */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 1024px) {
+            .header-light {
+                height: 80px;
+            }
+
+            .header-scrolled {
+                height: 70px;
+            }
+        }
+
+        .nav-link {
+            color: #5B4636;
+            font-family: 'Noto Serif JP', serif;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #C9A66B;
+        }
+
+        .header-scrolled .nav-link {
+            color: #5B4636;
+        }
+
+        .header-scrolled .nav-link:hover {
+            color: #C9A66B;
+        }
+
+        /* ふわっと光るエフェクト */
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(201, 166, 107, 0.15) 0%, rgba(248, 245, 241, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Swiper Pagination */
+        .voice-pagination.swiper-pagination-bullets {
+            bottom: 0px !important;
+        }
+
+        .voice-pagination .swiper-pagination-bullet {
+            background-color: rgba(201, 166, 107, 0.5);
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+        }
+
+        .voice-pagination .swiper-pagination-bullet-active {
+            background-color: #C9A66B;
+        }
+
+        /* FV Image Fade Slider */
+        .fv-slide-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .fv-slide-img.active {
+            opacity: 1;
+        }
+
+        /* Infinite Marquee */
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            -webkit-animation: marquee-scrolling 35s linear infinite;
+            animation: marquee-scrolling 35s linear infinite;
+            will-change: transform;
+        }
+
+        @-webkit-keyframes marquee-scrolling {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        @keyframes marquee-scrolling {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        /* Paragraph font size requirements */
+        p {
+            font-size: 14px !important;
+        }
+
+        @media (min-width: 1024px) {
+            p {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Disable user text selection and copy */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Mobile padding adjustments for SP */
+        @media (max-width: 1023px) {
+            .p-8 {
+                padding: 30px 10px !important;
+            }
+
+            .px-4 {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            .check-list li {
+                padding-left: 1rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased font-light tracking-wide overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header" class="fixed w-full top-0 z-50 header-light">
+        <div class="w-full h-full flex justify-between items-center pl-4 md:pl-8">
+            <!-- ロゴ/サロン名 -->
+            <a href="#"
+                class="flex flex-col justify-center bg-[#C9A66B] px-4 md:px-5 py-2 h-fit my-auto text-center border border-[#b5925a] shadow-sm select-none z-50 shrink-0">
+                <span
+                    class="font-serif text-lg md:text-xl text-[#5B4636] tracking-widest font-semibold flex items-center justify-center gap-1">
+                    welina <span class="text-sm">✴&#xFE0E;</span>
+                </span>
+                <span class="text-[9px] text-[#5B4636] font-gothic tracking-widest mt-0.5 whitespace-nowrap">SLEEP
+                    THERAPY</span>
+            </a>
+
+            <!-- PC Nav -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-gothic ml-auto mr-12 h-full">
+                <a href="#about" class="nav-link font-medium">About</a>
+                <a href="#feature" class="nav-link font-medium">Features</a>
+                <a href="#menu" class="nav-link font-medium">Menu</a>
+                <a href="#reviews" class="nav-link font-medium">Voice</a>
+                <a href="#gallery" class="nav-link font-medium">Gallery</a>
+                <a href="#access" class="nav-link font-medium">Contact</a>
+            </nav>
+
+            <!-- Reservation Button (Full height) -->
+            <div class="h-full hidden lg:flex items-center">
+                <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+                    class="bg-[#06C755] hover:bg-[#05b34c] text-white font-serif font-bold px-6 h-full flex items-center justify-center transition gap-2 text-sm tracking-widest whitespace-nowrap">
+                    <img src="./img/LINE.png" alt="LINE" class="w-4 h-4 object-contain" />
+                    LINE予約 <span class="text-xs">&gt;</span>
+                </a>
+                <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+                    class="bg-[#C9A66B] hover:bg-[#b5925a] text-[#5B4636] font-serif font-bold px-6 h-full flex items-center justify-center transition gap-2 text-sm tracking-widest whitespace-nowrap">
+                    Instagram予約 <span class="text-xs">&gt;</span>
+                </a>
+            </div>
+
+            <!-- SP Hamburger -->
+            <button id="menu-btn" class="lg:hidden hamburger focus:outline-none z-50 mr-4">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- SP Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 h-[100dvh] bg-welina-bg z-40 hidden flex-col items-center justify-start space-y-8 pt-32 pb-24 overflow-y-auto">
+            <a href="#about" class="text-lg text-welina-textMain mobile-link tracking-widest">About</a>
+            <a href="#feature" class="text-lg text-welina-textMain mobile-link tracking-widest">Features</a>
+            <a href="#menu" class="text-lg text-welina-textMain mobile-link tracking-widest">Menu</a>
+            <a href="#reviews" class="text-lg text-welina-textMain mobile-link tracking-widest">Voice</a>
+            <a href="#gallery" class="text-lg text-welina-textMain mobile-link tracking-widest">Gallery</a>
+            <a href="#access" class="text-lg text-welina-textMain mobile-link tracking-widest">Contact</a>
+
+            <div class="mt-8 flex flex-col w-full px-12 gap-4">
+                <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+                    class="bg-[#06C755] text-white font-serif font-bold py-4 rounded-sm text-center shadow-md text-lg">
+                    LINEで予約する
+                </a>
+                <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+                    class="bg-[#C9A66B] text-[#5B4636] font-serif font-bold py-4 rounded-sm text-center shadow-md text-lg">
+                    Instagramで予約する
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FV (First View) -->
+    <section
+        class="relative min-h-[100dvh] lg:h-[100dvh] flex flex-col lg:flex-row bg-[#F8F5F1] overflow-hidden pt-20 lg:pt-24">
+        <!-- Left Column: Content (approx 45% width on desktop) -->
+        <div
+            class="w-full lg:w-[45%] flex flex-col justify-center items-center text-center px-6 py-12 md:px-12 lg:px-16 xl:px-20 relative z-10 lg:h-full order-2 lg:order-1">
+            <!-- Background Large Sparkle Motif -->
+            <div
+                class="absolute -bottom-20 -left-16 lg:bottom-[-15%] lg:left-[-15%] w-64 h-64 lg:w-[550px] lg:h-[550px] pointer-events-none opacity-40 select-none text-[#D8D0C8]">
+                <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M50 0 L53 40 L90 15 L60 47 L100 50 L60 53 L90 85 L53 60 L50 100 L47 60 L10 85 L40 53 L0 50 L40 47 L10 15 L47 40 Z"
+                        fill="currentColor" opacity="0.4" />
+                </svg>
+            </div>
+
+            <div class="animate__animated animate__fadeIn duration-1000 flex flex-col justify-center items-center">
+                <!-- Badge Container (overlaps the image on desktop) -->
+                <div class="mb-10 lg:mb-16 relative z-20">
+                    <div class="inline-block bg-[#C9A66B] px-6 py-3 shadow-sm max-w-full whitespace-nowrap">
+                        <p
+                            class="text-xs md:text-sm lg:text-base text-[#5B4636] font-semibold tracking-widest font-serif leading-relaxed">
+                            睡眠の質が、明日のパフォーマンスを変える。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text block -->
+                <div class="space-y-4 lg:space-y-6 mt-2 z-10">
+                    <p
+                        class="text-sm md:text-base lg:text-lg text-[#5B4636] tracking-widest font-serif leading-relaxed">
+                        東京都稲城市のドライヘッドスパサロン
+                    </p>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.75rem] font-normal font-serif text-[#5B4636] leading-tight tracking-widest flex items-center justify-center gap-2">
+                        welina <span
+                            class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl align-middle text-[#C9A66B]">✴&#xFE0E;</span>
+                    </h1>
+                    <p
+                        class="text-xs md:text-sm lg:text-base text-[#5B4636] tracking-[0.4em] lg:tracking-[0.5em] font-serif font-light mt-1 pl-1">
+                        SLEEP THERAPY
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Image Container (approx 55% width on desktop) -->
+        <div
+            class="w-full lg:w-[55%] h-[50vh] lg:h-full relative z-0 flex items-center justify-center lg:justify-end bg-gradient-to-br from-[#D8D0C8] via-[#C9A66B] to-[#5B4636] p-4 md:p-8 lg:py-16 lg:pr-16 lg:pl-6 order-1 lg:order-2">
+            <div class="w-full h-full relative overflow-hidden shadow-2xl">
+                <img src="./img/fv1.jpg" alt="サロンイメージ" class="fv-slide-img active" />
+                <img src="./img/fv2.jpg" alt="サロンイメージ" class="fv-slide-img" />
+                <img src="./img/fv3.jpg" alt="サロンイメージ" class="fv-slide-img" />
+                <!-- Subtle overlay for the image to mimic indirect lighting -->
+                <div class="absolute inset-0 bg-[#5B4636]/10 mix-blend-multiply z-10 pointer-events-none"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F8F5F1]/30 via-transparent to-transparent z-10 pointer-events-none">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPAIGN (キャンペーン) -->
+    <section id="campaign" class="py-16 px-4 bg-welina-bg relative border-b border-welina-accent/10 z-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center flex flex-col items-center justify-center wow animate__fadeInUp"
+                data-wow-duration="1.2s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">CAMPAIGN</span>
+                <h2 class="text-2xl md:text-3xl section-title">キャンペーン情報</h2>
+                <div class="w-full max-w-xs mt-6 px-4 cursor-pointer group" onclick="openCampaignModal()">
+                    <img src="./img/campaign.jpg" alt="キャンペーンチラシ"
+                        class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                    <p class="text-xs text-welina-textMuted mt-4 font-gothic tracking-widest">※画像をタップで拡大します</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Below FV -->
+    <section class="py-12 px-4 bg-welina-bgLight border-b border-welina-accent/10 relative z-20">
+        <div class="max-w-4xl mx-auto text-center wow animate__fadeInUp" data-wow-duration="1s">
+
+            <h3 class="font-en text-xl md:text-2xl text-welina-accent font-semibold mb-6 tracking-widest">
+                TEL: <a href="tel:05054484913" class="hover:text-welina-accentDark transition">050-5448-4913</a>
+            </h3>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+                <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+                    class="flex-1 inline-flex items-center justify-center bg-[#06C755] hover:bg-[#05b34c] text-white font-serif font-bold text-lg py-4 rounded-sm hover:opacity-90 transition transform hover:-translate-y-0.5 shadow-lg gap-2">
+                    <img src="./img/LINE.png" alt="LINE" class="w-5 h-5 object-contain" />
+                    LINEで予約・相談する
+                </a>
+                <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+                    class="flex-1 inline-flex items-center justify-center bg-[#C9A66B] hover:bg-[#b5925a] text-[#5B4636] font-serif font-bold text-lg py-4 rounded-sm hover:opacity-90 transition transform hover:-translate-y-0.5 shadow-lg">
+                    Instagramで予約・相談する
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORRIES (こんなお悩みありませんか) -->
+    <section id="worries" class="py-24 px-4 relative overflow-hidden bg-cover bg-center"
+        style="background-image: url('./img/worriesbg.jpg');">
+        <!-- Overlay to ensure readability and match luxury theme -->
+        <div class="absolute inset-0 bg-[#F8F5F1]/85 backdrop-blur-[1px] z-0"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+
+            <div class="text-center mb-16 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">WORRIES</span>
+                <h2 class="text-2xl md:text-3xl section-title">こんなお悩み<br class="md:hidden">ありませんか？</h2>
+            </div>
+
+            <div class="bg-welina-bgLight p-8 md:p-12 rounded-sm border border-welina-accent/20 shadow-lg relative wow animate__fadeInUp"
+                data-wow-duration="1.2s" data-wow-delay="0.2s">
+                <div class="absolute -top-6 -left-6 text-6xl text-welina-accent/20 font-en">Q.</div>
+
+                <ul class="check-list text-sm md:text-lg space-y-2 font-gothic tracking-wide">
+                    <li><span class="inline-block">タスクに追われて</span><span class="inline-block">頭がパンパンになりやすい</span></li>
+                    <li><span class="inline-block">睡眠時間を</span><span class="inline-block">削ってしまうことが多い</span></li>
+                    <li><span class="inline-block">寝ても疲れが</span><span class="inline-block">残っているように感じる</span></li>
+                    <li><span class="inline-block">睡眠の悩みが続き、</span><span class="inline-block">ゆっくり休めていないと感じる</span></li>
+                    <li><span class="inline-block">目の疲れや</span><span class="inline-block">視界の重さが気になる</span></li>
+                    <li><span class="inline-block">仕事や家事の</span><span class="inline-block">パフォーマンスを上げたい</span></li>
+                    <li><span class="inline-block">若々しく健康的な</span><span class="inline-block">毎日を維持したい</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT (サロンについて) -->
+    <section id="about" class="py-24 px-4 bg-welina-bgLight relative border-y border-welina-accent/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                <div class="w-full lg:w-1/2 wow animate__fadeInLeft" data-wow-duration="1.2s">
+                    <div class="relative h-[400px] md:h-[500px]">
+                        <div class="absolute inset-0 bg-welina-accent/20 transform translate-x-4 translate-y-4"></div>
+                        <img src="./img/about.jpg" alt="落ち着いたサロン空間"
+                            class="img-cover relative z-10 opacity-90 sepia-[0.3]" />
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 wow animate__fadeInRight" data-wow-duration="1.2s" data-wow-delay="0.3s">
+                    <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">ABOUT US</span>
+                    <h2 class="text-2xl md:text-3xl leading-relaxed section-title section-title-left">
+                        <span class="inline-block">心と身体にやさしく<br class="md:hidden">寄り添うケアで、</span><br>
+                        <span class="inline-block">深く休める時間を</span><span class="inline-block">サポートします。</span>
+                    </h2>
+
+                    <div class="space-y-6 text-welina-textMuted leading-loose mt-8">
+                        <p>
+                            東京都稲城市にある、ドライヘッドスパと全身ケアのプライベートサロンです。<br>
+                        </p>
+                        <p>
+                            タスクに追われて頭が休まらない方、睡眠の質が気になる方、毎日をもっと軽やかに過ごしたい方に向けて、落ち着いた空間でゆったりとしたケアをご提供しています。<br>
+                        </p>
+                        <p>
+                            京王線稲城駅・JR南武線南多摩駅への無料送迎可能です。<br>
+                            隠れ家のような静かなサロンで、心と身体をゆるめる時間をお過ごしください。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES (特徴) -->
+    <section id="feature" class="py-24 px-4 bg-welina-bg relative">
+        <div class="glow-effect bottom-0 left-0"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">FEATURES</span>
+                <h2 class="text-2xl md:text-3xl section-title">サロンの特徴</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
+                <!-- 01 -->
+                <div class="flex flex-col wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                    <div class="h-[250px] mb-6 relative overflow-hidden">
+                        <img src="./img/service1.jpg" alt="ケア"
+                            class="img-cover opacity-80 hover:opacity-100 transition duration-500 sepia-[0.2]" />
+                        <div
+                            class="absolute top-0 left-0 bg-welina-bg/80 text-welina-accent font-en text-xl px-4 py-2 border-b border-r border-welina-accent/30">
+                            01</div>
+                    </div>
+                    <h3
+                        class="text-lg font-serif font-normal mb-4 text-welina-textMain border-l-2 border-welina-accent pl-3">
+                        <span class="inline-block">頭だけでなく、</span><span class="inline-block">全身の状態に合わせたケア</span>
+                    </h3>
+                    <p class="text-welina-textMuted text-sm leading-loose">
+                        ドライヘッドスパを中心に、頭・首・肩・身体の状態を見ながら施術をご提案します。<br>
+                        頭の重さや目元の疲れ、睡眠の質が気になる方にも、リラックスしながら受けていただけるケアです。<br>
+                    </p>
+                </div>
+
+                <!-- 02 -->
+                <div class="flex flex-col wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.4s">
+                    <div class="h-[250px] mb-6 relative overflow-hidden">
+                        <img src="./img/service2.jpg" alt="カウンセリング"
+                            class="img-cover opacity-80 hover:opacity-100 transition duration-500 sepia-[0.2]" />
+                        <div
+                            class="absolute top-0 left-0 bg-welina-bg/80 text-welina-accent font-en text-xl px-4 py-2 border-b border-r border-welina-accent/30">
+                            02</div>
+                    </div>
+                    <h3
+                        class="text-lg font-serif font-normal mb-4 text-welina-textMain border-l-2 border-welina-accent pl-3">
+                        <span class="inline-block">丁寧なカウンセリングで</span><span class="inline-block">一人ひとりに合わせて対応</span>
+                    </h3>
+                    <p class="text-welina-textMuted text-sm leading-loose">
+                        あなたの身体の状態を丁寧にカウンセリングし、施術内容のご提案が可能です。<br>
+                        施術前に身体の状態やお悩みを丁寧に伺い、その日のコンディションに合わせて内容をご提案します。<br>
+                        「今の自分に合うケアが分からない」という方も、安心してご相談いただけます。<br>
+                    </p>
+                </div>
+
+                <!-- 03 -->
+                <div class="flex flex-col wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.6s">
+                    <div class="h-[250px] mb-6 relative overflow-hidden">
+                        <img src="./img/service3.jpg" alt="セルフケア"
+                            class="img-cover opacity-80 hover:opacity-100 transition duration-500 sepia-[0.2]" />
+                        <div
+                            class="absolute top-0 left-0 bg-welina-bg/80 text-welina-accent font-en text-xl px-4 py-2 border-b border-r border-welina-accent/30">
+                            03</div>
+                    </div>
+                    <h3
+                        class="text-lg font-serif font-normal mb-4 text-welina-textMain border-l-2 border-welina-accent pl-3">
+                        <span class="inline-block">自宅でできる</span><span class="inline-block">セルフケアもサポート</span>
+                    </h3>
+                    <p class="text-welina-textMuted text-sm leading-loose">
+                        サロンでの施術だけでなく、自宅でできるセルフケア、サービスのご提供も可能です。<br>
+                        忙しくてなかなか通えない方にも、日常の中で無理なく整える習慣づくりをサポートします。<br>
+                        サロンになかなか来れない方もサポート致します。<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU (メニュー) -->
+    <section id="menu" class="py-24 px-4 bg-welina-bgLight relative border-y border-welina-accent/10">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="text-center mb-16 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">MENU & PRICE</span>
+                <h2 class="text-2xl md:text-3xl section-title">施術メニュー</h2>
+                <p class="text-sm text-welina-textMuted mt-4">
+                    ※価格は全て税込です。施術時間や部位の組み合わせ等、ご相談可能です。<br>
+                    ※施術内容と時間については、お身体の状態などにより柔軟に変更可能です。
+                </p>
+            </div>
+
+            <!-- おすすめメニュー -->
+            <div class="bg-gold-gradient p-1 rounded-sm shadow-xl mb-12 wow animate__zoomIn" data-wow-duration="1.2s"
+                data-wow-delay="0.2s">
+                <div class="bg-welina-bg p-8 text-center">
+                    <p
+                        class="text-welina-accent font-gothic text-xs tracking-widest mb-2 border border-welina-accent inline-block px-3 py-1">
+                        RECOMMEND</p>
+                    <h3 class="text-2xl font-normal text-welina-textMain mb-4">脳ケアドライヘッドスパ 60min<br><span class="text-base mt-2 inline-block">(たった60分で睡眠5時間分相応)</span></h3>
+                    <p class="text-3xl font-en text-welina-accent mb-6">¥7,800</p>
+                    <p class="text-sm text-welina-textMuted font-gothic">
+                        当店一番人気のドライヘッドスパコースです。<br>
+                        頭の重さ、眼精疲労、<br class="lg:hidden">睡眠の質にお悩みの方におすすめです。<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 通常メニュー -->
+            <div class="space-y-4 mb-16 font-gothic">
+
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-welina-accent/20 py-4 gap-2 lg:gap-0 wow animate__fadeInLeft"
+                    data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div>
+                        <h4 class="text-lg text-welina-textMain">脳ケア＋全身リンパケア 90min</h4>
+                    </div>
+                    <div class="text-xl text-welina-accent font-en lg:text-right">¥12,800</div>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-welina-accent/20 py-4 gap-2 lg:gap-0 wow animate__fadeInLeft"
+                    data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div>
+                        <h4 class="text-lg text-welina-textMain">中学・高校生コース 50min</h4>
+                    </div>
+                    <div class="text-xl text-welina-accent font-en lg:text-right">¥5,000</div>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-welina-accent/20 py-4 gap-2 lg:gap-0 wow animate__fadeInLeft"
+                    data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div>
+                        <h4 class="text-lg text-welina-textMain">小学生 眼精疲労ケア 20min</h4>
+                    </div>
+                    <div class="text-xl text-welina-accent font-en lg:text-right">¥2,000</div>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-welina-accent/20 py-4 gap-2 lg:gap-0 wow animate__fadeInLeft"
+                    data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div>
+                        <h4 class="text-lg text-welina-textMain">水素ガス吸入 <span
+                                class="text-xs text-welina-textMuted">(施術中のオプション)</span></h4>
+                        <p class="text-xs text-welina-textMuted mt-1">※初回のみチューブ代1,100円別途必要</p>
+                    </div>
+                    <div class="text-xl text-welina-accent font-en lg:text-right">¥600</div>
+                </div>
+            </div>
+
+            <!-- 特別メニュー＆回数券 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-welina-bgLight py-6 px-2 md:p-6 border border-welina-accent/10 rounded-sm wow animate__fadeInUp"
+                    data-wow-duration="1.2s" data-wow-delay="0.3s">
+                    <h4
+                        class="text-welina-accent text-center mb-4 pb-2 border-b border-welina-accent/20 whitespace-nowrap text-[15px] sm:text-base md:text-lg">
+                        ★性格タイプ診断×カラダ未来デザイン★</h4>
+                    <p class="text-sm text-welina-textMuted leading-relaxed mb-4">
+                        脳(心)とカラダを健康に。<br>
+                        自身の性格や思考のタイプを知ることで、ストレスを溜めない受け止め方がわかり、人間関係のストレスからの不調を防ぎます。<br>
+                        生活習慣の見直しから理想のカラダ未来をデザインするサポート付。<br>
+                    </p>
+                    <p class="text-center text-welina-textMain font-en text-xl">¥19,800 <span
+                            class="text-xs font-gothic">(60分×2 zoom可)</span></p>
+                </div>
+
+                <div class="bg-welina-bgLight py-6 px-2 md:p-6 border border-welina-accent/10 rounded-sm wow animate__fadeInUp"
+                    data-wow-duration="1.2s" data-wow-delay="0.5s">
+                    <h4
+                        class="text-welina-accent text-center mb-4 pb-2 border-b border-welina-accent/20 whitespace-nowrap text-[15px] sm:text-base md:text-lg">
+                        ★お得な健康回数券★
+                    </h4>
+                    <ul class="space-y-4 text-center mt-6">
+                        <li class="flex justify-between items-center px-4">
+                            <span class="text-welina-textMain">60分 3回</span>
+                            <span class="font-en text-welina-accent text-xl">¥22,000</span>
+                        </li>
+                        <li class="flex justify-between items-center px-4">
+                            <span class="text-welina-textMain">60分 5回</span>
+                            <span class="font-en text-welina-accent text-xl">¥37,000</span>
+                        </li>
+                        <li class="flex justify-between items-center px-4">
+                            <span class="text-welina-textMain">90分 3回</span>
+                            <span class="font-en text-welina-accent text-xl">¥37,000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                <h3 class="font-en text-xl md:text-2xl text-welina-accent font-semibold mb-6 tracking-widest">
+                    TEL: <a href="tel:05054484913" class="hover:text-welina-accentDark transition">050-5448-4913</a>
+                </h3>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+                    <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+                        class="flex-1 inline-flex items-center justify-center bg-[#06C755] hover:bg-[#05b34c] text-white font-serif font-bold text-lg py-4 rounded-sm hover:opacity-90 transition transform hover:-translate-y-0.5 shadow-lg gap-2">
+                        <img src="./img/LINE.png" alt="LINE" class="w-5 h-5 object-contain" />
+                        LINEで予約・相談する
+                    </a>
+                    <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+                        class="flex-1 inline-flex items-center justify-center bg-[#C9A66B] hover:bg-[#b5925a] text-[#5B4636] font-serif font-bold text-lg py-4 rounded-sm hover:opacity-90 transition transform hover:-translate-y-0.5 shadow-lg">
+                        Instagramで予約・相談する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS (お客様の声) -->
+    <section id="reviews" class="py-24 px-4 bg-welina-bg relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">VOICE</span>
+                <h2 class="text-2xl md:text-3xl section-title">お客様の声</h2>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper voiceSwiper pb-14 wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                <div class="swiper-wrapper">
+                    <!-- Voice 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 border border-welina-accent/10 flex flex-col h-full shadow-sm">
+                            <div class="mb-4">
+                                <h3 class="text-welina-textMain font-gothic">忙しい二児のママ</h3>
+                                <p class="text-welina-accent text-xs">（60分コース）</p>
+                            </div>
+                            <p class="text-welina-textMuted text-sm leading-loose font-gothic flex-grow">
+                                初めての体験だったのでどういうものかと思っていましたが、1時間あっという間でした。<br>
+                                指圧というよりは優しくツボ押しという感じで気持ちよく、ほとんど寝落ちしていた様に思います。<br>
+                                普段ヒーリング時間が皆無なので超絶リラックスさせていただきました！<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Voice 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 border border-welina-accent/10 flex flex-col h-full shadow-sm">
+                            <div class="mb-4">
+                                <h3 class="text-welina-textMain font-gothic">前頭筋ガチガチのSさん</h3>
+                                <p class="text-welina-accent text-xs">（60分コース）</p>
+                            </div>
+                            <p class="text-welina-textMuted text-sm leading-loose font-gothic flex-grow">
+                                リラックスできる空間と施術で起きているのが本当に困難😆<br>
+                                施術前後の会話で健康に関する知識も得られてとても良い時間でした😊<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Voice 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 border border-welina-accent/10 flex flex-col h-full shadow-sm">
+                            <div class="mb-4">
+                                <h3 class="text-welina-textMain font-gothic">健康意識の高いビジネスマンのKさん</h3>
+                                <p class="text-welina-accent text-xs">（60分コース）</p>
+                            </div>
+                            <p class="text-welina-textMuted text-sm leading-loose font-gothic flex-grow">
+                                施術後、家にいるのかとびっくりして起きた笑笑<br>
+                                60分でもかなりリラックスできたように感じました。帰り道での調子が良くて、気分も軽く、心地よい余韻がありました✨✨<br>
+                                思ったよりも駅から近くて、サロンも落ち着いた隠れ家的雰囲気で、リラックスできました✨✨<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Voice 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 border border-welina-accent/10 flex flex-col h-full shadow-sm">
+                            <div class="mb-4">
+                                <h3 class="text-welina-textMain font-gothic">3回目のご来店！深く眠れないとお悩みのSさん</h3>
+                                <p class="text-welina-accent text-xs">（60分コース＋フット体験）</p>
+                            </div>
+                            <p class="text-welina-textMuted text-sm leading-loose font-gothic flex-grow">
+                                長年、疲れててもゆっくり休めなかったのに、今日は横になったら寝ていて、途中一度起きたけど、その日はいつもよりゆっくり休めたように感じました！！<br>
+                                びっくりしました！！<br>
+                                出勤前までも横になることが多かったけど、最近は好きなことをして過ごせるようになっています！<br>
+                                また予約します！<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Voice 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 border border-welina-accent/10 flex flex-col h-full shadow-sm">
+                            <div class="mb-4">
+                                <h3 class="text-welina-textMain font-gothic">3人分ぐらい活動されてるKさん</h3>
+                                <p class="text-welina-accent text-xs">（60分コース）</p>
+                            </div>
+                            <p class="text-welina-textMuted text-sm leading-loose font-gothic flex-grow">
+                                ゆったりとした時間の中で、丁寧な施術がとても心地よかったです。<br>
+                                グイグイ揉まれるのがニガ テなのですが、加減がちょうどよくて弱すぎず、強すぎず、「気持ちいい〜✨」と言っちゃいました笑<br>
+                                ヘッドマッサージでこんなにリフレッシュできると知れたので、またお願いしたいです😃<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination voice-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (ギャラリー) -->
+    <section id="gallery"
+        class="py-24 px-0 bg-welina-bgLight relative border-t border-welina-accent/10 overflow-hidden">
+        <div class="w-full">
+            <div class="text-center mb-16 px-4 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">GALLERY</span>
+                <h2 class="text-2xl md:text-3xl section-title">ギャラリー</h2>
+            </div>
+
+            <!-- Marquee Outer Container -->
+            <div class="w-full overflow-hidden relative py-4 wow animate__fadeInUp" data-wow-duration="1.2s"
+                data-wow-delay="0.2s">
+                <div class="marquee-track flex gap-4 md:gap-6">
+                    <!-- Set 1 -->
+                    <div class="flex gap-4 md:gap-6 shrink-0">
+                        <div onclick="openLightbox(0)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery1.jpg" alt="サロン施術風景1"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(1)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery2.jpg" alt="サロン施術風景2"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(2)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery3.jpg" alt="サロン施術風景3"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(3)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery4.jpg" alt="サロン施術風景4"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(4)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery5.jpg" alt="サロン施術風景5"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(5)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery6.jpg" alt="サロン施術風景6"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Set 2 (Duplicate for infinite seamless loop) -->
+                    <div class="flex gap-4 md:gap-6 shrink-0">
+                        <div onclick="openLightbox(0)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery1.jpg" alt="サロン施術風景1"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(1)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery2.jpg" alt="サロン施術風景2"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(2)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery3.jpg" alt="サロン施術風景3"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(3)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery4.jpg" alt="サロン施術風景4"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(4)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery5.jpg" alt="サロン施術風景5"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                        <div onclick="openLightbox(5)"
+                            class="cursor-pointer relative group overflow-hidden w-[260px] md:w-[350px] aspect-[4/3] shadow-md border border-welina-accent/10 rounded-sm">
+                            <img src="./img/gallery6.jpg" alt="サロン施術風景6"
+                                class="img-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div
+                                class="absolute inset-0 bg-[#5B4636]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-[#F8F5F1] font-serif text-sm tracking-widest border border-white/40 px-4 py-2">welina</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE (メッセージ) -->
+    <section id="message" class="py-24 px-4 bg-welina-bg relative border-t border-welina-accent/10">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 lg:gap-20">
+                <!-- 写真 -->
+                <div class="w-full md:w-2/5 wow animate__fadeInLeft" data-wow-duration="1.2s">
+                    <div class="relative aspect-[3/4] md:h-full max-h-[500px]">
+                        <div
+                            class="absolute inset-0 border border-welina-accent/30 transform translate-x-3 translate-y-3">
+                        </div>
+                        <img src="./img/sms.jpg" alt="メッセージイメージ"
+                            class="img-cover relative z-10 sepia-[0.3] grayscale-[0.2]" />
+                    </div>
+                </div>
+
+                <!-- テキスト -->
+                <div class="w-full md:w-3/5 flex flex-col justify-center wow animate__fadeInRight"
+                    data-wow-duration="1.2s" data-wow-delay="0.2s">
+                    <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">MESSAGE</span>
+                    <h2 class="text-2xl md:text-3xl leading-relaxed text-welina-textMain mb-8 font-normal">
+                        <span class="inline-block">頑張る毎日に、</span><span class="inline-block">深く休める時間を</span>
+                    </h2>
+
+                    <div class="space-y-6 text-welina-textMuted leading-loose text-sm">
+                        <p>
+                            忙しい日々の中で、頭も身体も休まらないまま過ごしていませんか。<br>
+                        </p>
+                        <p>
+                            当サロンでは、ただ頭をほぐすだけではなく、お客様の状態を丁寧に伺いながら、心身がゆるむ時間を大切にしています。<br>
+                        </p>
+                        <p>
+                            睡眠の質を整えたい方、毎日のパフォーマンスを上げたい方、健康的に年齢を重ねたい方へ。<br>
+                            まずは一度、ご自身の身体をゆっくり休ませる時間をつくってみませんか。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFF (スタッフ紹介) -->
+    <section id="staff" class="py-24 px-4 bg-welina-bgLight relative border-t border-welina-accent/10">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row-reverse gap-12 lg:gap-20">
+                <!-- 写真 -->
+                <div class="w-full md:w-2/5 wow animate__fadeInRight" data-wow-duration="1.2s">
+                    <div class="relative aspect-[3/4] md:h-full max-h-[500px]">
+                        <div
+                            class="absolute inset-0 border border-welina-accent/30 transform -translate-x-3 translate-y-3">
+                        </div>
+                        <img src="./img/staff.jpg" alt="オーナーセラピスト 黒川 香与子"
+                            class="img-cover relative z-10 sepia-[0.2] grayscale-[0.1]" />
+                    </div>
+                </div>
+
+                <!-- テキスト -->
+                <div class="w-full md:w-3/5 flex flex-col justify-center wow animate__fadeInLeft"
+                    data-wow-duration="1.2s" data-wow-delay="0.2s">
+                    <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">OWNER</span>
+                    <h2 class="text-2xl md:text-3xl leading-relaxed text-welina-textMain mb-2 font-normal">黒川 香与子</h2>
+                    <p class="text-welina-accent text-sm mb-8 font-gothic tracking-wider font-semibold">
+                        細胞調律セラピスト / 睡眠栄養アドバイザー
+                    </p>
+
+                    <div class="space-y-6 text-welina-textMuted leading-loose text-sm">
+                        <p>
+                            睡眠栄養アドバイザーとして、睡眠や日々のコンディションに関するご相談にも対応しています。<br>
+                        </p>
+                        <p>
+                            また、性格統計学をもとに親子向けカウンセラーとしても活動しています。<br>
+                        </p>
+                        <p>
+                            お客様一人ひとりの状態やお悩みに寄り添いながら、心と身体がほっとゆるむ時間をご提供いたします。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & ACCESS (店舗情報・アクセス) -->
+    <section id="access" class="py-24 px-4 bg-welina-bgLight relative border-t border-welina-accent/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 wow animate__fadeInDown" data-wow-duration="1s">
+                <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">ACCESS</span>
+                <h2 class="text-2xl md:text-3xl section-title">サロン情報・アクセス</h2>
+            </div>
+
+            <div
+                class="bg-white p-8 md:p-12 border border-welina-accent/20 flex flex-col-reverse md:flex-row gap-10 shadow-lg">
+
+                <div class="w-full md:w-1/2 flex flex-col justify-center wow animate__fadeInLeft"
+                    data-wow-duration="1.2s" data-wow-delay="0.2s">
+                    <h3 class="text-xl font-normal text-welina-textMain mb-6 tracking-widest">睡眠セラピーwelina</h3>
+
+                    <table class="w-full text-left text-sm border-collapse text-welina-textMuted font-gothic mb-8">
+                        <tbody>
+                            <tr class="border-b border-welina-accent/10">
+                                <th class="py-4 text-welina-accent w-24 font-normal align-top">住所</th>
+                                <td class="py-4 leading-loose">
+                                    東京都稲城市百村<br>
+                                    <span class="text-[10px] md:text-[11px] text-welina-textMuted mt-1 block">
+                                        ご予約後に詳細住所お伝えいたします。<br><br>
+                                        京王線稲城駅<br>
+                                        JR南武線南多摩駅への<br>
+                                        無料送迎可能です。
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-welina-accent/10">
+                                <th class="py-4 text-welina-accent font-normal align-top">電話番号</th>
+                                <td class="py-4 font-en">
+                                    <a href="tel:05054484913"
+                                        class="hover:text-welina-accent transition">050-5448-4913</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-welina-accent/10">
+                                <th class="py-4 text-welina-accent font-normal align-top">営業時間</th>
+                                <td class="py-4">9:00〜18:00</td>
+                            </tr>
+                            <tr>
+                                <th class="py-4 text-welina-accent font-normal align-top">定休日</th>
+                                <td class="py-4">不定休</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="flex flex-col sm:flex-row gap-4 w-full">
+                        <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+                            class="flex-1 bg-[#06C755] hover:bg-[#05b34c] text-white font-serif font-bold text-center py-4 rounded-sm shadow-md transition flex items-center justify-center gap-2">
+                            <img src="./img/LINE.png" alt="LINE" class="w-5 h-5 object-contain" />
+                            LINEで予約・相談する
+                        </a>
+                        <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+                            class="flex-1 bg-[#C9A66B] hover:bg-[#b5925a] text-[#5B4636] font-serif font-bold text-center py-4 rounded-sm shadow-md transition">
+                            Instagramで予約・相談する
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[400px] lg:min-h-[450px] bg-[#F8F5F1] relative flex flex-col items-center justify-center p-8 border border-[#C9A66B]/20 rounded-sm text-center wow animate__fadeInRight overflow-hidden shadow-inner"
+                    data-wow-duration="1.2s" data-wow-delay="0.4s">
+                    <!-- Subtle background map icon SVG -->
+                    <div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+                        <svg class="w-72 h-72 text-[#5B4636]" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+
+                    <div class="relative z-10 max-w-xs sm:max-w-sm flex flex-col items-center">
+                        <div
+                            class="w-14 h-14 rounded-full bg-[#C9A66B]/15 flex items-center justify-center mb-5 text-[#C9A66B] border border-[#C9A66B]/30 shadow-sm">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs font-en text-[#C9A66B] tracking-widest uppercase mb-2">Google Map
+                            Notice</span>
+                        <h4 class="text-lg md:text-xl font-normal text-[#333333] mb-3 tracking-wider">
+                            マップは更新手続き中
+                        </h4>
+                        <p class="text-xs sm:text-sm text-[#5B4636] leading-relaxed font-gothic mb-5">
+                            稲城への移転に伴い、ただいま Google Map は更新手続き中です。<br>
+                            詳細な住所・アクセス方法はご予約後に個別にお伝えいたします。
+                        </p>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-2 bg-[#C9A66B]/10 border border-[#C9A66B]/25 rounded text-xs text-[#5B4636] font-gothic">
+                            <svg class="w-4 h-4 text-[#C9A66B] flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>京王線稲城駅 / JR南武線南多摩駅 無料送迎あり</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Logo -->
+            <div class="mt-24 text-center flex flex-col items-center justify-center wow animate__fadeInUp"
+                data-wow-duration="1.2s">
+                <a href="#campaign" class="relative block w-full max-w-[280px] md:max-w-xs cursor-pointer group">
+                    <!-- Offset Stroke/Border -->
+                    <div
+                        class="absolute inset-0 border border-welina-accent/60 transform translate-x-3 translate-y-3 group-hover:translate-x-1.5 group-hover:translate-y-1.5 transition-transform duration-300 z-0 pointer-events-none">
+                    </div>
+
+                    <!-- Main Image Wrapper -->
+                    <div
+                        class="relative bg-white p-2 border border-welina-accent/30 shadow-md transition-all duration-300 group-hover:shadow-xl z-10">
+                        <img src="./img/campaign%20logo.jpg" alt="キャンペーンロゴ" onerror="this.src='./img/campaign.jpg'"
+                            class="w-full h-auto object-contain transition-all group-hover:opacity-95 duration-300" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#5B4636] text-[#F8F5F1] text-center pt-10 pb-28 md:py-10 border-t border-welina-accent/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-xs font-en tracking-widest">&copy; 睡眠セラピーwelina All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating CTA (SP Only) -->
+    <div class="lg:hidden fixed bottom-0 w-full z-50 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.5)] flex">
+
+        <a href="https://welina-sleep.happytry.fun/jump01.html" target="_blank"
+            class="flex-1 bg-[#06C755] text-white text-center font-serif font-bold pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] sm:text-[14px] flex flex-col items-center justify-center gap-1">
+            <img src="./img/LINE.png" alt="LINE" class="w-5 h-5 object-contain" />
+            LINE予約
+        </a>
+
+        <a href="tel:05054484913"
+            class="flex-1 bg-white text-[#5B4636] border-t border-[#5B4636]/10 text-center font-serif font-bold pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] sm:text-[14px] flex flex-col items-center justify-center gap-1">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+            </svg>
+            TEL
+        </a>
+
+        <a href="https://welina-sleep.happytry.fun/jump02.html" target="_blank"
+            class="flex-1 bg-[#C9A66B] text-[#5B4636] text-center font-serif font-bold pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] sm:text-[14px] flex flex-col items-center justify-center gap-1">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Instagram
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top"
+        class="fixed right-4 bottom-24 lg:bottom-8 z-40 bg-[#C9A66B]/80 hover:bg-[#C9A66B] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible translate-y-4">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/85 z-[100] hidden items-center justify-center select-none"
+        onclick="closeLightbox(event)">
+        <!-- Close Button (Clean SVG X icon) -->
+        <button onclick="closeLightbox(event)"
+            class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors duration-200 z-[110] focus:outline-none"
+            aria-label="Close lightbox">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Previous Button (Clean SVG Arrow) -->
+        <button onclick="prevLightbox(event)"
+            class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 z-[110] focus:outline-none"
+            aria-label="Previous image">
+            <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+
+        <!-- Image Container (Horizontally & Vertically Centered) -->
+        <div class="relative max-w-[85%] max-h-[80vh] flex items-center justify-center"
+            onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="拡大画像"
+                class="max-w-full max-h-[80vh] object-contain shadow-2xl border border-white/10 rounded-sm" />
+        </div>
+
+        <!-- Next Button (Clean SVG Arrow) -->
+        <button onclick="nextLightbox(event)"
+            class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 z-[110] focus:outline-none"
+            aria-label="Next image">
+            <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Campaign Lightbox Modal -->
+    <div id="campaign-modal"
+        class="fixed inset-0 bg-black/85 z-[100] hidden items-center justify-center select-none p-4"
+        onclick="closeCampaignModal(event)">
+        <!-- Close Button (Clean SVG X icon) -->
+        <button onclick="closeCampaignModal(event)"
+            class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors duration-200 z-[110] focus:outline-none"
+            aria-label="Close modal">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Image Container -->
+        <div class="relative w-full max-w-3xl max-h-[85vh] flex items-center justify-center"
+            onclick="event.stopPropagation()">
+            <img src="./img/campaign.jpg" alt="キャンペーンチラシ拡大"
+                class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm" />
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // WOW.js Initialization
+        new WOW().init();
+
+        // Swiper Initialization
+        const voiceSwiper = new Swiper('.voiceSwiper', {
+            slidesPerView: 1.15,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.voice-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+
+        // Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            if (mobileMenu.classList.contains('flex')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+                header.classList.remove('header-light');
+            } else {
+                header.classList.remove('header-scrolled');
+                header.classList.add('header-light');
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        // Run once on load to prevent refresh layout shift
+        handleScroll();
+
+        // FV Image Fade Slider
+        const fvImages = document.querySelectorAll('.fv-slide-img');
+        let currentFvIndex = 0;
+        setInterval(() => {
+            fvImages[currentFvIndex].classList.remove('active');
+            currentFvIndex = (currentFvIndex + 1) % fvImages.length;
+            fvImages[currentFvIndex].classList.add('active');
+        }, 4000);
+
+        // Lightbox Gallery Logic
+        const galleryImages = [
+            './img/gallery1.jpg',
+            './img/gallery2.jpg',
+            './img/gallery3.jpg',
+            './img/gallery4.jpg',
+            './img/gallery5.jpg',
+            './img/gallery6.jpg'
+        ];
+        let currentLightboxIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && mobileMenu.classList.contains('hidden')) {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function nextLightbox(event) {
+            if (event) event.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
+        }
+
+        function prevLightbox(event) {
+            if (event) event.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
+        }
+
+        // Campaign Modal Logic
+        const campaignModal = document.getElementById('campaign-modal');
+        function openCampaignModal() {
+            campaignModal.classList.remove('hidden');
+            campaignModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCampaignModal(event) {
+            campaignModal.classList.add('hidden');
+            campaignModal.classList.remove('flex');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && mobileMenu.classList.contains('hidden')) {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!lightbox.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+                if (!campaignModal.classList.contains('hidden')) {
+                    closeCampaignModal();
+                }
+            }
+        });
+
+        // Disable right-click & copy
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+
+        // Break lines at Japanese period '。'
+        function breakAtPeriods(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.nodeValue;
+                if (text.includes('。')) {
+                    const parts = text.split('。');
+
+                    // Check if the original text ends with '。' and is followed by a <br> sibling
+                    const endsWithPeriod = text.endsWith('。');
+                    let hasTrailingBr = false;
+                    if (endsWithPeriod) {
+                        let next = node.nextSibling;
+                        while (next && next.nodeType === Node.TEXT_NODE && !next.nodeValue.trim()) {
+                            next = next.nextSibling;
+                        }
+                        if (next && next.nodeType === Node.ELEMENT_NODE && next.tagName.toLowerCase() === 'br') {
+                            hasTrailingBr = true;
+                        }
+                    }
+
+                    const fragment = document.createDocumentFragment();
+                    for (let i = 0; i < parts.length; i++) {
+                        if (parts[i]) {
+                            fragment.appendChild(document.createTextNode(parts[i]));
+                        }
+                        if (i < parts.length - 1) {
+                            fragment.appendChild(document.createTextNode('。'));
+                            // Only append <br> if it's not a trailing period that already has a <br> sibling
+                            if (!(i === parts.length - 2 && hasTrailingBr)) {
+                                fragment.appendChild(document.createElement('br'));
+                            }
+                        }
+                    }
+                    node.parentNode.replaceChild(fragment, node);
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                const tag = node.tagName.toLowerCase();
+                if (tag !== 'script' && tag !== 'style' && tag !== 'iframe' && tag !== 'textarea' && tag !== 'svg') {
+                    const children = Array.from(node.childNodes);
+                    for (const child of children) {
+                        breakAtPeriods(child);
+                    }
+                }
+            }
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => breakAtPeriods(document.body));
+        } else {
+            breakAtPeriods(document.body);
+        }
+
+        // Back to Top Button logic
+        const backToTopButton = document.getElementById('back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                    backToTopButton.classList.add('opacity-100', 'visible', 'translate-y-0');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                    backToTopButton.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

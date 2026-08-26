@@ -461,9 +461,20 @@
                 data-wow-duration="1.2s">
                 <span class="font-en text-welina-accent text-xs tracking-widest mb-3 block">CAMPAIGN</span>
                 <h2 class="text-2xl md:text-3xl section-title">キャンペーン情報</h2>
-                <div class="w-full max-w-xs mt-6 px-4 cursor-pointer group" onclick="openCampaignModal()">
-                    <img src="./img/campaign.jpg" alt="キャンペーンチラシ"
-                        class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                <div class="w-full max-w-sm mt-6 px-4">
+                    <div class="swiper campaignSwiper cursor-pointer" onclick="openCampaignModal()">
+                        <div class="swiper-wrapper mb-8">
+                            <div class="swiper-slide group">
+                                <img src="./img/campaign.jpg" alt="サロン画像1"
+                                    class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                            </div>
+                            <div class="swiper-slide group">
+                                <img src="./img/campaign2.jpg" alt="サロン画像2"
+                                    class="w-full h-auto object-contain shadow-lg border border-welina-accent/20 rounded-sm group-hover:opacity-90 transition-all group-hover:scale-[1.02] duration-300" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination !bottom-0"></div>
+                    </div>
                     <p class="text-xs text-welina-textMuted mt-4 font-gothic tracking-widest">※画像をタップで拡大します</p>
                 </div>
             </div>
@@ -649,7 +660,8 @@
                     <p
                         class="text-welina-accent font-gothic text-xs tracking-widest mb-2 border border-welina-accent inline-block px-3 py-1">
                         RECOMMEND</p>
-                    <h3 class="text-2xl font-normal text-welina-textMain mb-4">脳ケアドライヘッドスパ 60min<br><span class="text-base mt-2 inline-block">(たった60分で睡眠5時間分相応)</span></h3>
+                    <h3 class="text-2xl font-normal text-welina-textMain mb-4">脳ケアドライヘッドスパ 60min<br><span
+                            class="text-base mt-2 inline-block">(たった60分で睡眠5時間分相応)</span></h3>
                     <p class="text-3xl font-en text-welina-accent mb-6">¥7,800</p>
                     <p class="text-sm text-welina-textMuted font-gothic">
                         当店一番人気のドライヘッドスパコースです。<br>
@@ -1291,8 +1303,21 @@
         <!-- Image Container -->
         <div class="relative w-full max-w-3xl max-h-[85vh] flex items-center justify-center"
             onclick="event.stopPropagation()">
-            <img src="./img/campaign.jpg" alt="キャンペーンチラシ拡大"
-                class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm" />
+            <div class="swiper campaignModalSwiper w-full h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex items-center justify-center">
+                        <img src="./img/campaign.jpg" alt="サロン画像1拡大"
+                            class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm" />
+                    </div>
+                    <div class="swiper-slide flex items-center justify-center">
+                        <img src="./img/campaign2.jpg" alt="サロン画像2拡大"
+                            class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm" />
+                    </div>
+                </div>
+                <div class="swiper-button-next text-white/50 hover:text-white"></div>
+                <div class="swiper-button-prev text-white/50 hover:text-white"></div>
+                <div class="swiper-pagination !bottom-2"></div>
+            </div>
         </div>
     </div>
 
@@ -1303,6 +1328,35 @@
         new WOW().init();
 
         // Swiper Initialization
+        const campaignSwiper = new Swiper('.campaignSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.campaignSwiper .swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        const campaignModalSwiper = new Swiper('.campaignModalSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: '.campaignModalSwiper .swiper-button-next',
+                prevEl: '.campaignModalSwiper .swiper-button-prev',
+            },
+            pagination: {
+                el: '.campaignModalSwiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Other Swiper Initialization
         const voiceSwiper = new Swiper('.voiceSwiper', {
             slidesPerView: 1.15,
             spaceBetween: 20,

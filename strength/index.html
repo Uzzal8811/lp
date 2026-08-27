@@ -1006,50 +1006,88 @@
             </div>
 
             <!-- Recommended -->
-            <div
-                class="glass-panel p-8 md:p-12 text-center mb-16 fade-in from-scale relative overflow-hidden group shadow-[0_15px_50px_rgba(0,0,0,0.8)] border-gold/30">
-                <!-- Inner Gold Glow on Hover -->
-                <div
-                    class="absolute inset-0 bg-radial-glow opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                </div>
-                <div
-                    class="absolute top-0 right-0 bg-gradient-to-r from-gold to-[#A67C00] text-black text-[10px] font-en tracking-[0.4em] px-6 py-2 shadow-lg z-10">
-                    RECOMMENDED</div>
-                <h3 class="text-2xl md:text-3xl font-light tracking-widest mb-6 relative z-10 text-white-off">ALL
-                    TIME会員</h3>
-                <p class="font-en mb-2 relative z-10 flex justify-center items-baseline gap-2">
-                    <span class="text-white-off text-xl md:text-2xl font-sans font-light">月額</span>
-                    <span class="text-6xl md:text-7xl font-bold text-gold">13,200</span>
-                    <span class="text-white-off text-lg md:text-xl font-sans font-light">円</span>
-                </p>
-                <div class="flex items-center justify-center gap-4 mb-6 relative z-10">
-                    <div class="h-[1px] w-8 md:w-16 bg-gradient-to-r from-transparent to-gold"></div>
-                    <p class="text-gold text-base md:text-lg font-bold tracking-widest">
-                        1日1コマ55分
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- VIP会員 -->
+                <div class="glass-panel p-8 md:p-12 text-center fade-in from-scale relative overflow-hidden group shadow-[0_15px_50px_rgba(0,0,0,0.8)] border-gold/50 h-full flex flex-col">
+                    <div class="absolute inset-0 bg-radial-glow opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 bg-gradient-to-r from-gold to-[#A67C00] text-black text-[10px] font-en tracking-[0.4em] px-6 py-2 shadow-lg z-10">
+                        MOST RECOMMENDED
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-light tracking-widest mb-6 relative z-10 text-white-off">VIP会員</h3>
+                    <p class="font-en mb-2 relative z-10 flex justify-center items-baseline gap-2">
+                        <span class="text-white-off text-xl md:text-2xl font-sans font-light">月額</span>
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-gold">19,800</span>
+                        <span class="text-white-off text-lg md:text-xl font-sans font-light">円</span>
                     </p>
-                    <div class="h-[1px] w-8 md:w-16 bg-gradient-to-l from-transparent to-gold"></div>
+                    <div class="flex items-center justify-center gap-4 mb-6 relative z-10">
+                        <div class="h-[1px] w-6 md:w-12 bg-gradient-to-r from-transparent to-gold"></div>
+                        <p class="text-gold text-sm md:text-base font-bold tracking-widest whitespace-nowrap">
+                            ジム＆ゴルフ使い放題
+                        </p>
+                        <div class="h-[1px] w-6 md:w-12 bg-gradient-to-l from-transparent to-gold"></div>
+                    </div>
+                    <div class="text-gray text-sm leading-loose tracking-widest font-light relative z-10 text-left flex-grow">
+                        <p class="mb-4">
+                            STRENGTHが提供するすべての施設を最大限に活用できる、一番オススメの最上位プランです。
+                        </p>
+                        <p class="mb-4">
+                            毎日4:00〜23:00まで、最新の神経系マシンとシミュレーションゴルフの両方が利用可能。
+                        </p>
+                        <p>
+                            1日最大2コマ（110分）まで予約でき、同時予約も最大5コマまで可能。スケジュールに合わせて柔軟に通えます。
+                        </p>
+                    </div>
                 </div>
-                <p class="text-gray text-base leading-loose tracking-widest font-light mb-4 relative z-10">
-                    早朝4時から深夜23時まで、<br class="sp-br">ジムをご利用いただける<br class="sp-br">おすすめプラン。
-                </p>
-                <p class="text-gray text-base leading-loose tracking-widest font-light relative z-10">
-                    ご自身の予定に合わせて、<br>毎日のトレーニング習慣を<br>身につけられます。
-                </p>
+
+                <!-- ALL TIME会員 -->
+                <div class="glass-panel p-8 md:p-12 text-center fade-in from-scale relative overflow-hidden group shadow-[0_15px_50px_rgba(0,0,0,0.8)] border-white/20 h-full flex flex-col">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 bg-gradient-to-r from-gray-dark to-gray text-white text-[10px] font-en tracking-[0.4em] px-6 py-2 shadow-lg z-10">
+                        STANDARD
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-light tracking-widest mb-6 relative z-10 text-white-off">ALL TIME会員</h3>
+                    <p class="font-en mb-2 relative z-10 flex justify-center items-baseline gap-2">
+                        <span class="text-white-off text-xl md:text-2xl font-sans font-light">月額</span>
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white">13,200</span>
+                        <span class="text-white-off text-lg md:text-xl font-sans font-light">円</span>
+                    </p>
+                    <div class="flex items-center justify-center gap-4 mb-6 relative z-10">
+                        <div class="h-[1px] w-6 md:w-12 bg-gradient-to-r from-transparent to-white"></div>
+                        <p class="text-white-off text-sm md:text-base font-bold tracking-widest whitespace-nowrap">
+                            ジム特化・定番プラン
+                        </p>
+                        <div class="h-[1px] w-6 md:w-12 bg-gradient-to-l from-transparent to-white"></div>
+                    </div>
+                    <div class="text-gray text-sm leading-loose tracking-widest font-light relative z-10 text-left flex-grow">
+                        <p class="mb-4">
+                            ジムでの本格的な身体作りに集中したい方に一番人気のスタンダードプランです。
+                        </p>
+                        <p class="mb-4">
+                            毎日4:00〜23:00まで時間を気にせず利用できるため、ご自身のライフスタイルに合わせて無理なく通えます。
+                        </p>
+                        <p>
+                            1日1コマ（55分）の集中トレーニングで、着実に「動ける身体」を目指したい方に最適です。
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Table -->
             <div class="overflow-x-hidden">
                 <table class="w-full text-left border-collapse text-sm md:text-base font-light tracking-widest">
                     <tbody>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 入会金・事務手数料・予約システム料
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 <span class="text-gold font-bold">5,500</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 VIP会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1059,11 +1097,13 @@
                                     ・2週間先まで予約可 ※土日はゴルフレッスン優先
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">19,800</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 ALL TIME会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1073,11 +1113,13 @@
                                     ・1週間先まで予約可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">13,200</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 DAY TIME会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1087,11 +1129,13 @@
                                     ・1週間先まで予約可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">8,800</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 学生会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1102,11 +1146,13 @@
                                     ※小学4年生〜高校3年生対象（小学生は保護者同伴）
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">9,900</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 月4回会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1117,11 +1163,13 @@
                                     ※未使用分は1回分のみ翌月末まで繰越可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">8,800</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 月3回ゴルフレッスン会員<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1131,11 +1179,13 @@
                                     ※未使用分は1回分のみ翌月末まで繰越可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 月額 <span class="text-gold font-bold">33,000</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 ジム追加利用チケット<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1144,11 +1194,13 @@
                                     ・1週間先まで予約可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 <span class="text-gold font-bold">1,100</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 ジム利用チケット（ビジター様）<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1157,11 +1209,13 @@
                                     ・1週間先まで予約可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 <span class="text-gold font-bold">3,300</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-right">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 ゴルフルームチケット<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1171,11 +1225,13 @@
                                     ・1週間先まで予約可
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0">
                                 <span class="text-gold font-bold">3,300</span>円
                             </td>
                         </tr>
-                        <tr class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
+                        <tr
+                            class="border-b border-gray-dark flex flex-col items-start py-4 md:table-row md:py-0 fade-in from-left">
                             <th class="py-1 md:py-5 font-normal pr-2 w-full md:w-auto">
                                 ゴルフレッスンチケット（50分）<br>
                                 <span class="text-[10px] sm:text-xs text-gray mt-2 block leading-relaxed">
@@ -1184,7 +1240,8 @@
                                     ※ビジター様は月額0円の専用会員登録が必要
                                 </span>
                             </th>
-                            <td class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0 leading-loose">
+                            <td
+                                class="py-1 md:py-5 text-left md:text-right font-en whitespace-nowrap pl-2 w-full md:w-auto mt-2 md:mt-0 leading-loose">
                                 会員様 <span class="text-gold font-bold">11,000</span>円<br>
                                 ビジター様 <span class="text-gold font-bold">13,200</span>円<br>
                                 <span class="text-[10px] sm:text-xs text-gray">（レッスン料11,000円＋打席2,200円）</span>

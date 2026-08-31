@@ -376,11 +376,22 @@
                     自宅でも整えやすい再現性の高いカットで、年齢を重ねても清潔感とおしゃれを楽しめるスタイルへ導きます。
                 </p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <img src="img/Men01.jpg" alt="Men's Style 01" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
-                <img src="img/Men02.jpg" alt="Men's Style 02" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
-                <img src="img/Men03.jpg" alt="Men's Style 03" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
-                <img src="img/Men04.jpg" alt="Men's Style 04" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
+            <div class="swiper swiper-mens">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide cursor-zoom-in" onclick="openModal('img/Men01.jpg')">
+                        <img src="img/Men01.jpg" alt="Men's Style 01" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="swiper-slide cursor-zoom-in" onclick="openModal('img/Men02.jpg')">
+                        <img src="img/Men02.jpg" alt="Men's Style 02" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="swiper-slide cursor-zoom-in" onclick="openModal('img/Men03.jpg')">
+                        <img src="img/Men03.jpg" alt="Men's Style 03" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="swiper-slide cursor-zoom-in" onclick="openModal('img/Men04.jpg')">
+                        <img src="img/Men04.jpg" alt="Men's Style 04" class="w-full aspect-[3/4] object-cover hover:opacity-90 transition duration-300">
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-6 relative pb-8"></div>
             </div>
         </div>
     </section>

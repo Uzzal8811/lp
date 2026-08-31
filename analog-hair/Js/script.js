@@ -36,6 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mens Swiper Initialization
+    const mensSwiper = new Swiper('.swiper-mens', {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-mens .swiper-pagination', // Using specific selector to avoid conflicts
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                centeredSlides: false,
+                spaceBetween: 24,
+            }
+        }
+    });
+
     // Voice Swiper Initialization
     const voiceSwiper = new Swiper('.swiper-voice', {
         slidesPerView: 1,

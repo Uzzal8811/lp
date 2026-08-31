@@ -158,14 +158,39 @@ header {
   text-align: center;
 }
 
-/* Parallax */
+/* Parallax Safari Fix */
 .parallax-bg {
   position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 100px 0;
+  clip-path: inset(0 0 0 0);
+  background-color: #f8f8f8;
+}
+.parallax-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Swiper Safari Performance Fix */
+.swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.swiper-slide {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Gallery */

@@ -146,8 +146,9 @@
         /* ベーススタイル定義 */
         html,
         body {
-            overflow-x: hidden !important;
+            overflow-x: clip !important;
             max-width: 100% !important;
+            width: 100%;
             position: relative;
         }
 
@@ -629,7 +630,7 @@
 </head>
 
 <body class="antialiased bg-[#F7F4EE] text-[#403B36]">
-    <div class="overflow-x-hidden relative w-full">
+    <div class="relative w-full" style="overflow-x: clip;">
     <!-- Dynamic Reading/Scroll Progress Bar at Top -->
     <div id="scroll-progress"
         class="fixed top-0 left-0 h-[3.5px] bg-gradient-to-r from-[#B68F67] via-[#7E8D78] to-[#B68F67] z-[100] transition-all duration-75 w-0">

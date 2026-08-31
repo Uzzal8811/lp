@@ -231,96 +231,98 @@
             border: 1px solid rgba(214, 168, 79, 0.4);
             pointer-events: none;
         }
+
+        /* Gallery Shapes */
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            align-items: center;
+        }
+
+        .gallery-img {
+            flex-shrink: 0;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: filter 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-img {
+                width: 380px;
+                height: 380px;
+            }
+            .gallery-img:not(:first-child) {
+                margin-left: -53px; /* 15% of 380px (57px) minus 4px gap */
+            }
+        }
+
+        .shape-a {
+            clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+        }
+
+        .shape-b {
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
+
+        .gallery-img:not(:first-child) {
+            margin-left: -39px; /* 15% of 280px (42px) minus 3px gap */
+        }
+
+        .gallery-img:hover {
+            filter: brightness(1.15);
+        }
     </style>
 </head>
 
 <body class="antialiased">
 
-    <!-- Header / Sidebar Navigation (Desktop Left Sidebar, Mobile Top Header) -->
+    <!-- Header -->
     <header id="header"
-        class="fixed top-0 left-0 z-50 w-full lg:w-64 xl:w-72 lg:h-screen bg-black/95 lg:bg-[#0a0908]/95 backdrop-blur-md border-b lg:border-b-0 lg:border-r border-brandRed/20 lg:border-gray-900 transition-all duration-300">
-        <div class="h-full flex flex-col justify-between px-4 lg:px-6 py-3 lg:py-8 max-w-7xl mx-auto lg:max-w-none">
-            <!-- Mobile Header Top Bar / Desktop Sidebar Top Logo -->
-            <div class="flex lg:flex-col justify-between items-center lg:items-stretch w-full">
-                <!-- Logo Frame -->
-                <a href="#"
-                    class="group block text-center border border-brandGold/30 bg-black/80 p-2.5 lg:p-4 rounded-sm transition-all hover:border-brandRed shadow-lg">
-                    <span class="block text-[10px] lg:text-xs font-serif text-brandGold tracking-[0.25em] mb-0.5 lg:mb-1">松阪・宮町</span>
-                    <span class="text-lg lg:text-2xl font-bold tracking-widest text-white font-serif block">
-                        居酒家 <span class="text-brandRed">一喜</span>
-                    </span>
-                </a>
-
-                <!-- Mobile Header Right Actions (Phone & Hamburger) -->
-                <div class="lg:hidden flex items-center space-x-2">
-                    <a href="tel:0598-31-1034" class="text-brandRed text-base p-2 border border-brandRed/30 rounded-sm">
-                        <i class="fa-solid fa-phone"></i>
+        class="fixed w-full z-50 transition-all duration-500 bg-black/80 backdrop-blur-md border-b border-brandRed/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#"
+                        class="text-2xl font-bold tracking-widest text-white font-serif flex items-center gap-2">
+                        <span class="bg-brandRed text-black px-2 py-0.5 rounded text-lg font-bold">居酒家</span>
+                        <span class="text-white">一喜</span>
                     </a>
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2 text-xl">
-                        <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
+                    <a href="#about"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">当店について</a>
+                    <a href="#recommend"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">こんな方におすすめ</a>
+                    <a href="#service"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">選ばれる理由</a>
+                    <a href="#menu"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">お品書き</a>
+                    <a href="#gallery"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">ギャラリー</a>
+                    <a href="#message"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">店主の想い</a>
+                    <a href="#contact"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">店舗情報</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="jump01.html" target="_blank"
+                        class="bg-brandRed hover:bg-brandRed-dark text-white px-6 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-sm whitespace-nowrap">
+                        ホットペッパー予約
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
-            </div>
-
-            <!-- Desktop Sidebar Phone Section -->
-            <div class="hidden lg:block text-center py-4 border-y border-gray-900/80 my-4">
-                <span class="block text-[11px] text-gray-400 font-serif mb-1 tracking-wider"><i class="fa-solid fa-phone text-brandRed mr-1"></i> ご予約・お問合せ</span>
-                <a href="tel:0598-31-1034"
-                    class="inline-block text-brandGold hover:text-white font-serif text-base font-bold tracking-widest transition-colors">
-                    0598-31-1034
-                </a>
-            </div>
-
-            <!-- Desktop Sidebar Vertical Navigation -->
-            <nav class="hidden lg:flex flex-col space-y-3.5 my-auto font-serif">
-                <a href="#"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>ホーム</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Home</span>
-                </a>
-                <a href="#about"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>当店について</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">About</span>
-                </a>
-                <a href="#recommend"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>おすすめ</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Recommend</span>
-                </a>
-                <a href="#service"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>選ばれる理由</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Features</span>
-                </a>
-                <a href="#menu"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>お品書き</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Menu</span>
-                </a>
-                <a href="#gallery"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>ギャラリー</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Gallery</span>
-                </a>
-                <a href="#message"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>店主の想い</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Message</span>
-                </a>
-                <a href="#contact"
-                    class="group flex items-center justify-between text-gray-300 hover:text-brandGold transition-colors text-xs xl:text-sm tracking-widest py-1 border-b border-gray-900/50">
-                    <span>店舗情報</span>
-                    <span class="text-[10px] text-gray-500 group-hover:text-brandGold/70 font-sans tracking-normal">Access</span>
-                </a>
-            </nav>
-
-            <!-- Desktop Sidebar Reserve Button -->
-            <div class="hidden lg:block pt-2">
-                <a href="jump01.html" target="_blank"
-                    class="block bg-gradient-to-r from-brandRed via-brandRed-dark to-brandRed hover:brightness-110 text-white w-full py-3 rounded-sm text-xs font-bold tracking-widest text-center shadow-lg transition-all border border-brandGold/30">
-                    ホットペッパー予約
-                </a>
             </div>
         </div>
     </header>
@@ -358,36 +360,24 @@
         </nav>
     </div>
 
-    <!-- Main Content Wrapper (Shifted right on Desktop for Sidebar) -->
-    <div class="lg:pl-64 xl:pl-72 w-full min-h-screen">
-
-        <!-- First View (Hero Section) -->
-        <section class="relative h-[100dvh] flex flex-col justify-center overflow-hidden bg-black pt-16 lg:pt-0">
-            <!-- Top Right Tagline Banner (As in Reference Image) -->
-            <div class="absolute top-20 right-4 lg:top-8 lg:right-10 z-30 pointer-events-none text-right">
-                <span class="inline-block text-white/90 text-[11px] md:text-sm font-serif tracking-[0.2em] shadow-lg bg-black/60 px-3.5 py-1.5 rounded-sm backdrop-blur-sm border border-white/10">
-                    三重県松阪市「居酒家 一喜」で愉しむ 鮮魚と日替わり料理
-                </span>
-            </div>
-
-            <!-- Background Slideshow -->
-            <div class="absolute inset-0 z-0">
-                <div class="slideshow-container">
-                    <div class="slideshow-image active"
-                        style="--pc-img: url('img/fv1.png'); --sp-img: url('img/spfv1.png');"></div>
-                    <div class="slideshow-image" style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');">
-                    </div>
-                    <div class="slideshow-image" style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');">
-                    </div>
+    <!-- First View (Hero) -->
+    <section class="relative h-[100dvh] flex flex-col md:block overflow-hidden bg-black">
+        <!-- Background Slideshow -->
+        <div class="relative md:absolute top-0 right-0 w-full h-[55vh] md:h-full flex-shrink-0 z-0">
+            <div class="slideshow-container">
+                <div class="slideshow-image" style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');">
+                </div>
+                <div class="slideshow-image" style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');">
                 </div>
             </div>
+        </div>
 
-            <!-- Dark Overlay & Left Blend Gradient for Sidebar -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40 z-10 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50 z-10 pointer-events-none"></div>
+        <!-- Contents -->
+        <div
+            class="fv-text-sp relative z-10 w-full flex-grow md:h-full px-6 md:px-12 lg:px-20 flex flex-col justify-center items-start md:pt-20 bg-black md:bg-transparent pb-6 md:pb-0">
+            <!-- Foreground Content -->
+            <div class="relative z-20 flex flex-col items-start fade-in" style="transition-delay: 400ms;">
 
-            <!-- Contents Overlay -->
-            <div class="relative z-20 px-6 md:px-12 lg:px-16 w-full max-w-5xl flex flex-col justify-center items-start fade-in" style="transition-delay: 200ms;">
                 <!-- Vertical Line Decor & Content -->
                 <div class="relative pl-5 md:pl-8 border-l-[4px] border-transparent"
                     style="border-image: linear-gradient(to bottom, #B91C1C, #D6A84F) 1;">
@@ -400,13 +390,13 @@
 
                     <!-- Main Title -->
                     <h1
-                        class="text-2xl md:text-4xl lg:text-[3.2rem] font-bold tracking-widest leading-[1.5] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] font-serif">
+                        class="text-3xl md:text-5xl lg:text-[4rem] font-bold tracking-widest leading-[1.4] text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] font-serif">
                         今日いい日だった方、<br class="md:hidden">イマイチだった方、<br>
                         明日は<span class="text-brandRed">良い日</span>になりますように。
                     </h1>
 
                     <!-- Descriptions -->
-                    <div class="mt-6 md:mt-10 flex flex-col gap-2.5 md:gap-3.5">
+                    <div class="mt-8 md:mt-12 flex flex-col gap-3 md:gap-4">
                         <p class="text-gray-100 text-xs md:text-sm tracking-[0.2em] font-medium drop-shadow-md">
                             気軽に立ち寄れる、元気なおじさんがいる居酒家。
                         </p>
@@ -416,7 +406,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+    </section>
 
     <!-- Header overlap spacer for desktop to avoid jumps -->
     <div id="header-spacer" class="h-0 bg-transparent"></div>
@@ -447,204 +439,188 @@
     </section>
 
     <!-- Recommend Section -->
-    <section id="recommend" class="py-24 relative overflow-hidden z-0">
-        <!-- iOS Parallax BG -->
-        <div class="absolute inset-0 z-[-2]" style="clip-path: inset(0);">
-            <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/tv.jpg');"></div>
-        </div>
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black/85 z-[-1]"></div>
-
-        <!-- Background Decor -->
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brandRed/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
-        <div
-            class="absolute -bottom-40 -left-40 w-96 h-96 bg-brandGold/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
-
+    <section id="recommend" class="py-24 bg-white relative overflow-hidden z-0">
+        
         <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <!-- Section Header -->
             <div class="text-center mb-16 fade-in">
-                <span
-                    class="text-brandRed text-xs md:text-sm tracking-[0.3em] block mb-2 font-serif font-bold">RECOMMEND</span>
-                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white drop-shadow-md">
-                    こんな方におすすめ</h2>
-                <div class="w-16 h-[2px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6"></div>
+                <span class="text-brandRed text-xs md:text-sm tracking-[0.3em] block mb-2 font-serif font-bold">RECOMMEND</span>
+                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-black">
+                    こんな方におすすめ
+                </h2>
+                <div class="w-16 h-[2px] bg-brandRed mx-auto mt-6"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 max-w-4xl mx-auto">
                 <!-- Item 1 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandRed bg-brandRed/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-beer-mug-empty text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        仕事帰りや日常使いで気軽に<br class="md:hidden">「ちょい飲み」利用したい方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        仕事帰りや日常使いで気軽に<br class="md:hidden">「ちょい飲み」利用したい方
+                    </p>
                 </div>
                 <!-- Item 2 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandGold bg-brandGold/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-fish text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        新鮮な鮮魚や日替わりメニューの<br>美味しいお料理を楽しみたい方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        新鮮な鮮魚や日替わりメニューの<br>美味しいお料理を楽しみたい方
+                    </p>
                 </div>
                 <!-- Item 3 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandRed bg-brandRed/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-house text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        アットホームで落ち着く<br>昭和レトロな雰囲気でくつろぎたい方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        アットホームで落ち着く<br>昭和レトロな雰囲気でくつろぎたい方
+                    </p>
                 </div>
                 <!-- Item 4 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandGold bg-brandGold/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-utensils text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        ある食材でのリクエストや<br>ご予算・お時間の相談をしたい方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        ある食材でのリクエストや<br>ご予算・お時間の相談をしたい方
+                    </p>
                 </div>
                 <!-- Item 5 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandRed bg-brandRed/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-face-smile text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        元気なおじさんが活気よく<br>温かく迎えてくれるお店をお探しの方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        元気なおじさんが活気よく<br>温かく迎えてくれるお店をお探しの方
+                    </p>
                 </div>
                 <!-- Item 6 -->
-                <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in rounded-r-sm transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1">
-                    <div
-                        class="mt-0.5 text-brandGold bg-brandGold/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="group border border-gray-200 hover:border-brandRed bg-white p-6 md:p-8 flex items-start space-x-5 fade-in transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <div class="mt-0.5 text-brandRed bg-[#F8F5EF] w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors">
                         <i class="fa-solid fa-hand-holding-heart text-sm"></i>
                     </div>
-                    <p class="recommend-text text-gray-300 font-serif leading-relaxed text-sm md:text-base">
-                        安くて美味しい、自分や家族と<br>通いたいお店を探している方</p>
+                    <p class="recommend-text text-gray-900 font-serif leading-relaxed text-sm md:text-base">
+                        安くて美味しい、自分や家族と<br>通いたいお店を探している方
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-black relative overflow-hidden">
-        <!-- Background Decor -->
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brandRed/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
-        <div
-            class="absolute -bottom-40 -left-40 w-96 h-96 bg-brandGold/10 rounded-full blur-[120px] pointer-events-none">
+    <section id="about" class="relative bg-[#F8F5EF] md:bg-transparent overflow-hidden">
+        
+        <!-- Mobile Header Image -->
+        <div class="w-full h-64 md:hidden relative">
+            <img src="img/about.webp" class="w-full h-full object-cover object-center" alt="居酒家 一喜について" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F8F5EF]"></div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16 fade-in">
-                <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">ABOUT</span>
-                <h2
-                    class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white drop-shadow-md leading-relaxed md:leading-normal">
-                    気軽に立ち寄れる、<br class="md:hidden">元気なおじさんがいる居酒家
-                </h2>
-                <div class="w-12 h-[1px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6"></div>
-            </div>
+        <!-- Desktop Background & Curve -->
+        <div class="hidden md:block absolute inset-0 z-0">
+            <img src="img/about.webp" alt="居酒家 一喜について" class="w-full h-full object-cover object-right" />
+        </div>
+        <div class="hidden md:block absolute inset-0 z-10 pointer-events-none drop-shadow-[15px_0_15px_rgba(0,0,0,0.15)]">
+            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+                <path d="M0,0 L68,0 C68,45 45,55 45,100 L0,100 Z" fill="#F8F5EF" />
+            </svg>
+        </div>
 
-            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 max-w-5xl mx-auto">
-                <!-- Text Content -->
-                <div class="w-full lg:w-1/2 space-y-6 fade-in">
-                    <p class="text-sm lg:text-base text-gray-300 leading-relaxed font-serif">
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full min-h-[auto] md:min-h-[85vh] flex items-center py-16 md:py-24">
+            <div class="w-full md:w-[55%] lg:w-[45%] flex flex-col justify-center items-start space-y-12 fade-in">
+                
+                <!-- Description Text -->
+                <div class="space-y-8 mt-4 md:mt-0">
+                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
                         居酒家 一喜（いっき）は、三重県松阪市宮町にあるアットホームで昭和の温かみが残る居酒屋です。
                     </p>
-                    <p class="text-sm lg:text-base text-gray-300 leading-relaxed font-serif">
+                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
                         流行りものはありませんが、お客様最優先。「今日いい日だった方、イマイチだった方、明日は良い日になりますように」と少しでも手助けできたらという想いでお迎えしています。
                     </p>
-                    <p class="text-sm lg:text-base text-gray-300 leading-relaxed font-serif">
+                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
                         旬の鮮魚や日替わりメニューをはじめ、ボリューム満点で安くて美味しいお料理を豊富にご用意。<br>
                         ある食材でのリクエストやお時間・ご予算のご相談も出来る範囲で柔軟に対応いたします。
                     </p>
                 </div>
 
-                <!-- Image Card -->
-                <div class="w-full lg:w-1/2 fade-in lg:delay-200">
-                    <div class="relative chinese-border p-2 bg-black-light rounded-sm">
-                        <img src="img/about.webp" alt="居酒家 一喜について"
-                            class="w-full h-80 object-cover rounded-sm brightness-90">
-                        <div
-                            class="absolute -bottom-4 -right-4 bg-brandRed text-white py-2 px-4 font-bold font-serif text-xs tracking-widest rounded-sm shadow-lg">
-                            アットホームな居酒家
-                        </div>
-                    </div>
+                <!-- Big Title -->
+                <div class="pt-4 md:pt-8 w-full">
+                    <h2 class="text-2xl md:text-3xl lg:text-[2rem] font-bold font-serif text-black leading-snug tracking-widest">
+                        気軽に立ち寄れる、<br>元気なおじさんがいる居酒家
+                    </h2>
                 </div>
+
+                <!-- Button -->
+                <a href="#menu" class="group inline-flex items-center justify-between bg-black text-white hover:bg-brandRed px-6 py-4 w-full sm:w-[280px] text-sm tracking-widest font-serif transition-colors duration-300 shadow-lg">
+                    <span>お品書きを見る</span>
+                    <span class="text-gray-400 group-hover:text-white transition-colors text-xs">▶</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Service Section -->
-    <section id="service" class="py-24 bg-black-light border-t border-b border-gray-900 relative">
+    <section id="service" class="py-24 bg-[#F8F5EF] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">FEATURES</span>
-                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
+                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-black">
                     選ばれる理由
                 </h2>
-                <div class="w-12 h-[1px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6"></div>
+                <div class="w-12 h-[2px] bg-brandRed mx-auto mt-6"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Feature 1 -->
-                <div
-                    class="flex flex-col bg-black border border-gray-800 rounded-sm overflow-hidden p-6 fade-in shadow-md hover:border-brandRed/30 transition-all duration-300">
-                    <div class="mb-6 relative block w-full overflow-hidden rounded-sm group">
-                        <span class="absolute top-2 left-2 text-4xl font-bold text-brandRed/20 z-20 font-sans">01</span>
+                <div class="flex flex-col bg-white rounded-sm overflow-hidden p-6 md:p-8 fade-in shadow-sm hover:shadow-lg transition-all duration-300 group">
+                    <div class="mb-8 relative block w-full overflow-hidden rounded-sm">
+                        <span class="absolute top-2 left-2 text-4xl font-bold text-brandRed/10 z-20 font-sans">01</span>
                         <img src="img/service1.jpg" alt="昭和風居酒家"
-                            class="w-full h-56 object-cover relative z-10 brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            class="w-full h-56 object-cover relative z-10 brightness-95 group-hover:scale-105 transition-transform duration-700 shape-a">
                     </div>
-                    <h3 class="text-lg font-bold tracking-widest text-brandRed font-serif mb-4">
+                    <h3 class="text-lg font-bold tracking-widest text-black font-serif mb-4 leading-snug">
                         01 気軽に立ち寄れる<br>アットホームな昭和風居酒家
                     </h3>
-                    <p class="text-sm lg:text-base text-gray-400 leading-relaxed font-serif">
+                    <p class="text-sm lg:text-[15px] text-gray-700 leading-relaxed font-serif">
                         元気なおじさんが「いらっしゃいませ！」「ありがとうございます！」と当たり前の活気でお出迎えいたします。<br><br>
                         ちょい飲みのご利用も大歓迎。日常の羽を休める温かい雰囲気作りを心掛けています。
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="flex flex-col bg-black border border-gray-800 rounded-sm overflow-hidden p-6 fade-in shadow-md hover:border-brandGold/30 transition-all duration-300"
+                <div class="flex flex-col bg-white rounded-sm overflow-hidden p-6 md:p-8 fade-in shadow-sm hover:shadow-lg transition-all duration-300 group"
                     style="transition-delay: 150ms;">
-                    <div class="mb-6 relative block w-full overflow-hidden rounded-sm group">
-                        <span
-                            class="absolute top-2 left-2 text-4xl font-bold text-brandGold/20 z-20 font-sans">02</span>
+                    <div class="mb-8 relative block w-full overflow-hidden rounded-sm">
+                        <span class="absolute top-2 left-2 text-4xl font-bold text-brandRed/10 z-20 font-sans">02</span>
                         <img src="img/service2.png" alt="鮮魚や日替わり料理"
-                            class="w-full h-56 object-cover relative z-10 brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            class="w-full h-56 object-cover relative z-10 brightness-95 group-hover:scale-105 transition-transform duration-700 shape-b">
                     </div>
-                    <h3 class="text-lg font-bold tracking-widest text-brandGold font-serif mb-4">
+                    <h3 class="text-lg font-bold tracking-widest text-black font-serif mb-4 leading-snug">
                         02 ボリューム満点の鮮魚と<br>豊富な日替わりメニュー
                     </h3>
-                    <p class="text-sm lg:text-base text-gray-400 leading-relaxed font-serif">
+                    <p class="text-sm lg:text-[15px] text-gray-700 leading-relaxed font-serif">
                         「安くて美味しい、自分や家族が行きたいお店つくり」をコンセプトに、美味しいお料理を豊富にご用意。<br><br>
                         その日の新鮮な鮮魚や日替わりの逸品をボリューム満点でお楽しみいただけます。
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="flex flex-col bg-black border border-gray-800 rounded-sm overflow-hidden p-6 fade-in shadow-md hover:border-brandRed/30 transition-all duration-300"
+                <div class="flex flex-col bg-white rounded-sm overflow-hidden p-6 md:p-8 fade-in shadow-sm hover:shadow-lg transition-all duration-300 group"
                     style="transition-delay: 300ms;">
-                    <div class="mb-6 relative block w-full overflow-hidden rounded-sm group">
-                        <span class="absolute top-2 left-2 text-4xl font-bold text-brandRed/20 z-20 font-sans">03</span>
+                    <div class="mb-8 relative block w-full overflow-hidden rounded-sm">
+                        <span class="absolute top-2 left-2 text-4xl font-bold text-brandRed/10 z-20 font-sans">03</span>
                         <img src="img/service3.webp" alt="リクエスト要望対応"
-                            class="w-full h-56 object-cover relative z-10 brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            class="w-full h-56 object-cover relative z-10 brightness-95 group-hover:scale-105 transition-transform duration-700 shape-a">
                     </div>
-                    <h3 class="text-lg font-bold tracking-widest text-brandRed font-serif mb-4">
+                    <h3 class="text-lg font-bold tracking-widest text-black font-serif mb-4 leading-snug">
                         03 リクエスト要望・予算のご相談も<br>柔軟に対応
                     </h3>
-                    <p class="text-sm lg:text-base text-gray-400 leading-relaxed font-serif">
+                    <p class="text-sm lg:text-[15px] text-gray-700 leading-relaxed font-serif">
                         ある食材でのリクエスト料理のお作りや、お時間・ご予算のご相談など、出来る範囲でお応えいたします。<br><br>
                         お客様の寄り添った対応を徹底しておりますので、何でもお気軽にお声がけください。
                     </p>
@@ -679,57 +655,45 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-24 relative overflow-hidden z-0">
-        <!-- iOS Parallax BG -->
-        <div class="absolute inset-0 z-[-2]" style="clip-path: inset(0);">
-            <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/fv11.jpg');"></div>
-        </div>
-        <!-- Glowing gradient effect behind menu -->
-        <div class="absolute inset-0 bg-black/90 z-[-1] pointer-events-none">
-        </div>
-
+    <section id="menu" class="py-24 bg-white relative overflow-hidden z-0">
+        
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 fade-in">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">MENU</span>
-                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
+                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-black">
                     お品書き
                 </h2>
-                <div class="w-12 h-[1px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6"></div>
+                <div class="w-12 h-[2px] bg-brandRed mx-auto mt-6"></div>
             </div>
 
             <!-- Recommended Menu Showcase (Large box) -->
             <div class="max-w-3xl mx-auto mb-16 fade-in">
-                <div class="relative chinese-border bg-black-light/90 p-8 md:p-12 shadow-2xl rounded-sm">
-                    <div
-                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brandRed text-black font-bold font-serif text-xs tracking-widest py-1.5 px-6 rounded-sm whitespace-nowrap">
+                <div class="relative bg-[#F8F5EF] p-8 md:p-12 shadow-sm border border-gray-200 rounded-sm">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white font-bold font-serif text-xs tracking-widest py-2 px-6 rounded-sm whitespace-nowrap shadow-md">
                         当店名物・一番オススメ
                     </div>
 
                     <div class="space-y-8 mt-4">
                         <!-- Rec 1 -->
-                        <div
-                            class="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-800 pb-6">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-300 pb-6">
                             <div>
-                                <div
-                                    class="inline-block bg-brandRed/10 text-brandRed text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-sm mb-2">
-                                    おすすめ</div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white font-serif">鮮魚盛り合わせ＆日替わりメニュー</h3>
-                                <p class="text-xs text-gray-400 mt-1 font-serif">仕入れに合わせたボリューム満点の逸品</p>
+                                <div class="inline-block bg-white border border-brandRed text-brandRed text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-sm mb-2">おすすめ</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-black font-serif">鮮魚盛り合わせ＆日替わりメニュー</h3>
+                                <p class="text-sm text-gray-700 mt-2 font-serif">仕入れに合わせたボリューム満点の逸品</p>
                             </div>
-                            <div class="text-right mt-2 md:mt-0">
-                                <span class="text-sm text-gray-300 font-serif">安くて美味しい充実の価格</span>
+                            <div class="text-left md:text-right mt-4 md:mt-0">
+                                <span class="text-sm font-bold text-brandRed font-serif">安くて美味しい充実の価格</span>
                             </div>
                         </div>
 
                         <!-- Rec 2 -->
                         <div class="flex flex-col md:flex-row md:items-center justify-between">
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white font-serif">食材リクエスト＆ご予算料理</h3>
-                                <p class="text-xs text-gray-400 mt-1 font-serif">ある食材でお好みの一品をお作りします</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-black font-serif">食材リクエスト＆ご予算料理</h3>
+                                <p class="text-sm text-gray-700 mt-2 font-serif">ある食材でお好みの一品をお作りします</p>
                             </div>
-                            <div class="text-right mt-2 md:mt-0">
-                                <span class="text-sm text-gray-300 font-serif">お気軽にご相談ください</span>
+                            <div class="text-left md:text-right mt-4 md:mt-0">
+                                <span class="text-sm font-bold text-brandRed font-serif">お気軽にご相談ください</span>
                             </div>
                         </div>
                     </div>
@@ -739,50 +703,47 @@
             <!-- Other Menu Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                 <!-- Column 1 -->
-                <div class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm fade-in">
+                <div class="space-y-8 bg-[#F8F5EF] p-6 md:p-8 border border-gray-200 rounded-sm fade-in">
                     <div>
-                        <h3
-                            class="text-lg font-bold text-brandRed font-serif border-b border-brandRed/30 pb-2 mb-4 flex items-center">
-                            <span class="w-2 h-2 bg-brandRed rounded-full mr-2"></span>鮮魚・おすすめ逸品
+                        <h3 class="text-lg font-bold text-black font-serif border-b border-gray-300 pb-3 mb-6 flex items-center">
+                            <span class="w-2 h-2 bg-brandRed rounded-full mr-3"></span>鮮魚・おすすめ逸品
                         </h3>
-                        <ul class="space-y-4 font-serif">
+                        <ul class="space-y-5 font-serif">
                             <li class="flex items-baseline justify-between">
-                                <span class="text-white text-sm md:text-base">本日の鮮魚お刺身</span>
-                                <span class="flex-grow border-b border-dotted border-gray-800 mx-2"></span>
-                                <span class="text-gray-300 text-sm md:text-base font-sans font-bold">日替わり</span>
+                                <span class="text-gray-900 text-sm md:text-base">本日の鮮魚お刺身</span>
+                                <span class="flex-grow border-b border-dotted border-gray-400 mx-3"></span>
+                                <span class="text-brandRed text-sm md:text-base font-sans font-bold">日替わり</span>
                             </li>
                             <li class="flex items-baseline justify-between">
-                                <span class="text-white text-sm md:text-base">日替わり特選おつまみ</span>
-                                <span class="flex-grow border-b border-dotted border-gray-800 mx-2"></span>
-                                <span class="text-gray-300 text-sm md:text-base font-sans font-bold">日替わり</span>
+                                <span class="text-gray-900 text-sm md:text-base">日替わり特選おつまみ</span>
+                                <span class="flex-grow border-b border-dotted border-gray-400 mx-3"></span>
+                                <span class="text-brandRed text-sm md:text-base font-sans font-bold">日替わり</span>
                             </li>
                             <li class="flex items-baseline justify-between">
-                                <span class="text-white text-sm md:text-base">昭和風 昔ながらの居酒屋名物</span>
-                                <span class="flex-grow border-b border-dotted border-gray-800 mx-2"></span>
-                                <span class="text-gray-300 text-sm md:text-base font-sans font-bold">手頃価格</span>
+                                <span class="text-gray-900 text-sm md:text-base">昭和風 昔ながらの居酒屋名物</span>
+                                <span class="flex-grow border-b border-dotted border-gray-400 mx-3"></span>
+                                <span class="text-brandRed text-sm md:text-base font-sans font-bold">手頃価格</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
-                <div
-                    class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm fade-in lg:delay-150">
+                <div class="space-y-8 bg-[#F8F5EF] p-6 md:p-8 border border-gray-200 rounded-sm fade-in lg:delay-150">
                     <div>
-                        <h3
-                            class="text-lg font-bold text-brandRed font-serif border-b border-brandRed/30 pb-2 mb-4 flex items-center">
-                            <span class="w-2 h-2 bg-brandRed rounded-full mr-2"></span>ちょい飲み＆お酒のお供
+                        <h3 class="text-lg font-bold text-black font-serif border-b border-gray-300 pb-3 mb-6 flex items-center">
+                            <span class="w-2 h-2 bg-brandRed rounded-full mr-3"></span>ちょい飲み＆お酒のお供
                         </h3>
-                        <ul class="space-y-4 font-serif">
+                        <ul class="space-y-5 font-serif">
                             <li class="flex items-baseline justify-between">
-                                <span class="text-white text-sm md:text-base">ボリューム満点 揚げ物</span>
-                                <span class="flex-grow border-b border-dotted border-gray-800 mx-2"></span>
-                                <span class="text-gray-300 text-sm md:text-base font-sans font-bold">手頃価格</span>
+                                <span class="text-gray-900 text-sm md:text-base">ボリューム満点 揚げ物</span>
+                                <span class="flex-grow border-b border-dotted border-gray-400 mx-3"></span>
+                                <span class="text-brandRed text-sm md:text-base font-sans font-bold">手頃価格</span>
                             </li>
                             <li class="flex items-baseline justify-between">
-                                <span class="text-white text-sm md:text-base">食材リクエスト特別料理</span>
-                                <span class="flex-grow border-b border-dotted border-gray-800 mx-2"></span>
-                                <span class="text-gray-300 text-sm md:text-base font-sans font-bold">応相談</span>
+                                <span class="text-gray-900 text-sm md:text-base">食材リクエスト特別料理</span>
+                                <span class="flex-grow border-b border-dotted border-gray-400 mx-3"></span>
+                                <span class="text-brandRed text-sm md:text-base font-sans font-bold">応相談</span>
                             </li>
                         </ul>
                     </div>
@@ -792,8 +753,8 @@
             <!-- Bottom CTA Link -->
             <div class="text-center mt-16 fade-in">
                 <a href="jump01.html" target="_blank"
-                    class="inline-flex items-center justify-center border border-brandRed text-brandRed hover:bg-brandRed hover:text-white px-8 py-3.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-sm">
-                    ホットペッパーでメニューを見る <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                    class="inline-flex items-center justify-center bg-black text-white hover:bg-brandRed px-8 py-4 text-xs font-bold tracking-widest font-serif transition-colors duration-300 rounded-sm shadow-md">
+                    ホットペッパーでメニューを見る <span class="ml-3 text-[10px]">▶</span>
                 </a>
             </div>
         </div>
@@ -815,92 +776,45 @@
         <div class="gallery-slider relative w-full overflow-hidden fade-in">
             <div class="gallery-track" id="gallery-track">
                 <!-- Images -->
-                <img src="img/gallery1.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery2.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery3.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery4.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery5.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery6.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery7.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery8.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
+                <img src="img/gallery1.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery2.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery3.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery4.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery5.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery6.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery7.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery8.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                
                 <!-- Duplicate for infinite scroll -->
-                <img src="img/gallery1.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery2.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery3.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery4.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery5.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery6.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery7.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery8.jpg" alt="Gallery Image"
-                    class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 object-cover mx-2 cursor-pointer hover:brightness-110 transition-all rounded-sm"
-                    onclick="openLightbox(this.src)">
+                <img src="img/gallery1.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery2.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery3.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery4.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery5.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery6.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
+                <img src="img/gallery7.jpg" alt="Gallery Image" class="gallery-img shape-a" onclick="openLightbox(this.src)">
+                <img src="img/gallery8.jpg" alt="Gallery Image" class="gallery-img shape-b" onclick="openLightbox(this.src)">
             </div>
         </div>
     </section>
 
     <!-- Message Section -->
-    <section id="message" class="py-24 relative overflow-hidden border-t border-b border-gray-900 z-0">
-        <!-- iOS Parallax BG -->
-        <div class="absolute inset-0 z-[-2]" style="clip-path: inset(0);">
-            <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/1.jpg');"></div>
-        </div>
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black/85 z-[-1]"></div>
-
-        <div
-            class="absolute -top-40 -left-40 w-96 h-96 bg-brandRed/5 rounded-full blur-[120px] pointer-events-none z-0">
-        </div>
-        <div
-            class="absolute -bottom-40 -right-40 w-96 h-96 bg-brandGold/5 rounded-full blur-[120px] pointer-events-none">
-        </div>
-
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
+    <section id="message" class="py-24 bg-[#F8F5EF] relative overflow-hidden z-0">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 fade-in">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">MESSAGE</span>
-                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
+                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-black">
                     店主の想い
                 </h2>
-                <div class="w-12 h-[1px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6"></div>
+                <div class="w-12 h-[2px] bg-brandRed mx-auto mt-6"></div>
             </div>
 
-            <div class="bg-black-light border border-gray-800 p-8 md:p-12 rounded-sm shadow-xl fade-in text-center">
-                <h3 class="text-lg md:text-xl font-bold tracking-widest text-brandRed font-serif mb-6 leading-relaxed">
+            <div class="bg-white border border-gray-200 p-8 md:p-14 shadow-sm fade-in text-center rounded-sm">
+                <h3 class="text-lg md:text-xl font-bold tracking-widest text-black font-serif mb-8 leading-relaxed">
                     安くて美味しい、<br class="md:hidden">自分や家族が行きたいお店つくり。
                 </h3>
 
-                <div
-                    class="space-y-6 text-sm lg:text-base text-gray-300 leading-relaxed font-serif max-w-2xl mx-auto text-left md:text-center">
+                <div class="space-y-8 text-[15px] text-gray-800 leading-[2.4] font-serif max-w-2xl mx-auto text-left md:text-center">
                     <p>
                         今日いい日だった方、イマイチだった方、明日は良い日になりますように。<br>
                         少しでもお手伝いできたら幸いです。
@@ -916,9 +830,9 @@
                     </p>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-gray-900 text-right">
-                    <span class="text-sm text-gray-400 font-serif mr-4">居酒家 一喜</span>
-                    <span class="text-base font-bold font-serif text-white">店主</span>
+                <div class="mt-12 pt-8 border-t border-gray-200 text-right">
+                    <span class="text-sm text-gray-500 font-serif mr-4">居酒家 一喜</span>
+                    <span class="text-lg font-bold font-serif text-black">店主</span>
                 </div>
             </div>
         </div>
@@ -1007,8 +921,6 @@
             </p>
         </div>
     </footer>
-
-    </div><!-- End Main Content Wrapper -->
 
     <!-- Lightbox Modal -->
     <div id="lightbox"
@@ -1212,7 +1124,8 @@
 
                 pos -= speed * delta;
 
-                const halfWidth = track.scrollWidth / 2;
+                // Calculate exact width of one full set of 8 images for seamless looping
+                const halfWidth = track.children[8].offsetLeft - track.children[0].offsetLeft;
 
                 if (Math.abs(pos) >= halfWidth) {
                     pos += halfWidth;

@@ -38,7 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mens Swiper Initialization
     const mensSwiper = new Swiper('.swiper-mens', {
-        slidesPerView: 1.2,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
+        slidesPerView: 1.5,
         spaceBetween: 20,
         centeredSlides: true,
         loop: true,
@@ -47,14 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
             disableOnInteraction: false,
         },
         pagination: {
-            el: '.swiper-mens .swiper-pagination', // Using specific selector to avoid conflicts
+            el: '.swiper-mens .swiper-pagination',
             clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-mens-next',
+            prevEl: '.swiper-mens-prev',
         },
         breakpoints: {
             768: {
-                slidesPerView: 4,
-                centeredSlides: false,
-                spaceBetween: 24,
+                slidesPerView: 3,
+                centeredSlides: true,
+                spaceBetween: 30,
             }
         }
     });

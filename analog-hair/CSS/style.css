@@ -204,14 +204,18 @@ header {
 .swiper-voice-next,
 .swiper-voice-prev,
 .swiper-ba-next,
-.swiper-ba-prev {
+.swiper-ba-prev,
+.swiper-mens-next,
+.swiper-mens-prev {
   color: var(--primary-color) !important;
 }
 
 .swiper-voice-next::after,
 .swiper-voice-prev::after,
 .swiper-ba-next::after,
-.swiper-ba-prev::after {
+.swiper-ba-prev::after,
+.swiper-mens-next::after,
+.swiper-mens-prev::after {
   font-size: 24px !important;
   font-weight: bold;
 }

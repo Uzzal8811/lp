@@ -135,16 +135,40 @@
             }
         }
 
-        .fade-in {
+        /* ===== Directional Animation Classes ===== */
+        .fade-in,
+        .anim-from-left,
+        .anim-from-right,
+        .anim-from-top,
+        .anim-from-bottom,
+        .anim-zoom-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1);
         }
 
-        .fade-in.appear {
+        .fade-in          { transform: translateY(28px); }
+        .anim-from-left   { transform: translateX(-60px); }
+        .anim-from-right  { transform: translateX(60px); }
+        .anim-from-top    { transform: translateY(-40px); }
+        .anim-from-bottom { transform: translateY(60px); }
+        .anim-zoom-in     { transform: scale(0.88); }
+
+        .fade-in.appear,
+        .anim-from-left.appear,
+        .anim-from-right.appear,
+        .anim-from-top.appear,
+        .anim-from-bottom.appear,
+        .anim-zoom-in.appear {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) translateX(0) scale(1);
         }
+
+        /* Staggered delay helpers */
+        .anim-delay-1 { transition-delay: 0.1s; }
+        .anim-delay-2 { transition-delay: 0.22s; }
+        .anim-delay-3 { transition-delay: 0.34s; }
+        .anim-delay-4 { transition-delay: 0.46s; }
+        .anim-delay-5 { transition-delay: 0.58s; }
 
         .slideshow-container {
             position: relative;
@@ -516,7 +540,8 @@
                 <!-- Call CTA -->
                 <a href="tel:0598-31-1034"
                     class="flex-1 border border-brandRed/30 bg-black hover:bg-brandRed text-white hover:text-white px-6 py-3.5 transition-all duration-300 flex items-center justify-center group rounded-sm shadow-md">
-                    <i class="fa-solid fa-phone text-brandRed group-hover:text-white text-xl mr-3 transition-colors"></i>
+                    <i
+                        class="fa-solid fa-phone text-brandRed group-hover:text-white text-xl mr-3 transition-colors"></i>
                     <div class="text-left font-sans">
                         <span class="block text-xs text-gray-400 font-serif">お電話でのご予約・お問合せ</span>
                         <span class="block text-lg font-bold tracking-wide whitespace-nowrap">0598-31-1034</span>
@@ -816,7 +841,8 @@
                 <!-- Call CTA -->
                 <a href="tel:0598-31-1034"
                     class="flex-1 border border-brandRed/30 bg-black hover:bg-brandRed text-white hover:text-white px-6 py-3.5 transition-all duration-300 flex items-center justify-center group rounded-sm shadow-md">
-                    <i class="fa-solid fa-phone text-brandRed group-hover:text-white text-xl mr-3 transition-colors"></i>
+                    <i
+                        class="fa-solid fa-phone text-brandRed group-hover:text-white text-xl mr-3 transition-colors"></i>
                     <div class="text-left font-sans">
                         <span class="block text-xs text-gray-400 font-serif">お電話でのご予約・お問合せ</span>
                         <span class="block text-lg font-bold tracking-wide whitespace-nowrap">0598-31-1034</span>
@@ -841,7 +867,7 @@
         <!-- iOS Parallax BG -->
         <div class="absolute inset-0 z-[-3]" style="clip-path: inset(0);">
             <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/fv11.jpg');"></div>
+                style="background-image: url('img/service2.jpg');"></div>
         </div>
         <!-- Glowing gradient effect behind menu -->
         <div class="absolute inset-0 bg-black/50 z-[-2] pointer-events-none">
@@ -856,7 +882,7 @@
         </div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 anim-from-top">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">MENU</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
                     お品書き
@@ -865,7 +891,7 @@
             </div>
 
             <!-- Recommended Menu Showcase (Large box) -->
-            <div class="max-w-3xl mx-auto mb-16 fade-in">
+            <div class="max-w-3xl mx-auto mb-16 anim-zoom-in">
                 <div class="relative chinese-border bg-black-light/90 p-8 md:p-12 shadow-2xl rounded-sm">
                     <div
                         class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brandRed text-black font-bold font-serif text-xs tracking-widest py-1.5 px-6 rounded-sm whitespace-nowrap">
@@ -905,7 +931,7 @@
             <!-- Other Menu Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                 <!-- Column 1 -->
-                <div class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm fade-in">
+                <div class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm anim-from-left">
                     <div>
                         <h3
                             class="text-lg font-bold text-brandRed font-serif border-b border-brandRed/30 pb-2 mb-4 flex items-center">
@@ -933,7 +959,7 @@
 
                 <!-- Column 2 -->
                 <div
-                    class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm fade-in lg:delay-150">
+                    class="space-y-8 bg-black-light/60 p-6 md:p-8 border border-gray-900 rounded-sm anim-from-right anim-delay-2">
                     <div>
                         <h3
                             class="text-lg font-bold text-brandRed font-serif border-b border-brandRed/30 pb-2 mb-4 flex items-center">
@@ -956,7 +982,7 @@
             </div>
 
             <!-- Bottom CTA Link -->
-            <div class="text-center mt-16 fade-in">
+            <div class="text-center mt-16 anim-from-bottom">
                 <a href="jump01.html" target="_blank"
                     class="inline-flex items-center justify-center border border-brandRed text-brandRed hover:bg-brandRed hover:text-white px-8 py-3.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-sm">
                     ホットペッパーでメニューを見る <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
@@ -968,7 +994,7 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-24 bg-black border-t border-b border-gray-900 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-            <div class="text-center fade-in">
+            <div class="text-center anim-from-top">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">GALLERY</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
                     ギャラリー
@@ -1045,7 +1071,7 @@
         </div>
 
         <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 anim-from-left">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">MESSAGE</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
                     店主の想い
@@ -1054,7 +1080,7 @@
             </div>
 
             <div
-                class="bg-black-light border-y border-brandRed/20 p-8 md:p-12 shadow-xl fade-in text-center relative [clip-path:polygon(0_0,100%_0,97%_100%,3%_100%)]">
+                class="bg-black-light border-y border-brandRed/20 p-8 md:p-12 shadow-xl anim-zoom-in text-center relative [clip-path:polygon(0_0,100%_0,97%_100%,3%_100%)]">
                 <h3 class="text-lg md:text-xl font-bold tracking-widest text-brandRed font-serif mb-6 leading-relaxed">
                     安くて美味しい、<br class="md:hidden">自分や家族が行きたいお店つくり。
                 </h3>
@@ -1095,7 +1121,7 @@
         <div class="absolute inset-0 bg-black/90 z-[-1]"></div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 anim-from-right">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif">ACCESS &
                     INFO</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
@@ -1104,7 +1130,7 @@
             </div>
 
             <div
-                class="flex flex-col-reverse lg:flex-row gap-12 bg-black-light border border-gray-800 p-8 md:p-12 rounded-sm shadow-xl fade-in">
+                class="flex flex-col-reverse lg:flex-row gap-12 bg-black-light border border-gray-800 p-8 md:p-12 rounded-sm shadow-xl anim-from-bottom">
                 <!-- Shop Details -->
                 <div class="w-full lg:w-1/2 space-y-6 text-sm lg:text-base font-serif">
                     <h3 class="text-xl font-bold tracking-widest mb-8 text-white font-serif">居酒家 一喜</h3>
@@ -1337,51 +1363,82 @@
             setInterval(nextSlide, slideInterval);
         }
 
-        // Fade-in Intersection Observer
-        const fadeElements = document.querySelectorAll('.fade-in');
+        // Unified Animation Observer (fade-in + directional)
+        const animSelectors = '.fade-in, .anim-from-left, .anim-from-right, .anim-from-top, .anim-from-bottom, .anim-zoom-in';
+        const animElements = document.querySelectorAll(animSelectors);
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
-            threshold: 0.15
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
+                    obs.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        fadeElements.forEach(el => observer.observe(el));
+        animElements.forEach(el => observer.observe(el));
 
-        // Smooth JS Marquee
+        // ===== iOS Safari Compatible Gallery Marquee =====
         const track = document.getElementById('gallery-track');
         if (track) {
+            // Enable hardware acceleration on track and each image
+            track.style.willChange = 'transform';
+            track.style.webkitBackfaceVisibility = 'hidden';
+            track.style.backfaceVisibility = 'hidden';
+
             let pos = 0;
-            let lastTime = 0;
-            const speed = 40;
+            let lastTime = null;
+            let raf = null;
+            // Reduced speed for smooth render on iOS
+            const speed = 38;
+
+            function getHalfWidth() {
+                // Use first 8 children to compute one set width
+                const children = track.children;
+                if (children.length < 9) return 0;
+                return children[8].offsetLeft - children[0].offsetLeft;
+            }
+
+            let halfWidth = 0;
 
             function animateGallery(currentTime) {
-                if (!lastTime) lastTime = currentTime;
-                const delta = (currentTime - lastTime) / 1000;
+                if (lastTime === null) lastTime = currentTime;
+                const delta = Math.min((currentTime - lastTime) / 1000, 0.05); // cap delta to avoid big jumps
                 lastTime = currentTime;
+
+                if (!halfWidth) halfWidth = getHalfWidth();
 
                 pos -= speed * delta;
 
-                // Calculate exact width of one full set of 8 images for seamless looping
-                const halfWidth = track.children[8].offsetLeft - track.children[0].offsetLeft;
-
-                if (Math.abs(pos) >= halfWidth) {
+                if (halfWidth > 0 && Math.abs(pos) >= halfWidth) {
                     pos += halfWidth;
                 }
 
+                // Use matrix for best Safari compat
                 track.style.transform = `translate3d(${pos}px, 0, 0)`;
-                requestAnimationFrame(animateGallery);
+                raf = requestAnimationFrame(animateGallery);
             }
 
-            requestAnimationFrame(animateGallery);
+            // Pause when tab is hidden (save battery / fix Safari timer drift)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    if (raf) cancelAnimationFrame(raf);
+                    raf = null;
+                    lastTime = null;
+                } else {
+                    if (!raf) raf = requestAnimationFrame(animateGallery);
+                }
+            });
+
+            // Recalculate halfWidth on resize (handles device orientation change)
+            window.addEventListener('resize', () => { halfWidth = 0; });
+
+            raf = requestAnimationFrame(animateGallery);
         }
 
     </script>

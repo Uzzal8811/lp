@@ -147,7 +147,7 @@
         html,
         body {
             overflow-x: hidden !important;
-            max-width: 100vw !important;
+            max-width: 100% !important;
             position: relative;
         }
 
@@ -203,7 +203,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                width: 100vw;
+                width: 100%;
                 height: 100vh;
                 background-image: inherit;
                 background-position: center;
@@ -1079,7 +1079,7 @@
                 <!-- Left & Center Combined Column (Span 7) -->
                 <div class="lg:col-span-7 flex flex-col sm:flex-row items-end gap-6">
 
-                    <!-- Small Callout Box (Bottom Left - PLANNING YOUR VISIT? Fixed Height 220px & Bottom Aligned) SP非表示 -->
+                    <!-- Small Callout Box (Bottom Left - PLANNING YOUR VISIT? Fixed Height 220px & Bottom Aligned) - Desktop Only -->
                     <div
                         class="hidden sm:flex w-full sm:w-5/12 h-[220px] bg-[#EFEAE1]/90 rounded-[10px] p-5 border border-[#B68F67]/30 shadow-soft flex-col justify-between self-end shrink-0 fade-right delay-100">
                         <div>
@@ -1100,7 +1100,7 @@
 
                     <!-- Center Image (Full Height Matching Text Content Height) -->
                     <div
-                        class="w-full sm:w-7/12 rounded-[14px] overflow-hidden border border-[#B68F67]/40 shadow-soft self-stretch h-full min-h-[280px] sm:min-h-[400px] flip-up delay-200">
+                        class="w-full sm:w-7/12 rounded-[14px] overflow-hidden border border-[#B68F67]/40 shadow-soft self-stretch h-full min-h-[340px] sm:min-h-[400px] flip-up delay-200">
                         <img src="img/about.webp" alt="Flow サロンイメージ" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -1121,11 +1121,28 @@
                         </div>
                     </div>
 
-                    <!-- Accent Button (EXPLORE MORE >) SP: フル幅 -->
+                    <!-- Accent Button (EXPLORE MORE >) -->
                     <div class="pt-2 fade-up delay-600">
                         <a href="#features"
-                            class="flex sm:inline-flex items-center justify-center gap-2 bg-[#7E8D78] text-white px-7 py-3.5 rounded-[6px] text-xs font-bold tracking-widest hover:bg-[#61705B] transition-colors shadow-sm uppercase">
+                            class="inline-flex items-center gap-2 bg-[#7E8D78] text-white px-7 py-3.5 rounded-[6px] text-xs font-bold tracking-widest hover:bg-[#61705B] transition-colors shadow-sm uppercase">
                             EXPLORE MORE &gt;
+                        </a>
+                    </div>
+
+                    <!-- PLANNING YOUR VISIT Card - Mobile Only (shown after EXPLORE MORE button) -->
+                    <div
+                        class="sm:hidden bg-[#EFEAE1]/90 rounded-[10px] p-5 border border-[#B68F67]/30 shadow-soft flex flex-col gap-3 fade-up delay-700">
+                        <div>
+                            <h4 class="font-sans font-bold text-xs text-[#403B36] tracking-wider uppercase mb-1.5">
+                                PLANNING YOUR VISIT?
+                            </h4>
+                            <p class="text-[11px] text-[#403B36]/80 leading-relaxed">
+                                初めてのご来店でも安心。<br>24時間STEKiNAでの事前相談やWeb予約で、スムーズにご案内いたします。
+                            </p>
+                        </div>
+                        <a href="jump03.html" target="_blank" rel="noopener noreferrer"
+                            class="inline-block bg-white text-[#403B36] border border-[#B68F67]/40 px-3 py-1.5 rounded-[4px] text-[11px] font-bold hover:bg-[#F7F4EE] transition-colors shadow-xs w-fit">
+                            ご予約・相談 &gt;
                         </a>
                     </div>
                 </div>

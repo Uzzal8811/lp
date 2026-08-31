@@ -143,15 +143,32 @@
         .anim-from-bottom,
         .anim-zoom-in {
             opacity: 0;
-            transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        .fade-in          { transform: translateY(28px); }
-        .anim-from-left   { transform: translateX(-60px); }
-        .anim-from-right  { transform: translateX(60px); }
-        .anim-from-top    { transform: translateY(-40px); }
-        .anim-from-bottom { transform: translateY(60px); }
-        .anim-zoom-in     { transform: scale(0.88); }
+        .fade-in {
+            transform: translateY(28px);
+        }
+
+        .anim-from-left {
+            transform: translateX(-60px);
+        }
+
+        .anim-from-right {
+            transform: translateX(60px);
+        }
+
+        .anim-from-top {
+            transform: translateY(-40px);
+        }
+
+        .anim-from-bottom {
+            transform: translateY(60px);
+        }
+
+        .anim-zoom-in {
+            transform: scale(0.88);
+        }
 
         .fade-in.appear,
         .anim-from-left.appear,
@@ -164,11 +181,25 @@
         }
 
         /* Staggered delay helpers */
-        .anim-delay-1 { transition-delay: 0.1s; }
-        .anim-delay-2 { transition-delay: 0.22s; }
-        .anim-delay-3 { transition-delay: 0.34s; }
-        .anim-delay-4 { transition-delay: 0.46s; }
-        .anim-delay-5 { transition-delay: 0.58s; }
+        .anim-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .anim-delay-2 {
+            transition-delay: 0.22s;
+        }
+
+        .anim-delay-3 {
+            transition-delay: 0.34s;
+        }
+
+        .anim-delay-4 {
+            transition-delay: 0.46s;
+        }
+
+        .anim-delay-5 {
+            transition-delay: 0.58s;
+        }
 
         .slideshow-container {
             position: relative;
@@ -416,6 +447,8 @@
                 <div class="absolute inset-0 rounded-2xl md:rounded-3xl overflow-hidden z-0">
                     <div class="slideshow-container h-full">
                         <div class="slideshow-image active h-full"
+                            style="--pc-img: url('img/fv1.jpg'); --sp-img: url('img/spfv1.png');"></div>
+                        <div class="slideshow-image h-full"
                             style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');"></div>
                         <div class="slideshow-image h-full"
                             style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');"></div>

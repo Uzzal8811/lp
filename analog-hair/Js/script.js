@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // AOS Initialization
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-    });
-
     // FV Swiper Initialization
     const fvSwiper = new Swiper('.swiper-fv', {
         effect: 'fade',
@@ -32,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 3000,
             disableOnInteraction: false,
         },
+        speed: 1000,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

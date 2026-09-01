@@ -136,9 +136,11 @@
                 position: absolute !important;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 80% !important;
                 height: 100% !important;
                 min-height: 0;
+                -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+                mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
             }
 
             .fv img,
@@ -433,7 +435,7 @@
     <section
         class="fv fv-swiper relative w-full h-auto bg-navy overflow-hidden flex flex-col lg:flex-row lg:items-center">
         <!-- Layer 1 (z-10): Background Image Container (Swiper Carousel with 3 Images) -->
-        <div class="fv-swiper-container swiper relative w-full lg:w-[90%] h-auto z-10 overflow-hidden">
+        <div class="fv-swiper-container swiper relative w-full h-auto z-10 overflow-hidden">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="img/fv1.jpg" alt="大人女性向けパーソナルトレーニング指導 1">

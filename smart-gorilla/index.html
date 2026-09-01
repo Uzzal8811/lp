@@ -495,31 +495,7 @@
                     }
                 }
 
-                /* --- Safari & iOS Compatibility Fixes --- */
 
-                /* Fixed Background Fix for iOS Safari */
-                @supports (-webkit-touch-callout: none) {
-                    .safari-fixed-bg {
-                        background-attachment: scroll !important;
-                        position: relative;
-                        clip-path: inset(0);
-                        z-index: 0;
-                    }
-
-                    .safari-fixed-bg::before {
-                        content: "";
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100vw;
-                        height: 100vh;
-                        background-image: inherit;
-                        background-size: cover;
-                        background-position: center;
-                        z-index: -1;
-                        pointer-events: none;
-                    }
-                }
             </style>
         </div>
 
@@ -637,10 +613,11 @@
     </section>
 
     <!-- Sticky Background CTA Component (Below FV) -->
-    <section class="relative py-16 sm:py-20 bg-fixed safari-fixed-bg bg-cover bg-center text-white overflow-hidden"
-        style="background-image: url('img/ctabg.png');">
+    <section class="relative py-16 sm:py-20 text-white [clip-path:inset(0)]">
+        <!-- Parallax Background Image -->
+        <img src="img/ctabg.png" class="fixed inset-0 w-full h-full object-cover z-[-1] pointer-events-none" alt="">
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-navy/80 backdrop-blur-[1px] z-0"></div>
+        <div class="absolute inset-0 bg-navy/80 backdrop-blur-[1px] z-0 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-5">
             <!-- h4: Shop Name -->
@@ -833,9 +810,9 @@
 
 
     <!-- 05 数字・実績セクション (Sticky Parallax Background) -->
-    <section class="py-16 sm:py-20 bg-navy bg-fixed safari-fixed-bg bg-cover bg-center text-white relative overflow-hidden"
-        style="background-image: url('img/1.jpg');">
-        <div class="absolute inset-0 bg-navy/90 z-0"></div>
+    <section class="py-16 sm:py-20 bg-navy text-white relative [clip-path:inset(0)]">
+        <img src="img/1.jpg" class="fixed inset-0 w-full h-full object-cover z-[-1] pointer-events-none" alt="">
+        <div class="absolute inset-0 bg-navy/90 z-0 pointer-events-none"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <div
                 class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-ivory/20">
@@ -991,10 +968,10 @@
 
 
     <!-- 09 初回体験 (Sticky Parallax Background) -->
-    <section class="relative py-24 sm:py-32 bg-navy bg-fixed safari-fixed-bg bg-cover bg-center text-white overflow-hidden"
-        style="background-image: url('img/ctabg.png');">
+    <section class="relative py-24 sm:py-32 bg-navy text-white [clip-path:inset(0)]">
+        <img src="img/ctabg.png" class="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none" alt="">
         <!-- Background Image Container with 80% Navy Overlay -->
-        <div class="absolute inset-0 bg-navy/80 z-10"></div>
+        <div class="absolute inset-0 bg-navy/80 z-10 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-20 text-center">
 
@@ -1099,10 +1076,10 @@
     </section>
 
     <!-- Sticky Background CTA Component (Below Service) -->
-    <section class="relative py-16 sm:py-20 bg-fixed safari-fixed-bg bg-cover bg-center text-white overflow-hidden"
-        style="background-image: url('img/1.jpg');">
+    <section class="relative py-16 sm:py-20 text-white [clip-path:inset(0)]">
+        <img src="img/1.jpg" class="fixed inset-0 w-full h-full object-cover z-[-1] pointer-events-none" alt="">
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-navy/80 backdrop-blur-[1px] z-0"></div>
+        <div class="absolute inset-0 bg-navy/80 backdrop-blur-[1px] z-0 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-5">
             <!-- h4: Shop Name -->
@@ -1557,10 +1534,9 @@
     </section>
 
     <!-- 12 スタッフ紹介 (Gym Brand Theme) -->
-    <section id="staff" class="py-20 sm:py-28 bg-navy text-white relative overflow-hidden">
-        <!-- Background Image with Navy Overlay -->
-        <div class="absolute inset-0 w-full h-full z-0 opacity-15 bg-fixed safari-fixed-bg bg-cover bg-center"
-            style="background-image: url('img/2.jpg');"></div>
+    <section id="staff" class="py-20 sm:py-28 bg-navy text-white relative [clip-path:inset(0)]">
+        <!-- Background Image -->
+        <img src="img/2.jpg" class="fixed inset-0 w-full h-full object-cover z-0 opacity-15 pointer-events-none" alt="">
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <!-- Section Header -->
@@ -1759,12 +1735,9 @@
 
 
     <!-- 15 最終CTA -->
-    <section class="relative py-24 sm:py-32 bg-navy text-white overflow-hidden">
-        <!-- Background Image Container with 75% Navy Overlay -->
-        <div class="absolute inset-0 w-full h-full z-0">
-            <img src="img/1.jpg" alt="パーソナルトレーニング終了後の笑顔" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-navy/90 z-10"></div>
-        </div>
+    <section class="relative py-24 sm:py-32 bg-navy text-white [clip-path:inset(0)]">
+        <img src="img/1.jpg" alt="パーソナルトレーニング終了後の笑顔" class="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-navy/90 z-10 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-20 text-center space-y-6">
 

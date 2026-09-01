@@ -491,15 +491,6 @@
 
                 /* --- Safari & iOS Compatibility Fixes --- */
 
-                /* Gallery Swiper hardware acceleration for smooth animation on iOS Safari */
-                .gallery-swiper-container .swiper-wrapper {
-                    -webkit-transition-timing-function: linear !important;
-                    transition-timing-function: linear !important;
-                    transform: translate3d(0, 0, 0);
-                    -webkit-transform: translate3d(0, 0, 0);
-                    will-change: transform;
-                }
-
                 /* Fixed Background Fix for iOS Safari */
                 @supports (-webkit-touch-callout: none) {
                     .safari-fixed-bg {
@@ -521,7 +512,6 @@
                         background-position: center;
                         z-index: -1;
                         pointer-events: none;
-                        will-change: transform;
                     }
                 }
             </style>

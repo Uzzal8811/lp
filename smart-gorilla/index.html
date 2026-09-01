@@ -91,43 +91,50 @@
             width: 100%;
             position: relative;
             overflow: hidden;
-            height: auto !important;
-            min-height: 0 !important;
+            height: calc(100dvh - 80px) !important;
+            min-height: calc(100dvh - 80px) !important;
+        }
+
+        .fv-swiper-container {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100% !important;
         }
 
         .fv img,
         .fv-swiper img {
             width: 100% !important;
-            height: auto !important;
+            height: 100% !important;
             max-height: none !important;
             display: block;
-            object-fit: contain !important; /* アスペクト比を維持して全体を表示 */
+            object-fit: cover !important;
             margin-right: 0 !important;
             -webkit-mask-image: none !important;
             mask-image: none !important;
         }
 
         .fv-swiper-container .swiper-slide {
-            height: auto;
+            height: 100%;
         }
 
         @media (min-width: 1024px) {
 
             .fv,
             .fv-swiper {
-                height: auto !important;
-                min-height: 0 !important;
+                height: calc(100dvh - 80px) !important;
+                min-height: calc(100dvh - 80px) !important;
             }
 
             .fv img,
             .fv-swiper img {
                 width: 100% !important;
-                height: auto !important;
+                height: 100% !important;
                 max-height: none !important;
                 display: block;
-                object-fit: contain !important;
+                object-fit: cover !important;
                 margin-right: 0 !important;
-                /* PC版でも画像を全幅表示にするため、グラデーションマスクは無効化するか、お好みで残せます。今回は全幅の要望に合わせて無効化します */
                 -webkit-mask-image: none !important;
                 mask-image: none !important;
             }

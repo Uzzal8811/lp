@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -31,7 +31,7 @@
     <meta name="twitter:image:alt" content="居酒家 一喜">
 
     <!-- Favicon -->
-    <link class="rounded-full" rel="icon" href="img/favicon.jpg" type="image/jpeg">
+    <link class="rounded-full" rel="icon" href="img/favicon.png" type="image/jpeg">
 
     <!-- Google Fonts: Noto Serif JP & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,6 +133,31 @@
             .fv-text-sp {
                 padding: 2rem 1.5rem !important;
             }
+        }
+
+        /* ===== Fire Neon Glow Animation ===== */
+        @keyframes fireGlow {
+            0% {
+                filter: drop-shadow(0 0 2px #ff4500) drop-shadow(0 0 8px #ff0000);
+                color: #ffa07a;
+                border-color: rgba(255, 69, 0, 0.4);
+            }
+
+            50% {
+                filter: drop-shadow(0 0 5px #ff7f50) drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 25px #8b0000);
+                color: #ffd700;
+                border-color: rgba(255, 127, 80, 0.8);
+            }
+
+            100% {
+                filter: drop-shadow(0 0 2px #ff4500) drop-shadow(0 0 8px #ff0000);
+                color: #ffa07a;
+                border-color: rgba(255, 69, 0, 0.4);
+            }
+        }
+
+        .fire-neon {
+            animation: fireGlow 2s infinite ease-in-out;
         }
 
         /* ===== Directional Animation Classes ===== */
@@ -308,6 +333,25 @@
             display: flex;
             width: max-content;
             align-items: center;
+            animation: galleryScroll 35s linear infinite;
+            will-change: transform;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        @keyframes galleryScroll {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(calc(-100% / 2), 0, 0);
+            }
+        }
+
+        .gallery-track:hover {
+            animation-play-state: paused;
         }
 
         .gallery-img {
@@ -350,7 +394,9 @@
     </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased text-white relative">
+    <!-- Global Fixed Background for iOS Compatibility -->
+    <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center z-[-100] pointer-events-none" style="background-image: url('img/bodybg.jpg');"></div>
 
     <!-- Header -->
     <header id="header"
@@ -436,116 +482,304 @@
 
     <!-- First View (Hero) -->
     <!-- First View (Hero) - Bento Box Layout -->
-    <section class="relative bg-black pt-24 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 z-0">
+    <section class="relative pt-24 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 z-0">
         <div
-            class="max-w-[1600px] mx-auto h-[calc(100dvh-120px)] md:h-[calc(100dvh-130px)] grid grid-cols-1 lg:grid-cols-4 gap-4">
+            class="max-w-[1600px] mx-auto h-[calc(100dvh-120px)] md:h-[calc(100dvh-130px)] grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-3">
 
             <!-- Left Main Panel (Slideshow + Main Title) -->
-            <div class="lg:col-span-3 relative rounded-2xl md:rounded-3xl shadow-2xl">
+            <div class="lg:col-span-3 relative">
 
-                <!-- Background Slideshow & Overlay (Clipped to rounded corners) -->
-                <div class="absolute inset-0 rounded-2xl md:rounded-3xl overflow-hidden z-0">
+                <!-- Background Slideshow & Overlay -->
+                <div class="absolute inset-0 overflow-hidden z-0">
                     <div class="slideshow-container h-full">
                         <div class="slideshow-image active h-full"
-                            style="--pc-img: url('img/fv1.jpg'); --sp-img: url('img/spfv1.png');"></div>
+                            style="--pc-img: url('img/fv1.jpg'); --sp-img: url('img/fv1.jpg');"></div>
                         <div class="slideshow-image h-full"
-                            style="--pc-img: url('img/fv2.png'); --sp-img: url('img/spfv2.png');"></div>
+                            style="--pc-img: url('img/fv2.jpg'); --sp-img: url('img/fv2.jpg');"></div>
                         <div class="slideshow-image h-full"
-                            style="--pc-img: url('img/fv3.png'); --sp-img: url('img/spfv3.png');"></div>
+                            style="--pc-img: url('img/fv3.jpg'); --sp-img: url('img/fv3.jpg');"></div>
                     </div>
                     <!-- Dark Gradient Overlay for text readability -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-[5] pointer-events-none">
+                        class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-[5] pointer-events-none">
                     </div>
                 </div>
 
                 <!-- Text Content Floating on the Left -->
                 <div
-                    class="absolute bottom-6 md:bottom-12 lg:bottom-16 left-4 md:left-10 lg:left-16 z-10 w-full pointer-events-none">
-                    <div class="fade-in max-w-4xl" style="transition-delay: 400ms;">
-                        <!-- Badge -->
+                    class="absolute inset-y-0 left-2 md:left-6 lg:left-8 z-10 w-full flex flex-col justify-center pointer-events-none">
+                    <div class="max-w-4xl">
+
+                        <!-- Top Ribbon Badge -->
+                        <div class="anim-from-left anim-delay-1 inline-flex items-center justify-center bg-[#8F1414] text-[#F8F5EF] px-8 py-1.5 mb-2 relative"
+                            style="clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);">
+                            <span class="opacity-60 text-[10px] mr-3">❖</span>
+                            <span class="text-xs md:text-sm tracking-[0.2em] font-serif font-bold">気軽に立ち寄れる</span>
+                            <span class="opacity-60 text-[10px] ml-3">❖</span>
+                        </div>
+
+                        <!-- Sub Title -->
                         <div
-                            class="inline-flex items-center gap-2 bg-black/60 border border-white/20 backdrop-blur-xl text-white font-bold tracking-widest px-4 py-2 text-[10px] md:text-xs mb-6 rounded-full shadow-2xl pointer-events-auto">
-                            <span class="w-2 h-2 bg-brandRed rounded-full animate-pulse"></span>
-                            気軽により道・ちょい飲み歓迎
+                            class="anim-from-left anim-delay-2 text-[#D6A84F] text-sm md:text-base tracking-[0.3em] font-serif mb-4 flex items-center gap-4">
+                            <span class="w-8 h-[1px] bg-[#D6A84F] opacity-70"></span>
+                            昭和風居酒家
+                            <span class="w-8 h-[1px] bg-[#D6A84F] opacity-70"></span>
                         </div>
 
                         <!-- Main Title -->
                         <h1
-                            class="text-3xl md:text-[3rem] font-bold tracking-widest leading-[1.35] md:leading-[1.3] text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)] font-serif pointer-events-auto">
-                            今日いい日だった方、<br>イマイチだった方、<br>
-                            明日は<span class="text-brandRed">良い日</span>になりますように。
+                            class="text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-bold tracking-widest leading-[1.6] md:leading-[1.5] text-[#F8F5EF] drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)] font-serif pointer-events-auto">
+                            <style>
+                                @keyframes textWave {
+                                    0% {
+                                        opacity: 0;
+                                        transform: translateY(20px);
+                                        filter: blur(4px);
+                                    }
+
+                                    100% {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                        filter: blur(0);
+                                    }
+                                }
+
+                                .w-word {
+                                    display: inline-block;
+                                    opacity: 0;
+                                    animation: textWave 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+                                }
+                            </style>
+                            <div class="mb-1">
+                                <span class="w-word" style="animation-delay: 0.6s">気軽に</span><span class="w-word"
+                                    style="animation-delay: 0.8s">立ち寄れる、</span>
+                            </div>
+                            <div class="mb-1">
+                                <span class="w-word" style="animation-delay: 1.0s">元気な</span><span class="w-word"
+                                    style="animation-delay: 1.2s">おじさんが</span><span class="w-word"
+                                    style="animation-delay: 1.4s">いる</span>
+                            </div>
+                            <span
+                                class="anim-from-left text-[3rem] md:text-[3.25rem] lg:text-[3.5rem] font-bold leading-none flex items-center mt-3 md:mt-4 gap-3 md:gap-4"
+                                style="transition-delay: 1.6s">
+                                <span class="bg-brandRed text-black px-4 md:px-5 py-1 md:py-1.5 rounded-lg">居酒家</span>
+                                <span class="text-white">一喜</span>
+                            </span>
                         </h1>
 
-                        <!-- Scroll Indicator (Mobile Only) -->
-                        <div class="mt-8 flex lg:hidden items-center gap-3 animate-pulse pl-4">
-                            <span class="text-white/60 text-[10px] tracking-widest uppercase">Scroll to explore</span>
-                            <div class="w-8 h-[1px] bg-brandRed"></div>
+                        <!-- Bottom Buttons/Badges -->
+                        <div
+                            class="anim-from-bottom anim-delay-4 flex flex-wrap gap-4 mt-6 md:mt-8 pointer-events-auto">
+                            <!-- Badge 1 -->
+                            <div
+                                class="relative border border-[#D6A84F]/60 bg-black/40 backdrop-blur-sm px-5 py-2.5 flex items-center gap-3 hover:bg-black/60 transition-colors">
+                                <div class="absolute -top-[1px] -left-[1px] w-2 h-2 border-t border-l border-[#D6A84F]">
+                                </div>
+                                <div
+                                    class="absolute -bottom-[1px] -right-[1px] w-2 h-2 border-b border-r border-[#D6A84F]">
+                                </div>
+                                <i class="fa-solid fa-fish text-[#D6A84F] text-sm"></i>
+                                <span
+                                    class="text-[#F8F5EF] text-xs md:text-sm tracking-widest font-serif">鮮魚や日替わり</span>
+                            </div>
+                            <!-- Badge 2 -->
+                            <div
+                                class="relative border border-[#D6A84F]/60 bg-black/40 backdrop-blur-sm px-5 py-2.5 flex items-center gap-3 hover:bg-black/60 transition-colors">
+                                <div class="absolute -top-[1px] -left-[1px] w-2 h-2 border-t border-l border-[#D6A84F]">
+                                </div>
+                                <div
+                                    class="absolute -bottom-[1px] -right-[1px] w-2 h-2 border-b border-r border-[#D6A84F]">
+                                </div>
+                                <i class="fa-solid fa-user-tie text-[#D6A84F] text-sm"></i>
+                                <span
+                                    class="text-[#F8F5EF] text-xs md:text-sm tracking-widest font-serif">リクエスト要望対応</span>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Floating Text at Bottom -->
+                <div
+                    class="anim-from-bottom anim-delay-5 absolute bottom-16 md:bottom-28 lg:bottom-36 left-2 md:left-6 lg:left-8 z-10 pointer-events-none">
+                    <div
+                        class="text-[#F8F5EF] text-base md:text-xl tracking-[0.2em] font-serif drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                        明日は<span class="text-[#8F1414] font-bold mx-1">良い日</span>になりますように
                     </div>
                 </div>
             </div>
 
             <!-- Right Side Panel Stack (Hidden on Mobile) -->
-            <div class="hidden lg:flex lg:col-span-1 flex-col gap-4 h-full">
+            <div class="hidden lg:block lg:col-span-1 h-full overflow-hidden relative">
+                <style>
+                    .slide-track {
+                        --gap: 0.5rem;
+                        animation: slideDownInfinite 20s linear infinite;
+                    }
 
-                <!-- Top Panel (Menu) -->
-                <a href="#menu"
-                    class="relative flex-1 rounded-3xl overflow-hidden group block shadow-xl border border-white/5">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                        style="background-image: url('img/service2.png');"></div>
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-500">
-                    </div>
-                    <div
-                        class="absolute bottom-6 right-6 z-10 flex items-center gap-3 text-white/90 group-hover:text-brandRed transition-colors">
-                        <span class="text-sm font-bold tracking-widest font-serif uppercase">Menu</span>
-                        <div
-                            class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm group-hover:border-brandRed">
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </div>
-                    </div>
-                </a>
+                    @media (min-width: 1024px) {
+                        .slide-track {
+                            --gap: 0.75rem;
+                        }
+                    }
 
-                <!-- Middle Panel (Reservation) -->
-                <a href="#service"
-                    class="relative flex-1 rounded-3xl overflow-hidden group block shadow-xl border border-white/5">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                        style="background-image: url('img/service1.jpg'); filter: brightness(0.85);"></div>
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-500">
-                    </div>
-                    <div
-                        class="absolute bottom-6 right-6 z-10 flex items-center gap-3 text-white/90 group-hover:text-brandRed transition-colors">
-                        <span class="text-sm font-bold tracking-widest font-serif uppercase">Reservation</span>
-                        <div
-                            class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm group-hover:border-brandRed">
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </div>
-                    </div>
-                </a>
+                    .slide-track:hover {
+                        animation-play-state: paused;
+                    }
 
-                <!-- Bottom Panel (Access) -->
-                <a href="#contact"
-                    class="relative flex-1 rounded-3xl overflow-hidden group block shadow-xl border border-white/5">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                        style="background-image: url('img/1.jpg');"></div>
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-500">
-                    </div>
-                    <div
-                        class="absolute bottom-6 right-6 z-10 flex items-center gap-3 text-white/90 group-hover:text-brandRed transition-colors">
-                        <span class="text-sm font-bold tracking-widest font-serif uppercase">Our Restaurant</span>
-                        <div
-                            class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm group-hover:border-brandRed">
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </div>
-                    </div>
-                </a>
+                    @keyframes slideDownInfinite {
+                        0% {
+                            transform: translateY(calc(-50% - (var(--gap) / 2)));
+                        }
 
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                </style>
+
+                <div class="slide-track w-full flex flex-col gap-2 lg:gap-3">
+                    <!-- Top Block (Duplicate for loop) -->
+                    <div class="flex flex-col gap-2 lg:gap-3 w-full" style="height: calc(100dvh - 120px);">
+                        <!-- Item 1 -->
+                        <a href="#service"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.1.jpg');"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">気軽に立ち寄れる</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Item 2 -->
+                        <a href="#service"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.2.jpg'); filter: brightness(0.85);"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">リクエスト要望対応</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Item 3 -->
+                        <a href="#about"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.3.jpg');"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">昭和風居酒家</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Bottom Block (Original) -->
+                    <div class="flex flex-col gap-2 lg:gap-3 w-full" style="height: calc(100dvh - 120px);">
+                        <!-- Item 1 -->
+                        <a href="#service"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.1.jpg');"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">気軽に立ち寄れる</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Item 2 -->
+                        <a href="#service"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.2.jpg'); filter: brightness(0.85);"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">リクエスト要望対応</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Item 3 -->
+                        <a href="#about"
+                            class="relative flex-1 overflow-hidden group block border-2 border-transparent hover:border-brandRed hover:shadow-[0_0_25px_rgba(193,39,45,0.9)] transition-all duration-500">
+                            <div class="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-110"
+                                style="background-image: url('img/fv1.3.jpg');"></div>
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <div class="absolute bottom-4 left-0 z-10">
+                                <div class="bg-black/80 px-4 py-2 backdrop-blur-sm">
+                                    <span
+                                        class="text-sm md:text-base font-bold tracking-widest font-serif text-white group-hover:text-brandRed transition-colors">昭和風居酒家</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Header overlap spacer for desktop to avoid jumps -->
     <div id="header-spacer" class="h-0 bg-transparent"></div>
+
+
+    <!-- Icon Banner Section -->
+    <section class="bg-black/80 backdrop-blur-sm py-12 md:py-16 border-t border-gray-900 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-32">
+            <!-- Icon 1 -->
+            <div
+                class="relative w-20 h-20 md:w-28 md:h-28 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors duration-500 cursor-pointer group fire-neon">
+                <i
+                    class="fa-solid fa-leaf text-2xl md:text-4xl group-hover:scale-110 transition-transform duration-500"></i>
+            </div>
+            <!-- Icon 2 -->
+            <div
+                class="relative w-20 h-20 md:w-28 md:h-28 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors duration-500 cursor-pointer group fire-neon">
+                <svg class="absolute inset-0 w-full h-full text-gray-700/50 group-hover:text-gray-500 transition-colors duration-500"
+                    viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polygon points="50,2 95,25 95,75 50,98 5,75 5,25" />
+                </svg>
+                <i
+                    class="fa-solid fa-utensils text-2xl md:text-4xl group-hover:scale-110 transition-transform duration-500"></i>
+            </div>
+            <!-- Icon 3 -->
+            <div
+                class="relative w-20 h-20 md:w-28 md:h-28 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors duration-500 cursor-pointer group fire-neon">
+                <div class="absolute inset-[-6px] rounded-full border border-gray-800/60"></div>
+                <i
+                    class="fa-solid fa-bowl-food text-2xl md:text-4xl group-hover:scale-110 transition-transform duration-500"></i>
+            </div>
+            <!-- Icon 4 -->
+            <div
+                class="relative w-20 h-20 md:w-28 md:h-28 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors duration-500 cursor-pointer group fire-neon">
+                <i
+                    class="fa-solid fa-bell-concierge text-[2.5rem] md:text-[3.5rem] group-hover:scale-110 transition-transform duration-500"></i>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA Section (Below First View) -->
     <section class="bg-black-light pt-10 pb-8 md:py-8 border-b border-gray-900 relative z-20">
@@ -594,6 +828,7 @@
         </div>
     </section>
 
+
     <!-- Recommend Section -->
     <section id="recommend" class="py-24 relative overflow-hidden z-0">
         <!-- iOS Parallax BG -->
@@ -612,7 +847,7 @@
         </div>
 
         <div class="max-w-5xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 anim-from-top">
                 <span
                     class="text-brandRed text-xs md:text-sm tracking-[0.3em] block mb-2 font-serif font-bold">RECOMMEND</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white drop-shadow-md">
@@ -623,7 +858,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 max-w-4xl mx-auto relative">
                 <!-- Item 1 (Left Col - slant right) -->
                 <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1 [clip-path:polygon(0_0,100%_0,93%_100%,0_100%)] md:[clip-path:polygon(0_0,100%_0,90%_100%,0_100%)]">
+                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 anim-from-left transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1 [clip-path:polygon(0_0,100%_0,93%_100%,0_100%)] md:[clip-path:polygon(0_0,100%_0,90%_100%,0_100%)]">
                     <div
                         class="mt-0.5 text-brandRed bg-brandRed/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-beer-mug-empty text-sm"></i>
@@ -633,7 +868,7 @@
                 </div>
                 <!-- Item 2 (Right Col - slant left) -->
                 <div
-                    class="group border-r-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1 [clip-path:polygon(7%_0,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
+                    class="group border-r-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 anim-from-right transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1 [clip-path:polygon(7%_0,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
                     <div class="w-[7%] md:w-[10%] flex-shrink-0"></div> <!-- Spacer for slant -->
                     <div
                         class="mt-0.5 text-brandGold bg-brandGold/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -644,7 +879,7 @@
                 </div>
                 <!-- Item 3 (Left Col - slant right) -->
                 <div
-                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1 [clip-path:polygon(0_0,100%_0,93%_100%,0_100%)] md:[clip-path:polygon(0_0,100%_0,90%_100%,0_100%)]">
+                    class="group border-l-[3px] border-gray-800 hover:border-brandRed bg-black-light p-5 md:p-7 flex items-start space-x-5 anim-from-bottom transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandRed/5 hover:-translate-y-1 [clip-path:polygon(0_0,100%_0,93%_100%,0_100%)] md:[clip-path:polygon(0_0,100%_0,90%_100%,0_100%)]">
                     <div
                         class="mt-0.5 text-brandRed bg-brandRed/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-house text-sm"></i>
@@ -654,7 +889,7 @@
                 </div>
                 <!-- Item 4 (Right Col - slant left) -->
                 <div
-                    class="group border-r-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 fade-in transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1 [clip-path:polygon(7%_0,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
+                    class="group border-r-[3px] border-gray-800 hover:border-brandGold bg-black-light p-5 md:p-7 flex items-start space-x-5 anim-from-bottom transition-all duration-300 hover:bg-white/[0.03] shadow-lg hover:shadow-brandBlue/5 hover:-translate-y-1 [clip-path:polygon(7%_0,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
                     <div class="w-[7%] md:w-[10%] flex-shrink-0"></div> <!-- Spacer for slant -->
                     <div
                         class="mt-0.5 text-brandGold bg-brandGold/10 w-9 h-9 flex items-center justify-center rounded-full flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -689,68 +924,61 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="relative bg-[#F8F5EF] md:bg-transparent overflow-hidden">
-
-        <!-- Mobile Header Image -->
-        <div class="w-full h-80 md:hidden relative">
-            <img src="img/about.jpg" class="w-full h-full object-cover object-center" alt="居酒家 一喜について"
-                style="object-position: center 30%;" />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F8F5EF]"></div>
-        </div>
-
-        <!-- Desktop Background & Curve -->
-        <div class="hidden md:block absolute inset-0 z-0">
-            <img src="img/about.jpg" alt="居酒家 一喜について" class="w-full h-full object-cover"
-                style="object-position: 75% center;" />
-        </div>
+    <section id="about" class="relative py-24 md:py-32 overflow-hidden z-0 bg-black/70">
         <div
-            class="hidden md:block absolute inset-0 z-10 pointer-events-none drop-shadow-[15px_0_15px_rgba(0,0,0,0.15)]">
-            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path d="M0,0 L68,0 C68,45 45,55 45,100 L0,100 Z" fill="#F8F5EF" />
-            </svg>
-        </div>
+            class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-8 lg:gap-16">
 
-        <!-- Content -->
-        <div
-            class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full min-h-[auto] md:min-h-[85vh] flex items-center py-16 md:py-24">
-            <div class="w-full md:w-[55%] lg:w-[45%] flex flex-col justify-center items-start space-y-12 fade-in">
+            <!-- Left Image -->
+            <div class="w-full md:w-1/3 flex justify-center md:justify-end anim-from-left order-1 md:order-1">
+                <img src="img/about.jpg" alt="About Image 1"
+                    class="w-full max-w-md md:max-w-none h-[350px] md:h-[500px] lg:h-[650px] object-cover shadow-2xl">
+            </div>
 
-                <!-- Description Text -->
-                <div class="space-y-8 mt-4 md:mt-0">
-                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
-                        居酒家 一喜（いっき）は、三重県松阪市宮町にあるアットホームで昭和の温かみが残る居酒屋です。
+            <!-- Center Text -->
+            <div class="w-full md:w-1/3 flex flex-col items-center text-center anim-zoom-in anim-delay-1 px-2 md:px-0 order-3 md:order-2">
+                <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold uppercase">ABOUT
+                    US</span>
+
+                <h2
+                    class="text-xl md:text-2xl lg:text-[1.75rem] font-bold font-serif text-white tracking-widest leading-snug">
+                    三重県松阪市で愛される<br>昭和風の居酒家
+                </h2>
+
+                <!-- Decorative Divider (Same as other sections) -->
+                <div class="w-12 h-[1px] bg-gradient-to-r from-brandRed to-brandBlue mx-auto mt-6 mb-8"></div>
+
+                <div
+                    class="space-y-6 text-[13px] lg:text-sm text-gray-400 font-serif leading-loose tracking-widest mb-10 max-w-sm">
+                    <p>
+                        三重県松阪市宮町に位置する「居酒家 一喜」は、駅から徒歩約10分の場所にあるアットホームで和風な居酒屋です。
                     </p>
-                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
-                        流行りものはありませんが、お客様最優先。「今日いい日だった方、イマイチだった方、明日は良い日になりますように」と少しでも手助けできたらという想いでお迎えしています。
+                    <p>
+                        昭和っぽい落ち着く雰囲気の店内で、お客様最優先の丁寧な対応を心がけております。流行りものはありませんが、安くて美味しい、自分や家族が行きたいと思えるお店づくりを大切にしています。
                     </p>
-                    <p class="text-sm lg:text-[15px] text-gray-900 leading-[2.4] font-serif tracking-widest">
-                        旬の鮮魚や日替わりメニューをはじめ、ボリューム満点で安くて美味しいお料理を豊富にご用意。<br>
-                        ある食材でのリクエストやお時間・ご予算のご相談も出来る範囲で柔軟に対応いたします。
+                    <p>
+                        お気軽に立ち寄っていただけるよう、当たり前の活気をもってお迎えいたします。
                     </p>
                 </div>
 
-                <!-- Big Title -->
-                <div class="pt-4 md:pt-8 w-full">
-                    <h2
-                        class="text-2xl md:text-3xl lg:text-[2rem] font-bold font-serif text-black leading-snug tracking-widest">
-                        気軽に立ち寄れる、<br>元気なおじさんがいる居酒家
-                    </h2>
-                </div>
-
-                <!-- Button -->
                 <a href="#menu"
-                    class="group inline-flex items-center justify-between bg-black text-white hover:bg-brandRed px-6 py-4 w-full sm:w-[280px] text-sm tracking-widest font-serif transition-colors duration-300 shadow-lg">
-                    <span>お品書きを見る</span>
-                    <span class="text-gray-400 group-hover:text-white transition-colors text-xs">▶</span>
+                    class="border-2 border-brandRed text-brandRed font-bold hover:bg-brandRed hover:text-white transition-colors px-10 py-3.5 text-xs lg:text-sm tracking-widest font-serif shadow-md">
+                    お品書きを見る
                 </a>
             </div>
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/3 flex justify-center md:justify-start anim-from-right anim-delay-2 order-2 md:order-3">
+                <img src="img/gallery1.jpg" alt="About Image 2"
+                    class="w-full max-w-md md:max-w-none h-[350px] md:h-[500px] lg:h-[650px] object-cover shadow-2xl">
+            </div>
+
         </div>
     </section>
 
     <!-- Service Section -->
-    <section id="service" class="py-24 bg-black-light border-t border-b border-gray-900 relative">
+    <section id="service" class="py-24 bg-transparent border-t border-b border-gray-900 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 anim-from-top">
                 <span class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold">FEATURES</span>
                 <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
                     選ばれる理由
@@ -760,7 +988,7 @@
 
             <div class="flex flex-col gap-16 md:gap-24 max-w-7xl mx-auto mt-12">
                 <!-- Feature 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 anim-from-left">
                     <!-- Image Column -->
                     <div class="w-full md:w-1/2 relative group">
                         <!-- Decorative accent behind image -->
@@ -789,7 +1017,7 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 fade-in">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 anim-from-right">
                     <!-- Image Column -->
                     <div class="w-full md:w-1/2 relative group">
                         <!-- Decorative accent behind image -->
@@ -799,7 +1027,7 @@
                         <div class="relative block w-full overflow-hidden shape-b shadow-2xl">
                             <span
                                 class="absolute top-4 right-8 text-5xl font-bold text-brandGold/60 z-20 font-sans">02</span>
-                            <img src="img/service2.png" alt="鮮魚や日替わり料理"
+                            <img src="img/service2.jpg" alt="鮮魚や日替わり料理"
                                 class="w-full h-64 md:h-80 object-cover relative z-10 brightness-75 group-hover:scale-110 group-hover:brightness-100 transition-all duration-700">
                         </div>
                     </div>
@@ -819,7 +1047,7 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 anim-from-left">
                     <!-- Image Column -->
                     <div class="w-full md:w-1/2 relative group">
                         <!-- Decorative accent behind image -->
@@ -829,7 +1057,7 @@
                         <div class="relative block w-full overflow-hidden shape-a shadow-2xl">
                             <span
                                 class="absolute top-4 left-8 text-5xl font-bold text-brandRed/60 z-20 font-sans">03</span>
-                            <img src="img/service3.webp" alt="リクエスト要望対応"
+                            <img src="img/service3.jpg" alt="リクエスト要望対応"
                                 class="w-full h-64 md:h-80 object-cover relative z-10 brightness-75 group-hover:scale-110 group-hover:brightness-100 transition-all duration-700">
                         </div>
                     </div>
@@ -902,7 +1130,7 @@
         <!-- iOS Parallax BG -->
         <div class="absolute inset-0 z-[-3]" style="clip-path: inset(0);">
             <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/service2.jpg');"></div>
+                style="background-image: url('img/gallery2.jpg');"></div>
         </div>
         <!-- Glowing gradient effect behind menu -->
         <div class="absolute inset-0 bg-black/50 z-[-2] pointer-events-none">
@@ -1054,10 +1282,7 @@
                     onclick="openLightbox(this.src)">
                 <img src="img/gallery6.jpg" alt="Gallery Image" class="gallery-img shape-b"
                     onclick="openLightbox(this.src)">
-                <img src="img/gallery7.jpg" alt="Gallery Image" class="gallery-img shape-a"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery8.jpg" alt="Gallery Image" class="gallery-img shape-b"
-                    onclick="openLightbox(this.src)">
+
 
                 <!-- Duplicate for infinite scroll -->
                 <img src="img/gallery1.jpg" alt="Gallery Image" class="gallery-img shape-a"
@@ -1072,10 +1297,7 @@
                     onclick="openLightbox(this.src)">
                 <img src="img/gallery6.jpg" alt="Gallery Image" class="gallery-img shape-b"
                     onclick="openLightbox(this.src)">
-                <img src="img/gallery7.jpg" alt="Gallery Image" class="gallery-img shape-a"
-                    onclick="openLightbox(this.src)">
-                <img src="img/gallery8.jpg" alt="Gallery Image" class="gallery-img shape-b"
-                    onclick="openLightbox(this.src)">
+
             </div>
         </div>
     </section>
@@ -1085,10 +1307,10 @@
         <!-- iOS Parallax BG -->
         <div class="absolute inset-0 z-[-3]" style="clip-path: inset(0);">
             <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/1.jpg');"></div>
+                style="background-image: url('img/bodybg.jpg');"></div>
         </div>
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-[#919090]/50 z-[-2]"></div>
+        <div class="absolute inset-0 bg-transparent z-[-2]"></div>
 
         <!-- Dark Curve Top Transition (Flowing from Gallery) -->
         <div
@@ -1150,7 +1372,7 @@
         <!-- iOS Parallax BG -->
         <div class="absolute inset-0 z-[-2]" style="clip-path: inset(0);">
             <div class="fixed top-0 left-0 w-[100vw] h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/2.jpg');"></div>
+                style="background-image: url('img/fv2.jpg');"></div>
         </div>
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/90 z-[-1]"></div>
@@ -1418,63 +1640,7 @@
 
         animElements.forEach(el => observer.observe(el));
 
-        // ===== iOS Safari Compatible Gallery Marquee =====
-        const track = document.getElementById('gallery-track');
-        if (track) {
-            // Enable hardware acceleration on track and each image
-            track.style.willChange = 'transform';
-            track.style.webkitBackfaceVisibility = 'hidden';
-            track.style.backfaceVisibility = 'hidden';
 
-            let pos = 0;
-            let lastTime = null;
-            let raf = null;
-            // Reduced speed for smooth render on iOS
-            const speed = 38;
-
-            function getHalfWidth() {
-                // Use first 8 children to compute one set width
-                const children = track.children;
-                if (children.length < 9) return 0;
-                return children[8].offsetLeft - children[0].offsetLeft;
-            }
-
-            let halfWidth = 0;
-
-            function animateGallery(currentTime) {
-                if (lastTime === null) lastTime = currentTime;
-                const delta = Math.min((currentTime - lastTime) / 1000, 0.05); // cap delta to avoid big jumps
-                lastTime = currentTime;
-
-                if (!halfWidth) halfWidth = getHalfWidth();
-
-                pos -= speed * delta;
-
-                if (halfWidth > 0 && Math.abs(pos) >= halfWidth) {
-                    pos += halfWidth;
-                }
-
-                // Use matrix for best Safari compat
-                track.style.transform = `translate3d(${pos}px, 0, 0)`;
-                raf = requestAnimationFrame(animateGallery);
-            }
-
-            // Pause when tab is hidden (save battery / fix Safari timer drift)
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    if (raf) cancelAnimationFrame(raf);
-                    raf = null;
-                    lastTime = null;
-                } else {
-                    if (!raf) raf = requestAnimationFrame(animateGallery);
-                }
-            });
-
-            // Recalculate halfWidth on resize (handles device orientation change)
-            window.addEventListener('resize', () => { halfWidth = 0; });
-
-            raf = requestAnimationFrame(animateGallery);
-        }
 
     </script>
 </body>

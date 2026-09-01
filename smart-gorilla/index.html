@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
 
 <head>
@@ -494,8 +494,6 @@
                         padding: 1.5rem 1rem !important;
                     }
                 }
-
-
             </style>
         </div>
 
@@ -1054,7 +1052,7 @@
 
                 <!-- Note (Not red, dark gray / coral) -->
                 <div class="pt-4 border-t border-greige/40 text-[14px] md:text-[16px] font-bold text-coral mb-6">
-                    ※男性のお客様の新規受付は行っておりません。<br>
+                    ※男性のお客様の新規受付は<br class="sm:hidden">行っておりません。<br>
                 </div>
 
                 <!-- 2 CTA Action Jump Buttons in Pricing Card -->
@@ -1412,7 +1410,7 @@
                     ギャラリー
                 </h2>
                 <p class="text-[14px] md:text-[16px] text-darkGray/80 font-medium mt-2">
-                    スマートゴリラの落ち着いたプライベート空間とトレーニング風景（タップで拡大）
+                    スマートゴリラの落ち着いたプライベート空間と<br class="sm:hidden">トレーニング風景（タップで拡大）
                 </p>
             </div>
 
@@ -1523,9 +1521,11 @@
                         15年の実績を生かし、一人ひとりの身体と目標に寄り添います。<br>
                     </p>
 
-                    <div class="pt-2 flex items-center justify-center lg:justify-start gap-3">
-                        <span class="font-serif font-bold text-navy text-sm">スマートゴリラ 代表トレーナー</span>
-                        <span class="text-xs text-coral font-bold">（渋谷エリア15年実績）</span>
+                    <div
+                        class="pt-2 flex items-center justify-center lg:justify-start gap-1.5 sm:gap-3 whitespace-nowrap">
+                        <span class="font-serif font-bold text-navy text-[13px] sm:text-sm shrink-0">スマートゴリラ
+                            代表トレーナー</span>
+                        <span class="text-[11px] sm:text-xs text-coral font-bold shrink-0">（渋谷エリア15年実績）</span>
                     </div>
                 </div>
 
@@ -1546,7 +1546,8 @@
                 <h2 class="font-serif text-2xl sm:text-4xl font-bold text-ivory">
                     女性トレーナー紹介
                 </h2>
-                <p class="text-[14px] md:text-[16px] text-ivory/80 font-medium mt-2">15年の実績を持つ女性プロトレーナーが、完全オーダーメイドでサポート
+                <p class="text-[14px] md:text-[16px] text-ivory/80 font-medium mt-2">15年の実績を持つ女性プロトレーナーが、<br
+                        class="sm:hidden">完全オーダーメイドでサポート
                 </p>
             </div>
 
@@ -1736,7 +1737,8 @@
 
     <!-- 15 最終CTA -->
     <section class="relative py-24 sm:py-32 bg-navy text-white [clip-path:inset(0)]">
-        <img src="img/1.jpg" alt="パーソナルトレーニング終了後の笑顔" class="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none">
+        <img src="img/1.jpg" alt="パーソナルトレーニング終了後の笑顔"
+            class="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none">
         <div class="absolute inset-0 bg-navy/90 z-10 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-20 text-center space-y-6">

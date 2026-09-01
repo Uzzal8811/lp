@@ -101,7 +101,8 @@
             position: relative !important;
             flex: 1 1 auto;
             width: 100%;
-            min-height: 40vh; /* Ensure image doesn't get too squished on small devices */
+            min-height: 40vh;
+            /* Ensure image doesn't get too squished on small devices */
         }
 
         .fv img,
@@ -121,6 +122,7 @@
         }
 
         @media (min-width: 1024px) {
+
             .fv,
             .fv-swiper {
                 height: calc(100dvh - 80px) !important;
@@ -527,7 +529,7 @@
 
         <!-- Layer 3 (z-20): Content Container (Bottom block on SP / Overlay on PC) -->
         <div
-            class="relative lg:absolute lg:inset-0 max-w-7xl mx-auto w-full z-20 py-8 lg:py-16 flex items-center bg-navy lg:bg-transparent">
+            class="relative lg:absolute lg:inset-0 max-w-7xl mx-auto w-full z-20 py-8 lg:py-16 flex items-center bg-navy lg:bg-transparent shrink-0">
 
             <!-- Mobile Horizontal SVG Overlay (sticks out the top) -->
             <div

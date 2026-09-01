@@ -91,16 +91,17 @@
             width: 100%;
             position: relative;
             overflow: hidden;
-            height: calc(100dvh - 80px) !important;
+            display: flex;
+            flex-direction: column;
+            height: auto !important;
             min-height: calc(100dvh - 80px) !important;
         }
 
         .fv-swiper-container {
-            position: absolute !important;
-            top: 0;
-            left: 0;
+            position: relative !important;
+            flex: 1 1 auto;
             width: 100%;
-            height: 100% !important;
+            min-height: 40vh; /* Ensure image doesn't get too squished on small devices */
         }
 
         .fv img,
@@ -120,11 +121,20 @@
         }
 
         @media (min-width: 1024px) {
-
             .fv,
             .fv-swiper {
                 height: calc(100dvh - 80px) !important;
                 min-height: calc(100dvh - 80px) !important;
+                display: block;
+            }
+
+            .fv-swiper-container {
+                position: absolute !important;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100% !important;
+                min-height: 0;
             }
 
             .fv img,

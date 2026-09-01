@@ -157,18 +157,24 @@
             position: relative;
             width: 100%;
             max-width: 130px;
-            aspect-ratio: 1 / 1;
             border-radius: 50%;
-            padding: 3px;
             background: linear-gradient(135deg, #C97A6D 0%, #F5EBE8 35%, #C97A6D 70%, #B5675B 100%);
             box-shadow: 0 6px 18px rgba(15, 25, 38, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.6);
             margin: 0 auto;
         }
 
+        .theme-badge::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
         .theme-badge-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
             border-radius: 50%;
             background: radial-gradient(circle at 40% 30%, #1F3650 0%, #101c2a 85%);
             border: 1.5px solid #C97A6D;

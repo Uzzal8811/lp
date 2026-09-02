@@ -84,6 +84,8 @@
         /* Base typography settings */
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -96,6 +98,9 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
 
         @media (min-width: 1024px) {
@@ -231,11 +236,11 @@
         }
 
         .anim-from-left {
-            transform: translateX(-60px);
+            transform: translateX(-15px);
         }
 
         .anim-from-right {
-            transform: translateX(60px);
+            transform: translateX(15px);
         }
 
         .anim-from-top {
@@ -457,7 +462,7 @@
 
     <!-- Header -->
     <header id="header"
-        class="fixed w-full z-50 transition-all duration-500 bg-black/80 backdrop-blur-md border-b border-brandRed/20">
+        class="fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-black/80 backdrop-blur-md border-b border-brandRed/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -890,8 +895,8 @@
     <section id="recommend" class="py-24 relative overflow-hidden z-0">
         <!-- iOS Parallax BG -->
         <div class="absolute inset-0 z-[-2] overflow-hidden">
-            <div class="sticky top-0 w-full h-[100dvh] bg-cover bg-center"
-                style="background-image: url('img/tv.jpg');"></div>
+            <div class="sticky top-0 w-full h-[100dvh] bg-cover bg-center" style="background-image: url('img/tv.jpg');">
+            </div>
         </div>
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/85 z-[-1]"></div>

@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JELITA | 理想の束感目元を叶える、完全個室のまつ毛サロン</title>
+    <meta name="description"
+        content="名古屋市名東区高針原の完全個室まつ毛サロンJELITA。フラットラッシュ×ダブルフラットMIXやリベルハーブピーリングなど、歴12年の熟練技術でお客様の美しさをトータルサポート。">
+
+    <!-- Favicon & OGP -->
+    <link rel="icon" href="img/favicon.jpg">
+    <meta property="og:title" content="JELITA | 理想の束感目元を叶える、完全個室のまつ毛サロン">
+    <meta property="og:description" content="名古屋市名東区高針原の完全個室まつ毛サロンJELITA。フラットラッシュ×ダブルフラットMIX、リベルハーブピーリングをご提供。">
+    <meta property="og:url" content="https://jelita.happytry.org/">
+    <meta property="og:image" content="https://jelita.happytry.org/img/eyecatch.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Shippori+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffffff',
+                        'accent-gray': '#4a4d50', // Sophisticated Gray
+                        'accent-gold': '#d4af37', // Champagne Gold
+                        'text-dark': '#333333',
+                    },
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif'],
+                        'serif': ['Noto Serif JP', 'Shippori Mincho', 'serif'],
+                        'script': ['Great Vibes', 'cursive'],
+                    },
+                    spacing: {
+                        '120': '120px',
+                        '80': '80px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper.js (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .section-title-main {
+            color: #b6922a;
+            display: inline-block;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+        }
+
+        .bg-marble {
+            background-image: url('img/bg_marble.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .max-w-3xl {
+            max-width: 64rem !important;
+        }
+
+        /* Realistic Organic Ripple animation */
+        @keyframes ripple-organic {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.55;
+            }
+
+            50% {
+                opacity: 0.25;
+            }
+
+            100% {
+                transform: scale(3.5);
+                opacity: 0;
+            }
+        }
+
+        .ripple-wrap {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .ripple {
+            position: absolute;
+            inset: 0;
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: 50%;
+            animation: ripple-organic 8s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            box-shadow: inset 0 0 25px rgba(212, 175, 55, 0.2), 0 0 15px rgba(212, 175, 55, 0.1);
+            will-change: transform, opacity;
+        }
+
+        /* Seamless GPU-Accelerated Infinite Marquee Scroll */
+        @keyframes marquee {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite !important;
+            will-change: transform;
+        }
+
+        /* Disable user drag on marquee images for a clean native-feeling slider */
+        .animate-marquee img {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+    </style>
+</head>
+
+<body class="bg-primary text-text-dark overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header"
+        class="sticky top-0 w-full z-50 transition-all duration-300 bg-accent-gray shadow-lg border-b border-white/10 h-20">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between">
+            <h1 class="text-2xl font-bold tracking-wider text-accent-gold font-serif">JELITA</h1>
+
+            <!-- PC Navigation -->
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="#about"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">ABOUT</a>
+                <a href="#service"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">SERVICE</a>
+                <a href="#menu"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">MENU</a>
+                <a href="#gallery"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">GALLERY</a>
+                <a href="#voice"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">VOICE</a>
+                <a href="#access"
+                    class="text-white font-serif font-bold hover:opacity-80 transition uppercase tracking-wider text-sm">ACCESS</a>
+                <a href="jump01.html" target="_blank"
+                    class="bg-white text-accent-gray px-6 py-2 rounded-full font-serif font-bold hover:bg-gray-50 transition shadow-lg">WEB予約</a>
+            </nav>
+
+            <!-- SP Hamburger Icon -->
+            <button id="menu-open" class="lg:hidden text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP Global Navigation (Modal Overlay) -->
+    <div id="sp-nav"
+        class="fixed inset-0 bg-white z-[60] transform translate-x-full transition-transform duration-500 lg:hidden">
+        <div class="p-8 h-full flex flex-col justify-center items-center relative">
+            <button id="menu-close" class="absolute top-8 right-8 text-accent-gold p-2 font-serif font-bold">
+                <span class="text-lg">× 閉じる</span>
+            </button>
+            <nav class="flex flex-col space-y-8 text-center text-xl font-medium w-full max-w-[320px] mx-auto">
+                <a href="#about" class="menu-link font-serif font-bold">ABOUT</a>
+                <a href="#service" class="menu-link font-serif font-bold">SERVICE</a>
+                <a href="#menu" class="menu-link font-serif font-bold">MENU</a>
+                <a href="#gallery" class="menu-link font-serif font-bold">GALLERY</a>
+                <a href="#voice" class="menu-link font-serif font-bold">VOICE</a>
+                <a href="#access" class="menu-link font-serif font-bold">ACCESS</a>
+                <div class="pt-4 flex flex-col space-y-4 w-full">
+                    <a href="jump01.html" target="_blank"
+                        class="bg-white text-accent-gray border-2 border-accent-gray w-full py-4 rounded-2xl shadow-lg flex items-center justify-center font-serif font-bold whitespace-nowrap">WEB予約</a>
+                    <a href="tel:05054484897"
+                        class="bg-accent-gold text-white w-full py-3.5 rounded-2xl font-serif font-bold shadow-lg flex flex-col items-center justify-center leading-tight">
+                        <span class="text-[10px] tracking-widest opacity-80 mb-1 whitespace-nowrap">PHONE</span>
+                        <span class="text-sm whitespace-nowrap">お電話でお問い合わせ</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- FV (First View) -->
+    <section id="fv" class="relative w-full overflow-hidden bg-[#fae3e6]">
+        <div class="w-full relative flex flex-col md:flex-row-reverse">
+            <!-- Image Side (Right on PC, Top on Mobile) -->
+            <div
+                class="w-full md:w-[65%] relative z-10 overflow-hidden bg-[#fae3e6] flex items-center justify-center py-12 md:py-20">
+
+                <!-- Animated Background Ripples -->
+                <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                    <div class="ripple-wrap" style="left: 30%; top: 40%;">
+                        <div class="ripple" style="animation-delay: 0s;"></div>
+                        <div class="ripple" style="animation-delay: 2.67s;"></div>
+                        <div class="ripple" style="animation-delay: 5.33s;"></div>
+                    </div>
+                    <div class="ripple-wrap" style="left: 80%; top: 70%;">
+                        <div class="ripple" style="animation-delay: 1.5s;"></div>
+                        <div class="ripple" style="animation-delay: 4.17s;"></div>
+                        <div class="ripple" style="animation-delay: 6.83s;"></div>
+                    </div>
+                </div>
+
+                <img src="img/fv.jpg" alt="JELITA"
+                    class="w-full h-auto object-contain block brightness-95 relative z-10">
+                <!-- Soft Blend Overlays -->
+                <div
+                    class="block md:hidden absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#fae3e6] to-transparent pointer-events-none z-20">
+                </div>
+                <div
+                    class="hidden md:block absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#fae3e6] to-transparent pointer-events-none z-20">
+                </div>
+            </div>
+
+            <!-- Text Side: Logo & Catchphrase -->
+            <div
+                class="w-full md:w-[35%] flex flex-col justify-center items-center relative z-20 px-4 md:px-12 py-12 md:py-16 bg-gradient-to-b from-[#fae3e6] to-white md:bg-none md:bg-gradient-to-r md:from-white md:to-[#fae3e6]">
+                <div class="max-w-xl w-full flex flex-col items-center">
+                    <!-- Logo JELITA -->
+                    <div class="mb-2 md:mb-6 opacity-0 animate-fade-in-up text-center" style="animation-delay: 0.2s;">
+                        <h1
+                            class="text-accent-gold text-xl sm:text-3xl md:text-5xl font-serif tracking-[0.2em] uppercase leading-none select-none whitespace-nowrap">
+                            JELITA
+                        </h1>
+                    </div>
+
+                    <!-- OPEN Announcement -->
+                    <!-- <div class="mb-4 text-accent-gold font-bold tracking-[0.1em] text-xs sm:text-sm md:text-base opacity-0 animate-fade-in-up text-center"
+                        style="animation-delay: 0.4s;">
+                        【ダブルフラットMIX120本6,000円<br>
+                        無料駐車場完備/歴12年の熟練技術 -->
+                </div>
+
+                <!-- Horizontal Catchphrase -->
+                <div class="text-center opacity-0 animate-fade-in-up" style="animation-delay: 0.6s;">
+                    <h2
+                        class="text-[#050a14] font-serif text-lg sm:text-2xl md:text-3xl leading-[1.8] tracking-[0.1em]">
+                        <span class="inline-block whitespace-nowrap">理想の束感目元を叶える、</span><br>
+                        <span class="inline-block whitespace-nowrap">完全個室のまつ毛サロン</span>
+                    </h2>
+                    <div class="mt-4 w-12 h-[2px] bg-accent-gold mx-auto"></div>
+                </div>
+
+                <!-- FV Badges (PC only, under catchphrase) -->
+                <div class="hidden md:block mt-8 w-full">
+                    <div class="grid grid-cols-2 gap-6 max-w-sm mx-auto">
+                        <div class="bg-white/90 backdrop-blur-sm w-40 h-40 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-4 text-center animate-fade-in-up mx-auto"
+                            style="animation-delay: 1.0s;">
+                            <span class="text-accent-gold font-serif text-[13px] font-bold block mb-1">MENU</span>
+                            <span class="text-[14px] font-bold text-gray-700 leading-tight font-serif block">
+                                ダブルフラットMIX<br>120本 6,000円
+                            </span>
+                        </div>
+                        <div class="bg-white/90 backdrop-blur-sm w-40 h-40 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-4 text-center animate-fade-in-up mx-auto"
+                            style="animation-delay: 1.2s;">
+                            <span class="text-accent-gold font-serif text-[13px] font-bold block mb-1">PARKING</span>
+                            <span class="text-[14px] font-bold text-gray-700 leading-tight font-serif block">
+                                無料駐車場完備<br>敷地内14番</span>
+                        </div>
+                        <div class="bg-white/90 backdrop-blur-sm w-40 h-40 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-4 text-center animate-fade-in-up mx-auto"
+                            style="animation-delay: 1.4s;">
+                            <span class="text-accent-gold font-serif text-[13px] font-bold block mb-1">TECHNIQUE</span>
+                            <span
+                                class="text-[14px] font-bold text-gray-700 leading-tight font-serif block">歴12年の<br>熟練技術
+                            </span>
+                        </div>
+                        <div class="bg-white/90 backdrop-blur-sm w-40 h-40 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-4 text-center animate-fade-in-up mx-auto"
+                            style="animation-delay: 1.6s;">
+                            <span class="text-accent-gold font-serif text-[13px] font-bold block mb-1">PRIVATE</span>
+                            <span class="text-[14px] font-bold text-gray-700 leading-tight font-serif block">
+                                完全個室の<br>プライベート空間
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FV Badges (Mobile only) -->
+    <div class="relative z-30 -mt-12 mb-20 md:hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+                <div class="bg-white/90 backdrop-blur-sm w-28 h-28 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-2 text-center animate-fade-in-up mx-auto"
+                    style="animation-delay: 1.6s;">
+                    <span class="text-accent-gold font-serif text-[11px] font-bold block mb-0.5">MENU</span>
+                    <span class="text-[12px] font-bold text-gray-700 leading-tight font-serif block">ダブルフラットMIX<br>120本
+                        6,000円
+                    </span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm w-28 h-28 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-2 text-center animate-fade-in-up mx-auto"
+                    style="animation-delay: 1.8s;">
+                    <span class="text-accent-gold font-serif text-[11px] font-bold block mb-0.5">PARKING</span>
+                    <span class="text-[12px] font-bold text-gray-700 leading-tight font-serif block">無料駐車場完備<br>敷地内14番
+                    </span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm w-28 h-28 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-2 text-center animate-fade-in-up mx-auto"
+                    style="animation-delay: 2.0s;">
+                    <span class="text-accent-gold font-serif text-[11px] font-bold block mb-0.5">TECHNIQUE</span>
+                    <span class="text-[12px] font-bold text-gray-700 leading-tight font-serif block">
+                        歴12年の<br>熟練技術</span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm w-28 h-28 rounded-full flex flex-col items-center justify-center border border-accent-gold/20 shadow-xl p-2 text-center animate-fade-in-up mx-auto"
+                    style="animation-delay: 2.2s;">
+                    <span class="text-accent-gold font-serif text-[11px] font-bold block mb-0.5">PRIVATE</span>
+                    <span class="text-[12px] font-bold text-gray-700 leading-tight font-serif block">完全個室の<br>プライベート空間
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="w-full py-12 bg-accent-gray text-white overflow-hidden">
+        <div
+            class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10">
+            <div class="text-lg md:text-xl font-serif font-bold text-center">ご予約、お問い合わせ</div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full md:w-auto">
+                <a href="jump01.html" target="_blank"
+                    class="bg-white text-accent-gray w-full max-w-md md:max-w-none md:w-72 py-3 rounded-2xl font-serif font-bold shadow-lg hover:bg-gray-50 transition flex flex-col items-center justify-center leading-tight whitespace-nowrap">
+                    <span class="text-[10px] tracking-widest opacity-80 mb-1 whitespace-nowrap">RESERVATION</span>
+                    <span class="text-sm whitespace-nowrap">WEB予約</span>
+                </a>
+                <a href="tel:05054484897"
+                    class="bg-accent-gold text-white w-full max-w-md md:max-w-none md:w-72 py-3 rounded-2xl font-serif font-bold shadow-lg hover:opacity-90 transition flex flex-col items-center justify-center leading-tight whitespace-nowrap">
+                    <span class="text-[10px] tracking-widest opacity-80 mb-1 whitespace-nowrap">PHONE</span>
+                    <span class="text-sm whitespace-nowrap">お電話でお問い合わせ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="mb-40 md:mb-60 pt-16 md:pt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Problems
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">こんなお悩みありませんか？</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20 bg-gray-50/50 p-8 md:p-12 rounded-2xl">
+                <div class="w-full md:w-2/5">
+                    <img src="img/tv.jpg" alt="Problems" class="w-full h-auto shadow-md rounded-lg">
+                </div>
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-2xl font-bold text-accent-gold mb-8 font-serif">当サロンはこんな方に<br
+                            class="md:hidden">おすすめです</h3>
+                    <ul class="space-y-5 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-accent-gold mr-3 mt-1">✔</span>
+                            <p class="text-gray-600 font-medium text-base md:text-lg">まつ毛の自然なボリュームアップを叶えたい</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold mr-3 mt-1">✔</span>
+                            <p class="text-gray-600 font-medium text-base md:text-lg">初めてのサロンでも安心して施術を受けたい</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold mr-3 mt-1">✔</span>
+                            <p class="text-gray-600 font-medium text-base md:text-lg">自分にぴったり合うデザインを<br
+                                    class="md:hidden">提案してほしい</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold mr-3 mt-1">✔</span>
+                            <p class="text-gray-600 font-medium text-base md:text-lg">周りを気にせず過ごせる個室サロンを<br
+                                    class="md:hidden">探している</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold mr-3 mt-1">✔</span>
+                            <p class="text-gray-600 font-medium text-base md:text-lg">落ち着いた雰囲気のプライベート空間が好き</p>
+                        </li>
+                    </ul>
+                    <div class="border-t border-accent-gold/25 pt-6 mt-6">
+                        <p class="text-gray-700 font-bold leading-relaxed text-base md:text-lg font-serif">
+                            JELITAがあなたの理想と癒しを、<br>丁寧なカウンセリングと確かな技術で<br class="md:hidden">サポートいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="mb-80 md:mb-120 pt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        About
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">私たちについて</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-3xl mx-auto">
+                <div class="w-full md:w-3/5 order-2 md:order-1">
+                    <h3 class="text-accent-gold text-lg font-bold mb-4 font-serif">忙しい毎日に<br>
+                        癒しを届ける特別な空間</h3>
+                    <p class="leading-[1.8] text-gray-600 mb-6">
+                        名古屋市名東区高針原に6月新しくオープンしたJELITAは、忙しい毎日に癒しと自信をお届けする完全個室のプライベートサロンです。<br>
+                        お一人おひとりに寄り添った丁寧なカウンセリングを最も大切にしており、お客様のご希望に合わせたデザインを一緒に作り上げます。<br>
+                        周りの目を気にせずリラックスしていただける環境を整えております。
+                    </p>
+                </div>
+                <div class="w-full md:w-2/5 order-1 md:order-2">
+                    <div class="relative premium-frame glow-gold">
+                        <!-- Outer Decorative Frame Layer -->
+                        <div class="absolute -inset-2 border border-accent-gold/20 rounded-lg pointer-events-none z-10">
+                        </div>
+
+                        <img src="img/about.jpg" alt="About JELITA"
+                            class="w-full h-auto shadow-2xl relative z-20 rounded-sm brightness-[1.02]">
+
+                        <!-- Floating Accent Light -->
+                        <div
+                            class="absolute -top-6 -right-6 md:-top-10 md:-right-10 w-32 md:w-40 h-32 md:h-40 bg-accent-gold/10 rounded-full blur-[40px] md:blur-[60px] pointer-events-none z-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="mb-80 md:mb-120 py-20 relative overflow-hidden bg-white">
+        <div class="absolute inset-0 bg-white/60 pointer-events-none"></div>
+        <!-- Realistic Ripples -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <!-- Drop Point 1 (Base cycle: starts at 0s, repeats every 8s) -->
+            <div class="ripple-wrap" style="left: 5%; top: 15%;">
+                <div class="ripple" style="animation-delay: 0s;"></div>
+                <div class="ripple" style="animation-delay: 2.67s;"></div>
+                <div class="ripple" style="animation-delay: 5.33s;"></div>
+            </div>
+            <!-- Drop Point 2 (Offset by 1.5s to organicize propagation) -->
+            <div class="ripple-wrap" style="left: 65%; top: 45%;">
+                <div class="ripple" style="animation-delay: 1.5s;"></div>
+                <div class="ripple" style="animation-delay: 4.17s;"></div>
+                <div class="ripple" style="animation-delay: 6.83s;"></div>
+            </div>
+            <!-- Drop Point 3 (Offset by 3.0s to organicize propagation) -->
+            <div class="ripple-wrap" style="left: 25%; top: 75%;">
+                <div class="ripple" style="animation-delay: 3s;"></div>
+                <div class="ripple" style="animation-delay: 5.67s;"></div>
+                <div class="ripple" style="animation-delay: 0.33s;"></div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Service
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">サービス紹介</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-24 md:space-y-32 max-w-5xl mx-auto">
+                <!-- Point 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-3/5 order-2 md:order-1">
+                        <span class="text-accent-gold font-bold text-sm tracking-widest block mb-2 font-serif">POINT
+                            01</span>
+                        <h3 class="text-2xl font-bold mb-6 font-serif">自然なボリュームと<br class="md:hidden">抜群の持続力</h3>
+                        <p class="leading-[1.8] text-gray-600">
+                            当店こだわりのフラットラッシュ and
+                            ダブルフラットのMIXは、軽さと存在感を両立します。<br>1本1本自まつ毛の状態に合わせて丁寧に装着するため、自然な仕上がりでありながらしっかりボリューム感が出せます。<br>流行りの美しい束感もしっかりキープし、抜群の持続力を実現します。<br>
+                        </p>
+                    </div>
+                    <div class="w-full md:w-2/5 order-1 md:order-2 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div
+                                class="relative w-full aspect-[4/3] rounded-2xl shadow-2xl overflow-hidden z-10 border border-accent-gold/10">
+                                <img src="img/B.jpg" alt="Service Point 01"
+                                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                            </div>
+                            <!-- Floating Glows -->
+                            <div
+                                class="absolute -top-6 -left-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-2/5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div
+                                class="relative w-full aspect-[4/3] rounded-2xl shadow-2xl overflow-hidden z-10 border border-accent-gold/10">
+                                <img src="img/service02.jpg" alt="Service Image"
+                                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                            </div>
+                            <!-- Floating Glows -->
+                            <div
+                                class="absolute -top-6 -left-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <span class="text-accent-gold font-bold text-sm tracking-widest block mb-2 font-serif">POINT
+                            02</span>
+                        <h3 class="text-2xl font-bold mb-6 font-serif">お肌のコンディションを<br class="md:hidden">整えるケア</h3>
+                        <p class="leading-[1.8] text-gray-600">
+                            お顔周りの肌荒れを防ぎたい方や、お肌のコンディション・年齢サインでお悩みの方へ、リベルハーブピーリングをご用意しております。<br>お顔だけでなく、二の腕や背中など気になる箇所のケアとしても非常におすすめのメニューです。<br>化粧品検定1級・コスメコンシェルジュのスタッフが丁寧にサポートいたします。<br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-3/5 order-2 md:order-1">
+                        <span class="text-accent-gold font-bold text-sm tracking-widest block mb-2 font-serif">POINT
+                            03</span>
+                        <h3 class="text-2xl font-bold mb-6 font-serif">アクセス良好な完全<br class="md:hidden">プライベート空間</h3>
+                        <p class="leading-[1.8] text-gray-600">
+                            星ヶ丘駅や植田駅からお車で10分、名古屋市営バス「高針原」停留所から徒歩2分の立地です。<br>サロンの敷地内には無料駐車場（14番）を完備しているため、お車でも安心してお越しいただけます。<br>周りを気にせず過ごせる完全個室で、落ち着いた大人のためのプライベート空間です。<br>
+                        </p>
+                    </div>
+                    <div class="w-full md:w-2/5 order-1 md:order-2 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div
+                                class="relative w-full aspect-[4/3] rounded-2xl shadow-2xl overflow-hidden z-10 border border-accent-gold/10">
+                                <img src="img/A.jpg" alt="Service Point 03"
+                                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                            </div>
+                            <!-- Floating Glows -->
+                            <div
+                                class="absolute -top-6 -left-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full py-12 bg-accent-gray text-white overflow-hidden">
+        <div
+            class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10">
+            <div class="text-lg md:text-xl font-serif font-bold text-center">ご予約、お問い合わせ</div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full md:w-auto">
+                <a href="jump01.html" target="_blank"
+                    class="bg-white text-accent-gray w-full max-w-md md:max-w-none md:w-72 py-3 rounded-2xl font-serif font-bold shadow-lg hover:bg-gray-50 transition flex flex-col items-center justify-center leading-tight whitespace-nowrap">
+                    <span class="text-[10px] tracking-widest opacity-80 mb-1 whitespace-nowrap">RESERVATION</span>
+                    <span class="text-sm whitespace-nowrap">WEB予約</span>
+                </a>
+                <a href="tel:05054484897"
+                    class="bg-accent-gold text-white w-full max-w-md md:max-w-none md:w-72 py-3 rounded-2xl font-serif font-bold shadow-lg hover:opacity-90 transition flex flex-col items-center justify-center leading-tight whitespace-nowrap">
+                    <span class="text-[10px] tracking-widest opacity-80 mb-1 whitespace-nowrap">PHONE</span>
+                    <span class="text-sm whitespace-nowrap">お電話でお問い合わせ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu/Recommend Section with Parallax -->
+    <section id="menu" class="relative py-32 md:py-48 overflow-hidden">
+        <!-- Parallax Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center bg-fixed opacity-30 hidden md:block"
+                style="background-image: url('img/recommendbg.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center opacity-30 block md:hidden"
+                style="background-image: url('img/recommendbg.jpg');"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Recommend
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">おすすめメニュー</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4 overflow-hidden rounded-xl">
+                            <img src="img/C.jpg" alt="ダブルフラットMIX 120本"
+                                class="w-full h-48 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <span
+                            class="bg-accent-gold text-white text-[10px] font-bold px-3 py-1 rounded-full inline-block mb-3">アイラッシュ一番人気</span>
+                        <h3 class="text-xl font-bold mb-4 font-serif text-gray-800 border-b border-accent-gold/20 pb-2">
+                            ダブルフラットMIX 120本</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            フラットラッシュとダブルフラットを絶妙にMIX。<br>自まつ毛への負担を抑えながら、自然で美しい束感とボリュームを引き出し、抜群のキープ力を誇ります。
+                        </p>
+                    </div>
+                    <div class="bg-accent-gold/5 p-4 rounded-lg">
+                        <div class="flex items-baseline gap-1.5">
+                            <span
+                                class="text-[8px] tracking-widest font-bold bg-accent-gold text-white px-2 py-0.5 rounded-sm leading-none uppercase">Price</span>
+                            <span class="text-2xl font-bold text-accent-gold leading-none">6,000</span>
+                            <span class="text-sm font-bold text-accent-gold">円</span>
+                            <span class="text-xs font-medium text-gray-500 font-sans">（税込）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4 overflow-hidden rounded-xl">
+                            <img src="img/D.jpg" alt="ダブルフラットMIX つけ放題"
+                                class="w-full h-48 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <span
+                            class="bg-accent-gold text-white text-[10px] font-bold px-3 py-1 rounded-full inline-block mb-3">圧倒的ボリューム＆持続</span>
+                        <h3 class="text-xl font-bold mb-4 font-serif text-gray-800 border-b border-accent-gold/20 pb-2">
+                            ダブルフラットMIX <br class="md:hidden">つけ放題</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            まつ毛の隙間を埋めて、華やかで美しい目元をデザインします。<br>丁寧な装着で持ちが良く、理想の束感まつ毛を1ヶ月先まで美しく維持できます。
+                        </p>
+                    </div>
+                    <div class="bg-accent-gold/5 p-4 rounded-lg">
+                        <div class="flex items-baseline gap-1.5">
+                            <span
+                                class="text-[8px] tracking-widest font-bold bg-accent-gold text-white px-2 py-0.5 rounded-sm leading-none uppercase">Price</span>
+                            <span class="text-2xl font-bold text-accent-gold leading-none">9,000</span>
+                            <span class="text-sm font-bold text-accent-gold">円</span>
+                            <span class="text-xs font-medium text-gray-500 font-sans">（税込）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4 overflow-hidden rounded-xl">
+                            <img src="img/recommend03.jpg" alt="まつ毛パーマ（トレーニングモデル）"
+                                class="w-full h-48 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <span
+                            class="bg-accent-gold text-white text-[10px] font-bold px-3 py-1 rounded-full inline-block mb-3">限定お得メニュー</span>
+                        <h3 class="text-xl font-bold mb-4 font-serif text-gray-800 border-b border-accent-gold/20 pb-2">
+                            まつ毛パーマ<br class="md:hidden">（トレーニングモデル）</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            技術向上のためのトレーニングモデル様向け特別メニューです。<br>熟練技術のアイリストによる丁寧な指導チェックのもと、低価格でまつ毛パーマをお試しいただけます。
+                        </p>
+                    </div>
+                    <div class="bg-accent-gold/5 p-4 rounded-lg">
+                        <div class="flex items-baseline gap-1.5">
+                            <span
+                                class="text-[8px] tracking-widest font-bold bg-accent-gold text-white px-2 py-0.5 rounded-sm leading-none uppercase">Price</span>
+                            <span class="text-2xl font-bold text-accent-gold leading-none">4,800</span>
+                            <span class="text-sm font-bold text-accent-gold">円</span>
+                            <span class="text-xs font-medium text-gray-500 font-sans">（税込）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4 overflow-hidden rounded-xl">
+                            <img src="img/recommend04.jpg" alt="リベルハーブピーリング"
+                                class="w-full h-48 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <span
+                            class="bg-accent-gold text-white text-[10px] font-bold px-3 py-1 rounded-full inline-block mb-3">肌質改善スペシャルケア</span>
+                        <h3 class="text-xl font-bold mb-4 font-serif text-gray-800 border-b border-accent-gold/20 pb-2">
+                            剥ける<br class="md:hidden">リベルハーブピーリング</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            お肌の内側から細胞活性を促し、古い角質を自然に剥離させます。<br>ニキビやシミ、ざらつきなどのお悩みに本格アプローチ。<br>お顔はもちろん二の腕ケアにもおすすめです。
+                        </p>
+                    </div>
+                    <div class="bg-accent-gold/5 p-4 rounded-lg">
+                        <div class="flex flex-col gap-1.5">
+                            <div class="flex items-baseline gap-1.5">
+                                <span
+                                    class="text-[8px] tracking-widest font-bold bg-accent-gold text-white px-2 py-0.5 rounded-sm leading-none uppercase">初回</span>
+                                <span class="text-2xl font-bold text-accent-gold leading-none">18,000</span>
+                                <span class="text-sm font-bold text-accent-gold">円</span>
+                                <span class="text-xs font-medium text-gray-500 font-sans">（税込）</span>
+                            </div>
+                            <div class="flex items-baseline gap-1.5">
+                                <span
+                                    class="text-[8px] tracking-widest font-bold bg-gray-500 text-white px-2 py-0.5 rounded-sm leading-none uppercase">通常</span>
+                                <span class="text-lg font-bold text-gray-600 leading-none">22,000</span>
+                                <span class="text-sm font-bold text-gray-600">円</span>
+                                <span class="text-xs font-medium text-gray-500 font-sans">（税込）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu-list" class="pb-80 md:pb-120 py-24 bg-marble relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Our Menu
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">施術メニュー</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Column 1 -->
+                <div
+                    class="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-6 font-serif border-b border-accent-gold/30 pb-3 flex items-center justify-between">
+                            <span>フラットラッシュ＆<br class="md:hidden">パーマ</span>
+                            <span
+                                class="text-xs text-accent-gold font-sans font-normal uppercase tracking-wider">Eyelash
+                                & Perm</span>
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ダブルフラットMIX 120本</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥6,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">自然なふんわり感を出しつつ長持ちさせたい方に</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ダブルフラットMIX 140本</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥6,500</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">程よいボリュームと目元のアクセントに</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ダブルフラットMIX 160本</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥7,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">印象的でハッキリとした存在感のある目元に</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ダブルフラットMIX 200本</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥8,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">しっかりと密度とボリュームが欲しい方に</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ダブルフラットMIX つけ放題</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥9,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">上限なしで理想のフサフサまつ毛へ仕上げます</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div
+                                    class="flex justify-between items-baseline border-t border-dashed border-gray-200 pt-4">
+                                    <span class="font-bold text-gray-700">まつ毛パーマ<br><span
+                                            class="text-[10px] text-accent-gold font-normal">（トレーニングモデル）</span></span>
+                                    <span class="font-bold text-accent-gold text-lg">¥4,800</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">モデル様限定の特別お試しメニューです</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div
+                    class="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-6 font-serif border-b border-accent-gold/30 pb-3 flex items-center justify-between">
+                            <span>リペア＆<br class="md:hidden">ハーブピーリング</span>
+                            <span class="text-xs text-accent-gold font-sans font-normal uppercase tracking-wider">Repair
+                                & Peeling</span>
+                        </h3>
+                        <div class="space-y-6">
+                            <h4 class="text-xs font-bold text-accent-gold uppercase tracking-wider mb-2 font-serif">—
+                                REPAIR</h4>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">2週間以内リペア</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥3,500</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">ヨレや抜けを整え、綺麗な状態を保ちます</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">3週間以内リペア</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥4,700</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">部分的に付け足してボリュームを復活させます</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">4週間以内リペア</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥6,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">全体のデザインを崩さず修復します</span>
+                            </div>
+
+                            <h4
+                                class="text-xs font-bold text-accent-gold uppercase tracking-wider mb-2 font-serif border-t border-dashed border-gray-200 pt-4">
+                                — HERB PEELING</h4>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">リベルハーブピーリング</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥22,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">肌トラブルを和らげ、透明感あふれる素肌へ</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-bold text-gray-700">ピーリング 5回チケット</span>
+                                    <span class="font-bold text-accent-gold text-lg">¥90,000</span>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1">本格的に肌質を改善したいお得な回数券です</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div
+                    class="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl border border-accent-gold/20 flex flex-col justify-between">
+                    <div>
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-6 font-serif border-b border-accent-gold/30 pb-3 flex items-center justify-between">
+                            <span>オプション＆<br class="md:hidden">ご案内</span>
+                            <span class="text-xs text-accent-gold font-sans font-normal uppercase tracking-wider">Option
+                                & Guide</span>
+                        </h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">LED変更（120本〜160本）</span>
+                                <span class="font-bold text-accent-gold">¥1,000</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">LED変更（200本以上）</span>
+                                <span class="font-bold text-accent-gold">¥1,500</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">まつ毛シャンプー</span>
+                                <span class="font-bold text-accent-gold">¥500</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">カラーエクステ変更</span>
+                                <span class="font-bold text-accent-gold">¥700</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">カラーエクステ変更（リペア）</span>
+                                <span class="font-bold text-accent-gold">¥500</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">アレルギー用グルー変更</span>
+                                <span class="font-bold text-accent-gold">¥500</span>
+                            </div>
+                            <div class="flex justify-between items-baseline text-sm">
+                                <span class="text-gray-700 font-medium">再来他店・自店オフのみ</span>
+                                <span class="font-bold text-accent-gold">¥2,000</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-accent-gold/5 border border-accent-gold/25 p-4 rounded-xl">
+                            <h4
+                                class="text-xs font-bold text-accent-gold tracking-widest uppercase mb-2 font-serif flex items-center gap-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                                ご利用時のお願い
+                            </h4>
+                            <ul class="text-[11px] text-gray-500 space-y-2 leading-relaxed">
+                                <li>※リペアは、前回ご来店から指定の期間以内の方が対象となります。</li>
+                                <li>※キャンセルや変更は、ご予約の3日前までにご協力をお願い致します。</li>
+                                <li>※10分以上遅刻される場合は、必ずお電話にてご連絡をお願い致します。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="pb-80 md:pb-120 pt-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-gold" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <h2
+                            class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                            Gallery
+                        </h2>
+                    </div>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">施術ギャラリー</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-full overflow-hidden py-6">
+                <!-- Overlay gradient left and right for a premium fade-out effect -->
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none">
+                </div>
+
+                <!-- Marquee Wrapper -->
+                <div class="flex animate-marquee">
+                    <!-- Set 1 -->
+                    <div class="flex gap-4 md:gap-6 pr-4 md:pr-6 flex-shrink-0">
+                        <!-- Gallery Item 1 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g1.jpg')">
+                            <img src="img/g1.jpg" alt="ダブルフラットMIX"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">ダブルフラットMIX</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 2 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g2.jpg')">
+                            <img src="img/g2.jpg" alt="理想の束感まつ毛"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">理想の束感まつ毛</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 3 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g3.jpg')">
+                            <img src="img/g3.jpg" alt="まつ毛パーマ"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">まつ毛パーマ</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Perm</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 4 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g4.jpg')">
+                            <img src="img/g4.jpg" alt="ナチュラル上品仕上げ"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">ナチュラル上品仕上げ</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 5 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g5.jpg')">
+                            <img src="img/g5.jpg" alt="リベルハーブピーリング"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">リベルハーブピーリング</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Peeling</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 6 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g6.jpg')">
+                            <img src="img/g6.jpg" alt="上品な目元デザイン"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">上品な目元デザイン</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Design</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 (Identical duplicate for infinite seamless looping) -->
+                    <div class="flex gap-4 md:gap-6 pr-4 md:pr-6 flex-shrink-0">
+                        <!-- Gallery Item 1 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g1.jpg')">
+                            <img src="img/g1.jpg" alt="ダブルフラットMIX"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">ダブルフラットMIX</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 2 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g2.jpg')">
+                            <img src="img/g2.jpg" alt="理想の束感まつ毛"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">理想の束感まつ毛</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 3 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g3.jpg')">
+                            <img src="img/g3.jpg" alt="まつ毛パーマ"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">まつ毛パーマ</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Perm</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 4 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g4.jpg')">
+                            <img src="img/g4.jpg" alt="ナチュラル上品仕上げ"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">ナチュラル上品仕上げ</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Eyelash</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 5 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g5.jpg')">
+                            <img src="img/g5.jpg" alt="リベルハーブピーリング"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">リベルハーブピーリング</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Peeling</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 6 -->
+                        <div class="group relative overflow-hidden rounded-2xl shadow-lg w-48 h-48 md:w-64 md:h-64 cursor-pointer border border-accent-gold/10 flex-shrink-0"
+                            onclick="openModal('img/g6.jpg')">
+                            <img src="img/g6.jpg" alt="上品な目元デザイン"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                <span class="text-white font-serif text-sm font-bold tracking-wider">上品な目元デザイン</span>
+                                <span class="text-accent-gold text-[10px] uppercase tracking-widest mt-1">Design</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-gray" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Voice Section -->
+    <section id="voice" class="pb-80 md:pb-120 pt-20 bg-[#f5f3ef] relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-gold" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                        <h2
+                            class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                            Voice
+                        </h2>
+                    </div>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">[お客様の声]</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper voice-swiper pb-16">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white pt-8 px-8 pb-4 md:pt-10 md:px-10 md:pb-6 shadow-xl border border-gray-50 flex flex-col h-full rounded-lg voice-card-container hover:border-accent-gold/30 transition-colors duration-500">
+                            <div class="flex flex-col items-center justify-center text-center mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-accent-gold/10 flex items-center justify-center mb-3 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent-gold" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-sm">お客様 (30代前半)</h4>
+                                    <div class="flex justify-center text-accent-gold gap-0.5 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5
+                                class="text-accent-gold font-bold mb-4 leading-snug text-left border-l-4 border-accent-gold pl-3">
+                                「丁寧なカウンセリングとダブルフラットMIXの持ちの良さに大満足！」
+                            </h5>
+                            <div
+                                class="text-gray-600 leading-[1.8] text-sm md:text-base text-left relative voice-content-wrapper">
+                                <div
+                                    class="voice-content-inner overflow-hidden max-h-[100px] transition-all duration-500">
+                                    <p>初めて伺いましたが、施術前に丁寧なカウンセリングがあり、自まつ毛の状態を見ながら本数や長さを細かく提案していただけて安心しました。<br><span
+                                            class="highlight-gold">ダブルフラットMIXはとても軽くて違和感がなく、なのに仕上がりはフサフサ！</span><br>
+                                        2週間経ってもほとんどヨレず綺麗にキープできています。<br>
+                                        星ヶ丘周辺で通いやすいマツエクサロンが見つかって嬉しいです。<br>またお願いします。<br>
+                                    </p>
+                                </div>
+                                <div
+                                    class="read-more-btn text-accent-gold text-xs font-bold mt-2 cursor-pointer hover:underline flex items-center justify-center gap-1 py-2 bg-gradient-to-t from-white via-white/90 to-transparent absolute bottom-0 left-0 w-full pt-8">
+                                    <span>... 続きを読む</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white pt-8 px-8 pb-4 md:pt-10 md:px-10 md:pb-6 shadow-xl border border-gray-50 flex flex-col h-full rounded-lg relative overflow-hidden group hover:border-accent-gold/30 transition-colors duration-500">
+                            <div
+                                class="absolute top-0 left-0 w-1.5 h-full bg-accent-gold opacity-20 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <div class="flex flex-col items-center justify-center text-center mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-accent-gold/10 flex items-center justify-center mb-3 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent-gold" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-sm">お客様 (20代後半)</h4>
+                                    <div class="flex justify-center text-accent-gold gap-0.5 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5
+                                class="text-accent-gold font-bold mb-4 leading-snug text-left border-l-4 border-accent-gold pl-3">
+                                「初めてのハーブピーリングで肌がツルツルに！完全個室でリラックス」
+                            </h5>
+                            <div
+                                class="text-gray-600 leading-[1.8] text-sm md:text-base text-left relative voice-content-wrapper">
+                                <div
+                                    class="voice-content-inner overflow-hidden max-h-[100px] transition-all duration-500">
+                                    <p>お顔周りの肌荒れが気になり、リベルハーブピーリングをお願いしました。<br><span
+                                            class="highlight-gold">ピーリングの仕組みや施術後の経過について、コスメコンシェルジュのスタッフさんが細かく説明してくださり、</span>安心して受けられました。<br>
+                                        施術から数日後、古い角質がポロポロ剥がれてきて、その後は驚くほどツルツルで透明感のあるお肌になり感動です！<br>
+                                        完全個室なので、他の人の目も気にならず、贅沢なプライベート時間を過ごせました。<br>定期的に通いたいです。<br>
+                                    </p>
+                                </div>
+                                <div
+                                    class="read-more-btn text-accent-gold text-xs font-bold mt-2 cursor-pointer hover:underline flex items-center justify-center gap-1 py-2 bg-gradient-to-t from-white via-white/90 to-transparent absolute bottom-0 left-0 w-full pt-8">
+                                    <span>... 続きを読む</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white pt-8 px-8 pb-4 md:pt-10 md:px-10 md:pb-6 shadow-xl border border-gray-50 flex flex-col h-full rounded-lg relative overflow-hidden group hover:border-accent-gold/30 transition-colors duration-500">
+                            <div
+                                class="absolute top-0 left-0 w-1.5 h-full bg-accent-gold opacity-20 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <div class="flex flex-col items-center justify-center text-center mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-accent-gold/10 flex items-center justify-center mb-3 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent-gold" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-sm">お客様 (40代)</h4>
+                                    <div class="flex justify-center text-accent-gold gap-0.5 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 fill-current"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5
+                                class="text-accent-gold font-bold mb-4 leading-snug text-left border-l-4 border-accent-gold pl-3">
+                                「過去最高のまつ毛パーマ！モデル価格でも抜群の安心感とコスパ」
+                            </h5>
+                            <div
+                                class="text-gray-600 leading-[1.8] text-sm md:text-base text-left relative voice-content-wrapper">
+                                <div
+                                    class="voice-content-inner overflow-hidden max-h-[100px] transition-all duration-500">
+                                    <p>トレーニングモデルのまつ毛パーマで予約させていただきました。<br>お値打ちな価格だったので少し不安もありましたが、<span
+                                            class="highlight-gold">とても丁寧な施術で、最後の仕上がりチェックもしっかり行われていて</span>終始安心できました。<br>
+                                        立ち上がりもすごく綺麗で、毎日のビューラーの手間がなくなりメイクが劇的に楽になりました！<br>
+                                        このクオリティでこの価格は本当にありがたいです。<br>ぜひまたお願いしたいと思います。<br>
+                                    </p>
+                                </div>
+                                <div
+                                    class="read-more-btn text-accent-gold text-xs font-bold mt-2 cursor-pointer hover:underline flex items-center justify-center gap-1 py-2 bg-gradient-to-t from-white via-white/90 to-transparent absolute bottom-0 left-0 w-full pt-8">
+                                    <span>... 続きを読む</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination voice-pagination !-bottom-2"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Message Section -->
+    <section class="pb-80 md:pb-120 pt-20 bg-[#fdfbf7] relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Message
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">想い</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 max-w-4xl mx-auto">
+                <div class="w-full md:w-3/5 order-2 md:order-1 relative flex flex-col justify-center">
+                    <!-- Accent gold bar -->
+                    <div class="w-8 h-[2px] bg-accent-gold mb-6 mx-auto md:mx-0"></div>
+
+                    <h3
+                        class="text-2xl md:text-3xl font-bold mb-8 font-serif leading-tight text-gray-800 text-center md:text-left">
+                        お客様の理想に<br class="md:hidden">寄り添うご提案
+                    </h3>
+
+                    <div
+                        class="space-y-6 leading-[1.8] md:leading-[2] text-gray-600 font-serif text-sm md:text-base border-l-0 md:border-l-2 border-accent-gold/20 pl-0 md:pl-8 text-left">
+                        <p>
+                            サロンでのひとときが皆様にとって癒しの時間となるよう、丁寧な接客と確かな技術を心がけております。
+                        </p>
+                        <p>
+                            些細なことでも遠慮なくご相談ください。
+                        </p>
+                        <p>
+                            コスメコンシェルジュの知識も活かし、まつ毛とお肌の両面から美しさをトータルにサポートいたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5 order-1 md:order-2 flex justify-center">
+                    <div class="relative w-full max-w-xs">
+                        <div
+                            class="relative w-full aspect-square rounded-2xl shadow-2xl overflow-hidden z-10 border border-accent-gold/15">
+                            <img src="img/rogo.jpg" alt="Owner Message"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <!-- Floating Gold Accent Glows -->
+                        <div class="absolute -top-6 -left-6 w-28 h-28 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -right-6 w-28 h-28 bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="mb-80 md:mb-120 py-20 bg-[#f5f3ef] relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Staff
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">スタッフ紹介</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="max-w-3xl mx-auto bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-xl border border-accent-gold/20 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 relative">
+                    <!-- Elegant Gold Frame Decor -->
+                    <div
+                        class="absolute inset-0 border-2 border-accent-gold rounded-full rotate-6 opacity-30 animate-pulse pointer-events-none">
+                    </div>
+                    <div
+                        class="w-full h-full rounded-full overflow-hidden border-2 border-white shadow-md relative z-10">
+                        <img src="img/staff.jpg" alt="田嶋 美樹" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <span
+                        class="text-xs font-bold text-accent-gold tracking-widest uppercase mb-2 block font-serif">Staff
+                        Profile</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-1 font-serif text-gray-800">田嶋 美樹</h3>
+                    <p class="text-accent-gold text-sm md:text-base font-bold mb-4 font-serif">アイラッシュ × リベルハーブピーリング</p>
+
+                    <!-- Qualification Badges -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                        <span
+                            class="text-[10px] md:text-xs font-bold border border-accent-gold/40 text-accent-gold px-3 py-1 rounded-full bg-accent-gold/5">施術歴
+                            12年</span>
+                        <span
+                            class="text-[10px] md:text-xs font-bold border border-accent-gold/40 text-accent-gold px-3 py-1 rounded-full bg-accent-gold/5">化粧品検定1級</span>
+                        <span
+                            class="text-[10px] md:text-xs font-bold border border-accent-gold/40 text-accent-gold px-3 py-1 rounded-full bg-accent-gold/5">コスメコンシェルジュ</span>
+                    </div>
+
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed text-left">
+                        施術歴12年の経験豊富なスタッフが担当いたします。<br>
+                        化粧品検定1級およびコスメコンシェルジュの資格を保持しており、まつ毛の施術だけでなく、お肌のケアに関する幅広い知識でお客様の美しさをサポートいたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Access Section -->
+    <section id="access" class="mb-80 md:mb-120 pt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="relative inline-block">
+                    <h2
+                        class="section-title-main text-4xl md:text-5xl font-serif text-accent-gold tracking-[0.1em] uppercase">
+                        Access
+                    </h2>
+                    <p class="text-base md:text-lg font-serif mt-1 text-gray-600 tracking-[0.15em]">アクセス</p>
+                    <div class="mt-1 w-full max-w-[240px] mx-auto opacity-60">
+                        <svg viewBox="0 0 300 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5 C 100 20, 200 20, 290 5" stroke="#d4af37" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row gap-0 lg:gap-0 items-stretch max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-accent-gold/10">
+                <div class="w-full lg:w-2/5 bg-white p-10 flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent-gold mb-6 font-serif tracking-widest">JELITA
+                        </h3>
+                        <h4 class="text-accent-gold font-bold text-sm mb-2 tracking-widest uppercase font-serif">
+                            ACCESS</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            〒465-0073<br>
+                            愛知県名古屋市名東区<br>高針原2-1807<br class="md:hidden">金城園南館
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-accent-gold font-bold text-sm mb-2 tracking-widest uppercase font-serif">
+                            CONTACT</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            TEL: <a href="tel:05054484897"
+                                class="hover:text-accent-gold transition-colors">050-5448-4897</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-accent-gold font-bold text-sm mb-2 tracking-widest uppercase font-serif">
+                            OPEN / CLOSE
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            営業時間: 8:30 - 18:00 (最終受付)<br>
+                            定休日: 日曜日
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-6 justify-center md:justify-start items-center">
+                            <a href="jump03.html" target="_blank" class="hover:opacity-80 transition duration-300">
+                                <img src="img/Instagram.png" alt="Instagram" class="h-10 w-auto">
+                            </a>
+                            <a href="jump01.html" target="_blank" class="hover:opacity-80 transition duration-300">
+                                <img src="img/HOT PEPPER BEAUTY.png" alt="Hotpepper" class="h-10 w-auto">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-3/5 min-h-[400px] lg:min-h-[500px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.4485295018394!2d136.9959544!3d35.1454331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60035d5785f34f6f%3A0x84f72b81c058ec7b!2zSkVMSVRBIOOAkOODnuODhOOCqOOCr-OAgeODnuODhOODkeOAgeODj-ODvOODluODlOODvOODquODs-OCsOOAkQ!5e0!3m2!1sja!2sjp!4v1779458932409!5m2!1sja!2sjp"
+                        width="100%" height="100%" style="border:0; display:block; min-height:400px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent-gray pt-16 pb-32 lg:pb-16 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-12 tracking-wider uppercase font-serif text-accent-gold">JELITA</h2>
+            <nav
+                class="flex flex-wrap justify-center gap-8 mb-12 text-sm uppercase tracking-widest font-serif font-bold">
+                <a href="#about" class="hover:opacity-80 transition">About</a>
+                <a href="#service" class="hover:opacity-80 transition">Service</a>
+                <a href="#menu" class="hover:opacity-80 transition">Menu</a>
+                <a href="#gallery" class="hover:opacity-80 transition">Gallery</a>
+                <a href="#voice" class="hover:opacity-80 transition">Voice</a>
+                <a href="#access" class="hover:opacity-80 transition">Access</a>
+            </nav>
+            <p class="text-xs text-white/60">&copy; 2026 JELITA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-24 right-6 md:bottom-32 md:right-10 w-12 h-12 bg-accent-gray text-white rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- SP Fixed CTA -->
+    <div class="fixed bottom-0 left-0 w-full grid grid-cols-2 lg:hidden z-50 shadow-2xl">
+        <a href="tel:05054484897"
+            class="bg-white text-accent-gold border-t border-r border-gray-100 py-4 flex flex-col items-center justify-center font-serif font-bold">
+            <span class="text-[10px] tracking-wider opacity-70 mb-1 whitespace-nowrap">PHONE</span>
+            <span class="text-sm whitespace-nowrap">お問い合わせ</span>
+        </a>
+        <a href="jump01.html" target="_blank"
+            class="bg-accent-gray text-white py-4 flex flex-col items-center justify-center font-serif font-bold">
+            <span class="text-[10px] tracking-wider opacity-70 mb-1 whitespace-nowrap">RESERVATION</span>
+            <span class="text-sm whitespace-nowrap">WEB予約</span>
+        </a>
+    </div>
+
+    <!-- Modal for Gallery -->
+    <div id="modal" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4"
+        onclick="closeModal(event)">
+        <div class="relative max-w-4xl w-full max-h-[85vh] flex items-center justify-center"
+            onclick="event.stopPropagation()">
+            <!-- Prev Button -->
+            <button onclick="prevImage(event)"
+                class="absolute left-2 md:left-4 z-50 text-white/70 hover:text-white transition bg-black/30 hover:bg-black/50 p-3 rounded-full flex items-center justify-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Image (Centered, non-clickable, default pointer) -->
+            <img id="modal-img" src="" alt="Zoomed Image"
+                class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl cursor-default select-none">
+
+            <!-- Next Button -->
+            <button onclick="nextImage(event)"
+                class="absolute right-2 md:right-4 z-50 text-white/70 hover:text-white transition bg-black/30 hover:bg-black/50 p-3 rounded-full flex items-center justify-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <!-- Close Button (Only one X close button, in top-right) -->
+            <button onclick="closeModal(event)"
+                class="modal-close absolute -top-12 right-0 md:-top-4 md:-right-12 z-50 text-white/70 hover:text-white transition bg-black/30 hover:bg-black/50 p-2 md:p-3 rounded-full flex items-center justify-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="Js/main.js"></script>
+    <script>
+        // Voice Content Toggle
+        document.querySelectorAll('.voice-content-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', function () {
+                const inner = this.querySelector('.voice-content-inner');
+                const btn = this.querySelector('.read-more-btn');
+                const svg = btn.querySelector('svg');
+                const span = btn.querySelector('span');
+
+                if (inner.classList.contains('max-h-[100px]')) {
+                    inner.classList.remove('max-h-[100px]');
+                    inner.classList.add('max-h-[1000px]');
+                    btn.classList.remove('bg-gradient-to-t');
+                    btn.classList.add('relative', 'pt-2');
+                    btn.classList.remove('absolute', 'bottom-0', 'pt-8');
+                    span.textContent = '閉じる';
+                    svg.style.transform = 'rotate(180deg)';
+                } else {
+                    inner.classList.remove('max-h-[1000px]');
+                    inner.classList.add('max-h-[100px]');
+                    btn.classList.add('bg-gradient-to-t');
+                    btn.classList.remove('relative', 'pt-2');
+                    btn.classList.add('absolute', 'bottom-0', 'pt-8');
+                    span.textContent = '... 続きを読む';
+                    svg.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

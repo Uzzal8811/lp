@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美.Sarah - 髪も心も、ふっと軽くなる時間を</title>
+    <meta name="description" content="愛媛県東温市の美容室「美.Sarah」。自然に囲まれた落ち着いた空間で、40年の経験を持つオーナーがマンツーマンで施術します。">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="美.Sarah - 髪も心も、ふっと軽くなる時間を">
+    <meta property="og:description" content="愛媛県東温市の美容室「美.Sarah」。自然に囲まれた落ち着いた空間で、40年の経験を持つオーナーがマンツーマンで施術します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bi-sarah.happytry.fun/">
+    <meta property="og:image" content="https://bi-sarah.happytry.fun/img/ogp.jpg">
+    <meta property="og:site_name" content="美.Sarah">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontSize: {
+                    'xs': '12px',
+                    'sm': '14px',
+                    'base': '16px',
+                    'lg': '18px',
+                    'xl': '20px',
+                    '2xl': '24px',
+                    '3xl': '30px',
+                    '4xl': '36px',
+                    '5xl': '48px',
+                },
+                extend: {
+                    colors: {
+                        toneMain: '#333333',      /* ダークグレー（文字色） */
+                        toneBase: '#ffffff',      /* 白 */
+                        toneBeige: '#f4f1ea',     /* ベージュ（背景色） */
+                        toneAccent: '#7b8d70',    /* アクセントカラー（緑） */
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Noto Serif JP', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper.js (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
+</head>
+
+<body class="bg-texture text-toneMain select-none">
+
+    <!-- ══════════════════════════════
+         HEADER
+    ══════════════════════════════ -->
+    <header class="site-header" id="header">
+        <!-- Left nav -->
+        <ul class="nav-group left">
+            <li><a href="#trouble"><span class="nav-ja">お悩み</span><span class="nav-en">Trouble</span></a></li>
+            <li><a href="#about"><span class="nav-ja">美.Sarahについて</span><span class="nav-en">About</span></a></li>
+        </ul>
+
+        <!-- Center logo -->
+        <a href="#" class="header-logo text-2xl font-serif tracking-widest text-toneMain">
+            美.Sarah
+        </a>
+
+        <!-- Right nav -->
+        <ul class="nav-group right">
+            <li><a href="#features"><span class="nav-ja">特徴</span><span class="nav-en">Features</span></a></li>
+            <li><a href="#menu"><span class="nav-ja">メニュー</span><span class="nav-en">Menu</span></a></li>
+            <li><a href="#access"><span class="nav-ja">アクセス</span><span class="nav-en">Access</span></a></li>
+        </ul>
+
+        <!-- Mobile Burger -->
+        <div id="burger" class="lg:hidden flex items-center px-6 cursor-pointer h-full">
+            <div class="space-y-2">
+                <span class="block w-7 h-px bg-toneMain"></span>
+                <span class="block w-7 h-px bg-toneMain"></span>
+                <span class="block w-5 h-px bg-toneMain ml-auto"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hamburger Overlay -->
+    <div id="drawer"
+        class="fixed inset-0 z-[1000] translate-x-full transition-transform duration-700 ease-in-out flex flex-col items-center justify-center space-y-12">
+        <button id="close-drawer"
+            class="absolute top-8 right-8 text-4xl font-light text-toneMain hover:text-toneAccent transition">×</button>
+        <nav>
+            <ul class="flex flex-col items-center space-y-10">
+                <li><a href="#trouble" class="hover:text-toneAccent transition">Trouble</a></li>
+                <li><a href="#about" class="hover:text-toneAccent transition">About</a></li>
+                <li><a href="#features" class="hover:text-toneAccent transition">Features</a></li>
+                <li><a href="#menu" class="hover:text-toneAccent transition">Menu</a></li>
+                <li><a href="#message" class="hover:text-toneAccent transition">Message</a></li>
+                <li><a href="#access" class="hover:text-toneAccent transition">Access</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ══════════════════════════════
+         FV (First View)
+    ══════════════════════════════ -->
+    <section class="relative w-full h-[100svh] min-h-[600px] flex justify-between bg-white pt-[90px] lg:pt-0">
+        <!-- Left Image -->
+        <div class="w-[49%] lg:w-[48%] h-full relative">
+            <img src="img/fv01.jpg" alt="FV Left" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Right Image -->
+        <div class="w-[49%] lg:w-[48%] h-full relative">
+            <img src="img/fv02.jpg" alt="FV Right" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Center Box -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#f4f1ea] w-[90%] md:w-[75%] lg:w-[50%] max-w-[650px] px-4 py-12 md:py-20 flex flex-col items-center justify-center text-center z-20 reveal reveal-up delay-300 shadow-xl overflow-hidden mt-6 lg:mt-0">
+            <!-- Decorative Leaf SVG (Approximation) -->
+            <svg class="absolute -right-24 md:-right-10 top-1/2 -translate-y-1/2 w-48 md:w-64 h-auto opacity-10 pointer-events-none text-toneAccent" viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 200C50 200 40 120 80 80C80 80 60 90 50 120C50 120 70 40 95 10C95 10 70 30 60 80C60 80 70 20 90 0C90 0 60 20 50 60C50 60 40 20 40 0C40 0 35 30 45 70C45 70 20 40 0 50C0 50 25 70 40 90C40 90 10 90 0 110C0 110 20 105 45 105C45 105 40 150 50 200Z" stroke="currentColor" stroke-width="0.5"/>
+            </svg>
+
+            <span class="text-[10px] md:text-xs tracking-[0.3em] uppercase text-toneMain opacity-60 mb-4 md:mb-6 font-sans z-10">Relax. Renew. Revive.</span>
+            
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-toneMain leading-tight md:leading-snug mb-6 z-10">
+                Where Relaxation<br>Meets Total Wellness
+            </h2>
+            
+            <div class="w-10 h-px bg-toneMain opacity-30 mb-6 md:mb-8 z-10"></div>
+            
+            <p class="text-xs md:text-sm text-toneMain opacity-80 mb-8 md:mb-10 font-sans tracking-wider leading-relaxed z-10">
+                Unwind your body, calm your mind,<br class="hidden md:block">and restore your natural balance.
+            </p>
+            
+            <a href="#menu" class="inline-block bg-[#aa9682] hover:bg-[#96826e] text-white text-[10px] md:text-xs tracking-[0.2em] py-3 px-8 md:py-4 md:px-10 transition-colors uppercase z-10">
+                Explore Services
+            </a>
+        </div>
+
+        <!-- LINE button -->
+        <a href="https://line.me/R/ti/p/@bi.sarah-20260202" target="_blank" class="res-circle-btn hidden lg:flex group">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span class="btn-ja" style="font-family: var(--font-sans); letter-spacing: 0.1em; font-size: 12px;">LINE</span>
+        </a>
+    </section>
+
+    <!-- FLOATING RIGHT BUTTONS -->
+    <div class="float-right hidden lg:flex flex-col">
+        <a href="https://beauty.hotpepper.jp/slnH000817978/" target="_blank" class="float-btn web-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="18" height="18" class="mb-2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span class="float-btn-text">WEB予約</span>
+        </a>
+        <a href="https://line.me/R/ti/p/@bi.sarah-20260202" target="_blank" class="float-btn insta-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" width="18" height="18" class="mb-2">
+                <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+            </svg>
+            <span class="float-btn-text">LINE</span>
+        </a>
+    </div>
+
+    <main>
+        <!-- Trouble -->
+        <section id="trouble" class="bg-texture py-24 md:py-32">
+            <div class="container mx-auto px-6 max-w-[70rem]">
+                <div class="colmo-header reveal reveal-up mb-12 md:mb-16">
+                    <span class="sub-text">Trouble</span>
+                    <h2>こんなお悩みありませんか</h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-stretch items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-5/12 reveal reveal-left flex">
+                        <img src="img/worrypic.jpg" alt="お悩み"
+                            class="w-full h-full max-w-md mx-auto object-cover rounded-sm shadow-sm">
+                    </div>
+                    <div class="w-full md:w-7/12 reveal reveal-right delay-200 flex flex-col justify-center">
+                        <ul class="space-y-4 text-sm md:text-base text-toneMain opacity-80 leading-relaxed">
+                            <li class="flex items-start gap-4 border-b border-gray-100 pb-3">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>髪の生え癖やまとまりに悩んでいる</span>
+                            </li>
+                            <li class="flex items-start gap-4 border-b border-gray-100 pb-3">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>毎朝のスタイリングを簡単にしたい</span>
+                            </li>
+                            <li class="flex items-start gap-4 border-b border-gray-100 pb-3">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>自分に合う髪型が分からない</span>
+                            </li>
+                            <li class="flex items-start gap-4 border-b border-gray-100 pb-3">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>大型サロンでは落ち着かない</span>
+                            </li>
+                            <li class="flex items-start gap-4 border-b border-gray-100 pb-3">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>髪も気持ちもリフレッシュしたい</span>
+                            </li>
+                            <li class="flex items-start gap-4 pb-1">
+                                <svg class="w-5 h-5 text-toneAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>出張や送迎に対応できる美容室を探している</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="bg-toneBeige py-24 md:py-32 px-6 relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-toneBase opacity-50 blur-3xl"></div>
+
+            <div class="container mx-auto max-w-7xl reveal reveal-up relative z-10">
+                <div class="colmo-header">
+                    <span class="sub-text">About</span>
+                    <h2>美.Sarahについて</h2>
+                </div>
+
+                <div class="asym-grid-60-40 flex flex-col-reverse lg:grid items-center lg:items-stretch mt-16">
+                    <div
+                        class="space-y-10 mt-16 lg:mt-0 lg:pr-16 reveal reveal-left delay-200 flex flex-col justify-center">
+                        <h4 class="text-xl md:text-2xl font-serif leading-relaxed tracking-wider text-toneMain">
+                            自然の中で、髪と心を<br>リフレッシュできる美容室
+                        </h4>
+                        <p class="text-sm md:text-base leading-loose opacity-80">
+                            日常の忙しさから少し離れ、自然豊かなエリアでゆったりと過ごせる完全予約制の美容室です。<br><br>
+                            オーナーの髙岡由香は、美容師歴40年。<br>
+                            長年の経験を活かし、髪質や生え癖、日々のスタイリングのお悩みに寄り添いながら、お一人おひとりに合わせた施術をご提案します。<br><br>
+                            施術はマンツーマンで行うため、大型サロンが苦手な方や、落ち着いて相談したい方にもおすすめです。<br>
+                            必要に応じて出張や送迎にも対応しておりますので、ご希望の方は事前にお問い合わせください。
+                        </p>
+                    </div>
+                    <div class="reveal reveal-right w-full flex relative group">
+                        <!-- サイトの雰囲気に合わせた上品な枠線装飾 -->
+                        <div
+                            class="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full border border-toneAccent opacity-60 rounded-sm transition-all duration-700 group-hover:-top-2 group-hover:-left-2">
+                        </div>
+                        <img src="img/aboutpic.jpg" alt="About 燈寧"
+                            class="w-full h-full object-cover rounded-sm shadow-lg relative z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features (4つの特徴) -->
+        <section id="features" class="bg-texture py-24 md:py-32">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="colmo-header reveal reveal-up">
+                    <span class="sub-text">Features</span>
+                    <h2>4つの特徴</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-16">
+                    <!-- 01 -->
+                    <div class="feature-card reveal reveal-up flex flex-col overflow-hidden group">
+                        <div class="-mx-10 -mt-10 mb-8 h-56 md:h-64 relative overflow-hidden shrink-0">
+                            <img src="img/serpic01.jpg" alt="美容師歴40年の経験を活かした施術"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="feature-number block">01</span>
+                        <h4 class="text-xl md:text-2xl mb-6 pb-4 border-b border-toneBeige font-serif">美容師歴40年の<br
+                                class="md:hidden">経験を活かした施術
+                        </h4>
+                        <p class="text-sm md:text-base leading-loose opacity-80 flex-grow">
+                            長年の経験をもとに、髪質や生え癖を見極めながら、お客様に合ったスタイルをご提案します。扱いやすさを大切にし、日々のスタイリングが楽になる髪型を目指します。
+                        </p>
+                    </div>
+
+                    <!-- 02 -->
+                    <div class="feature-card reveal reveal-up delay-100 flex flex-col overflow-hidden group">
+                        <div class="-mx-10 -mt-10 mb-8 h-56 md:h-64 relative overflow-hidden shrink-0">
+                            <img src="img/serpic02.jpg" alt="完全予約制のマンツーマン対応"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="feature-number block">02</span>
+                        <h4 class="text-xl md:text-2xl mb-6 pb-4 border-b border-toneBeige font-serif">
+                            完全予約制の<br>マンツーマン対応</h4>
+                        <p class="text-sm md:text-base leading-loose opacity-80 flex-grow">
+                            カウンセリングから仕上げまで、オーナーが一人ひとり丁寧に対応します。周りを気にせず、髪のお悩みをゆっくり相談できる落ち着いた空間です。
+                        </p>
+                    </div>
+
+                    <!-- 03 -->
+                    <div class="feature-card reveal reveal-up delay-200 flex flex-col overflow-hidden group">
+                        <div class="-mx-10 -mt-10 mb-8 h-56 md:h-64 relative overflow-hidden shrink-0">
+                            <img src="img/serpic03.jpg" alt="自然豊かな場所で過ごす癒しの時間"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="feature-number block">03</span>
+                        <h4 class="text-xl md:text-2xl mb-6 pb-4 border-b border-toneBeige font-serif">
+                            自然豊かな場所で<br>過ごす癒しの時間
+                        </h4>
+                        <p class="text-sm md:text-base leading-loose opacity-80 flex-grow">
+                            自然に囲まれた環境で、日常の慌ただしさから離れてリラックス。髪を整えるだけでなく、心までほっとできる時間をお過ごしいただけます。
+                        </p>
+                    </div>
+
+                    <!-- 04 -->
+                    <div class="feature-card reveal reveal-up delay-300 flex flex-col overflow-hidden group">
+                        <div class="-mx-10 -mt-10 mb-8 h-56 md:h-64 relative overflow-hidden shrink-0">
+                            <img src="img/serpic04.jpg" alt="出張・送迎にも対応"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="feature-number block">04</span>
+                        <h4 class="text-xl md:text-2xl mb-6 pb-4 border-b border-toneBeige font-serif">
+                            出張・送迎にも対応
+                        </h4>
+                        <p class="text-sm md:text-base leading-loose opacity-80 flex-grow">
+                            ご来店が難しい方には、出張や送迎のご相談も可能です。対応内容や日時については、必ず事前にお問い合わせください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommend Menu -->
+        <section id="menu" class="bg-toneBeige py-24 md:py-32">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="colmo-header reveal reveal-up">
+                    <span class="sub-text">Menu</span>
+                    <h2>メニュー</h2>
+                </div>
+
+                <div class="space-y-24 md:space-y-32 mt-20">
+                    <!-- Menu 1 -->
+                    <div class="flex flex-col md:flex-row items-center reveal reveal-up group">
+                        <!-- Image -->
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="img/menupic01.jpg" alt="カット（20歳以上）"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                            <!-- Recommend Badge -->
+                            <div
+                                class="absolute top-0 left-0 bg-toneAccent text-white text-[10px] md:text-xs tracking-widest py-2 px-6 z-10 uppercase font-serif">
+                                Recommend
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div
+                            class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-4 md:p-8 relative -mt-12 md:mt-0 md:-ml-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4 class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest mb-4">
+                                    カット<br><span class="text-lg">（20歳以上）※シャンプーなし</span>
+                                </h4>
+                                <div class="text-xl font-serif text-toneAccent flex flex-col gap-2">
+                                    <div><span class="text-sm text-toneMain mr-2">初回</span> 3,500<span
+                                            class="text-sm font-sans ml-1">円</span></div>
+                                    <div><span class="text-sm text-toneMain mr-2">2回目以降</span> 2,500<span
+                                            class="text-sm font-sans ml-1">円</span></div>
+                                </div>
+                            </div>
+                            <p class="text-sm md:text-base text-toneMain opacity-70 leading-loose tracking-wider">
+                                ご新規様はこちらの価格でカットさせていただきます！丁寧にカウンセリングさせていただき、お悩み解消のためご提案♪
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Menu 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center reveal reveal-up delay-100 group">
+                        <!-- Image -->
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="img/menupic02.jpg" alt="ヘアセット"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                        </div>
+
+                        <!-- Content -->
+                        <div
+                            class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-4 md:p-8 relative -mt-12 md:mt-0 md:-mr-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4
+                                    class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest leading-snug mb-4">
+                                    ヘアセット</h4>
+                            </div>
+                            <ul
+                                class="text-sm md:text-base text-toneMain opacity-70 leading-loose tracking-wider space-y-2">
+                                <li class="flex justify-between"><span>ブロー、セット（ショート）</span> <span>1,500円</span></li>
+                                <li class="flex justify-between"><span>ブロー、セット（セミロング）</span> <span>2,000円</span></li>
+                                <li class="flex justify-between"><span>ブロー、セット（まとめ髪）</span> <span>3,000円</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Menu 3 -->
+                    <div class="flex flex-col md:flex-row items-center reveal reveal-up delay-200 group">
+                        <!-- Image -->
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="img/menupic03.jpg" alt="着付け"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                        </div>
+
+                        <!-- Content -->
+                        <div
+                            class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-4 md:p-8 relative -mt-12 md:mt-0 md:-ml-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4
+                                    class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest leading-snug mb-4">
+                                    着付け</h4>
+                            </div>
+                            <ul
+                                class="text-sm md:text-base text-toneMain opacity-70 leading-loose tracking-wider space-y-2">
+                                <li class="flex justify-between"><span>浴衣着付け</span> <span>2,000円</span></li>
+                                <li class="flex justify-between"><span>訪問着、付け下げ着付け</span> <span>4,000円</span></li>
+                                <li class="flex justify-between"><span>振袖着付け</span> <span>5,000円</span></li>
+                                <li class="flex justify-between"><span>男性袴着付け</span> <span>3,000円</span></li>
+                                <li class="flex justify-between"><span>女性袴着付け</span> <span>4,000円</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-20 reveal reveal-up">
+                    <a href="https://beauty.hotpepper.jp/slnH000817978/coupon/" target="_blank"
+                        class="tone-btn">その他メニューはこちら</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Styles Gallery -->
+        <section id="gallery" class="bg-texture py-24 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-6 max-w-7xl mb-12">
+                <div class="colmo-header reveal reveal-up">
+                    <span class="sub-text">Styles</span>
+                    <h2>スタイルギャラリー</h2>
+                </div>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper gallery-swiper reveal reveal-up delay-100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito07.jpg" alt="Style 1"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito01.jpg" alt="Style 2"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito02.jpg" alt="Style 3"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito03.jpg" alt="Style 4"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito04.jpg" alt="Style 5"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito05.jpg" alt="Style 6"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/menusuraito06.jpg" alt="Style 7"
+                            class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="bg-toneBeige py-24 md:py-32 px-6">
+            <div class="container mx-auto max-w-7xl reveal reveal-up">
+                <div class="asym-grid-50-50 flex flex-col lg:grid items-center lg:items-stretch gap-16 lg:gap-0">
+                    <div class="reveal reveal-left w-full flex relative group">
+                        <!-- サイトの雰囲気に合わせた上品な枠線装飾 -->
+                        <div
+                            class="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full border border-toneAccent opacity-60 rounded-sm transition-all duration-700 group-hover:-top-2 group-hover:-left-2">
+                        </div>
+                        <img src="img/messagepic.jpg" alt="Message"
+                            class="w-full h-[215px] lg:h-full object-cover rounded-sm shadow-lg relative z-10">
+                    </div>
+                    <div class="space-y-12 lg:pl-10 reveal reveal-right delay-200 flex flex-col justify-center">
+                        <div class="space-y-4">
+                            <span class="text-xs tracking-widest text-toneAccent font-serif uppercase">Message</span>
+                            <h2 class="text-2xl md:text-4xl font-serif leading-tight">髪のお悩みに、<br>丁寧に寄り添います</h2>
+                        </div>
+                        <div class="space-y-6 text-sm md:text-base leading-loose opacity-80">
+                            <p>髪質や生え癖、年齢とともに変わる髪のお悩みは、一人ひとり違います。</p>
+                            <p>
+                                40年の美容師経験を活かし、お客様が毎日扱いやすく、自然に過ごせる髪型をご提案できるよう心がけています。<br>
+                                基本的にパーマやカラーは対応しておりませんが、白髪染めに限り、プラス1,000円で薬剤の塗布まで対応可能です。<br>
+                                その後のシャンプーはご自宅でお願いしております。
+                            </p>
+                            <p>
+                                髪も心もリフレッシュしたい方は、ぜひお気軽にご相談ください。
+                            </p>
+                        </div>
+                        <div
+                            class="pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-end sm:items-center justify-end gap-4 sm:gap-6">
+                            <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border border-gray-100">
+                                <img src="img/messageicon.jpg" alt="髙岡 由香" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm tracking-widest uppercase text-gray-400 mb-1">Owner</p>
+                                <p class="text-xl font-serif">髙岡 由香</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access -->
+        <section id="access" class="bg-texture py-24 md:py-32 text-toneMain relative">
+            <div class="container mx-auto px-6 max-w-7xl reveal reveal-up">
+                <div class="colmo-header">
+                    <span class="sub-text text-toneMain">Information</span>
+                    <h2>アクセス</h2>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch mt-16 bg-white p-8 md:p-16 shadow-xl relative z-10">
+                    <div class="space-y-12 reveal reveal-left delay-100 flex flex-col justify-center">
+                        <div>
+                            <h3 class="text-2xl font-serif mb-2">美.Sarah</h3>
+                            <p class="text-sm tracking-widest opacity-60 font-serif">Bi.Sarah</p>
+                        </div>
+
+                        <dl class="space-y-6 text-sm md:text-base">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 border-b border-gray-200 pb-4">
+                                <dt class="font-serif tracking-widest text-toneAccent">ADDRESS</dt>
+                                <dd class="col-span-2">〒791-0223<br>愛媛県東温市上林甲１７５７−１９</dd>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 border-b border-gray-200 pb-4">
+                                <dt class="font-serif tracking-widest text-toneAccent">TEL</dt>
+                                <dd class="col-span-2"><a href="tel:09052773297"
+                                        class="hover:opacity-70 transition">090-5277-3297</a></dd>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 border-b border-gray-200 pb-4">
+                                <dt class="font-serif tracking-widest text-toneAccent">OPEN</dt>
+                                <dd class="col-span-2">9:00〜17:00</dd>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 border-b border-gray-200 pb-4">
+                                <dt class="font-serif tracking-widest text-toneAccent">CLOSE</dt>
+                                <dd class="col-span-2">不定休</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex items-center gap-6 pt-4">
+                            <a href="https://line.me/R/ti/p/@bi.sarah-20260202" target="_blank"
+                                class="hover:opacity-60 transition text-toneMain">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="pt-8">
+                            <a href="https://beauty.hotpepper.jp/slnH000817978/" target="_blank"
+                                class="tone-btn w-full text-center">WEB予約はこちら</a>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[400px] lg:h-auto min-h-[400px] reveal reveal-right delay-300 relative">
+                        <!-- Google Maps Iframe -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13256.703770381488!2d132.8953154!3d33.7826725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fa89e81d4b673%3A0xc3d15b02de6015b3!2z5oSb5aqb55yM5p2x5rip5biC5LiK5p6X55Sy77yR77yX77yV77yX4oiS77yR77yZ!5e0!3m2!1sja!2sjp!4v1787903963493!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 bg-toneBase text-toneMain border-t border-gray-100">
+        <div class="container mx-auto max-w-7xl flex flex-col items-center gap-8">
+            <a href="#"
+                class="inline-block text-2xl font-serif tracking-widest text-toneMain opacity-80 hover:opacity-100 transition-opacity">
+                美.Sarah
+            </a>
+            <nav>
+                <ul
+                    class="flex flex-wrap justify-center gap-8 md:gap-12 text-[10px] md:text-xs tracking-[0.2em] font-serif uppercase text-gray-500">
+                    <li><a href="#trouble" class="hover:text-toneAccent transition">Trouble</a></li>
+                    <li><a href="#about" class="hover:text-toneAccent transition">About</a></li>
+                    <li><a href="#features" class="hover:text-toneAccent transition">Features</a></li>
+                    <li><a href="#menu" class="hover:text-toneAccent transition">Menu</a></li>
+                    <li><a href="#access" class="hover:text-toneAccent transition">Access</a></li>
+                </ul>
+            </nav>
+            <p class="text-[10px] opacity-50 tracking-widest uppercase mt-0">&copy; 2026 Bi.Sarah.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom CTA for SP -->
+    <div class="bottom-cta lg:hidden fixed bottom-0 left-0 w-full flex z-[1000] shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
+        <a href="https://line.me/R/ti/p/@bi.sarah-20260202" target="_blank"
+            class="flex-1 text-center py-4 text-xs tracking-widest text-white bg-toneMain font-serif">LINE</a>
+        <a href="https://beauty.hotpepper.jp/slnH000817978/" target="_blank"
+            class="flex-1 text-center py-4 text-xs tracking-widest text-white bg-toneAccent font-serif">WEB
+            RESERVATION</a>
+    </div>
+
+    <!-- Page Top Button -->
+    <a href="#" id="page-top"
+        class="fixed right-4 bottom-24 lg:right-6 lg:bottom-6 w-12 h-12 bg-toneAccent text-white flex justify-center items-center rounded-full opacity-0 invisible transition-all duration-300 z-[1500] hover:bg-opacity-80 shadow-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" width="20" height="20">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[2000] bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="close-lightbox"
+            class="absolute top-6 right-6 text-white text-4xl font-light hover:text-gray-300 transition">&times;</button>
+        <img id="lightbox-img" src="" alt="Gallery Image Zoom" class="max-w-[90%] max-h-[90%] object-contain">
+    </div>
+
+    <!-- Scripts -->
+    <script src="Js/main.js"></script>
+</body>
+
+</html>

@@ -779,8 +779,19 @@
 
         <!-- Message -->
         <section id="message" class="relative w-full bg-[#E8DDCC] flex flex-col lg:block overflow-hidden py-0">
+            <!-- Video (Top on SP, Background on PC) -->
+            <div
+                class="relative w-full aspect-video lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[60%] z-0 order-1 lg:order-none">
+                <!-- SP Top Gradient Blend -->
+                <div
+                    class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#E8DDCC] via-[#E8DDCC]/70 to-transparent lg:hidden z-10 pointer-events-none">
+                </div>
+
+                <video src="img/MessageRight.mp4" autoplay loop muted playsinline
+                    class="w-full h-full object-cover"></video>
+            </div>
             <!-- Content -->
-            <div class="relative z-20 flex items-center h-full w-full order-1 lg:order-none">
+            <div class="relative z-20 flex items-center h-full w-full order-2 lg:order-none">
                 <div
                     class="flex flex-col justify-center items-start py-10 px-6 md:py-12 md:px-12 lg:py-16 lg:pl-24 lg:pr-12 text-[#35483A] w-full lg:w-[40%] bg-[#E8DDCC] lg:bg-transparent reveal reveal-left">
                     <span
@@ -813,18 +824,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Video (Bottom on SP, Background on PC) -->
-            <div
-                class="relative w-full aspect-video lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[60%] z-0 order-2 lg:order-none">
-                <!-- SP Top Gradient Blend -->
-                <div
-                    class="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-[#E8DDCC] via-[#E8DDCC]/70 to-transparent lg:hidden z-10 pointer-events-none">
-                </div>
-
-                <video src="img/MessageRight.mp4" autoplay loop muted playsinline
-                    class="w-full h-full object-cover"></video>
             </div>
 
             <!-- Soft Gradient Overlay (PC Only) -->

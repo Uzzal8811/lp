@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
        CSS VARIABLES & BASE STYLES
        ========================================= */
 :root {
@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-/* html { scroll-behavior: smooth; } Windows遲峨〒縺ｮ繝槭え繧ｹ繝帙う繝ｼ繝ｫ縺ｮ縲悟ｼ輔▲縺九°繧翫阪・蜴溷屏縺ｫ縺ｪ繧九◆繧∫┌蜉ｹ蛹・*/
+/* html { scroll-behavior: smooth; } Windows等でのマウスホイールの「引っかかり」の原因になるため無効化 */
 body,
 p,
 .voice-text,
@@ -425,12 +425,12 @@ nav .container {
   overflow: hidden;
 }
 
-/* 蟾ｦ蛛ｴ 1/3縺ｮ閭梧勹 (Removed for Food LP) */
+/* 左側 1/3の背景 (Removed for Food LP) */
 .hero-left-bg {
   display: none;
 }
 
-/* 繧ｹ繝ｩ繧､繝繝ｼ繧ｨ繝ｪ繧｢ (蜿ｳ蛛ｴ) - Shape applied here */
+/* スライダーエリア (右側) - Shape applied here */
 .hero-slider {
   position: absolute;
   top: 0;
@@ -444,7 +444,7 @@ nav .container {
   clip-path: url(#hero-shape-pc);
 }
 
-/* 繧ｹ繝ｩ繧､繝繝ｼ縺ｮ繧ｰ繝ｩ繝・・繧ｷ繝ｧ繝ｳ */
+/* スライダーのグラデーション */
 .hero-slider-overlay {
   position: absolute;
   inset: 0;
@@ -452,7 +452,7 @@ nav .container {
   z-index: 2;
 }
 
-/* 繧ｹ繝ｩ繧､繝臥判蜒・*/
+/* スライド画像 */
 .slide {
   position: absolute;
   inset: 0;
@@ -1848,7 +1848,7 @@ nav .container {
 }
 
 .voice-card::before {
-  content: '窶・;
+  content: '“';
   position: absolute;
   top: 10px;
   left: 20px;
@@ -2727,7 +2727,7 @@ footer {
 @media(max-width: 768px) {
   .back-to-top {
     bottom: 90px;
-    /* SP逕ｨ繝輔Ο繝ｼ繝・ぅ繝ｳ繧ｰCTA・・0px・峨・荳翫↓驟咲ｽｮ */
+    /* SP用フローティングCTA（70px）の上に配置 */
     right: 20px;
     width: 45px;
     height: 45px;
@@ -3542,5 +3542,4 @@ footer {
   .float-card-2 { right: -10%; }
   .float-card-1 { left: -10%; }
 }
-
 

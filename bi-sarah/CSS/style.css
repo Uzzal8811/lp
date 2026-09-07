@@ -820,3 +820,11 @@ html, body { overflow-x: hidden; width: 100%; position: relative; max-width: 100
 .animate-neon {
     animation: neonPulse 2.5s infinite alternate ease-in-out, floatBadge 4s infinite ease-in-out;
 }
+
+/* SP padding overrides */
+@media (max-width: 767px) {
+    .p-10, .p-12, .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

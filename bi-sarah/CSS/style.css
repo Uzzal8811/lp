@@ -668,7 +668,7 @@ header.scrolled {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -10;
+    z-index: 0;
     pointer-events: none;
 }
 

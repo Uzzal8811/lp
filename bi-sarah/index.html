@@ -73,10 +73,14 @@
 </head>
 
 <body class="text-toneMain select-none w-full">
-    <!-- Safari Fixed Background Bug Fix -->
-    <div class="fixed-bg"></div>
+    <!-- Safari Fixed Background Bug Fix (Image Tag Method) -->
+    <div class="fixed-bg-wrapper">
+        <img src="img/Spbodybg.jpg" class="bg-img bg-sp" alt="">
+        <img src="img/bodybg.jpg" class="bg-img bg-pc" alt="">
+        <div class="bg-overlay"></div>
+    </div>
 
-    <div id="page-wrapper" class="overflow-hidden w-full max-w-full relative z-[1]">
+    <div id="page-wrapper" class="overflow-hidden w-full max-w-full relative z-[10]">
 
         <!-- ══════════════════════════════
          HEADER

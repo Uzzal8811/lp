@@ -73,54 +73,79 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="hero-split">
-    <!-- 右側の背景画像 -->
-    <div class="hero-slider">
-      <div class="slide slide-1" style="background-image: url('img/fv1.jpg');"></div>
-      <div class="slide slide-2" style="background-image: url('img/fv2.jpg');"></div>
-      <div class="slide slide-3" style="background-image: url('img/fv3.jpg');"></div>
+  <!-- HERO (Redesigned matching reference) -->
+  <section id="hero" class="hero-redesign">
+    <!-- Background SVG Waves -->
+    <div class="hero-bg-shapes">
+      <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,800 C400,600 600,850 1440,400 L1440,0 L0,0 Z" fill="#FCF8F4"/>
+        <path d="M0,800 C400,750 800,600 1440,750 L1440,800 L0,800 Z" fill="#F4EBE0"/>
+        <path d="M1440,0 C1000,100 800,-50 400,200 C200,300 0,100 0,100 L0,0 Z" fill="#FAF5ED"/>
+      </svg>
+      <!-- Lotus Icon Outline in bg -->
+      <svg class="bg-lotus" viewBox="0 0 24 24" fill="none" stroke="rgba(227,156,122,0.1)" stroke-width="0.5">
+        <path d="M12 22C12 22 4 16 4 10C4 6 7 3 12 3C17 3 20 6 20 10C20 16 12 22 12 22Z"/>
+        <path d="M12 22C12 22 8 18 8 13C8 9 10 7 12 7C14 7 16 9 16 13C16 18 12 22 12 22Z"/>
+      </svg>
     </div>
 
-    <!-- SVG Clip Path Defines the Shape of the Image Container -->
-    <svg width="0" height="0" style="position: absolute;">
-      <defs>
-        <!-- Desktop Shape (Left edge wavy) -->
-        <clipPath id="hero-shape-pc" clipPathUnits="objectBoundingBox">
-          <path d="M0.15,1 C0,0.6 0.25,0.3 0.1,0 L1,0 L1,1 Z"></path>
-        </clipPath>
-        <!-- Mobile Shape (Bottom edge wavy) -->
-        <clipPath id="hero-shape-sp" clipPathUnits="objectBoundingBox">
-          <path d="M0,0 L1,0 L1,0.85 C0.7,1 0.3,0.8 0,0.9 Z"></path>
-        </clipPath>
-      </defs>
-    </svg>
-
-    <!-- 前面のコンテンツ -->
-    <div class="hero-content-split">
-      <div class="hero-text-box-split">
-        <div class="hero-tag-row">
-          <span class="tag-pill">少人数制</span>
-          <span class="tag-text">「50代からの私を整える寺ヨガ」</span>
+    <div class="container hero-container-redesign">
+      <div class="hero-content-redesign">
+        <div class="hero-sub-redesign">
+          <span class="dot-accent"></span>
+          「50代からの私を整える寺ヨガ」
         </div>
-        <h1 class="hero-catchcopy-split" style="font-size: 32px;">
-          お寺で心と身体を整える<br>50代からのヨガ＆ピラティス
+        <h1 class="hero-title-redesign">
+          お寺で心と身体を整える<br>
+          <span class="highlight-line">50代からのヨガ＆ピラティス</span>
         </h1>
-        <p class="hero-subtext-split">
+        <p class="hero-desc-redesign">
           自分を大切にする時間を始めたいあなたへ
         </p>
-        <div style="margin-top: 24px; animation: slideInLeft 1.2s 0.5s forwards; opacity: 0; display:flex; gap:8px; flex-wrap:wrap;">
-          <span class="tag-pill"
-            style="font-size: 14px; padding: 10px 24px; display: inline-block; background-color: var(--primary);">安心の少人数制</span>
-          <span class="tag-pill"
-            style="font-size: 14px; padding: 10px 24px; display: inline-block; background-color: var(--primary);">医師指導の知識</span>
-          <span class="tag-pill"
-            style="font-size: 14px; padding: 10px 24px; display: inline-block; background-color: var(--primary);">駐車場も完備</span>
+        
+        <div class="hero-actions-redesign">
+          <a href="https://lin.ee/5pricD9" target="_blank" class="hero-btn-redesign">
+            LINEで予約する
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual-redesign">
+        <!-- Circle Image Container -->
+        <div class="hero-image-circle">
+          <div class="hero-slider-modern">
+             <div class="slide slide-1" style="background-image: url('img/fv1.jpg');"></div>
+             <div class="slide slide-2" style="background-image: url('img/fv2.jpg');"></div>
+             <div class="slide slide-3" style="background-image: url('img/fv3.jpg');"></div>
+          </div>
+        </div>
+        
+        <!-- Floating cards -->
+        <div class="float-card float-card-1">
+          <div class="float-icon float-icon-orange"><i data-lucide="users"></i></div>
+          <div class="float-text">
+            <strong>安心の少人数制</strong>
+            <span>きめ細やかなサポート</span>
+          </div>
+        </div>
+        
+        <div class="float-card float-card-2">
+          <div class="float-icon float-icon-yellow"><i data-lucide="stethoscope"></i></div>
+          <div class="float-text">
+            <strong>医師指導の知識</strong>
+            <span>安全でわかりやすい</span>
+          </div>
+        </div>
+
+        <div class="float-card float-card-3">
+          <div class="float-icon float-icon-green"><i data-lucide="car"></i></div>
+          <div class="float-text">
+            <strong>駐車場も完備</strong>
+            <span>通いやすい環境</span>
+          </div>
         </div>
       </div>
     </div>
-
-
   </section>
 
   <!-- MARQUEE -->

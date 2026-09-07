@@ -794,3 +794,25 @@ html, body { overflow-x: hidden; width: 100%; position: relative; max-width: 100
 .animate-float-delay-2 {
     animation: floatBadge 3.5s ease-in-out 2.4s infinite;
 }
+
+/* --------------------------------------
+ * Neon Pulse Animation
+ * -------------------------------------- */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(124, 146, 117, 0.2), 0 0 10px rgba(124, 146, 117, 0.1);
+        border-color: rgba(124, 146, 117, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(124, 146, 117, 0.8), 0 0 20px rgba(124, 146, 117, 0.6), 0 0 30px rgba(124, 146, 117, 0.4);
+        border-color: rgba(124, 146, 117, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(124, 146, 117, 0.2), 0 0 10px rgba(124, 146, 117, 0.1);
+        border-color: rgba(124, 146, 117, 0.4);
+    }
+}
+
+.animate-neon {
+    animation: neonPulse 2.5s infinite alternate ease-in-out, floatBadge 4s infinite ease-in-out;
+}

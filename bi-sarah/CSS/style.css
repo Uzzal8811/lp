@@ -14,7 +14,6 @@ html, body {
     color: var(--color-main);
     background-color: var(--color-bg-white);
     font-size: 14px;
-    overflow-x: hidden;
     width: 100%;
     -webkit-font-smoothing: antialiased;
 }
@@ -680,7 +679,7 @@ header.scrolled {
 
 
 /* Fix horizontal scroll */
-html, body { overflow-x: hidden; width: 100%; position: relative; max-width: 100vw; }
+html, body { width: 100%; max-width: 100vw; }
 
 
 /* Dynamic Glass Animation */

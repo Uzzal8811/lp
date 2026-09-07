@@ -72,7 +72,10 @@
 
 </head>
 
-<body class="bg-texture text-toneMain select-none overflow-x-hidden relative w-full">
+<body class="text-toneMain select-none overflow-x-hidden relative w-full">
+    <!-- Safari Fixed Background Bug Fix -->
+    <div class="fixed-bg"></div>
+
     <div id="page-wrapper" class="overflow-hidden w-full max-w-full relative">
 
         <!-- ══════════════════════════════
@@ -972,7 +975,8 @@
         </footer>
 
         <!-- Fixed Bottom CTA for SP -->
-        <div class="bottom-cta lg:hidden fixed bottom-0 left-0 w-full flex z-[1000] shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
+        <div
+            class="bottom-cta lg:hidden fixed bottom-0 left-0 w-full flex z-[1000] shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
             <a href="jump01.html" target="_blank"
                 class="flex-1 text-center py-4 text-xs tracking-widest text-white bg-toneAccent font-serif border-r border-white/30">LINE</a>
             <a href="jump02.html" target="_blank"

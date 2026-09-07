@@ -656,13 +656,8 @@ header.scrolled {
 }
 
 
-/* Background Texture */
-.bg-texture {
-    position: relative;
-    z-index: 0;
-}
-.bg-texture::before {
-    content: '';
+/* Background Texture for iOS Safari fix */
+.fixed-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -673,12 +668,12 @@ header.scrolled {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: -10;
     pointer-events: none;
 }
 
 @media (min-width: 768px) {
-    .bg-texture::before {
+    .fixed-bg {
         background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../img/bodybg.jpg');
     }
 }

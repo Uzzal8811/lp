@@ -636,13 +636,34 @@ header.scrolled {
 /* Gallery Swiper */
 .gallery-swiper .swiper-wrapper {
     transition-timing-function: linear !important;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+.gallery-swiper .swiper-slide {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 
 /* Background Texture */
 .bg-texture {
-    background-color: #FAF8F2; /* Clean beige background */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    position: relative;
+    z-index: 0;
+}
+.bg-texture::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../img/bodybg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
 }
 
 

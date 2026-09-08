@@ -2810,18 +2810,16 @@ footer {
   width: 100%;
   padding: 100px 20px;
   text-align: center;
-  background-image: linear-gradient(rgba(242, 205, 208, 0.9), rgba(242, 205, 208, 0.95)), url('../img/cta-striky-bg.jpg');
+  background-image: linear-gradient(rgba(248, 246, 240, 0.75), rgba(248, 246, 240, 0.85)), url('../img/cta-striky-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @media (max-width: 1024px) {
-  body {
-    background-attachment: scroll;
-  }
-
   .elegant-cta-wrapper {
     background-attachment: scroll;
   }

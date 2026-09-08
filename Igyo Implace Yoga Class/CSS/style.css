@@ -3444,8 +3444,11 @@ footer {
 
 .hero-content-redesign {
   flex: 1;
-  max-width: 550px;
+  max-width: 590px;
   animation: slideInLeft 1s ease forwards;
+  padding: 20px;
+  position: relative;
+  left: -20px;
 }
 
 .hero-sub-redesign {
@@ -3606,6 +3609,8 @@ footer {
   .hero-content-redesign {
     text-align: center;
     max-width: 100%;
+    padding: 0;
+    left: 0;
   }
   .hero-image-circle {
     width: 320px;

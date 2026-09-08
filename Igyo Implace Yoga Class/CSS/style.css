@@ -3399,7 +3399,7 @@ footer {
   min-height: 700px;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(rgba(248, 246, 240, 0.4), rgba(248, 246, 240, 0.7)), url('../img/fvbg.jpg');
+  background-image: linear-gradient(rgba(248, 246, 240, 0.75), rgba(248, 246, 240, 0.92)), url('../img/fvbg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3457,6 +3457,7 @@ footer {
   font-size: 15px;
   margin-bottom: 20px;
   gap: 8px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .dot-accent {
@@ -3474,6 +3475,7 @@ footer {
   color: #3F5145;
   line-height: 1.3;
   margin-bottom: 24px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 .hero-desc-redesign {
@@ -3481,6 +3483,7 @@ footer {
   color: #3F5145;
   line-height: 1.8;
   margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .hero-btn-redesign {

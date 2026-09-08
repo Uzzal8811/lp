@@ -3616,23 +3616,26 @@ footer {
     height: 320px;
   }
   .float-card {
-    padding: 10px 14px;
-    gap: 10px;
-    transform: scale(0.85);
+    padding: 8px 12px;
+    gap: 8px;
+    transform: scale(0.7);
   }
-  .float-card-1 { left: -5%; bottom: 15%; }
-  .float-card-2 { right: -5%; top: 5%; }
-  .float-card-3 { right: 0%; bottom: -12%; }
+  .float-card-1 { left: -15%; bottom: 20%; }
+  .float-card-2 { right: -15%; top: 0%; }
+  .float-card-3 { right: -5%; bottom: -20%; }
 }
 
 @media(max-width: 480px) {
   .hero-image-circle {
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     margin-top: 20px;
   }
-  .float-card-2 { right: -15%; top: 0%; }
-  .float-card-1 { left: -15%; bottom: 20%; }
-  .float-card-3 { right: -5%; bottom: -15%; }
+  .float-card {
+    transform: scale(0.65);
+  }
+  .float-card-2 { right: -25%; top: -5%; }
+  .float-card-1 { left: -25%; bottom: 25%; }
+  .float-card-3 { right: -10%; bottom: -25%; }
 }
 

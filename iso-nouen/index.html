@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>磯のうえん | 伊勢崎市の高品質きゅうり農家</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+    <meta name="description"
+        content="群馬県伊勢崎市で年間5万ケースのキュウリを出荷するエコファーマー認定農園「磯のうえん」。高品質で安定した生産体制で、飲食店や販売店様に新鮮なキュウリをお届けします。">
+
+    <!-- Favicon & App Icon -->
+    <link rel="icon" href="https://iso-nouen.happytry.org//img/favicon.png">
+    <link rel="apple-touch-icon" href="https://iso-nouen.happytry.org//img/favicon.png">
+
+    <!-- OGP -->
+    <meta property="og:site_name" content="磯のうえん">
+    <meta property="og:title" content="磯のうえん | 伊勢崎市の高品質きゅうり農家">
+    <meta property="og:description" content="群馬県伊勢崎市で年間5万ケースのキュウリを出荷するエコファーマー認定農園「磯のうえん」。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://iso-nouen.happytry.org/img/eyecatch.png">
+    <meta property="og:url" content="">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://iso-nouen.happytry.org/img/eyecatch.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#009800',
+                        secondary: '#e9ee95',
+                        accent: '#fa5936',
+                        black: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body class="text-black font-sans bg-slate-50 antialiased" oncontextmenu="return false;">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-[10px] md:px-8 h-full flex items-center justify-between">
+            <h1 class="h-full py-3 flex items-center">
+                <a href="#" class="block text-2xl md:text-3xl font-black text-primary tracking-widest"
+                    style="font-family: 'M PLUS U', sans-serif; font-weight: 900;">
+                    磯のうえん
+                </a>
+            </h1>
+
+            <!-- PC Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#service" class="hover:text-primary transition">Service</a>
+                <a href="#menu" class="hover:text-primary transition">Inquiry</a>
+                <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                <a href="#message" class="hover:text-primary transition">Message</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- PC CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:05057953512"
+                    class="flex items-center gap-2 bg-secondary text-primary px-5 py-2.5 rounded-full font-bold hover:bg-secondary/80 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    050-5795-3512
+                </a>
+
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 z-50 relative">
+                <span class="w-6 h-0.5 bg-black transition-all duration-300 mb-1.5 line1"></span>
+                <span class="w-6 h-0.5 bg-black transition-all duration-300 mb-1.5 line2"></span>
+                <span class="w-6 h-0.5 bg-black transition-all duration-300 line3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP Fullscreen Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-[100] hidden flex-col items-center justify-start pt-20 pb-10 px-[10px] overflow-y-auto">
+        <button id="close-menu-btn"
+            class="absolute top-6 right-4 p-2 text-black flex items-center gap-1 font-bold z-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            閉じる
+        </button>
+        <div class="flex flex-col gap-6 text-center text-lg w-full max-w-xs mx-auto my-auto">
+            <a href="#about" class="mobile-link py-3 border-b border-gray-200">About</a>
+            <a href="#service" class="mobile-link py-3 border-b border-gray-200">Service</a>
+            <a href="#menu" class="mobile-link py-3 border-b border-gray-200">Inquiry</a>
+            <a href="#gallery" class="mobile-link py-3 border-b border-gray-200">Gallery</a>
+            <a href="#message" class="mobile-link py-3 border-b border-gray-200">Message</a>
+            <a href="#contact" class="mobile-link py-3 border-b border-gray-200">Contact</a>
+
+            <div class="mt-8 flex flex-col gap-4">
+                <a href="tel:05057953512"
+                    class="flex justify-center items-center gap-2 bg-secondary text-primary py-4 rounded-full font-bold w-full text-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    050-5795-3512
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- FV -->
+        <section class="fv-section relative w-full h-[calc(100vh-80px)] overflow-hidden">
+            <div class="swiper fv-swiper w-full h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full h-full">
+                        <picture class="w-full h-full block">
+                            <source media="(max-width: 767px)" srcset="./img/fv1.jpg">
+                            <img src="./img/fv1.jpg" alt="磯のうえん風景1"
+                                class="w-full h-full object-cover block align-bottom">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide w-full h-full">
+                        <picture class="w-full h-full block">
+                            <source media="(max-width: 767px)" srcset="./img/fv2.jpg">
+                            <img src="./img/fv2.jpg" alt="磯のうえん風景2"
+                                class="w-full h-full object-cover block align-bottom">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide w-full h-full">
+                        <picture class="w-full h-full block">
+                            <source media="(max-width: 767px)" srcset="./img/fv3.jpg">
+                            <img src="./img/fv3.jpg" alt="磯のうえん風景3"
+                                class="w-full h-full object-cover block align-bottom">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SP Only FV Text Design -->
+            <div
+                class="absolute inset-0 z-20 flex md:hidden flex-col items-center justify-end pointer-events-none px-4 pb-4">
+                <div class="fv-text-box flex flex-col w-full max-w-[320px]">
+                    <!-- Main Title -->
+                    <div
+                        class="bg-white/60 backdrop-blur-md border-[3px] border-black p-5 shadow-[5px_5px_0_0_rgba(0,0,0,1)] rounded-2xl text-center mb-6 relative">
+                        <div
+                            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-secondary border-2 border-black px-4 py-0.5 rounded-full whitespace-nowrap shadow-sm">
+                            <span class="text-accent font-black text-xs tracking-widest">伊勢崎の施設園芸農園</span>
+                        </div>
+                        <h2 class="text-xl font-black text-primary leading-snug tracking-widest mt-2">
+                            年間<span class="text-3xl text-accent mx-0.5">5万</span>ケースの<br>
+                            キュウリを出荷！
+                        </h2>
+                    </div>
+
+                    <!-- 3 Points Stacked -->
+                    <div class="flex flex-col gap-3">
+                        <div class="wave-float" style="animation-delay: 0s;">
+                            <div
+                                class="bg-secondary border-2 border-black py-2.5 px-4 shadow-[3px_3px_0_0_rgba(0,0,0,1)] rounded-full text-center transform rotate-1">
+                                <span class="text-black font-bold text-sm tracking-widest">鮮度を保つ朝収穫</span>
+                            </div>
+                        </div>
+                        <div class="wave-float" style="animation-delay: -0.66s;">
+                            <div
+                                class="bg-primary border-2 border-black py-2.5 px-4 shadow-[3px_3px_0_0_rgba(0,0,0,1)] rounded-full text-center transform -rotate-1">
+                                <span class="text-white font-bold text-sm tracking-widest">ハウス5棟で栽培</span>
+                            </div>
+                        </div>
+                        <div class="wave-float" style="animation-delay: -1.33s;">
+                            <div
+                                class="bg-accent border-2 border-black py-2.5 px-4 shadow-[3px_3px_0_0_rgba(0,0,0,1)] rounded-full text-center transform rotate-1">
+                                <span class="text-white font-bold text-sm tracking-widest">安心のエコ認定</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PC Only FV Text Design -->
+            <div
+                class="absolute inset-0 z-20 hidden md:flex flex-col items-end justify-end pointer-events-none px-4 md:px-8 pb-8 md:pb-10">
+                <div class="fv-text-box inline-flex flex-col items-stretch w-full md:w-fit max-w-full">
+
+                    <!-- Main Title (Pop Style) -->
+                    <div
+                        class="bg-white/60 backdrop-blur-md border-4 border-black p-6 md:p-10 shadow-[6px_6px_0_0_rgba(0,0,0,1)] md:shadow-[10px_10px_0_0_rgba(0,0,0,1)] rounded-3xl transform -rotate-1 mb-6 md:mb-8 w-full text-left">
+                        <p
+                            class="text-accent font-black text-sm md:text-lg mb-2 tracking-widest bg-secondary/30 inline-block px-4 py-1 rounded-full">
+                            伊勢崎の施設園芸農園</p>
+                        <h2
+                            class="text-2xl md:text-5xl lg:text-6xl font-black text-primary leading-snug md:leading-tight tracking-widest">
+                            年間<span class="text-accent text-[1.2em] mx-1">5万</span>ケースの<br>
+                            キュウリを出荷！
+                        </h2>
+                    </div>
+
+                    <!-- 3 Points (Pop Tags) -->
+                    <div class="flex flex-col md:flex-row gap-3 md:gap-4 w-full justify-between items-stretch">
+                        <div class="flex-1 wave-float" style="animation-delay: 0s;">
+                            <div
+                                class="bg-secondary border-[3px] border-black py-3 px-4 shadow-[4px_4px_0_0_rgba(0,0,0,1)] rounded-full transform rotate-2 hover:scale-105 transition-transform h-full flex justify-center items-center">
+                                <span
+                                    class="text-black font-bold text-sm md:text-base lg:text-lg tracking-widest whitespace-nowrap">鮮度を保つ朝収穫</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 wave-float" style="animation-delay: -0.66s;">
+                            <div
+                                class="bg-primary border-[3px] border-black py-3 px-4 shadow-[4px_4px_0_0_rgba(0,0,0,1)] rounded-full transform -rotate-1 hover:scale-105 transition-transform h-full flex justify-center items-center">
+                                <span
+                                    class="text-white font-bold text-sm md:text-base lg:text-lg tracking-widest whitespace-nowrap">ハウス5棟で栽培</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 wave-float" style="animation-delay: -1.33s;">
+                            <div
+                                class="bg-accent border-[3px] border-black py-3 px-4 shadow-[4px_4px_0_0_rgba(0,0,0,1)] rounded-full transform rotate-1 hover:scale-105 transition-transform h-full flex justify-center items-center">
+                                <span
+                                    class="text-white font-bold text-sm md:text-base lg:text-lg tracking-widest whitespace-nowrap">安心のエコ認定</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- CTA 1 -->
+        <section class="w-full bg-primary py-8 md:py-12">
+            <div
+                class="max-w-5xl mx-auto px-[10px] md:px-8 flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="tel:05057953512"
+                    class="w-full md:w-auto min-w-[300px] flex justify-center items-center gap-2 bg-secondary text-primary py-4 px-8 rounded-none font-bold text-xl hover:-translate-y-1 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    050-5795-3512
+                </a>
+            </div>
+        </section>
+
+        <!-- TV (Third View) -->
+        <section class="bg-secondary/10 section-padding">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 fade-in">
+
+
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-[45%] order-1 md:order-1 relative p-4">
+                        <div class="absolute inset-0 bg-secondary/40 transform translate-x-4 translate-y-4 -z-10"></div>
+                        <img src="./img/tv.jpg" alt="きゅうり" class="w-full h-auto object-cover relative z-10">
+                    </div>
+                    <div class="w-full md:w-[55%] order-2 md:order-2">
+                        <h4 class="font-bold mb-6 text-center md:text-left text-primary text-lg md:text-xl">
+                            安定した品質と出荷量を備えた<br class="md:hidden">キュウリをお探しですか？</h4>
+                        <ul class="space-y-3 mb-8 bg-white p-6 md:p-8 border-l-4 border-accent shadow-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-accent font-bold mt-1">✓</span>
+                                <span>高品質なキュウリを安定的に確保したい方</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-accent font-bold mt-1">✓</span>
+                                <span>朝収穫にこだわった鮮度の良い商材を求める方</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-accent font-bold mt-1">✓</span>
+                                <span>エコファーマー認定農園との取引を希望する方</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-accent font-bold mt-1">✓</span>
+                                <span>伊勢崎産の施設栽培キュウリを扱いたい方</span>
+                            </li>
+                        </ul>
+                        <p class="text-center md:text-left">高い生産性と品質を両立させた当農園のキュウリが、<br>安定した仕入れと付加価値向上を実現します。<br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="bg-primary/5 section-padding">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 fade-in">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-primary mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-accent pb-2">About</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center relative">
+                    <!-- SP: order-1 for text, order-2 for img -->
+                    <div
+                        class="w-full md:w-[55%] bg-white p-8 md:p-12 md:-mr-12 md:mt-16 z-10 relative shadow-sm border-t-4 border-primary order-2 md:order-1">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-6 leading-tight">
+                            伊勢崎市で総面積100aの<br>ハウス栽培を展開</h3>
+                        <p class="mb-4">伊勢崎市にてハウス5棟を運営し、年間50,000ケース（1ケース5kg換算）におよぶキュウリを出荷しております。<br></p>
+                        <p class="mb-4">高度な肥培管理と「つる下げ栽培」を導入することで、長期にわたる安定した生産体制を構築。<br></p>
+                        <p>地域でも希少な規模と実績を持つ、キュウリ栽培に特化した専門農園です。<br></p>
+                    </div>
+                    <div class="w-full md:w-[55%] ml-auto z-0 order-1 md:order-2 p-4 md:p-0">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary/20 transform -translate-x-4 -translate-y-4 -z-10">
+                            </div>
+                            <img src="./img/about.jpg" alt="磯のうえんについて"
+                                class="w-full h-[300px] md:h-[500px] object-cover relative z-10">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="bg-secondary/20 section-padding">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8">
+                <div class="text-center mb-10 md:mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-primary mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-accent pb-2">Service</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col gap-16 md:gap-24">
+                    <!-- Point 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <span
+                                class="inline-block bg-accent text-white px-4 py-1 text-sm font-bold tracking-wider mb-4">POINT
+                                1</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">品質重視の朝収穫<br><span
+                                    class="text-primary text-2xl md:text-3xl mt-2 block">エグミを抑えるため<br>徹底した早朝の収穫作業</span>
+                            </h3>
+                            <p>収穫はキュウリのエグミが出にくい朝の時間帯に限定して行っています。<br>このこだわりが市場からも高い品質評価を得る理由です。<br>瑞々しく、本来の食感と味を維持した状態でお届けすることに注力しています。<br>
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2 relative p-4">
+                            <div class="absolute inset-0 bg-accent/20 transform translate-x-4 translate-y-4 -z-10">
+                            </div>
+                            <img src="./img/point1.jpg" alt="朝収穫"
+                                class="w-full h-64 md:h-80 object-cover relative z-10">
+                        </div>
+                    </div>
+
+                    <!-- Radar Chart for Point 1 -->
+                    <div
+                        class="w-full mt-8 mb-16 bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100 fade-in">
+                        <h4 class="text-center font-bold text-xl md:text-2xl text-primary mb-6">朝収穫と夕方収穫の品質比較</h4>
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+                            <!-- Left: Radar Chart -->
+                            <div class="w-full md:w-[45%]">
+                                <div class="relative w-full aspect-square">
+                                    <canvas id="harvestRadarChart"></canvas>
+                                </div>
+                            </div>
+                            <!-- Right: Reasons Table -->
+                            <div class="w-full md:w-[55%]">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-sm text-left border-collapse min-w-[400px]">
+                                        <thead>
+                                            <tr class="bg-primary/10 border-b-2 border-primary text-primary">
+                                                <th class="p-3 font-bold whitespace-nowrap">評価項目</th>
+                                                <th class="p-3 font-bold whitespace-nowrap text-center">朝</th>
+                                                <th class="p-3 font-bold whitespace-nowrap text-center">夕</th>
+                                                <th class="p-3 font-bold">理由・違いの背景</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-200">
+                                            <tr class="hover:bg-gray-50 transition">
+                                                <td class="p-3 font-bold whitespace-nowrap">えぐみの少なさ</td>
+                                                <td class="p-3 text-center font-bold text-lg text-primary">5</td>
+                                                <td class="p-3 text-center font-bold text-lg text-accent">2</td>
+                                                <td class="p-3 text-gray-700 leading-snug">夕方は日中の乾燥・熱ストレスでえぐみが濃縮されやすい。
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50 transition">
+                                                <td class="p-3 font-bold whitespace-nowrap">みずみずしさ</td>
+                                                <td class="p-3 text-center font-bold text-lg text-primary">5</td>
+                                                <td class="p-3 text-center font-bold text-lg text-accent">3</td>
+                                                <td class="p-3 text-gray-700 leading-snug">日中に行われた蒸散により、夕方は果実の水分が奪われている。
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50 transition">
+                                                <td class="p-3 font-bold whitespace-nowrap">シャキシャキ感</td>
+                                                <td class="p-3 text-center font-bold text-lg text-primary">5</td>
+                                                <td class="p-3 text-center font-bold text-lg text-accent">3</td>
+                                                <td class="p-3 text-gray-700 leading-snug">水分量に比例。朝は細胞に水が満ちており、歯ごたえが良い。
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50 transition">
+                                                <td class="p-3 font-bold whitespace-nowrap">甘みの感じやすさ</td>
+                                                <td class="p-3 text-center font-bold text-lg text-primary">4</td>
+                                                <td class="p-3 text-center font-bold text-lg text-accent">3</td>
+                                                <td class="p-3 text-gray-700 leading-snug">
+                                                    夜間に養分が転流して蓄積するため。夕方は水分が減り味が濃く感じることもあるが、雑味も多い。</td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50 transition">
+                                                <td class="p-3 font-bold whitespace-nowrap">日持ちの良さ</td>
+                                                <td class="p-3 text-center font-bold text-lg text-primary">5</td>
+                                                <td class="p-3 text-center font-bold text-lg text-accent">3</td>
+                                                <td class="p-3 text-gray-700 leading-snug">
+                                                    朝は品温（野菜自体の温度）が低いため、収穫後の鮮度低下が遅い。</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-2">
+                            <span
+                                class="inline-block bg-accent text-white px-4 py-1 text-sm font-bold tracking-wider mb-4">POINT
+                                2</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">安定した生産基盤<br><span
+                                    class="text-primary text-2xl md:text-3xl mt-2 block">年間5万ケースの出荷を<br>支える大規模な施設園芸</span>
+                            </h3>
+                            <p>総栽培面積100a、反収約40t超という高い生産性を実現しています。<br>安定した生産体制を築いているため、年間を通じて計画的な出荷が可能です。<br>屋号の入った専用パッケージにて、品質を保証してお届けします。<br>
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-1 relative p-4">
+                            <div class="absolute inset-0 bg-primary/20 transform -translate-x-4 translate-y-4 -z-10">
+                            </div>
+                            <img src="./img/point2.jpg" alt="安定した生産基盤"
+                                class="w-full h-64 md:h-80 object-cover relative z-10">
+                        </div>
+                    </div>
+
+                    <!-- Annual Harvest Bar Chart -->
+                    <div
+                        class="w-full mt-8 mb-16 bg-white p-6 md:p-10 rounded-lg shadow-sm border border-gray-100 fade-in">
+                        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                            <div class="w-full md:w-1/2">
+                                <h4 class="text-center md:text-left font-bold text-xl md:text-2xl text-primary mb-6">
+                                    年間<span class="text-accent text-3xl md:text-4xl mx-1 font-black">50,000</span>ケースの
+                                    <br class="block md:hidden"> 安定出荷
+                                </h4>
+                                <div class="relative w-full aspect-[4/3]">
+                                    <canvas id="annualHarvestChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                                <p
+                                    class="text-xl md:text-2xl font-bold leading-relaxed text-black border-l-4 border-primary pl-4 py-2">
+                                    肥培管理と<br class="md:hidden"> つる下げ栽培の導入により、<br>安定した生産体制を構築
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <span
+                                class="inline-block bg-accent text-white px-4 py-1 text-sm font-bold tracking-wider mb-4">POINT
+                                3</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">安心の栽培管理<br><span
+                                    class="text-primary text-2xl md:text-3xl mt-2 block">エコファーマー認定を<br>受けた安全なキュウリ栽培</span>
+                            </h3>
+                            <p>当農園は安心安全な「エコファーマー」としての認定を受けています。<br>環境に配慮し、適切な管理のもとで育てられたキュウリは、消費者の皆様へ安心をお届けしたい販売店様にも最適です。<br>
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2 relative p-4">
+                            <div class="absolute inset-0 bg-accent/20 transform translate-x-4 translate-y-4 -z-10">
+                            </div>
+                            <img src="./img/point3.jpg" alt="エコファーマー認定"
+                                class="w-full h-64 md:h-80 object-cover relative z-10">
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Bar Chart for Point 3 -->
+                    <div
+                        class="w-full mt-8 mb-16 bg-white p-6 md:p-10 rounded-lg shadow-sm border border-gray-100 fade-in">
+                        <h4 class="text-center font-bold text-xl md:text-2xl text-primary mb-6">「エシカル消費」や <br
+                                class="block md:hidden"> 「環境保全型農業」への関心度
+                        </h4>
+                        <div class="relative w-full aspect-[4/3] md:aspect-[2/1]">
+                            <canvas id="ecoFarmerChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed">
+                            ※データは消費者庁や農林水産省などが過去に実施した「エシカル消費」や「環境保全型農業」に関する意識調査の一般的な傾向をベースにした、モデル数値です。
+                        </p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-2">
+                            <span
+                                class="inline-block bg-accent text-white px-4 py-1 text-sm font-bold tracking-wider mb-4">POINT
+                                4</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">高度な農園技術<br><span
+                                    class="text-primary text-2xl md:text-3xl mt-2 block">反収40トン超を達成する<br>高度な肥培管理と栽培技術</span>
+                            </h3>
+                            <p>ハウスでの「つる下げ栽培」により、長期的な収穫と高い反収を実現しています。<br>1人乗り電気自動車の導入など、効率的な圃場移動と管理体制を整えることで、常に安定した品質の維持に努めています。<br>
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-1 relative p-4">
+                            <div class="absolute inset-0 bg-primary/20 transform -translate-x-4 translate-y-4 -z-10">
+                            </div>
+                            <img src="./img/point4.jpg" alt="高度な農園技術"
+                                class="w-full h-64 md:h-80 object-cover relative z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 2 -->
+        <section class="w-full bg-primary py-8 md:py-12">
+            <div
+                class="max-w-5xl mx-auto px-[10px] md:px-8 flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="tel:05057953512"
+                    class="w-full md:w-auto min-w-[300px] flex justify-center items-center gap-2 bg-secondary text-primary py-4 px-8 rounded-none font-bold text-xl hover:-translate-y-1 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    050-5795-3512
+                </a>
+            </div>
+        </section>
+
+        <!-- Menu / Recommend (Parallax) -->
+        <section id="menu" class="parallax-section relative section-padding"
+            style="background-image: url('./img/fv2.jpg');">
+            <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 relative z-10 fade-in">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-white mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-secondary pb-2">Inquiry</span>
+                    </h2>
+                </div>
+
+                <div
+                    class="bg-white/95 p-6 md:p-12 flex flex-col md:flex-row gap-8 items-center max-w-5xl mx-auto border-t-8 border-primary">
+                    <div class="w-full md:w-[45%] relative p-2">
+                        <div class="absolute inset-0 bg-secondary/60 transform translate-x-3 -translate-y-3 -z-10">
+                        </div>
+                        <img src="./img/recmenu.jpg" alt="出荷状況" class="w-full h-auto object-cover relative z-10">
+                    </div>
+                    <div class="w-full md:w-[55%] flex flex-col">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4 border-b border-gray-200 pb-4">
+                            現在の出荷状況や<br class="md:hidden">お取引に関して</h3>
+
+                        <div class="flex flex-col gap-6 mt-4">
+                            <p>当農園のキュウリや出荷体制について、詳細な情報を個別にご案内いたします。<br>見学も受け付けておりますので、まずはお気軽にご連絡ください。<br></p>
+
+                            <div class="mt-4 text-right">
+                                <a href="tel:05057953512"
+                                    class="inline-flex items-center gap-2 text-2xl md:text-3xl font-bold text-accent hover:opacity-80 transition">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg>
+                                    050-5795-3512
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="bg-white section-padding overflow-hidden">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 fade-in">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-primary mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-accent pb-2">Gallery</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Marquee Auto-scrolling Gallery -->
+            <div class="marquee-container pb-8">
+                <!-- Two tracks for infinite seamless scrolling -->
+                <div class="marquee-track">
+                    <img src="./img/gallery1.jpg" alt="ギャラリー画像1" class="gallery-img" data-src="./img/gallery1.jpg">
+                    <img src="./img/gallery2.jpg" alt="ギャラリー画像2" class="gallery-img" data-src="./img/gallery2.jpg">
+                    <img src="./img/gallery3.jpg" alt="ギャラリー画像3" class="gallery-img" data-src="./img/gallery3.jpg">
+                    <img src="./img/gallery4.jpg" alt="ギャラリー画像4" class="gallery-img" data-src="./img/gallery4.jpg">
+                    <img src="./img/gallery5.jpg" alt="ギャラリー画像5" class="gallery-img" data-src="./img/gallery5.jpg">
+                    <img src="./img/gallery7.jpg" alt="ギャラリー画像7" class="gallery-img" data-src="./img/gallery7.jpg">
+                    <img src="./img/gallery8.jpg" alt="ギャラリー画像8" class="gallery-img" data-src="./img/gallery8.jpg">
+                    <img src="./img/gallery9.jpg" alt="ギャラリー画像9" class="gallery-img" data-src="./img/gallery9.jpg">
+                    <img src="./img/gallery10.jpg" alt="ギャラリー画像10" class="gallery-img" data-src="./img/gallery10.jpg">
+
+
+
+
+                    <!-- Duplicate -->
+                    <img src="./img/gallery1.jpg" alt="ギャラリー画像1" class="gallery-img" data-src="./img/gallery1.jpg">
+                    <img src="./img/gallery2.jpg" alt="ギャラリー画像2" class="gallery-img" data-src="./img/gallery2.jpg">
+                    <img src="./img/gallery3.jpg" alt="ギャラリー画像3" class="gallery-img" data-src="./img/gallery3.jpg">
+                    <img src="./img/gallery4.jpg" alt="ギャラリー画像4" class="gallery-img" data-src="./img/gallery4.jpg">
+                    <img src="./img/gallery5.jpg" alt="ギャラリー画像5" class="gallery-img" data-src="./img/gallery5.jpg">
+                    <img src="./img/gallery.jpg" alt="ギャラリー画像7" class="gallery-img" data-src="./img/gallery7.jpg">
+                    <img src="./img/gallery8.jpg" alt="ギャラリー画像8" class="gallery-img" data-src="./img/gallery8.jpg">
+                    <img src="./img/gallery9.jpg" alt="ギャラリー画像9" class="gallery-img" data-src="./img/gallery9.jpg">
+                    <img src="./img/gallery10.jpg" alt="ギャラリー画像10" class="gallery-img" data-src="./img/gallery10.jpg">
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox"
+                class="fixed inset-0 bg-black/95 z-[100] hidden flex-col justify-center items-center p-4">
+                <!-- Close Button -->
+                <button id="lightbox-close"
+                    class="absolute top-6 right-6 text-white hover:text-gray-300 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="relative w-full max-w-5xl flex items-center justify-center">
+                    <!-- Prev Button -->
+                    <button id="lightbox-prev"
+                        class="absolute left-0 md:-left-16 text-white hover:text-gray-300 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center z-10 transition">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <img id="lightbox-img" src="" alt="拡大画像"
+                        class="max-h-[85vh] max-w-full object-contain mx-auto shadow-2xl">
+
+                    <!-- Next Button -->
+                    <button id="lightbox-next"
+                        class="absolute right-0 md:-right-16 text-white hover:text-gray-300 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center z-10 transition">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="bg-primary/10 section-padding">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 fade-in">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-primary mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-accent pb-2">Message</span>
+                    </h2>
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row items-center gap-10 md:gap-16 bg-white border border-gray-100 p-6 md:p-12 shadow-sm relative">
+                    <div class="w-full md:w-1/2 order-2 md:order-1">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-6 leading-tight">
+                            1ランク上の品質と供給力で<br>食の現場に貢献します</h3>
+                        <p class="mb-4">私たちは「稼げる農業」を掲げ、徹底したデータ管理と栽培技術を磨いてきました。<br></p>
+                        <p class="mb-4">年間5万ケースという実績は、私たちの努力と品質の証です。<br></p>
+                        <p>確かな技術で育てたキュウリを通じ、皆様のビジネスの発展をサポートいたします。<br></p>
+                    </div>
+                    <div class="w-full md:w-1/2 order-1 md:order-2 relative p-2">
+                        <div class="absolute inset-0 bg-secondary/50 transform translate-x-4 -translate-y-4 -z-10">
+                        </div>
+                        <img src="./img/message.jpg" alt="代表メッセージ"
+                            class="w-full h-auto object-cover border-b-4 border-r-4 border-primary relative z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Access -->
+        <section id="contact" class="bg-gray-100 section-padding">
+            <div class="max-w-7xl mx-auto px-[10px] md:px-8 fade-in">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-widest text-primary mb-2 inline-block">
+                        <span class="inline-block border-b-4 border-accent pb-2">Contact / Access</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 md:gap-16">
+                    <!-- Text Order 2 for SP -->
+                    <div
+                        class="w-full md:w-[45%] bg-white p-8 md:p-10 shadow-sm flex flex-col justify-center order-2 md:order-1">
+                        <div class="mb-6 border-l-4 border-primary pl-4 flex items-center">
+                            <span class="text-2xl font-black text-primary tracking-widest"
+                                style="font-family: 'M PLUS U', sans-serif; font-weight: 900;">磯のうえん</span>
+                        </div>
+                        <div class="space-y-4">
+                            <dl class="flex flex-col md:flex-row gap-1 md:gap-4 border-b border-gray-100 pb-3">
+                                <dt class="font-bold min-w-[5rem] text-primary">住所</dt>
+                                <dd>〒379-2233<br>群馬県伊勢崎市平井町1244-1</dd>
+                            </dl>
+                            <dl class="flex flex-col md:flex-row gap-1 md:gap-4 border-b border-gray-100 pb-3">
+                                <dt class="font-bold min-w-[5rem] text-primary">電話番号</dt>
+                                <dd><a href="tel:05057953512"
+                                        class="hover:text-primary transition font-bold text-lg">050-5795-3512</a></dd>
+                            </dl>
+                            <dl class="flex flex-col md:flex-row gap-1 md:gap-4 border-b border-gray-100 pb-3">
+                                <dt class="font-bold min-w-[5rem] text-primary">営業時間</dt>
+                                <dd>6:00 〜 18:00</dd>
+                            </dl>
+                            <dl class="flex flex-col md:flex-row gap-1 md:gap-4 border-b border-gray-100 pb-3">
+                                <dt class="font-bold min-w-[5rem] text-primary">定休日</dt>
+                                <dd>不定休</dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <!-- Img Order 2 for SP -->
+                    <div
+                        class="w-[calc(100%+20px)] -ml-[10px] md:w-[55%] md:ml-0 flex h-[350px] md:h-auto md:min-h-[450px] order-2 md:order-2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.5345864553324!2d139.2615499!3d36.3235916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ee741086df5cb%3A0xd9282213aea61bae!2z56Ov44Gu44GG44GI44KT!5e0!3m2!1sja!2sjp!4v1788852197122!5m2!1sja!2sjp"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-[10px] md:px-8">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/20 pb-10 mb-10">
+                <div class="py-2">
+                    <span class="text-2xl font-black text-white tracking-widest"
+                        style="font-family: 'M PLUS U', sans-serif; font-weight: 900;">磯のうえん</span>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 font-bold text-sm">
+                    <a href="#about" class="hover:text-primary transition">About</a>
+                    <a href="#service" class="hover:text-primary transition">Service</a>
+                    <a href="#menu" class="hover:text-primary transition">Inquiry</a>
+                    <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                    <a href="#message" class="hover:text-primary transition">Message</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                </nav>
+            </div>
+
+            <div class="text-center text-gray-400">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> 磯のうえん All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom CTA (SP Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-40 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] flex">
+        <a href="tel:05057953512"
+            class="w-full bg-secondary text-primary py-3 flex flex-col justify-center items-center font-bold">
+            <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+            </svg>
+            電話
+        </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="to-top-btn"
+        class="fixed bottom-[80px] md:bottom-8 right-4 md:right-8 bg-black/60 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex justify-center items-center z-30 opacity-0 invisible transition-all duration-300 hover:bg-primary">
+        <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Radar Chart Initialization Function
+            const initRadarChart = () => {
+                const radarCtx = document.getElementById('harvestRadarChart');
+                if (radarCtx && !radarCtx.dataset.initialized) {
+                    radarCtx.dataset.initialized = 'true';
+                    setTimeout(() => {
+                        new Chart(radarCtx, {
+                            type: 'radar',
+                            data: {
+                                labels: ['えぐみの少なさ', 'みずみずしさ', 'シャキシャキ感', '甘みの感じやすさ', '日持ちの良さ'],
+                                datasets: [{
+                                    label: '朝収穫（午前中早め）',
+                                    data: [5, 5, 5, 4, 5],
+                                    backgroundColor: 'rgba(0, 152, 0, 0.2)', // primary color
+                                    borderColor: 'rgba(0, 152, 0, 1)',
+                                    pointBackgroundColor: 'rgba(0, 152, 0, 1)',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: 'rgba(0, 152, 0, 1)',
+                                    borderWidth: 2
+                                }, {
+                                    label: '夕方収穫（日没前）',
+                                    data: [2, 3, 3, 3, 3],
+                                    backgroundColor: 'rgba(250, 89, 54, 0.2)', // accent color
+                                    borderColor: 'rgba(250, 89, 54, 1)',
+                                    pointBackgroundColor: 'rgba(250, 89, 54, 1)',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: 'rgba(250, 89, 54, 1)',
+                                    borderWidth: 2
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 2000,
+                                    easing: 'easeOutQuart'
+                                },
+                                scales: {
+                                    r: {
+                                        angleLines: {
+                                            display: true,
+                                            color: 'rgba(0, 0, 0, 0.1)'
+                                        },
+                                        grid: {
+                                            color: 'rgba(0, 0, 0, 0.1)'
+                                        },
+                                        pointLabels: {
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif',
+                                                size: 11,
+                                                weight: 'bold'
+                                            },
+                                            color: '#333'
+                                        },
+                                        suggestedMin: 0,
+                                        suggestedMax: 5,
+                                        ticks: {
+                                            stepSize: 1,
+                                            backdropColor: 'transparent'
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        position: 'bottom',
+                                        labels: {
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif',
+                                                size: 13
+                                            },
+                                            padding: 20
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }, 600); // CSSのfade-inが終わるのを待ってから描画
+                }
+            };
+
+            // Bar Chart Initialization Function
+            const initBarChart = () => {
+                const barCtx = document.getElementById('annualHarvestChart');
+                if (barCtx && !barCtx.dataset.initialized) {
+                    barCtx.dataset.initialized = 'true';
+                    setTimeout(() => {
+                        new Chart(barCtx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                                datasets: [{
+                                    label: '月間収穫量 (ケース)',
+                                    data: [4000, 5000, 6000, 7000, 8000, 8500, 0, 0, 6000, 3500, 1000, 1000], // Total = 50000
+                                    backgroundColor: 'rgba(0, 152, 0, 0.7)', // primary color
+                                    borderColor: 'rgba(0, 152, 0, 1)',
+                                    borderWidth: 1,
+                                    borderRadius: 4,
+                                    hoverBackgroundColor: 'rgba(0, 152, 0, 0.9)'
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 1500,
+                                    easing: 'easeOutQuart',
+                                    delay: (context) => {
+                                        let delay = 0;
+                                        if (context.type === 'data' && context.mode === 'default') {
+                                            delay = context.dataIndex * 100; // 棒グラフを左から順に表示
+                                        }
+                                        return delay;
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        suggestedMax: 9000,
+                                        title: {
+                                            display: true,
+                                            text: 'ケース (1ケース5kg)',
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif'
+                                            }
+                                        }
+                                    },
+                                    x: {
+                                        ticks: {
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif'
+                                            }
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    tooltip: {
+                                        titleFont: {
+                                            family: '"Noto Sans JP", sans-serif'
+                                        },
+                                        bodyFont: {
+                                            family: '"Noto Sans JP", sans-serif'
+                                        },
+                                        callbacks: {
+                                            label: function (context) {
+                                                let label = context.dataset.label || '';
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.parsed.y !== null) {
+                                                    label += context.parsed.y + ' ケース';
+                                                }
+                                                return label;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }, 600); // CSSのfade-inが終わるのを待ってから描画
+                }
+            };
+
+            // Horizontal Bar Chart Initialization Function (Eco Farmer)
+            const initEcoFarmerChart = () => {
+                const ecoCtx = document.getElementById('ecoFarmerChart');
+                if (ecoCtx && !ecoCtx.dataset.initialized) {
+                    ecoCtx.dataset.initialized = 'true';
+                    setTimeout(() => {
+                        new Chart(ecoCtx, {
+                            type: 'bar',
+                            data: {
+                                labels: [
+                                    ['同じ価格なら', '優先して買いたい'],
+                                    ['少し(数%)高くても', '買いたい'],
+                                    ['1割程度高くても', '買いたい'],
+                                    ['価格や環境配慮に', '関わらず買わない']
+                                ],
+                                datasets: [{
+                                    label: '回答割合 (%)',
+                                    data: [40, 35, 15, 10],
+                                    backgroundColor: [
+                                        'rgba(0, 152, 0, 0.7)',
+                                        'rgba(0, 152, 0, 0.5)',
+                                        'rgba(0, 152, 0, 0.3)',
+                                        'rgba(200, 200, 200, 0.7)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(0, 152, 0, 1)',
+                                        'rgba(0, 152, 0, 1)',
+                                        'rgba(0, 152, 0, 1)',
+                                        'rgba(150, 150, 150, 1)'
+                                    ],
+                                    borderWidth: 1,
+                                    borderRadius: 4
+                                }]
+                            },
+                            options: {
+                                indexAxis: 'y', // Horizontal Bar Chart
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 1500,
+                                    easing: 'easeOutQuart',
+                                    delay: (context) => {
+                                        let delay = 0;
+                                        if (context.type === 'data' && context.mode === 'default') {
+                                            delay = context.dataIndex * 200; // 上から順に表示
+                                        }
+                                        return delay;
+                                    }
+                                },
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        suggestedMax: 50,
+                                        ticks: {
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif'
+                                            },
+                                            callback: function (value) {
+                                                return value + '%';
+                                            }
+                                        }
+                                    },
+                                    y: {
+                                        ticks: {
+                                            font: {
+                                                family: '"Noto Sans JP", sans-serif'
+                                            }
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    tooltip: {
+                                        titleFont: {
+                                            family: '"Noto Sans JP", sans-serif'
+                                        },
+                                        bodyFont: {
+                                            family: '"Noto Sans JP", sans-serif'
+                                        },
+                                        callbacks: {
+                                            label: function (context) {
+                                                let label = context.dataset.label || '';
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.parsed.x !== null) {
+                                                    label += context.parsed.x + '%';
+                                                }
+                                                return label;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }, 600); // CSSのfade-inが終わるのを待ってから描画
+                }
+            };
+
+            // Use Intersection Observer to trigger charts when they come into view
+            const chartObserverOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the chart is visible
+            };
+
+            const chartObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.id === 'harvestRadarChart') {
+                            initRadarChart();
+                        } else if (entry.target.id === 'annualHarvestChart') {
+                            initBarChart();
+                        } else if (entry.target.id === 'ecoFarmerChart') {
+                            initEcoFarmerChart();
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, chartObserverOptions);
+
+            const radarCanvas = document.getElementById('harvestRadarChart');
+            if (radarCanvas) chartObserver.observe(radarCanvas);
+
+            const barCanvas = document.getElementById('annualHarvestChart');
+            if (barCanvas) chartObserver.observe(barCanvas);
+
+            const ecoCanvas = document.getElementById('ecoFarmerChart');
+            if (ecoCanvas) chartObserver.observe(ecoCanvas);
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="./Js/script.js"></script>
+</body>
+
+</html>

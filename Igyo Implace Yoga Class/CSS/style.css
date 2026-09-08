@@ -36,11 +36,6 @@ body {
 body {
   font-family: 'Shippori Mincho', serif;
   background-color: var(--bg-main);
-  background-image: url('../img/BodyBg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: var(--text-main);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
@@ -50,10 +45,24 @@ body {
   user-select: none;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/BodyBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
-  body {
+  body::before {
     background-image: url('../img/BodyBgSp.jpg');
-    background-attachment: fixed;
   }
 }
 

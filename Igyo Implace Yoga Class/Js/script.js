@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const pricingBgJs = document.querySelector('.pricing-bg-js');
       const pricingSec = document.querySelector('#pricing');
       if (pricingBgJs && pricingSec) {
+        let isTicking = false;
         const updateParallax = () => {
           const rect = pricingSec.getBoundingClientRect();
           const windowHeight = window.innerHeight;
@@ -79,10 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollDistance = windowHeight - rect.top;
             pricingBgJs.style.transform = `translate3d(0, ${scrollDistance * 0.4}px, 0)`;
           }
+          isTicking = false;
         };
+        
         // 初期化時とスクロール時に実行
         updateParallax();
-        window.addEventListener('scroll', updateParallax, { passive: true });
+        window.addEventListener('scroll', () => {
+          if (!isTicking) {
+            window.requestAnimationFrame(updateParallax);
+            isTicking = true;
+          }
+        }, { passive: true });
       }
 
       // Pricing Swiper Initialization
@@ -105,11 +113,18 @@ document.addEventListener('DOMContentLoaded', () => {
       // Back to Top Button Logic
       const backToTopBtn = document.getElementById('back-to-top');
       if (backToTopBtn) {
+        let isTopTicking = false;
         window.addEventListener('scroll', () => {
-          if (window.scrollY > 300) {
-            backToTopBtn.classList.add('is-visible');
-          } else {
-            backToTopBtn.classList.remove('is-visible');
+          if (!isTopTicking) {
+            window.requestAnimationFrame(() => {
+              if (window.scrollY > 300) {
+                backToTopBtn.classList.add('is-visible');
+              } else {
+                backToTopBtn.classList.remove('is-visible');
+              }
+              isTopTicking = false;
+            });
+            isTopTicking = true;
           }
         }, { passive: true });
 

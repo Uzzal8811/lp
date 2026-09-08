@@ -1989,6 +1989,9 @@ nav .container {
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
   will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .gallery-video-item:hover {
@@ -2043,7 +2046,10 @@ nav .container {
   border: 1px solid rgba(125, 150, 116, 0.1);
   background: var(--bg-white);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.3s ease;
-  will-change: transform, box-shadow;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .gallery-item:hover {

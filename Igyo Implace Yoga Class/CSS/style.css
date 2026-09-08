@@ -3399,7 +3399,10 @@ footer {
   min-height: 700px;
   display: flex;
   align-items: center;
-  background-color: #F8F6F0;
+  background-image: linear-gradient(rgba(248, 246, 240, 0.4), rgba(248, 246, 240, 0.7)), url('../img/fvbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: var(--nav-height);
   overflow: hidden;
 }

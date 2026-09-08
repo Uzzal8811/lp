@@ -36,6 +36,11 @@ body {
 body {
   font-family: 'Shippori Mincho', serif;
   background-color: var(--bg-main);
+  background-image: url('../img/BodyBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-main);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
@@ -43,6 +48,13 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('../img/BodyBgSp.jpg');
+    background-attachment: fixed;
+  }
 }
 
 img {
@@ -1207,7 +1219,9 @@ nav .container {
        ABOUT
        ========================================= */
 #about {
-  background: var(--bg-white);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .about-split {
@@ -1514,7 +1528,9 @@ nav .container {
   position: relative;
   padding: 120px 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #f9f5f0 0%, #f0e6d8 100%);
+  background: rgba(249, 245, 240, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 #pricing::before {
@@ -2199,8 +2215,10 @@ nav .container {
        ========================================= */
 #message {
   position: relative;
-  background: var(--bg-white);
-  padding: 100px 0;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 120px 0;
 }
 
 @media (max-width: 1024px) {

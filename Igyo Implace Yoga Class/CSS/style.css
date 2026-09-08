@@ -1134,8 +1134,8 @@ nav .container {
 .recommend-visuals::before {
   content: '';
   position: absolute;
-  width: 90%;
-  height: 90%;
+  width: 105%;
+  height: 105%;
   background: linear-gradient(135deg, rgba(227, 205, 207, 0.6), rgba(210, 224, 206, 0.6));
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   z-index: 0;
@@ -1150,7 +1150,7 @@ nav .container {
 
 .rec-img-large {
   position: relative;
-  width: 85%;
+  width: 100%;
   aspect-ratio: 4 / 3;
   margin: 0 auto;
   border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;

@@ -3633,7 +3633,7 @@ footer {
     margin-bottom: 20px;
   }
   .float-card {
-    transform: scale(0.55);
+    transform: scale(0.45);
   }
   .float-card-2 { right: -30%; top: 5%; }
   .float-card-1 { left: -30%; bottom: 30%; }

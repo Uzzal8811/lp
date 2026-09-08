@@ -3629,13 +3629,14 @@ footer {
   .hero-image-circle {
     width: 250px;
     height: 250px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
   .float-card {
-    transform: scale(0.65);
+    transform: scale(0.55);
   }
-  .float-card-2 { right: -25%; top: -5%; }
-  .float-card-1 { left: -25%; bottom: 25%; }
-  .float-card-3 { right: -10%; bottom: -25%; }
+  .float-card-2 { right: -30%; top: 5%; }
+  .float-card-1 { left: -30%; bottom: 30%; }
+  .float-card-3 { right: -15%; bottom: -10%; }
 }
 

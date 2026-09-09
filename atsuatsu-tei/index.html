@@ -152,7 +152,7 @@
         <!-- Mobile Image -->
         <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden animate-fade-in relative z-0">
         <!-- Desktop Video -->
-        <video class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
+        <video id="fv-video" class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4" autoplay muted playsinline></video>
     </section>
 
 
@@ -1019,6 +1019,20 @@
                 lightbox.classList.add('hidden');
             }, 300);
         }
+
+        // ビデオのループ時のカクつき（dakka）を防止するための処理
+        document.addEventListener('DOMContentLoaded', function() {
+            const fvVideo = document.getElementById('fv-video');
+            if (fvVideo) {
+                fvVideo.addEventListener('timeupdate', function() {
+                    // ビデオの終了0.15秒前に再生位置を先頭に戻すことで、一瞬止まるカクつきを防ぐ
+                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.15) {
+                        fvVideo.currentTime = 0;
+                        fvVideo.play();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 

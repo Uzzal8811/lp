@@ -28,6 +28,10 @@ p,
   font-size: 16px;
 }
 
+p {
+  color: #333333 !important;
+}
+
 html,
 body {
   overflow-x: clip;
@@ -3872,10 +3876,5 @@ footer {
     width: 28px !important;
     height: 28px !important;
   }
-}
-
-/* Make all paragraph text #333333 */
-p {
-  color: #333333 !important;
 }
 

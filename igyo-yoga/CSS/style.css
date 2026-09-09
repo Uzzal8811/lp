@@ -3243,7 +3243,7 @@ footer {
 
 .service-card-img-wrap-new {
   width: 55%;
-  height: 400px;
+  height: 480px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
@@ -3274,6 +3274,10 @@ footer {
   border: 1px solid rgba(242, 205, 208, 0.5);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .service-card-new:hover .service-card-body-new {
@@ -3388,6 +3392,7 @@ footer {
     width: 95%;
     margin: -30px auto 0 !important;
     padding: 30px 10px;
+    min-height: 420px;
   }
 
   .service-card-header-new {

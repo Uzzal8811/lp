@@ -43,11 +43,13 @@
             theme: {
                 extend: {
                     colors: {
-                        brandRed: '#9B2C22',
-                        brandBrown: '#6B4226',
-                        brandYellow: '#D9B44A',
-                        brandLight: '#F7F1E6',
-                        brandDark: '#221111',
+                        brandRed: '#A62B1F', /* Deep Japanese red */
+                        brandBrown: '#5A3825', /* Dark wood brown */
+                        brandYellow: '#D4A62A', /* Traditional mustard gold */
+                        brandOrange: '#E68A2E', /* Warm orange light */
+                        brandLight: '#F3E8D0', /* Warm Japanese parchment beige */
+                        brandLighter: '#FFF8E8', /* Light cream paper texture */
+                        brandDark: '#2B2118', /* Ink black */
                         brandGray: '#4a4a4a',
                     },
                     fontFamily: {
@@ -110,12 +112,9 @@
 
     <!-- FV (First View) -->
     <section class="relative w-full h-[80vh] md:h-[600px] flex items-center justify-center overflow-hidden">
-        <!-- Background Composite -->
-        <div class="absolute inset-0 z-0 flex flex-col md:flex-row">
-            <!-- Left Image: Storefront -->
-            <div class="w-full md:w-1/2 h-1/2 md:h-full bg-[url('img/1.jpg')] bg-cover bg-center"></div>
-            <!-- Right Image: Okonomiyaki -->
-            <div class="w-full md:w-1/2 h-1/2 md:h-full bg-[url('img/11.jpg')] bg-cover bg-center"></div>
+        <!-- Background Video -->
+        <div class="absolute inset-0 z-0">
+            <video class="w-full h-full object-cover" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
         </div>
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 z-10"></div>
@@ -171,7 +170,7 @@
     </section>
 
     <!-- SPECIALITY SECTION -->
-    <section id="speciality" class="py-16 md:py-24 bg-[#EFE9DD]">
+    <section id="speciality" class="py-16 md:py-24 bg-brandLighter border-t border-brandBrown/10">
         <div class="container mx-auto px-4 max-w-6xl">
             <!-- Section Title -->
             <div class="text-center mb-12 flex flex-col items-center justify-center">
@@ -290,7 +289,7 @@
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="py-16 bg-white border-t border-brandBrown/10">
+    <section id="gallery" class="py-16 bg-brandLighter border-t border-brandBrown/10">
         <div class="container mx-auto px-4 max-w-6xl mb-8">
             <div class="flex items-end gap-4">
                 <h2 class="text-xl md:text-2xl font-bold font-serif tracking-widest text-brandDark">店内ギャラリー</h2>
@@ -370,7 +369,7 @@
         </div>
     </section>
 
-    <footer class="bg-brandDark py-6 text-center text-white/50 text-xs tracking-widest">
+    <footer class="bg-brandBrown py-6 text-center text-white/50 text-xs tracking-widest">
         &copy; あつあつ亭 All Rights Reserved.
     </footer>
 

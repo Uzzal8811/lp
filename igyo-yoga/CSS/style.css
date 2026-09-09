@@ -3874,3 +3874,8 @@ footer {
   }
 }
 
+/* Make all paragraph text #333333 */
+p {
+  color: #333333 !important;
+}
+

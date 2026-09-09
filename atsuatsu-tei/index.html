@@ -111,10 +111,10 @@
     </header>
 
     <!-- FV (First View) -->
-    <section class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
         <!-- Background Video -->
-        <div class="absolute inset-0 z-0 flex items-center justify-center">
-            <video class="w-full h-full object-contain" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
+        <div class="absolute inset-0 z-0">
+            <video class="w-full h-full object-cover" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
         </div>
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 z-10"></div>

@@ -982,7 +982,7 @@ nav .container {
   font-family: 'Shippori Mincho', serif;
   font-size: 20px;
   font-weight: 500;
-  color: var(--secondary);
+  color: var(--primary);
   margin-bottom: 24px;
   line-height: 1.8;
   letter-spacing: 0.05em;
@@ -2262,7 +2262,7 @@ nav .container {
 }
 
 #message .content-lead {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 #message .profile-title {

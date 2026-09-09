@@ -73,6 +73,14 @@
             font-family: 'Yuji Syuku', serif;
         }
         html { scroll-behavior: smooth; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
     </style>
 </head>
 
@@ -272,13 +280,23 @@
                 <span class="text-brandBrown text-xs font-bold tracking-widest uppercase mb-1">GALLERY</span>
             </div>
         </div>
-        <!-- 5 images row -->
-        <div class="flex flex-wrap md:flex-nowrap w-full">
-            <div class="w-1/2 md:w-1/5 aspect-[4/3] overflow-hidden"><img src="img/1.jpg" alt="Gallery" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-            <div class="w-1/2 md:w-1/5 aspect-[4/3] overflow-hidden"><img src="img/10.jpg" alt="Gallery" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-            <div class="w-1/2 md:w-1/5 aspect-[4/3] overflow-hidden"><img src="img/2.jpg" alt="Gallery" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-            <div class="w-1/2 md:w-1/5 aspect-[4/3] overflow-hidden"><img src="img/12.jpg" alt="Gallery" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-            <div class="w-full md:w-1/5 aspect-[4/3] overflow-hidden"><img src="img/13.jpg" alt="Gallery" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+        <!-- Infinite Marquee -->
+        <div class="w-full overflow-hidden flex">
+            <div class="flex animate-marquee min-w-max pointer-events-none">
+                <!-- Original Set -->
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/1.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/10.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/2.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/12.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/13.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                
+                <!-- Duplicate Set -->
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/1.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/10.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/2.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/12.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img src="img/13.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
+            </div>
         </div>
     </section>
 

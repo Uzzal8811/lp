@@ -123,7 +123,7 @@ br.sp-br {
 
 @media(max-width: 768px) {
   br.sp-br {
-    display: inline;
+    display: block;
   }
 }
 
@@ -3957,10 +3957,14 @@ footer {
 
   /* SP Nav Header Fix */
   @media (max-width: 768px) {
+    .sec-heading {
+      word-break: normal;
+    }
+
     .hero-btn-redesign {
       padding: 16px 25px;
     }
-    
+
     nav .container {
       padding-left: 15px !important;
       padding-right: 15px !important;

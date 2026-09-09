@@ -3233,7 +3233,7 @@ footer {
 
 .service-card-new {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   position: relative;
 }
 
@@ -3243,7 +3243,6 @@ footer {
 
 .service-card-img-wrap-new {
   width: 55%;
-  height: 480px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);

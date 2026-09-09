@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    font-size: 16px; 
+}
+
+/* Margin-bottom for sections to remove cramped feeling */
+/* SP: 80px, PC: 120px+ */
+.section-margin {
+    margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+    .section-margin {
+        margin-bottom: 60px;
+    }
+}
+
+img {
+    vertical-align: bottom;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+/* Parallax adjustment for iOS/sp if needed */
+.bg-fixed-ios {
+    background-attachment: fixed;
+}
+
+/* Header transition override if any specific needs */
+.header-transparent {
+    background-color: transparent !important;
+    color: white !important;
+    border-color: transparent !important;
+    backdrop-filter: none !important;
+}
+.header-transparent.scrolled {
+    background-color: rgba(253,253,253,0.95) !important;
+    color: #1a1a1a !important;
+    border-bottom-color: rgba(230,230,230,0.5) !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+/* Scroll down animation */
+@keyframes scrolldown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+.animate-scrolldown {
+    animation: scrolldown 2s ease-in-out infinite;
+}
+
+@keyframes scale-up {
+    0% { transform: scale(1.05); opacity: 0; filter: blur(10px); }
+    100% { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+.scale-up-anim {
+    animation: scale-up 2.5s cubic-bezier(0.2, 0, 0.2, 1) forwards;
+}
+
+/* Vertical Text Support */
+.writing-vertical {
+    writing-mode: vertical-rl;
+}
+
+/* Lightbox customization */
+.lum-lightbox {
+    z-index: 9999;
+}
+
+/* Glassmorphism Headings */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-left: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Red Neon Border for Section Headers */
+h2.glass-panel {
+    border: 2px solid #9e2a2b !important;
+    box-shadow: 0 0 15px rgba(158, 42, 43, 0.4), 
+                0 0 30px rgba(158, 42, 43, 0.2), 
+                inset 0 0 15px rgba(158, 42, 43, 0.1) !important;
+}
+
+/* Global Neon Red Borders for Sections */
+.border-themeRed {
+    border-color: #9e2a2b !important;
+    box-shadow: 0 0 12px rgba(158, 42, 43, 0.3);
+}
+
+/* Section Header Background Shape (Red Slope) */
+.section-entry-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: #9e2a2b; /* 100% Opaque Brand Red */
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .section-entry-shape {
+        height: 250px;
+    }
+}
+
+/* White Neon Border for Red Backgrounds */
+h2.glass-panel-on-red {
+    background: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 2px solid white !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 
+                0 0 30px rgba(255, 255, 255, 0.2), 
+                inset 0 0 15px rgba(255, 255, 255, 0.1) !important;
+}
+
+.glass-panel-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Button Left-to-Right Hover Effect */
+.cta-hover-effect {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.cta-hover-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.cta-hover-effect:hover::before {
+    left: 0;
+}
+
+.cta-hover-red::before {
+    background-color: #9e2a2b !important;
+}
+
+.cta-hover-black::before {
+    background-color: #1a1a1a !important;
+}
+
+/* Lightbox Professional Fixes */
+.lum-lightbox {
+    z-index: 10000 !important;
+    background: rgba(0,0,0,0.92) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.lum-lightbox-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+.lum-lightbox-inner img {
+    max-width: 90vw !important;
+    max-height: 80vh !important;
+    object-fit: contain !important;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5) !important;
+    border: none !important;
+}
+/* Center the loader if any */
+.lum-lightbox-loader {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+/* Hide extra close buttons or glyphs, use our caption 'x' only */
+.lum-close-button {
+    font-size: 32px !important;
+    color: #fff !important;
+    top: 30px !important;
+    right: 30px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10100 !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+.lum-close-button::before, .lum-close-button::after {
+    display: none !important;
+    content: "" !important;
+}
+/* Navigation Buttons Styling */
+.lum-next-button, .lum-previous-button {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 40px !important;
+    color: #fff !important;
+    background: rgba(255,255,255,0.05) !important;
+    border: none !important;
+    width: 60px !important;
+    height: 100px !important;
+    cursor: pointer !important;
+    transition: background 0.3s !important;
+    z-index: 10100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.lum-next-button:hover, .lum-previous-button:hover {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+/* Infinite Seamless Marquee Gallery */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+}
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 40s linear infinite;
+}
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-container:hover .marquee-content {
+    animation-play-state: running !important;
+}
+.marquee-item { padding: 0; }
+@media (min-width: 768px) { .marquee-item { padding: 0; } }
+.marquee-item img { display: block; pointer-events: auto; }
+
+/* Lightbox Professional Fixes - Force Absolute Centering */
+.lum-lightbox {
+    z-index: 10000 !important;
+    background: rgba(0,0,0,0.94) !important;
+    display: none !important; /* Managed by .lum-open */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.lum-lightbox.lum-open {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.lum-lightbox-inner {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+.lum-lightbox-inner img {
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8) !important;
+    display: block !important;
+    margin: auto !important;
+}
+/* Center the loader */
+.lum-lightbox-loader {
+    display: none !important;
+}
+/* Professional X Close Button - No more double icon */
+.lum-close-button {
+    position: absolute !important;
+    top: 40px !important;
+    right: 40px !important;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 10100 !important;
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+.lum-close-button:hover {
+    background: rgba(255,255,255,0.3) !important;
+    transform: rotate(90deg) !important;
+}
+/* Ensure the close button looks like X perfectly */
+.lum-close-button::before, .lum-close-button::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 20px !important;
+    height: 2px !important;
+    background: #fff !important;
+    display: block !important;
+}
+.lum-close-button::before { transform: translate(-50%, -50%) rotate(45deg) !important; }
+.lum-close-button::after { transform: translate(-50%, -50%) rotate(-45deg) !important; }
+
+/* Navigation Buttons Styling - Professional Large Arrows */
+.lum-next-button, .lum-previous-button {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 80px !important;
+    height: 80px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.lum-next-button::after, .lum-previous-button::after {
+    content: '' !important;
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-top: 3px solid #fff !important;
+    border-right: 3px solid #fff !important;
+    opacity: 0.7 !important;
+}
+.lum-next-button::after { transform: rotate(45deg) !important; }
+.lum-previous-button::after { transform: rotate(-135deg) !important; }
+.lum-next-button:hover::after, .lum-previous-button:hover::after { opacity: 1 !important; scale: 1.1; }
+
+.lum-previous-button { left: 20px !important; }
+.lum-next-button { right: 20px !important; }
+
+/* Mobile Padding Override for .p-8 */
+@media (max-width: 767px) {
+    .p-8 {
+        padding: 40px 10px !important;
+    }
+}
+
+/* Scroll Reveal Animation Classes - Advanced Staggered Transitions */
+.reveal {
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.2, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+/* Base state for reveal items (stay hidden until parent is .active) */
+.reveal-item {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.2, 0, 0.2, 1);
+    will-change: opacity, transform, filter;
+    filter: blur(10px);
+}
+
+/* Directional Starts */
+.reveal-up { transform: translateY(30px); }
+.reveal-down { transform: translateY(-30px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+
+/* Active States */
+.reveal.active,
+.reveal.active .reveal-item {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    filter: blur(0);
+}
+
+/* Staggered Delays Helpers */
+.reveal.active .delay-100 { transition-delay: 100ms; }
+.reveal.active .delay-200 { transition-delay: 200ms; }
+.reveal.active .delay-300 { transition-delay: 300ms; }
+.reveal.active .delay-400 { transition-delay: 400ms; }
+.reveal.active .delay-500 { transition-delay: 500ms; }
+.reveal.active .delay-600 { transition-delay: 600ms; }
+
+/* Voice Swiper Equal Height Fix */
+.voice-swiper {
+    /* Ensure shadows/borders are not clipped */
+    padding: 10px 4px 40px 4px !important;
+}
+
+/* Force all slides in wrapper to stretch to same height */
+.voice-swiper .swiper-wrapper {
+    align-items: stretch !important;
+}
+
+/* Each slide is a flex column so content fills height */
+.voice-swiper .swiper-slide {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: stretch !important;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(158,42,43,0.2);
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.5s;
+}
+
+@media (min-width: 768px) {
+    .voice-swiper .swiper-slide {
+        padding: 2rem;
+    }
+}
+
+.voice-swiper .swiper-slide:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Make the review text fill remaining space so cards stretch */
+.voice-swiper .swiper-slide > p {
+    flex-grow: 1;
+}

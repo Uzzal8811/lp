@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+    <meta name="description" content="秋田県横手市田中町にある創業26年の鉄板焼き食堂「あつあつ亭」。広島風お好み焼きや横手やきそばをご提供しています。<br>">
+
+    <!-- Open Graph (OGP) Meta Tags -->
+    <meta property="og:site_name" content="あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば">
+    <meta property="og:title" content="あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば">
+    <meta property="og:description" content="秋田県横手市田中町にある創業26年の鉄板焼き食堂「あつあつ亭」。広島風お好み焼きや横手やきそばをご提供しています。<br>">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば">
+    <meta name="twitter:description" content="秋田県横手市田中町にある創業26年の鉄板焼き食堂「あつあつ亭」。広島風お好み焼きや横手やきそばをご提供しています。<br>">
+    <meta name="twitter:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.png">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" href="https://atsuatsu-tei.happytry.fun/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://atsuatsu-tei.happytry.fun/img/favicon.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeRed: '#9e2a2b', /* Sophisticated Deep Red */
+                        themeBlack: '#1a1a1a',
+                        themeDark: '#333333',
+                        themeGray: '#4a4a4a',
+                        themeLight: '#ffffff',
+                        themeLightBg: '#fdfdfd',
+                        themeBorder: '#e6e6e6',
+                        teaGreen: '#2d5a27',
+                        teaMatcha: '#d5e2d4',
+                        teaGold: '#c5a059',
+                        teaAmber: '#b87333',
+                        teaTeal: '#004d40',
+                        teaCyan: '#f0faff'
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper & Lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="bg-themeLightBg text-themeGray tracking-widest relative">
+
+    <!-- HEADER -->
+    <header id="header"
+        class="sticky top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 md:px-8 flex justify-between items-center text-themeBlack bg-white/90 backdrop-blur-md border-b-2 border-themeRed shadow-sm">
+        <h1 class="text-xl md:text-2xl font-bold tracking-widest"><a href="#"
+                class="hover:text-themeRed transition">あつあつ亭</a></h1>
+
+        <!-- PC Nav -->
+        <nav class="hidden pc-nav md:flex items-center space-x-8 text-sm">
+            <a href="#about" class="hover:text-themeRed transition">ABOUT</a>
+            <a href="#service" class="hover:text-themeRed transition">SERVICE</a>
+            <a href="#features" class="hover:text-themeRed transition">FEATURES</a>
+            <a href="#menu-recommend" class="hover:text-themeRed transition">MENU</a>
+            <a href="#gallery" class="hover:text-themeRed transition">GALLERY</a>
+            <a href="#voice" class="hover:text-themeRed transition">VOICE</a>
+            <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+                class="px-6 py-3 bg-themeRed text-white hover:opacity-80 transition tracking-widest font-bold">INSTAGRAM</a>
+        </nav>
+
+        <!-- SP Nav Toggle -->
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5 w-8 items-end justify-center h-8 z-50">
+            <span class="w-full h-[1px] bg-themeBlack block"></span>
+            <span class="w-full h-[1px] bg-themeBlack block"></span>
+            <span class="w-3/4 h-[1px] bg-themeBlack block"></span>
+        </button>
+    </header>
+
+    <!-- SP Mobile Menu Modal -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[60] bg-white opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center">
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl font-light text-themeBlack hover:text-themeRed">✕
+            閉じる</button>
+        <ul class="flex flex-col space-y-6 text-center text-xl tracking-widest text-themeBlack">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#menu-recommend">MENU</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#voice">VOICE</a></li>
+            <li><a href="#contact">ACCESS</a></li>
+            <li class="pt-8">
+                <div class="flex flex-col space-y-4 items-center">
+                    <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+                        class="w-48 py-3 border border-themeBlack text-themeBlack block hover:bg-themeBlack hover:text-white transition">INSTAGRAM</a>
+                    <a href="tel:0182-36-5525" class="w-48 py-3 bg-themeRed text-white block">TEL 0182-36-5525</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- FV -->
+        <section id="fv" class="w-full h-[95svh] relative overflow-hidden bg-themeBlack border-b-2 border-themeRed">
+            <!-- text or buttons are completely removed intentionally -->
+            <div class="swiper fv-swiper w-full h-full">
+                <div class="swiper-wrapper w-full h-full">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide w-full h-full relative">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/21.jpg">
+                            <img src="img/21.jpg" alt="FV Image 01" class="w-full h-full object-cover select-none">
+                        </picture>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide overflow-hidden translate-z-0">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/1.jpg">
+                            <img src="img/1.jpg" alt="FV Image 02" class="w-full h-full object-cover select-none">
+                        </picture>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide overflow-hidden translate-z-0">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/15.jpg">
+                            <img src="img/15.jpg" alt="FV Image 03" class="w-full h-full object-cover select-none">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side Vertical Branding (Right Side) -->
+            <div
+                class="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 pointer-events-none flex flex-col items-center gap-12">
+                <div class="w-[1px] h-24 bg-themeRed/40"></div>
+                <div class="flex flex-col gap-8 text-themeBlack/70">
+                    <span class="writing-vertical text-xl md:text-3xl font-serif tracking-[1em] font-bold">あつあつ亭</span>
+                    <span
+                        class="writing-vertical text-[10px] md:text-xs tracking-[0.8em] font-light uppercase opacity-50">ATSUATSU-TEI</span>
+                </div>
+                <div class="w-[1px] h-24 bg-themeRed/40"></div>
+            </div>
+
+            <!-- Overlay Text Container -->
+            <div
+                class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
+                <div class="relative flex flex-col items-center max-w-4xl scale-up-anim">
+                    <h2
+                        class="text-white text-3xl md:text-6xl font-bold tracking-[0.25em] mb-10 font-serif leading-relaxed drop-shadow-2xl">
+                        秋田県横手市<br>駅近で評判の<br><span class="text-white">お好み焼きとやきそば</span>
+                    </h2>
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-12 h-[1px] bg-white/80"></div>
+                        <p class="text-white text-sm md:text-xl tracking-[0.5em] font-serif uppercase leading-loose">
+                            創業26年の実績<br>暖簾会加盟店<br>観光協会推奨店
+                        </p>
+                        <div class="w-12 h-[1px] bg-white/80"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dramatic Overlay Gradients -->
+            <div
+                class="absolute top-0 left-0 w-full h-[30%] bg-gradient-to-b from-themeBlack/80 to-transparent z-[15] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-themeBlack via-themeBlack/30 to-transparent z-[15] pointer-events-none">
+            </div>
+
+            <!-- Professional Glass & Layered Shape Divider (Full Glass Effect) -->
+            <div
+                class="absolute bottom-[-1px] left-0 w-full z-30 pointer-events-none h-[100px] md:h-[200px] overflow-hidden">
+                <!-- Layer: Black Glass Slopes (Deep black glass) -->
+                <div class="absolute inset-0 z-20 flex justify-between pointer-events-none drop-shadow-2xl">
+                    <!-- Left Red Glass -->
+                    <div class="w-[45%] h-full bg-white/80 backdrop-blur-xl border-l border-themeBlack/10"
+                        style="clip-path: polygon(0 100%, 0 20%, 100% 100%);"></div>
+                    <!-- Right Red Glass -->
+                    <div class="w-[45%] h-full bg-white/80 backdrop-blur-xl border-r border-themeBlack/5"
+                        style="clip-path: polygon(100% 100%, 100% 20%, 0 100%);"></div>
+                </div>
+
+                <!-- Layer: White Glass Mountain (Central glass peak) -->
+                <div class="absolute inset-0 z-10 flex justify-center pointer-events-none">
+                    <div class="w-full h-full bg-themeRed/20 backdrop-blur-md border-t border-themeRed/10"
+                        style="clip-path: polygon(0 100%, 50% 0, 100% 100%);"></div>
+                </div>
+
+                <!-- Layer: Red Accent Line (Premium detail on peak) -->
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none"
+                    class="absolute bottom-0 left-0 w-full h-full block z-40 opacity-90 pointer-events-none">
+                    <path d="M0,100 L500,2 L1000,100" stroke="#9e2a2b" stroke-width="1.5" fill="none" />
+                </svg>
+            </div>
+
+            <!-- Scroll Indicator -->
+
+
+        </section>
+
+        <!-- CTA Upper (Refined Background & Parallax Effect) -->
+        <section class="relative w-full overflow-hidden group py-12 md:py-24 border-b-2 border-themeRed reveal">
+            <!-- Full-width Parallax Background Layer (Updated to Food Image) -->
+            <div class="absolute inset-0 z-0 bg-fixed bg-center bg-cover" style="background-image: url('img/17.jpg');">
+                <!-- Dark overlay for readability -->
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-0 max-w-5xl relative z-10">
+                <!-- High-Transparency Glass Content Layer -->
+                <div
+                    class="flex flex-col sm:flex-row w-full bg-white/10 backdrop-blur-xl text-white p-1 md:p-0 border border-white/20 shadow-2xl transition-all duration-700 rounded-none overflow-hidden">
+                    <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+                        class="w-full sm:w-1/2 flex items-center justify-center p-4 border-b sm:border-b-0 sm:border-r border-white/20 cta-hover-effect cta-hover-red">
+                        <span class="text-sm tracking-widest flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram 公式アカウント
+                        </span>
+                    </a>
+                    <a href="tel:0182-36-5525"
+                        class="w-full sm:w-1/2 flex items-center justify-center p-4 bg-themeRed/90 cta-hover-effect cta-hover-black">
+                        <div class="text-center">
+                            <span class="text-xs tracking-[0.2em] block text-white/80">電話問い合わせ</span>
+                            <span class="text-xl md:text-2xl font-bold font-sans text-white">050-5448-9224</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        </div>
+        </section>
+
+        <!-- TV Section -->
+        <section id="tv"
+            class="w-full bg-gradient-to-br from-[#fdfbf9] via-[#fdf2f2] to-themeRed/10 py-16 md:py-24 text-themeGray border-b-2 border-themeRed relative reveal">
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-8 md:mb-12">
+                    <h2 class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10">
+                        <span class="text-themeRed text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">For
+                            You</span>
+                        <span
+                            class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-themeBlack font-serif">こんな方に<br
+                                class="md:hidden">おすすめ</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col md:flex-row items-stretch gap-6 md:gap-10">
+                    <div class="w-full md:w-1/2 p-4 md:p-8">
+                        <img src="img/5.jpg" alt="おすすめ"
+                            class="w-full h-auto object-cover relative z-10 transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <div class="w-full md:w-1/2 flex flex-col justify-center py-6 md:py-8">
+                        <ul class="space-y-4 text-[15px] md:text-base leading-relaxed pl-2 relative">
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                具材がぎっしり詰まった広島風お好み焼きを食べたい方</li>
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                観光協会推奨店の本場の横手やきそばを味わいたい方</li>
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                ランチや仕事帰りの一杯に気軽に立ち寄りたい方</li>
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                鉄板で焼き上げるアツアツの料理を楽しみたい方</li>
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                お一人様からご家族連れまで気兼ねなく利用したい方</li>
+                            <li
+                                class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-themeRed before:rotate-45">
+                                気兼ねなく立ち寄れる空間で食事を楽しみたい方</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Broken Grid) -->
+        <section id="about"
+            class="w-full bg-gradient-to-br from-white via-themeRed/5 to-[#f8f8f8] py-16 md:py-24 text-themeGray border-b-2 border-themeRed relative reveal">
+            <div class="section-entry-shape"></div>
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-8 md:mb-12">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel-on-red py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                        <span
+                            class="text-white/90 text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">About</span>
+                        <span
+                            class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-white font-serif">あつあつ亭について</span>
+                    </h2>
+                </div>
+
+                <div class="relative w-full flex flex-col md:flex-row items-center">
+                    <!-- Text Box (60%) -->
+                    <div
+                        class="w-full md:w-[60%] bg-themeLightBg p-8 md:p-12 z-10 md:translate-x-12 md:translate-y-8 xl:translate-x-20 border border-themeBorder shadow-sm reveal-item reveal-left delay-200">
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 leading-normal text-themeRed">
+                            秋田県横手市田中町にある<br>鉄板焼き食堂</h3>
+                        <div class="space-y-4 text-sm md:text-base">
+                            <p>秋田県横手市田中町に位置するあつあつ亭は、横手駅前にある創業26年の鉄板焼き食堂です。<br></p>
+                            <p>名物の広島風お好み焼きや横手風お好み焼き＆横手やきそば暖簾会加盟店として提供する横手やきそばなど、鉄板で焼き上げるアツアツの料理をご提供しています。<br></p>
+                            <p>お一人様からご家族連れまで気兼ねなくご利用いただけます。<br></p>
+                        </div>
+                    </div>
+                    <!-- Image Box (40%) -->
+                    <div
+                        class="w-full md:w-[40%] mt-8 md:mt-0 relative z-0 overflow-hidden group border border-themeBorder/20 reveal-item reveal-right delay-400">
+                        <img src="img/6.jpg" alt="あつあつ亭"
+                            class="w-full h-auto object-cover transition duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-4 border border-white/60 z-10 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service"
+            class="w-full bg-themeLightBg py-16 md:py-24 text-themeGray border-b-2 border-themeRed relative reveal">
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                        <span
+                            class="text-themeRed text-xs md:text-sm tracking-[0.4em] mb-3 uppercase font-serif">Service</span>
+                        <span
+                            class="text-2xl md:text-4xl font-bold tracking-[0.2em] text-themeBlack font-serif">アツアツの<br
+                                class="md:hidden">鉄板焼きを</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <!-- Image side -->
+                    <div class="w-full md:w-1/2 reveal-item reveal-left delay-200">
+                        <div class="relative group overflow-hidden border border-themeBorder shadow-xl">
+                            <img src="img/18.jpg" alt="鉄板焼きの提供"
+                                class="w-full h-auto object-cover transition duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-themeBlack/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text side -->
+                    <div class="w-full md:w-1/2 reveal-item reveal-right delay-400">
+                        <div class="space-y-8">
+                            <ul class="space-y-6 text-base md:text-lg text-themeBlack">
+                                <li class="flex items-start">
+                                    <span class="w-6 h-px bg-themeRed mt-3 mr-4 shrink-0"></span>
+                                    <span>本場仕込みの広島風お好み焼き</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-px bg-themeRed mt-3 mr-4 shrink-0"></span>
+                                    <span>観光協会推奨店の横手やきそば</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-px bg-themeRed mt-3 mr-4 shrink-0"></span>
+                                    <span>夜限定の豊富な一品料理</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-px bg-themeRed mt-3 mr-4 shrink-0"></span>
+                                    <span>スタッフが目の前で焼くスタイル</span>
+                                </li>
+                            </ul>
+                            <div class="pt-8 border-t border-themeBorder/50 font-serif">
+                                <p class="text-themeGray leading-relaxed italic">
+                                    気兼ねなく立ち寄れる空間で、皆様のお越しをお待ちしております。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features"
+            class="w-full bg-gradient-to-b from-[#fdfdfd] via-[#f5f5f5] to-[#f0f0f0] py-16 md:py-24 text-themeGray overflow-hidden border-b-2 border-themeRed relative reveal">
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-16 md:mb-24">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-down">
+                        <span
+                            class="text-themeRed text-xs md:text-sm tracking-[0.4em] mb-3 uppercase font-serif">Feature</span>
+                        <span
+                            class="text-2xl md:text-4xl font-bold tracking-[0.2em] text-themeBlack font-serif">こだわり</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                    <!-- Feature 1 -->
+                    <div class="relative group reveal-item reveal-up">
+                        <div class="mb-8 relative overflow-hidden border border-themeBorder aspect-[4/5]">
+                            <img src="img/Service1.jpg" alt="広島風お好み焼き"
+                                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 z-10">
+                                <span
+                                    class="text-5xl md:text-6xl font-bold text-themeRed opacity-80 font-serif italic">01</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-themeBlack/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                            </div>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-themeBlack tracking-widest">
+                            鉄板で丁寧に焼き上げる<br>広島風お好み焼き
+                        </h4>
+                        <div class="w-12 h-[2px] bg-themeRed mb-4 transition-all duration-500 group-hover:w-full"></div>
+                        <p class="text-sm md:text-base text-themeGray leading-loose">
+                            キャベツやたっぷりの海鮮、カリッカリの豚肉、薄味に調整された焼きそばなどの具材がぎっしり詰まった一品です。<br>お客様が自分で焼くのではなく、スタッフが目の前の鉄板で焼いて仕上がったアツアツの状態でテーブルへお届けします。<br></p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="relative group md:translate-y-12 reveal-item reveal-up delay-200">
+                        <div class="mb-8 relative overflow-hidden border border-themeBorder aspect-[4/5]">
+                            <img src="img/Service2.jpg" alt="横手やきそば"
+                                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 z-10">
+                                <span
+                                    class="text-5xl md:text-6xl font-bold text-themeRed opacity-80 font-serif italic">02</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-themeBlack/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                            </div>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-themeBlack tracking-widest">和風ソースが香る<br
+                                class="hidden md:block">自慢の横手やきそば
+                        </h4>
+                        <div class="w-12 h-[2px] bg-themeRed mb-4 transition-all duration-500 group-hover:w-full"></div>
+                        <p class="text-sm md:text-base text-themeGray leading-loose">
+                            一般社団法人横手市観光協会の推奨店に選ばれた横手やきそばをご提供しています。<br>太い中華麺に、ウスターソースをベースとして鰹や昆布の魚介ダシで割ったさらっとした和風ソースを絡めた一品で、全国各地から訪れる食通をうならせる味わいです。<br></p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="relative group reveal-item reveal-up delay-400">
+                        <div class="mb-8 relative overflow-hidden border border-themeBorder aspect-[4/5]">
+                            <img src="img/Service3.jpg" alt="豊富なメニュー"
+                                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 z-10">
+                                <span
+                                    class="text-5xl md:text-6xl font-bold text-themeRed opacity-80 font-serif italic">03</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-themeBlack/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                            </div>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-themeBlack tracking-widest">
+                            豊富な鉄板焼きメニューと<br class="hidden md:block">夜の一品料理
+                        </h4>
+                        <div class="w-12 h-[2px] bg-themeRed mb-4 transition-all duration-500 group-hover:w-full"></div>
+                        <p class="text-sm md:text-base text-themeGray leading-loose">
+                            米粉を使用したお好み焼き「横手焼き」や「横巻き」のほか、各種焼きそば・焼うどん、夜限定の一品料理まで豊富にご用意しています。<br>ランチ営業はもちろん仕事帰りの一杯にも最適です。<br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Service Bottom (Replicated Glass CTA) -->
+        <section class="relative w-full overflow-hidden group py-12 md:py-24 border-b-2 border-themeRed shadow-inner">
+            <!-- Full-width Parallax Background Layer -->
+            <div class="absolute inset-0 z-0 bg-fixed bg-center bg-cover" style="background-image: url('img/7.jpg');">
+                <!-- Dark overlay for readability -->
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-0 max-w-5xl relative z-10">
+                <!-- High-Transparency Glass Content Layer -->
+                <div
+                    class="flex flex-col sm:flex-row w-full bg-white/10 backdrop-blur-xl text-white p-1 md:p-0 border border-white/20 shadow-2xl transition-all duration-700 rounded-none overflow-hidden text-center sm:text-left">
+                    <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+                        class="w-full sm:w-1/2 flex items-center justify-center p-4 border-b sm:border-b-0 sm:border-r border-white/20 cta-hover-effect cta-hover-red">
+                        <span class="text-sm tracking-widest flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram 公式アカウント
+                        </span>
+                    </a>
+                    <a href="tel:0182-36-5525"
+                        class="w-full sm:w-1/2 flex items-center justify-center p-4 bg-themeRed/90 cta-hover-effect cta-hover-black">
+                        <div class="text-center">
+                            <span class="text-xs tracking-[0.2em] block text-white/80">電話問い合わせ</span>
+                            <span class="text-xl md:text-2xl font-bold font-sans text-white">0182-36-5525</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section (Focus on おすすめ) -->
+        <section id="menu-recommend" class="relative py-16 md:py-24 overflow-hidden border-b-2 border-themeRed reveal">
+            <!-- Background Image with Parallax & Dark Overlay -->
+            <div
+                class="absolute inset-0 bg-[url('img/10.jpg')] bg-fixed bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-themeBlack/85 z-0">
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl relative z-10">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                        <span
+                            class="text-themeRed text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">Recommend
+                            Menu</span>
+                        <span
+                            class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-white font-serif">おすすめメニュー</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <!-- Text Side -->
+                    <div class="w-full md:w-1/2 text-white reveal-item reveal-left delay-100">
+                        <div class="space-y-8 text-center md:text-left">
+                            <div>
+                                <h4 class="text-3xl md:text-4xl font-bold mb-4 font-serif tracking-widest text-white">
+                                    広島風お好み焼き</h4>
+                                <p class="text-themeRed text-xl md:text-2xl font-bold tracking-widest font-sans">
+                                    ￥800<span class="text-xs font-normal text-white/70 ml-1">〜</span>
+                                </p>
+                            </div>
+                            <div class="w-16 h-[2px] bg-themeRed mx-auto md:mx-0"></div>
+                            <p class="text-base md:text-lg leading-relaxed text-white/90">
+                                キャベツや海鮮がぎっしり詰まった一品。<br class="md:hidden">種類豊富なトッピングで自分好みの味に。
+                            </p>
+                            <div class="pt-4 text-center md:text-left">
+                                <ul class="text-sm md:text-base text-white/80 grid grid-cols-2 gap-2 text-left">
+                                    <li>・いか天：￥900</li>
+                                    <li>・スタミナ：￥900</li>
+                                    <li>・めんたいこ：￥950</li>
+                                    <li>・キムチ：￥950</li>
+                                    <li>・牡蠣：￥1,250</li>
+                                    <li>・ちから(もち)：￥1,000</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Side -->
+                    <div class="w-full md:w-1/2 reveal-item reveal-right delay-200 font-serif">
+                        <div class="relative group p-1 bg-white shadow-2xl">
+                            <div class="relative overflow-hidden aspect-[4/5] border border-themeBorder">
+                                <img src="img/11.jpg" alt="広島風お好み焼き"
+                                    class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-themeBlack/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacer / Divider -->
+                <div class="my-20 h-px bg-themeBorder shadow-inner opacity-20"></div>
+
+                <!-- Second Menu Plan -->
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <!-- Image Side (Left on Desktop) -->
+                    <div class="w-full md:w-1/2 reveal-item reveal-left delay-300 font-serif">
+                        <div class="relative group p-1 bg-white shadow-2xl">
+                            <div class="relative overflow-hidden aspect-[4/5] border border-themeBorder">
+                                <img src="img/12.jpg" alt="横手やきそば"
+                                    class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-themeBlack/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text Side (Right on Desktop) -->
+                    <div class="w-full md:w-1/2 text-white reveal-item reveal-right delay-400">
+                        <div class="space-y-8 text-center md:text-left">
+                            <div>
+                                <h4 class="text-3xl md:text-4xl font-bold mb-4 font-serif tracking-widest text-white">
+                                    横手やきそば</h4>
+                                <p class="text-themeRed text-xl md:text-2xl font-bold tracking-widest font-sans">
+                                    ￥550<span class="text-xs font-normal text-white/70 ml-1">〜</span>
+                                </p>
+                            </div>
+                            <div class="w-16 h-[2px] bg-themeRed mx-auto md:mx-0"></div>
+                            <p class="text-base md:text-lg leading-relaxed text-white/90">
+                                観光協会推奨店の自慢の味。<br class="md:hidden">さらっとした和風ソースと太麺が絡み合います。
+                            </p>
+                            <div class="pt-4 text-center md:text-left">
+                                <ul class="text-sm md:text-base text-white/80 grid grid-cols-2 gap-2 text-left">
+                                    <li>・横手やきそば 特製：￥600</li>
+                                    <li>・ぶた焼きそば：￥600</li>
+                                    <li>・キムチ焼きそば：￥850</li>
+                                    <li>・ステーキ焼きそば：￥1,600</li>
+                                    <li>・オムそば：￥780</li>
+                                    <li>・焼きうどん：￥650</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center text-white/80 text-sm">
+                    ※その他、各種トッピングや一品料理（100円〜）など多数ご用意しております。
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery"
+            class="w-full overflow-hidden relative py-16 md:py-24 bg-gradient-to-b from-[#fdfdfd] via-[#f5f5f5] to-[#fdfdfd] text-themeGray border-y-2 border-themeRed reveal">
+            <div class="container mx-auto px-4 lg:px-0 text-center mb-8 md:mb-12">
+                <h2
+                    class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                    <span
+                        class="text-themeRed text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif font-bold">Gallery</span>
+                    <span
+                        class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-themeBlack font-serif">ギャラリー</span>
+                </h2>
+            </div>
+
+            <div class="marquee-container overflow-hidden relative cursor-default reveal-item reveal-up delay-300">
+                <div class="marquee-content flex gap-[20px]">
+                    <!-- Image list (6 images repeated to ensure seamless loop) -->
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/14.jpg" class="luminous block relative group">
+                            <img src="img/14.jpg" alt="Gallery 1"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/15.jpg" class="luminous block relative group">
+                            <img src="img/15.jpg" alt="Gallery 2"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/16.jpg" class="luminous block relative group">
+                            <img src="img/16.jpg" alt="Gallery 3"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/24.jpg" class="luminous block relative group">
+                            <img src="img/24.jpg" alt="Gallery 4"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/25.jpg" class="luminous block relative group">
+                            <img src="img/25.jpg" alt="Gallery 5"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/26.jpg" class="luminous block relative group">
+                            <img src="img/26.jpg" alt="Gallery 6"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <!-- Repeated for seamlessness -->
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/14.jpg" class="luminous block relative group">
+                            <img src="img/14.jpg" alt="Gallery 1"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/15.jpg" class="luminous block relative group">
+                            <img src="img/15.jpg" alt="Gallery 2"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/16.jpg" class="luminous block relative group">
+                            <img src="img/16.jpg" alt="Gallery 3"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/24.jpg" class="luminous block relative group">
+                            <img src="img/24.jpg" alt="Gallery 4"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/25.jpg" class="luminous block relative group">
+                            <img src="img/25.jpg" alt="Gallery 5"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                    <div class="marquee-item flex-shrink-0 w-[240px] md:w-[320px]">
+                        <a href="img/26.jpg" class="luminous block relative group">
+                            <img src="img/26.jpg" alt="Gallery 6"
+                                class="w-full aspect-[3/4] object-cover transition-all duration-700">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation hint deleted as it's auto-scroll -->
+        </section>
+
+        <!-- Voice -->
+        <section id="voice"
+            class="w-full overflow-hidden py-16 md:py-24 bg-gradient-to-br from-themeRed/5 via-white to-[#f0f4f8] border-b-2 border-themeRed relative reveal">
+            <div class="container mx-auto px-4 lg:px-0 text-center mb-8 md:mb-12">
+                <h2
+                    class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                    <span
+                        class="text-themeRed text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">Voice</span>
+                    <span
+                        class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-themeBlack font-serif">お客様の声</span>
+                </h2>
+            </div>
+
+            <div class="max-w-[1110px] mx-auto px-4 lg:px-0 reveal-item reveal-up delay-300">
+                <div class="swiper voice-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Review 1 -->
+                        <div class="swiper-slide text-themeGray">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 bg-themeRed rounded-full flex items-center justify-center text-white font-bold mr-4 font-serif">
+                                    男</div>
+                                <div>
+                                    <p class="font-bold text-sm text-themeBlack">30代 男性</p>
+                                    <div class="text-yellow-500 text-xs tracking-[0.2em]">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed flex-grow text-themeGray font-medium">
+                                横手駅前にあってアクセス抜群です。横手やきそばはソースが絶品で、目玉焼きを崩して絡めて食べると最高に美味しいです。お好み焼きも具がたっぷりで大満足でした。<br>
+                            </p>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="swiper-slide text-themeGray">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 bg-themeBlack rounded-full flex items-center justify-center text-white font-bold mr-4 font-serif">
+                                    女</div>
+                                <div>
+                                    <p class="font-bold text-sm text-themeBlack">40代 女性</p>
+                                    <div class="text-yellow-500 text-xs tracking-[0.2em]">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed flex-grow text-themeGray font-medium">
+                                目の前の鉄板で焼いてくれるので、アツアツの状態で食べられます。スタッフの方も親切で、アットホームな雰囲気が居心地が良いです。夜の一品料理も豊富で、お酒が進みます。
+                            </p>
+                        </div>
+                        <!-- Review 3 -->
+                        <div class="swiper-slide text-themeGray">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 bg-themeRed rounded-full flex items-center justify-center text-white font-bold mr-4 font-serif">
+                                    男</div>
+                                <div>
+                                    <p class="font-bold text-sm text-themeBlack">50代 男性</p>
+                                    <div class="text-yellow-500 text-xs tracking-[0.2em]">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed flex-grow text-themeGray font-medium">
+                                昔から通っている地元の名店。横手やきそばと言えばここですね。観光で来た友人にもおすすめできるお店です。<br></p>
+                        </div>
+                    </div>
+
+                    <!-- More Button -->
+                    <div class="flex justify-center mt-12 md:mt-16">
+                        <a href="https://www.google.com/search?q=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD+%E7%A7%8B%E7%94%B0&rlz=1C1VDKB_jaJP1161JP1162&oq=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD%E3%80%80%E7%A7%8B%E7%94%B0&gs_lcrp=EgZjaHJvbWUyCAgAEEUYHhg5MgcIARAAGO8FMgoIAhAAGIAEGKIE0gEINjcxMmowajeoAgiwAgHxBXEXuIeMIobe&sourceid=chrome&ie=UTF-8#lrd=0x5f8f0ffc87e32d25:0x951c611710a8118f,1,,,,"
+                            target="_blank"
+                            class="inline-flex items-center justify-center px-10 py-4 bg-themeBlack text-white tracking-[0.2em] text-sm font-bold cta-hover-effect cta-hover-red">
+                            もっと見る (Googleでクチコミを読む)
+                        </a>
+                    </div>
+                </div> <!-- Closing Container -->
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="w-full bg-themeBlack py-16 md:py-24 text-white border-y-2 border-themeRed relative reveal">
+            <div class="section-entry-shape opacity-10"></div>
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel-on-red py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                        <span
+                            class="text-white/90 text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">Message</span>
+                        <span class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-white font-serif">代表挨拶</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="w-full md:w-[55%] pr-0 md:pr-12 text-white reveal-item reveal-left delay-300">
+                        <h3 class="text-xl md:text-3xl font-bold mb-6 text-white leading-relaxed">
+                            創業26年温かい料理でお迎えします</h3>
+                        <div class="space-y-4 text-[15px] md:text-base">
+                            <p>横手市田中町で創業26年、いつでもお客様を温かくお迎えしてきました。<br></p>
+                            <p>鉄板で丁寧に焼き上げるアツアツの料理で、心も体も温まっていただきたいと思っております。<br></p>
+                            <p>皆様のご来店を心よりお待ちしております。<br></p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-[45%] relative group p-2 reveal-item reveal-right delay-500">
+                        <div class="overflow-hidden relative z-10 border border-themeBorder/50">
+                            <img src="img/27.jpg" alt="代表挨拶"
+                                class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                        </div>
+                        <!-- Corner boxes -->
+                        <div
+                            class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/50 z-20 transition-all duration-500 group-hover:w-16 group-hover:h-16 group-hover:border-themeRed opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/50 z-20 transition-all duration-500 group-hover:w-16 group-hover:h-16 group-hover:border-themeRed opacity-80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Access Section -->
+        <section id="contact"
+            class="w-full bg-gradient-to-b from-[#fdfdfd] via-[#fcfcfc] to-[#fdfdfd] py-16 md:py-24 text-themeGray border-t-2 border-themeRed relative reveal">
+            <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
+                <div class="text-center mb-8 md:mb-12">
+                    <h2
+                        class="inline-flex flex-col items-center glass-panel py-4 px-6 md:py-6 md:px-10 reveal-item reveal-up">
+                        <span
+                            class="text-themeRed text-xs md:text-sm tracking-[0.3em] mb-3 uppercase font-serif">Access</span>
+                        <span
+                            class="text-2xl md:text-3xl font-bold tracking-[0.15em] text-themeBlack font-serif">店舗情報</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <!-- Info Left -->
+                    <div class="w-full md:w-[45%] flex flex-col justify-center reveal-item reveal-left delay-300">
+                        <h4 class="text-xl font-bold mb-6 text-themeBlack tracking-widest">あつあつ亭</h4>
+                        <dl class="space-y-3 text-sm md:text-base border-t border-themeBorder pt-6">
+                            <div class="flex">
+                                <dt class="w-24 font-bold shrink-0">住所</dt>
+                                <dd>〒013-0024<br>秋田県横手市田中町２−１９</dd>
+                            </div>
+                            <div class="flex">
+                                <dt class="w-24 font-bold shrink-0">電話番号</dt>
+                                <dd><a href="tel:0182-36-5525" class="hover:text-themeRed transition">0182-36-5525</a>
+                                </dd>
+                            </div>
+                            <div class="flex">
+                                <dt class="w-24 font-bold shrink-0">営業時間</dt>
+                                <dd>11:30～14:00, 17:00～22:30</dd>
+                            </div>
+                            <div class="flex border-b border-themeBorder pb-6">
+                                <dt class="w-24 font-bold shrink-0">定休日</dt>
+                                <dd>日曜日</dd>
+                            </div>
+                        </dl>
+
+                        <!-- SNS -->
+                        <div class="mt-8 flex flex-col items-center md:items-start gap-4 text-center md:text-left">
+                            <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+                                class="w-full md:w-80 px-6 py-4 bg-transparent border border-themeBlack text-themeBlack hover:text-white transition tracking-widest text-sm flex justify-center items-center font-bold cta-hover-effect cta-hover-red">
+                                INSTAGRAM 公式アカウント
+                            </a>
+                            <a href="tel:0182-36-5525"
+                                class="w-full md:w-80 px-6 py-4 bg-themeRed border border-themeRed text-white tracking-widest text-sm flex justify-center items-center font-bold cta-hover-effect cta-hover-black">
+                                TEL: 0182-36-5525
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Right -->
+                    <div class="w-full md:w-[55%] reveal-item reveal-right delay-500">
+                        <div class="w-full pb-[75%] relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.0122687018425!2d140.5601378!3d39.3013157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8f0ffc87e32d25%3A0x951c611710a8118f!2z44GC44Gk44GC44Gk5Lqt!5e0!3m2!1sja!2sjp!4v1774925036680!5m2!1sja!2sjp"
+                                class="absolute top-0 left-0 w-full h-full border-0 opacity-100 transition duration-500"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+        class="bg-black text-white py-16 text-center text-sm md:text-base pb-24 md:pb-10 border-t-4 border-themeRed">
+        <div class="container mx-auto px-4 mb-8">
+            <h2 class="text-3xl tracking-[0.2em] font-bold mb-6 text-white">あつあつ亭</h2>
+            <ul
+                class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 tracking-widest text-white/80">
+                <li><a href="#about" class="hover:text-white transition">ABOUT</a></li>
+                <li><a href="#service" class="hover:text-white transition">SERVICE</a></li>
+                <li><a href="#features" class="hover:text-white transition">FEATURES</a></li>
+                <li><a href="#menu-recommend" class="hover:text-white transition">MENU</a></li>
+                <li><a href="#gallery" class="hover:text-white transition">GALLERY</a></li>
+                <li><a href="#voice" class="hover:text-white transition">VOICE</a></li>
+                <li><a href="#contact" class="hover:text-white transition">ACCESS</a></li>
+            </ul>
+        </div>
+        <p class="text-xs text-white/50 tracking-widest">&copy; あつあつ亭 All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fixed Bottom CTA (SP only) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-themeBlack flex border-t border-white/10">
+        <a href="https://www.instagram.com/atsuatsutei/" target="_blank"
+            class="w-1/2 flex justify-center items-center py-4 bg-themeBlack text-white border-r border-white/10 text-sm tracking-wide cta-hover-effect cta-hover-red">
+            Instagram
+        </a>
+        <a href="tel:0182-36-5525"
+            class="w-1/2 flex justify-center items-center py-4 bg-themeRed text-white font-bold text-sm tracking-wide cta-hover-effect cta-hover-black">
+            電話問い合わせ
+        </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="pagetop-btn"
+        class="fixed bottom-24 md:bottom-8 right-4 md:right-8 w-12 h-12 bg-white border border-themeBorder text-themeGray flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-themeLight bg shadow-lg">
+        <span class="block border-t border-r border-themeBlack w-3 h-3 transform -rotate-45 mt-1"></span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.media='all'"></script>
+    <!-- just fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <script src="Js/script.js"></script>
+
+    <!-- Scroll Reveal Activation Script -->
+    <script>
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+
+</html>

@@ -93,6 +93,14 @@
         .animate-marquee {
             animation: marquee 30s linear infinite;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
     </style>
 </head>
 
@@ -139,11 +147,12 @@
     </header>
 
     <!-- FV (First View) -->
-    <section class="w-full bg-brandDark bg-opacity-95">
+    <section class="w-full bg-brandDark bg-opacity-95 relative">
+        <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
         <!-- Mobile Image -->
-        <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden">
+        <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden animate-fade-in relative z-0">
         <!-- Desktop Video -->
-        <video class="hidden md:block w-full h-auto" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
+        <video class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4" autoplay loop muted playsinline></video>
     </section>
 
 

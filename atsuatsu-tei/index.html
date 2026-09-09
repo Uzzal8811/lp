@@ -500,29 +500,29 @@
         </div>
         <!-- Infinite Marquee -->
         <div class="w-full overflow-hidden flex">
-            <div class="flex animate-marquee min-w-max pointer-events-none">
+            <div class="flex animate-marquee min-w-max">
                 <!-- Original Set -->
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/1.jpg')"><img
                         src="img/1.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/10.jpg')"><img
                         src="img/10.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/2.jpg')"><img
                         src="img/2.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/12.jpg')"><img
                         src="img/12.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/13.jpg')"><img
                         src="img/13.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
 
                 <!-- Duplicate Set -->
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/1.jpg')"><img
                         src="img/1.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/10.jpg')"><img
                         src="img/10.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/2.jpg')"><img
                         src="img/2.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/12.jpg')"><img
                         src="img/12.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
-                <div class="w-[60vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] aspect-[4/3] flex-shrink-0"><img
+                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300" onclick="openLightbox('img/13.jpg')"><img
                         src="img/13.jpg" alt="Gallery" class="w-full h-full object-cover"></div>
             </div>
         </div>
@@ -611,6 +611,14 @@
         &copy; あつあつ亭 All Rights Reserved.
     </footer>
 
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden flex justify-center items-center opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-brandRed transition focus:outline-none" onclick="closeLightbox()">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Popup Image" class="max-w-[90%] max-h-[90%] object-contain shadow-2xl scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+    </div>
+
     <script>
         function toggleReview(btn) {
             const text = btn.previousElementSibling;
@@ -621,6 +629,29 @@
                 text.classList.add('line-clamp-4');
                 btn.textContent = '続きを読む';
             }
+        }
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            // Allow display block to apply before changing opacity for transition
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
         }
     </script>
 </body>

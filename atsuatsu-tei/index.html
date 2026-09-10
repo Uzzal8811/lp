@@ -67,6 +67,16 @@
         }
     </script>
     <style>
+        p {
+            font-size: 14px !important;
+        }
+
+        @media (min-width: 768px) {
+            p {
+                font-size: 16px !important;
+            }
+        }
+
         .max-w-6xl {
             max-width: 73rem;
         }
@@ -121,7 +131,8 @@
     </style>
 </head>
 
-<body class="text-sm md:text-base text-brandDark font-sans bg-fixed bg-cover bg-center" style="background-image: url('img/BodyBg.jpg');">
+<body class="text-sm md:text-base text-brandDark font-sans bg-fixed bg-cover bg-center"
+    style="background-image: url('img/BodyBg.jpg');">
 
     <!-- HEADER -->
     <header
@@ -172,27 +183,34 @@
         <!-- Hamburger Button (Mobile) -->
         <button id="mobile-menu-btn" class="md:hidden flex items-center p-2 text-brandDark focus:outline-none z-50">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
             </svg>
         </button>
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-brandLight z-[100] flex flex-col pt-20 px-6 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto w-full h-full">
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brandLight z-[100] flex flex-col pt-20 px-6 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto w-full h-full">
         <button id="mobile-menu-close" class="absolute top-6 right-6 text-brandDark focus:outline-none p-2">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
-        
+
         <nav class="flex flex-col space-y-6 text-lg font-bold tracking-widest text-brandDark mt-8">
             <a href="#" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">HOME</a>
-            <a href="#about" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">お店の紹介</a>
-            <a href="#menu" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">メニュー</a>
-            <a href="#speciality" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">こだわり</a>
-            <a href="#gallery" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">店内のご案内</a>
-            <a href="#access" class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">アクセス</a>
-            
+            <a href="#about"
+                class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">お店の紹介</a>
+            <a href="#menu"
+                class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">メニュー</a>
+            <a href="#speciality"
+                class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">こだわり</a>
+            <a href="#gallery"
+                class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">店内のご案内</a>
+            <a href="#access"
+                class="mobile-link hover:text-brandRed transition border-b border-brandBrown/10 pb-2">アクセス</a>
+
             <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
                 class="hover:opacity-70 transition-opacity text-[#bc1888] flex items-center py-2" title="Instagram">
                 <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">

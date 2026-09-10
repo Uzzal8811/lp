@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Swiper - First View
-    const curNum = document.getElementById('curNum');
-    const fvSwiper = new Swiper('.fv-swiper', {
+    const fvSwiperRight = new Swiper('.fv-swiper-right', {
         loop: true,
-        effect: 'fade',
-        fadeEffect: { crossFade: true },
+        effect: 'slide',
+        speed: 1500,
+        allowTouchMove: false,
+    });
+
+    const fvSwiperLeft = new Swiper('.fv-swiper-left', {
+        loop: true,
+        effect: 'slide',
+        speed: 1500,
+        allowTouchMove: false,
         autoplay: {
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
         },
-        speed: 1500,
-        on: {
-            slideChange: function () {
-                if (curNum) {
-                    const realIndex = this.realIndex + 1;
-                    curNum.textContent = realIndex.toString().padStart(2, '0');
-                }
-            }
-        }
     });
+
+    if (fvSwiperLeft.controller && fvSwiperRight.controller) {
+        fvSwiperLeft.controller.control = fvSwiperRight;
+        fvSwiperRight.controller.control = fvSwiperLeft;
+    }
 
     // 2. Header Scroll Logic
     const header = document.getElementById('header');

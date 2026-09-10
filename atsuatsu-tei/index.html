@@ -301,1016 +301,1028 @@
 
     <main class="w-full overflow-hidden">
 
-    <!-- FV (First View) -->
-    <section class="w-full bg-brandDark bg-opacity-95 relative">
-        <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
-        <!-- Mobile Image -->
-        <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden relative z-0">
-        <!-- Desktop Video -->
-        <video id="fv-video" class="hidden md:block w-full h-auto relative z-0" src="img/FvVid.mp4" autoplay muted
-            playsinline loop></video>
-    </section>
+        <!-- FV (First View) -->
+        <section class="w-full bg-brandDark bg-opacity-95 relative">
+            <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
+            <!-- Mobile Image -->
+            <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden relative z-0">
+            <!-- Desktop Video -->
+            <video id="fv-video" class="hidden md:block w-full h-auto relative z-0" src="img/FvVid.mp4" autoplay muted
+                playsinline loop></video>
+        </section>
 
-    <!-- CTA SECTION 1 -->
-    <section class="py-10 bg-[#ebdbbd] bg-opacity-40 border-b border-brandBrown/20 text-center relative z-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold font-serif text-brandDark mb-3 tracking-widest">あつあつ亭</h2>
-            <h3 class="text-xl md:text-2xl font-bold text-brandRed mb-4 tracking-wider">
-                <a href="tel:05057953545"
-                    class="hover:opacity-70 transition inline-flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                        </path>
-                    </svg>
-                    050-5795-3545
-                </a>
-            </h3>
-            <div class="flex justify-center mb-6">
-                <div
-                    class="grid grid-cols-[auto_auto] gap-x-2 gap-y-1 text-sm md:text-base font-bold text-brandDark/80 text-left">
-                    <div class="text-right">【営業時間】</div>
-                    <div>11時30分～14時00分</div>
-                    <div></div>
-                    <div>17時00分～22時30分</div>
-                    <div class="text-right">【定休日】</div>
-                    <div>日曜日</div>
-                </div>
-            </div>
-            <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-8 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm md:text-base rounded-md">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-                Instagramを見る
-            </a>
-        </div>
-    </section>
-
-    <!-- TV (TARGET VIEW) SECTION -->
-    <section id="tv" class="relative py-16 md:py-24 w-full bg-[#f6ebd9] overflow-hidden">
-        <!-- Background with fade effect -->
-        <div class="absolute inset-0 z-0">
-            <!-- Fade mask for desktop -->
-            <div class="hidden md:block absolute right-0 top-0 w-[70%] h-full">
-                <img src="img/tv.jpg" class="w-full h-full object-cover" alt=""
-                    style="mask-image: linear-gradient(to right, transparent, black 30%); -webkit-mask-image: linear-gradient(to right, transparent, black 30%);">
-            </div>
-            <!-- Mobile subtle background -->
-            <div class="md:hidden absolute inset-0 opacity-20">
-                <img src="img/tv.jpg" class="w-full h-full object-cover object-center" alt="">
-            </div>
-        </div>
-
-        <div class="container mx-auto px-4 max-w-6xl relative z-10">
-            <div class="w-full md:w-1/2 lg:w-3/5">
-                <!-- Title Badge -->
-                <div
-                    class="inline-block bg-brandRed text-white px-8 py-3 font-bold font-serif tracking-widest shadow-md mb-10 text-xl">
-                    こんな方におすすめ
-                </div>
-
-                <!-- Text Content -->
-                <div
-                    class="mb-10 space-y-8 bg-white/70 md:bg-transparent p-6 md:p-0 rounded-lg backdrop-blur-md md:backdrop-blur-none">
-                    <div class="flex items-start">
-                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <p
-                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
-                            具材がぎっしり詰まった広島風<br class="block md:hidden">お好み焼きを食べたい方</p>
-                    </div>
-                    <div class="flex items-start">
-                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <p
-                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
-                            観光協会推奨店の本場の横手やきそばを<br class="block md:hidden">味わいたい方</p>
-                    </div>
-                    <div class="flex items-start">
-                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <p
-                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
-                            ランチや仕事帰りの一杯に気軽に<br class="block md:hidden">立ち寄りたい方</p>
-                    </div>
-                </div>
-
-                <div class="pt-8 border-t border-brandBrown/30">
-                    <p
-                        class="text-lg md:text-xl font-bold font-serif text-brandDark tracking-widest leading-loose drop-shadow-sm">
-                        気兼ねなく立ち寄れる空間で、<br>皆様のお越しをお待ちしております。
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vertical Banner Overlay (Desktop only) -->
-        <div class="hidden lg:block absolute right-[10%] top-1/2 transform -translate-y-1/2 bg-[#fdfbf6] p-8 shadow-2xl border border-brandBrown/10 z-10"
-            style="box-shadow: 10px 10px 30px rgba(0,0,0,0.3);">
-            <p class="vertical-text text-3xl font-bold font-brush text-brandDark tracking-widest leading-loose"
-                style="font-family: 'Yuji Syuku', serif;">
-                うまいもんで<br>みんな元気に
-            </p>
-        </div>
-    </section>
-
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-16 md:py-24 bg-brandLight bg-opacity-70">
-        <div
-            class="container mx-auto px-4 max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-            <!-- Text Content -->
-            <div class="w-full md:w-1/2 pl-0 md:pl-10 reveal-right">
-                <h2 class="text-3xl md:text-4xl font-bold font-serif leading-snug mb-8 text-brandDark tracking-wide">
-                    秋田県横手市田中町にある<br>鉄板焼き食堂
-                </h2>
-                <div class="space-y-4 text-brandDark font-medium leading-loose">
-                    <p>秋田県横手市田中町に位置するあつあつ亭は、横手駅前にある創業26年の鉄板焼き食堂です。</p>
-                    <p>名物の広島風お好み焼きや横手風お好み焼き＆横手やきそば暖簾会加盟店として提供する横手やきそばなど、鉄板で焼き上げるアツアツの料理をご提供しています。</p>
-                    <p>お一人様からご家族連れまで気兼ねなくご利用いただけます。</p>
-                </div>
-            </div>
-            <!-- Image Content -->
-            <div class="w-full md:w-1/2 relative group reveal-left">
-                <img src="img/about.jpg" alt="店内の様子" class="w-full h-[400px] md:h-[600px] object-cover shadow-2xl">
-                <!-- Vertical Banner Overlay -->
-                <div
-                    class="absolute -right-4 -bottom-4 md:right-8 md:-bottom-8 bg-[#F3E5AB] p-4 shadow-lg border border-brandBrown/10">
-                    <p class="vertical-text text-xl md:text-2xl font-bold font-serif text-brandDark tracking-widest">
-                        うまいもんで<br>みんな元気に
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SPECIALITY SECTION -->
-    <section id="speciality" class="py-16 md:py-24 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <!-- Section Title -->
-            <div class="text-center mb-12 flex flex-col items-center justify-center reveal-up">
-                <div class="flex items-center justify-center space-x-4 mb-2">
-                    <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                    <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">こだわり</h2>
-                    <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                </div>
-                <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">OUR SPECIALITY</p>
-            </div>
-
-            <!-- 3 Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-100">
-                    <div class="h-64 overflow-hidden">
-                        <img src="img/service1.jpg" alt="広島風お好み焼き" class="w-full h-full object-cover">
-                    </div>
-                    <div class="bg-brandRed text-white p-6 flex-grow">
-                        <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
-                            鉄板で丁寧に焼き上げる<br>広島風お好み焼き</h3>
-                        <p class="text-sm leading-loose opacity-90">
-                            キャベツやたっぷりの海鮮、カリッカリの豚肉、薄味に調整された焼きそばなどの具材がぎっしり詰まった一品です。<br>お客様が自分で焼くのではなく、スタッフが目の前の鉄板で焼いて仕上がったアツアツの状態でテーブルへお届けします。
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-200">
-                    <div class="h-64 overflow-hidden">
-                        <img src="img/service2.jpg" alt="横手やきそば" class="w-full h-full object-cover">
-                    </div>
-                    <div class="bg-brandYellow text-brandDark p-6 flex-grow">
-                        <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
-                            和風ソースが香る<br>自慢の横手やきそば</h3>
-                        <p class="text-sm leading-loose opacity-90 font-medium">
-                            一般社団法人横手市観光協会の推奨店に選ばれた横手やきそばをご提供しています。<br>太い中華麺に、ウスターソースをベースとして鰹や昆布の魚介ダシで割ったさらっとした和風ソースを絡めた一品で、全国各地から訪れる食通をうならせる味わいです。
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-300">
-                    <div class="h-64 overflow-hidden">
-                        <img src="img/service3.jpg" alt="豊富な鉄板料理" class="w-full h-full object-cover">
-                    </div>
-                    <div class="bg-brandBrown text-white p-6 flex-grow">
-                        <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
-                            豊富な鉄板焼きメニューと<br>夜の一品料理</h3>
-                        <p class="text-sm leading-loose opacity-90">
-                            米粉を使用したお好み焼き「横手焼き」（650円）や「横巻き」（600円）のほか、各種焼きそば・焼うどん、夜限定の一品料理（100円〜）まで豊富にご用意しています。<br>ランチ営業はもちろん仕事帰りの一杯にも最適です。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION 2 -->
-    <section class="py-10 bg-[#ebdbbd] bg-opacity-40 border-b border-brandBrown/20 text-center relative z-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold font-serif text-brandDark mb-3 tracking-widest">あつあつ亭</h2>
-            <h3 class="text-xl md:text-2xl font-bold text-brandRed mb-4 tracking-wider">
-                <a href="tel:05057953545"
-                    class="hover:opacity-70 transition inline-flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                        </path>
-                    </svg>
-                    050-5795-3545
-                </a>
-            </h3>
-            <div class="flex justify-center mb-6">
-                <div
-                    class="grid grid-cols-[auto_auto] gap-x-2 gap-y-1 text-sm md:text-base font-bold text-brandDark/80 text-left">
-                    <div class="text-right">【営業時間】</div>
-                    <div>11時30分～14時00分</div>
-                    <div></div>
-                    <div>17時00分～22時30分</div>
-                    <div class="text-right">【定休日】</div>
-                    <div>日曜日</div>
-                </div>
-            </div>
-            <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-8 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm md:text-base rounded-md">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-                Instagramを見る
-            </a>
-        </div>
-    </section>
-
-    <!-- MENU SECTION -->
-    <section id="menu" class="py-16 md:py-24 bg-brandLight border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex flex-col items-center justify-center mb-12 gap-2 text-center reveal-up">
-                <div class="flex items-center justify-center space-x-4">
-                    <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                    <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark">お品書き</h2>
-                    <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                </div>
-                <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">MENU</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                <!-- 広島風お好み焼き -->
-                <div
-                    class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/menu1.jpg" alt="広島風お好み焼き"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <h3
-                            class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-6 bg-brandRed inline-block"></span>広島風お好み焼き
-                        </h3>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow bg-white relative">
-                        <ul class="space-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか天</span><span class="font-bold">￥900</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>スタミナ <span
-                                        class="text-xs text-gray-500 font-normal">(にんにくスライス・白ゴマ)</span></span><span
-                                    class="font-bold">￥900</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>めんたいこ</span><span class="font-bold">￥950</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ</span><span class="font-bold">￥950</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶた</span><span class="font-bold">￥800</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズ</span><span class="font-bold">￥900</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーン</span><span class="font-bold">￥900</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ</span><span class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>秋田きりたんぽ</span><span class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ちから <span class="text-xs text-gray-500 font-normal">(もち)</span></span><span
-                                    class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>シーフード <span
-                                        class="text-xs text-gray-500 font-normal">(イカ・エビ・ホタテ)</span></span><span
-                                    class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>フレッシュ <span
-                                        class="text-xs text-gray-500 font-normal">(トマト丸ごと1コスライス)</span></span><span
-                                    class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>牡蠣</span><span class="font-bold">￥1,250</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横手焼き</span><span class="font-bold">￥650</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横巻き</span><span class="font-bold">￥600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>おのみち焼き <span class="text-xs text-gray-500 font-normal">(鳥の砂肝入り)</span></span><span
-                                    class="font-bold">￥1,000</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>府中焼き <span class="text-xs text-gray-500 font-normal">(豚ひき肉)</span></span><span
-                                    class="font-bold">￥900</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 焼きそば・焼うどん -->
-                <div
-                    class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/menu2.jpg" alt="焼きそば・焼うどん"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <h3
-                            class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-6 bg-brandYellow inline-block"></span>焼きそば・焼うどん
-                        </h3>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow bg-white relative">
-                        <ul class="space-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横手焼きそば <span class="text-xs text-gray-500 font-normal">(あつあつ亭
-                                        2011年度推奨店)</span></span><span class="font-bold">￥550</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横手焼きそば 特製ソース・麺 <span
-                                        class="text-xs text-gray-500 font-normal">(豚ひき肉・福神漬け・目玉焼き)</span></span><span
-                                    class="font-bold">￥600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶた焼きそば</span><span class="font-bold">￥600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>目玉焼きそば</span><span class="font-bold">￥680</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ焼きそば</span><span class="font-bold">￥780</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ焼きそば</span><span class="font-bold">￥850</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ステーキ焼きそば</span><span class="font-bold">￥1,600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>シーフード</span><span class="font-bold">￥800</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>オムそば</span><span class="font-bold">￥780</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズオムそば</span><span class="font-bold">￥880</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>焼きうどん</span><span class="font-bold">￥650</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ焼きうどん</span><span class="font-bold">￥850</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- トッピング -->
-                <div
-                    class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300 lg:col-span-2">
-                    <div class="h-32 md:h-40 overflow-hidden relative">
-                        <img src="img/menu3.jpg" alt="トッピング"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <h3
-                            class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-6 bg-brandBrown inline-block"></span>トッピング
-                        </h3>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow bg-white relative">
-                        <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>えび</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ほたて</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか天</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズ</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーン</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>にんにくスライス</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>白ゴマ</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ</span><span class="font-bold">￥150</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ</span><span class="font-bold">￥150</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>きりたんぽ</span><span class="font-bold">￥150</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>めんたいこ</span><span class="font-bold">￥150</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ちから</span><span class="font-bold">￥200</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>トマト</span><span class="font-bold">￥200</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>鳥の砂肝</span><span class="font-bold">￥200</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>カキ</span><span class="font-bold">￥500</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 一品料理 -->
-                <div
-                    class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300 lg:col-span-2">
-                    <div class="h-32 md:h-40 overflow-hidden relative">
-                        <img src="img/menu4.jpg" alt="一品料理"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <h3
-                            class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-6 bg-brandDark inline-block"></span>一品料理
-                        </h3>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow bg-white relative">
-                        <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>手羽めんたい</span><span class="font-bold">￥680</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キノコホイル焼き</span><span class="font-bold">￥620</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>貝柱バター焼き</span><span class="font-bold">￥590</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>豆腐</span><span class="font-bold">￥590</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>枝豆</span><span class="font-bold">￥580</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ソーセージ</span><span class="font-bold">￥530</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いそべ巻き</span><span class="font-bold">￥100</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズいそべ</span><span class="font-bold">￥150</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>焼きおにぎり</span><span class="font-bold">￥180</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>はんぺん</span><span class="font-bold">￥420</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズはんぺん</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>肝焼き</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ししゃも</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか焼き</span><span class="font-bold">￥630</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>つくね</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>とりなんこつ</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーンバター</span><span class="font-bold">￥350</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>きのこバター</span><span class="font-bold">￥390</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>うめきゅう</span><span class="font-bold">￥390</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズコーンバター</span><span class="font-bold">￥450</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>豚玉バター</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ホタテバター</span><span class="font-bold">￥690</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いかバター</span><span class="font-bold">￥600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>一口餃子</span><span class="font-bold">￥490</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶたキムチ</span><span class="font-bold">￥580</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶたロースティック</span><span class="font-bold">￥580</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>オムチーズ</span><span class="font-bold">￥590</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>手羽チーズ</span><span class="font-bold">￥660</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ステーキ</span><span class="font-bold">￥1,080</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>牛すじうどん</span><span class="font-bold">￥600</span>
-                            </li>
-                            <li
-                                class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>大根サラダ</span><span class="font-bold">￥480</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VOICE SECTION -->
-    <section id="voice" class="py-16 md:py-24 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <!-- Title -->
-            <div class="text-center mb-12 flex flex-col items-center justify-center">
-                <div class="flex items-center justify-center space-x-4 mb-2">
-                    <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                    <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">お客様の声</h2>
-                    <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                </div>
-                <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">CUSTOMER VOICE</p>
-            </div>
-
-            <!-- Reviews Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
-                <!-- Review 1 -->
-                <div class="bg-white p-8 shadow-xl border-t-4 border-brandYellow flex flex-col h-full relative">
-                    <div class="flex text-brandYellow mb-4">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+        <!-- CTA SECTION 1 -->
+        <section class="py-10 bg-[#ebdbbd] bg-opacity-40 border-b border-brandBrown/20 text-center relative z-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold font-serif text-brandDark mb-3 tracking-widest">あつあつ亭</h2>
+                <h3 class="text-xl md:text-2xl font-bold text-brandRed mb-4 tracking-wider">
+                    <a href="tel:05057953545"
+                        class="hover:opacity-70 transition inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                             </path>
                         </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="mb-6 flex-grow flex flex-col items-start justify-start">
-                        <p
-                            class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
-                            横手やきそば暖簾会の一店舗です。横手カマクラ館の近くです。小ぢんまりした店舗でした。オカミサン1人でやっています。横手やきそば暖簾会は、不定期の休みのお店が多いので確認して行った方が良いと思います🙇とても美味しかったです😄目玉焼き半熟を絡めて食べる絶品です。値段も550円❗️リーズナブルです。
-                        </p>
-                        <button onclick="toggleReview(this)"
-                            class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
-                    </div>
-
-                </div>
-
-                <!-- Review 2 -->
-                <div class="bg-white p-8 shadow-xl border-t-4 border-brandRed flex flex-col h-full relative">
-                    <div class="flex text-brandYellow mb-4">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="mb-6 flex-grow flex flex-col items-start justify-start">
-                        <p
-                            class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
-                            今日は朝から無性にお好み焼きが食べたい。<br>向かった先はあつあつ亭。<br>横手では珍しい広島風お好み焼きが食べられる鉄板焼きのお店、もちろん横手焼きそばも食べられるし、珍しい横手焼きや横巻きも食べられる。<br>決して小綺麗とは言い難いが、なんとなく落ち着ける雰囲気のある店内。女性店主はとても気さくな人で、お客さんが少ない時は世間話が盛り上がる。<br><br>お好み焼きの口になっているので、広島風お好み焼き大盛りを注文、麺とキャベツたっぷり、ボリュームがあってソース好きには堪らない一品。メニューにはないが本場広島同様に、麺を焼きそば麺からうどんにも変えられるらしい。是非一度お試しを。<br><br>今日も変わらぬ美味しさ、ご馳走様でした。
-                        </p>
-                        <button onclick="toggleReview(this)"
-                            class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
-                    </div>
-
-                </div>
-
-                <!-- Review 3 -->
-                <div class="bg-white p-8 shadow-xl border-t-4 border-brandBrown flex flex-col h-full relative">
-                    <div class="flex text-brandYellow mb-4">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="mb-6 flex-grow flex flex-col items-start justify-start">
-                        <p
-                            class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
-                            横手焼きと横手やきそばをテイクアウトでいただきました。開店してすぐに伺ったこともありお客さんは店内にまだいらっしゃらない状態でした。覗いたところ席数はそれほど多くなく、アットホームな雰囲気で飲食を楽しめるお店なのかなと思いました。<br><br>肝心の味には間違いなく美味しいので、どこで横手やきそばを食べるか悩んでいる方にはとてもオススメできるお店です。
-                        </p>
-                        <button onclick="toggleReview(this)"
-                            class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Button -->
-            <div class="text-center">
-                <a href="https://www.google.com/search?q=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD+%E7%A7%8B%E7%94%B0&rlz=1C1VDKB_jaJP1161JP1162&oq=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD%E3%80%80%E7%A7%8B%E7%94%B0&gs_lcrp=EgZjaHJvbWUyCAgAEEUYHhg5MgcIARAAGO8FMgoIAhAAGIAEGKIE0gEINjcxMmowajeoAgiwAgHxBXEXuIeMIobe&sourceid=chrome&ie=UTF-8&sec_src=editors#lrd=0x5f8f0ffc87e32d25:0x951c611710a8118f,1,,,,"
-                    target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center bg-brandRed text-white px-8 py-4 font-bold tracking-widest hover:bg-brandDark transition duration-300 shadow-md rounded-full">
-                    Googleのクチコミをもっと見る
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="py-16 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl mb-8 reveal-up">
-            <div class="flex items-end gap-4">
-                <h2 class="text-xl md:text-2xl font-bold font-serif tracking-widest text-brandDark">店内ギャラリー</h2>
-                <span class="text-brandBrown text-xs font-bold tracking-widest uppercase mb-1">GALLERY</span>
-            </div>
-        </div>
-        <!-- Infinite Marquee -->
-        <div class="w-full overflow-hidden flex">
-            <div class="flex animate-marquee min-w-max gap-[20px]">
-                <!-- Original Set -->
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery1.jpg')"><img src="img/gallery1.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery2.jpg')"><img src="img/gallery2.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery3.jpg')"><img src="img/gallery3.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery4.jpg')"><img src="img/gallery4.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery5.jpg')"><img src="img/gallery5.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery6.jpg')"><img src="img/gallery6.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-
-                <!-- Duplicate Set -->
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery1.jpg')"><img src="img/gallery1.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery2.jpg')"><img src="img/gallery2.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery3.jpg')"><img src="img/gallery3.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery4.jpg')"><img src="img/gallery4.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery5.jpg')"><img src="img/gallery5.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-                <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                    onclick="openLightbox('img/gallery6.jpg')"><img src="img/gallery6.jpg" alt="Gallery"
-                        class="w-full h-full object-cover"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MESSAGE SECTION -->
-    <section id="message" class="py-16 md:py-24 bg-white bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <!-- Title -->
-            <div class="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <div class="flex items-center justify-center space-x-4 mb-2">
-                    <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                    <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">スタッフ
-                    </h2>
-                    <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
-                    </svg>
-                </div>
-                <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">お客様へ</p>
-            </div>
-
-            <!-- Content -->
-            <div
-                class="bg-brandLighter p-8 md:p-12 shadow-lg border-t-4 border-brandRed flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <!-- Image -->
-                <div class="w-full md:w-5/12 flex-shrink-0 reveal-right">
-                    <img src="img/message.jpg" alt="オーナー・スタッフから一言"
-                        class="w-full h-auto object-cover rounded shadow-md aspect-square md:aspect-[4/3]">
-                </div>
-                <!-- Text -->
-                <div
-                    class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left reveal-left delay-100">
-                    <h3 class="text-xl md:text-2xl font-bold font-serif text-brandRed mb-6 leading-relaxed">
-                        創業26年温かい料理で<br class="block md:hidden">お迎えします
-                    </h3>
-                    <p
-                        class="text-brandDark font-medium text-sm md:text-base leading-loose md:leading-loose inline-block text-left">
-                        横手市田中町で創業26年、いつでもお客様を温かくお迎えしてきました。<br>
-                        鉄板で丁寧に焼き上げるアツアツの料理で、心も体も温まっていただきたいと思っております。<br><br>
-                        皆様のご来店を心よりお待ちしております。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACCESS SECTION -->
-    <section id="access" class="py-16 md:py-24 bg-brandLight bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl reveal-up">
-            <!-- Title -->
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark mb-2">アクセス</h2>
-                <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">ACCESS</span>
-            </div>
-
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-                <!-- Address Info -->
-                <div class="w-full lg:w-[20%] flex flex-col items-center lg:items-start gap-4 order-1">
-                    <div class="text-center lg:text-left">
-                        <p class="font-bold text-lg md:text-xl mb-2">あつあつ亭</p>
-                        <p class="text-sm md:text-base leading-relaxed mb-6">
-                            〒013-0024<br>
-                            秋田県横手市田中町２−１９<br>
-                            TEL: <a href="tel:05057953545" class="hover:text-brandRed transition">050-5795-3545</a>
-                        </p>
-                        <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-6 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm rounded-md">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                            </svg>
-                            Instagramを見る
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Map Iframe -->
-                <div class="w-full lg:w-[50%] order-3 lg:order-2">
+                        050-5795-3545
+                    </a>
+                </h3>
+                <div class="flex justify-center mb-6">
                     <div
-                        class="w-full aspect-[4/3] bg-gray-200 border border-brandBrown/20 flex items-center justify-center overflow-hidden">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.0122687018425!2d140.5601378!3d39.3013157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8f0ffc87e32d25%3A0x951c611710a8118f!2z44GC44Gk44GC44Gk5Lqt!5e0!3m2!1sja!2sjp!4v1774925036680!5m2!1sja!2sjp"
-                            class="w-full h-full border-0 opacity-80" allowfullscreen="" loading="lazy"></iframe>
+                        class="grid grid-cols-[auto_auto] gap-x-2 gap-y-1 text-sm md:text-base font-bold text-brandDark/80 text-left">
+                        <div class="text-right">【営業時間】</div>
+                        <div>11時30分～14時00分</div>
+                        <div></div>
+                        <div>17時00分～22時30分</div>
+                        <div class="text-right">【定休日】</div>
+                        <div>日曜日</div>
                     </div>
                 </div>
-
-                <!-- Store Info -->
-                <div
-                    class="w-full lg:w-[30%] relative bg-[#ebdbbd] p-6 md:p-8 shadow-sm border border-brandBrown/20 rounded-sm overflow-hidden order-2 lg:order-3">
-                    <!-- Spatula Watermark -->
-                    <svg class="absolute right-[-15%] bottom-[-15%] w-56 h-56 text-brandBrown opacity-10 transform rotate-45"
-                        viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-8 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm md:text-base rounded-md">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                         <path
-                            d="M13 2h-2v10L7 16v6h10v-6l-4-4V2zm-1 16.5a1 1 0 110-2 1 1 0 010 2zm-2.5 1.5a1 1 0 110-2 1 1 0 010 2zm5 0a1 1 0 110-2 1 1 0 010 2z" />
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                     </svg>
+                    Instagramを見る
+                </a>
+            </div>
+        </section>
 
-                    <h3
-                        class="font-bold text-lg md:text-xl border-b border-brandBrown/30 pb-3 mb-5 relative z-10 text-brandDark">
-                        店舗情報</h3>
-                    <div class="space-y-5 text-sm md:text-base font-bold relative z-10 text-brandDark">
-                        <div class="flex">
-                            <span class="w-24 md:w-28 text-brandDark/80">営業時間</span>
-                            <span class="leading-loose">11:30 ~ 14:00<br>17:00 ~ 22:30</span>
+        <!-- TV (TARGET VIEW) SECTION -->
+        <section id="tv" class="relative py-16 md:py-24 w-full bg-[#f6ebd9] overflow-hidden">
+            <!-- Background with fade effect -->
+            <div class="absolute inset-0 z-0">
+                <!-- Fade mask for desktop -->
+                <div class="hidden md:block absolute right-0 top-0 w-[70%] h-full">
+                    <img src="img/tv.jpg" class="w-full h-full object-cover" alt=""
+                        style="mask-image: linear-gradient(to right, transparent, black 30%); -webkit-mask-image: linear-gradient(to right, transparent, black 30%);">
+                </div>
+                <!-- Mobile subtle background -->
+                <div class="md:hidden absolute inset-0 opacity-20">
+                    <img src="img/tv.jpg" class="w-full h-full object-cover object-center" alt="">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="w-full md:w-1/2 lg:w-3/5">
+                    <!-- Title Badge -->
+                    <div
+                        class="inline-block bg-brandRed text-white px-8 py-3 font-bold font-serif tracking-widest shadow-md mb-10 text-xl">
+                        こんな方におすすめ
+                    </div>
+
+                    <!-- Text Content -->
+                    <div
+                        class="mb-10 space-y-8 bg-white/70 md:bg-transparent p-6 md:p-0 rounded-lg backdrop-blur-md md:backdrop-blur-none">
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p
+                                class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
+                                具材がぎっしり詰まった広島風<br class="block md:hidden">お好み焼きを食べたい方</p>
                         </div>
-                        <div class="flex">
-                            <span class="w-24 md:w-28 text-brandDark/80">定休日</span>
-                            <span>日曜日</span>
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p
+                                class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
+                                観光協会推奨店の本場の横手やきそばを<br class="block md:hidden">味わいたい方</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p
+                                class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
+                                ランチや仕事帰りの一杯に気軽に<br class="block md:hidden">立ち寄りたい方</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-brandBrown/30">
+                        <p
+                            class="text-lg md:text-xl font-bold font-serif text-brandDark tracking-widest leading-loose drop-shadow-sm">
+                            気兼ねなく立ち寄れる空間で、<br>皆様のお越しをお待ちしております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Banner Overlay (Desktop only) -->
+            <div class="hidden lg:block absolute right-[10%] top-1/2 transform -translate-y-1/2 bg-[#fdfbf6] p-8 shadow-2xl border border-brandBrown/10 z-10"
+                style="box-shadow: 10px 10px 30px rgba(0,0,0,0.3);">
+                <p class="vertical-text text-3xl font-bold font-brush text-brandDark tracking-widest leading-loose"
+                    style="font-family: 'Yuji Syuku', serif;">
+                    うまいもんで<br>みんな元気に
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-16 md:py-24 bg-brandLight bg-opacity-70">
+            <div
+                class="container mx-auto px-4 max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2 pl-0 md:pl-10 reveal-right">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold font-serif leading-snug mb-8 text-brandDark tracking-wide">
+                        秋田県横手市田中町にある<br>鉄板焼き食堂
+                    </h2>
+                    <div class="space-y-4 text-brandDark font-medium leading-loose">
+                        <p>秋田県横手市田中町に位置するあつあつ亭は、横手駅前にある創業26年の鉄板焼き食堂です。</p>
+                        <p>名物の広島風お好み焼きや横手風お好み焼き＆横手やきそば暖簾会加盟店として提供する横手やきそばなど、鉄板で焼き上げるアツアツの料理をご提供しています。</p>
+                        <p>お一人様からご家族連れまで気兼ねなくご利用いただけます。</p>
+                    </div>
+                </div>
+                <!-- Image Content -->
+                <div class="w-full md:w-1/2 relative group reveal-left">
+                    <img src="img/about.jpg" alt="店内の様子" class="w-full h-[400px] md:h-[600px] object-cover shadow-2xl">
+                    <!-- Vertical Banner Overlay -->
+                    <div
+                        class="absolute -right-4 -bottom-4 md:right-8 md:-bottom-8 bg-[#F3E5AB] p-4 shadow-lg border border-brandBrown/10">
+                        <p
+                            class="vertical-text text-xl md:text-2xl font-bold font-serif text-brandDark tracking-widest">
+                            うまいもんで<br>みんな元気に
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SPECIALITY SECTION -->
+        <section id="speciality" class="py-16 md:py-24 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <!-- Section Title -->
+                <div class="text-center mb-12 flex flex-col items-center justify-center reveal-up">
+                    <div class="flex items-center justify-center space-x-4 mb-2">
+                        <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                        <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">こだわり</h2>
+                        <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">OUR SPECIALITY</p>
+                </div>
+
+                <!-- 3 Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-100">
+                        <div class="h-64 overflow-hidden">
+                            <img src="img/service1.jpg" alt="広島風お好み焼き" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-brandRed text-white p-6 flex-grow">
+                            <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
+                                鉄板で丁寧に焼き上げる<br>広島風お好み焼き</h3>
+                            <p class="text-sm leading-loose opacity-90">
+                                キャベツやたっぷりの海鮮、カリッカリの豚肉、薄味に調整された焼きそばなどの具材がぎっしり詰まった一品です。<br>お客様が自分で焼くのではなく、スタッフが目の前の鉄板で焼いて仕上がったアツアツの状態でテーブルへお届けします。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-200">
+                        <div class="h-64 overflow-hidden">
+                            <img src="img/service2.jpg" alt="横手やきそば" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-brandYellow text-brandDark p-6 flex-grow">
+                            <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
+                                和風ソースが香る<br>自慢の横手やきそば</h3>
+                            <p class="text-sm leading-loose opacity-90 font-medium">
+                                一般社団法人横手市観光協会の推奨店に選ばれた横手やきそばをご提供しています。<br>太い中華麺に、ウスターソースをベースとして鰹や昆布の魚介ダシで割ったさらっとした和風ソースを絡めた一品で、全国各地から訪れる食通をうならせる味わいです。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-300">
+                        <div class="h-64 overflow-hidden">
+                            <img src="img/service3.jpg" alt="豊富な鉄板料理" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-brandBrown text-white p-6 flex-grow">
+                            <h3 class="text-xl md:text-2xl font-bold font-serif mb-4 tracking-wider leading-snug">
+                                豊富な鉄板焼きメニューと<br>夜の一品料理</h3>
+                            <p class="text-sm leading-loose opacity-90">
+                                米粉を使用したお好み焼き「横手焼き」（650円）や「横巻き」（600円）のほか、各種焼きそば・焼うどん、夜限定の一品料理（100円〜）まで豊富にご用意しています。<br>ランチ営業はもちろん仕事帰りの一杯にも最適です。
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER CTA -->
-    <section class="bg-brandRed bg-opacity-95 py-12 md:py-16">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:gap-12">
-            <h2 class="text-2xl md:text-4xl font-bold text-white tracking-widest font-serif mb-6 md:mb-0 text-center md:text-left">
-                今日も熱々で<br class="block md:hidden">お待ちしております。
-            </h2>
-            <a href="tel:0182-36-5525"
-                class="inline-flex items-center justify-center bg-white text-brandRed px-8 py-4 font-bold tracking-widest hover:bg-brandDark hover:text-white transition duration-300 shadow-xl rounded-full text-lg">
-                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                ご予約・お問い合わせ
-                <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </a>
-        </div>
-    </section>
+        <!-- CTA SECTION 2 -->
+        <section class="py-10 bg-[#ebdbbd] bg-opacity-40 border-b border-brandBrown/20 text-center relative z-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold font-serif text-brandDark mb-3 tracking-widest">あつあつ亭</h2>
+                <h3 class="text-xl md:text-2xl font-bold text-brandRed mb-4 tracking-wider">
+                    <a href="tel:05057953545"
+                        class="hover:opacity-70 transition inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        050-5795-3545
+                    </a>
+                </h3>
+                <div class="flex justify-center mb-6">
+                    <div
+                        class="grid grid-cols-[auto_auto] gap-x-2 gap-y-1 text-sm md:text-base font-bold text-brandDark/80 text-left">
+                        <div class="text-right">【営業時間】</div>
+                        <div>11時30分～14時00分</div>
+                        <div></div>
+                        <div>17時00分～22時30分</div>
+                        <div class="text-right">【定休日】</div>
+                        <div>日曜日</div>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-8 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm md:text-base rounded-md">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                    Instagramを見る
+                </a>
+            </div>
+        </section>
 
-    <footer class="bg-brandBrown py-6 text-center text-white/50 text-xs tracking-widest">
-        &copy; あつあつ亭 All Rights Reserved.
-    </footer>
+        <!-- MENU SECTION -->
+        <section id="menu" class="py-16 md:py-24 bg-brandLight border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col items-center justify-center mb-12 gap-2 text-center reveal-up">
+                    <div class="flex items-center justify-center space-x-4">
+                        <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                        <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark">お品書き</h2>
+                        <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                    </div>
+                    <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">MENU</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <!-- 広島風お好み焼き -->
+                    <div
+                        class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="img/menu1.jpg" alt="広島風お好み焼き"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                            </div>
+                            <h3
+                                class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
+                                <span class="w-2 h-6 bg-brandRed inline-block"></span>広島風お好み焼き
+                            </h3>
+                        </div>
+                        <div class="p-6 md:p-8 flex-grow bg-white relative">
+                            <ul class="space-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いか天</span><span class="font-bold">￥900</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>スタミナ <span
+                                            class="text-xs text-gray-500 font-normal">(にんにくスライス・白ゴマ)</span></span><span
+                                        class="font-bold">￥900</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>めんたいこ</span><span class="font-bold">￥950</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>キムチ</span><span class="font-bold">￥950</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ぶた</span><span class="font-bold">￥800</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズ</span><span class="font-bold">￥900</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>コーン</span><span class="font-bold">￥900</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ビーフ</span><span class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>秋田きりたんぽ</span><span class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ちから <span class="text-xs text-gray-500 font-normal">(もち)</span></span><span
+                                        class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>シーフード <span
+                                            class="text-xs text-gray-500 font-normal">(イカ・エビ・ホタテ)</span></span><span
+                                        class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>フレッシュ <span
+                                            class="text-xs text-gray-500 font-normal">(トマト丸ごと1コスライス)</span></span><span
+                                        class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>牡蠣</span><span class="font-bold">￥1,250</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>横手焼き</span><span class="font-bold">￥650</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>横巻き</span><span class="font-bold">￥600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>おのみち焼き <span
+                                            class="text-xs text-gray-500 font-normal">(鳥の砂肝入り)</span></span><span
+                                        class="font-bold">￥1,000</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>府中焼き <span class="text-xs text-gray-500 font-normal">(豚ひき肉)</span></span><span
+                                        class="font-bold">￥900</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 焼きそば・焼うどん -->
+                    <div
+                        class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="img/menu2.jpg" alt="焼きそば・焼うどん"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                            </div>
+                            <h3
+                                class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
+                                <span class="w-2 h-6 bg-brandYellow inline-block"></span>焼きそば・焼うどん
+                            </h3>
+                        </div>
+                        <div class="p-6 md:p-8 flex-grow bg-white relative">
+                            <ul class="space-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>横手焼きそば <span class="text-xs text-gray-500 font-normal">(あつあつ亭
+                                            2011年度推奨店)</span></span><span class="font-bold">￥550</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>横手焼きそば 特製ソース・麺 <span
+                                            class="text-xs text-gray-500 font-normal">(豚ひき肉・福神漬け・目玉焼き)</span></span><span
+                                        class="font-bold">￥600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ぶた焼きそば</span><span class="font-bold">￥600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>目玉焼きそば</span><span class="font-bold">￥680</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ビーフ焼きそば</span><span class="font-bold">￥780</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>キムチ焼きそば</span><span class="font-bold">￥850</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ステーキ焼きそば</span><span class="font-bold">￥1,600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>シーフード</span><span class="font-bold">￥800</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>オムそば</span><span class="font-bold">￥780</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズオムそば</span><span class="font-bold">￥880</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>焼きうどん</span><span class="font-bold">￥650</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>キムチ焼きうどん</span><span class="font-bold">￥850</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- トッピング -->
+                    <div
+                        class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300 lg:col-span-2">
+                        <div class="h-32 md:h-40 overflow-hidden relative">
+                            <img src="img/menu3.jpg" alt="トッピング"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                            </div>
+                            <h3
+                                class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
+                                <span class="w-2 h-6 bg-brandBrown inline-block"></span>トッピング
+                            </h3>
+                        </div>
+                        <div class="p-6 md:p-8 flex-grow bg-white relative">
+                            <ul
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いか</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>えび</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ほたて</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いか天</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズ</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>コーン</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>にんにくスライス</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>白ゴマ</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ビーフ</span><span class="font-bold">￥150</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>キムチ</span><span class="font-bold">￥150</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>きりたんぽ</span><span class="font-bold">￥150</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>めんたいこ</span><span class="font-bold">￥150</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ちから</span><span class="font-bold">￥200</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>トマト</span><span class="font-bold">￥200</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>鳥の砂肝</span><span class="font-bold">￥200</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>カキ</span><span class="font-bold">￥500</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 一品料理 -->
+                    <div
+                        class="bg-white shadow-xl flex flex-col h-full rounded-lg overflow-hidden border border-brandBrown/20 group hover:shadow-2xl transition-all duration-300 lg:col-span-2">
+                        <div class="h-32 md:h-40 overflow-hidden relative">
+                            <img src="img/menu4.jpg" alt="一品料理"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                            </div>
+                            <h3
+                                class="absolute bottom-4 left-6 text-xl md:text-2xl font-bold font-serif text-white tracking-widest flex items-center gap-2">
+                                <span class="w-2 h-6 bg-brandDark inline-block"></span>一品料理
+                            </h3>
+                        </div>
+                        <div class="p-6 md:p-8 flex-grow bg-white relative">
+                            <ul
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>手羽めんたい</span><span class="font-bold">￥680</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>キノコホイル焼き</span><span class="font-bold">￥620</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>貝柱バター焼き</span><span class="font-bold">￥590</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>豆腐</span><span class="font-bold">￥590</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>枝豆</span><span class="font-bold">￥580</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ソーセージ</span><span class="font-bold">￥530</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いそべ巻き</span><span class="font-bold">￥100</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズいそべ</span><span class="font-bold">￥150</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>焼きおにぎり</span><span class="font-bold">￥180</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>はんぺん</span><span class="font-bold">￥420</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズはんぺん</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>肝焼き</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ししゃも</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いか焼き</span><span class="font-bold">￥630</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>つくね</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>とりなんこつ</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>コーンバター</span><span class="font-bold">￥350</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>きのこバター</span><span class="font-bold">￥390</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>うめきゅう</span><span class="font-bold">￥390</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>チーズコーンバター</span><span class="font-bold">￥450</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>豚玉バター</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ホタテバター</span><span class="font-bold">￥690</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>いかバター</span><span class="font-bold">￥600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>一口餃子</span><span class="font-bold">￥490</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ぶたキムチ</span><span class="font-bold">￥580</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ぶたロースティック</span><span class="font-bold">￥580</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>オムチーズ</span><span class="font-bold">￥590</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>手羽チーズ</span><span class="font-bold">￥660</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>ステーキ</span><span class="font-bold">￥1,080</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>牛すじうどん</span><span class="font-bold">￥600</span>
+                                </li>
+                                <li
+                                    class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
+                                    <span>大根サラダ</span><span class="font-bold">￥480</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOICE SECTION -->
+        <section id="voice" class="py-16 md:py-24 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <!-- Title -->
+                <div class="text-center mb-12 flex flex-col items-center justify-center">
+                    <div class="flex items-center justify-center space-x-4 mb-2">
+                        <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                        <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">お客様の声</h2>
+                        <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">CUSTOMER VOICE</p>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 shadow-xl border-t-4 border-brandYellow flex flex-col h-full relative">
+                        <div class="flex text-brandYellow mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="mb-6 flex-grow flex flex-col items-start justify-start">
+                            <p
+                                class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
+                                横手やきそば暖簾会の一店舗です。横手カマクラ館の近くです。小ぢんまりした店舗でした。オカミサン1人でやっています。横手やきそば暖簾会は、不定期の休みのお店が多いので確認して行った方が良いと思います🙇とても美味しかったです😄目玉焼き半熟を絡めて食べる絶品です。値段も550円❗️リーズナブルです。
+                            </p>
+                            <button onclick="toggleReview(this)"
+                                class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 shadow-xl border-t-4 border-brandRed flex flex-col h-full relative">
+                        <div class="flex text-brandYellow mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="mb-6 flex-grow flex flex-col items-start justify-start">
+                            <p
+                                class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
+                                今日は朝から無性にお好み焼きが食べたい。<br>向かった先はあつあつ亭。<br>横手では珍しい広島風お好み焼きが食べられる鉄板焼きのお店、もちろん横手焼きそばも食べられるし、珍しい横手焼きや横巻きも食べられる。<br>決して小綺麗とは言い難いが、なんとなく落ち着ける雰囲気のある店内。女性店主はとても気さくな人で、お客さんが少ない時は世間話が盛り上がる。<br><br>お好み焼きの口になっているので、広島風お好み焼き大盛りを注文、麺とキャベツたっぷり、ボリュームがあってソース好きには堪らない一品。メニューにはないが本場広島同様に、麺を焼きそば麺からうどんにも変えられるらしい。是非一度お試しを。<br><br>今日も変わらぬ美味しさ、ご馳走様でした。
+                            </p>
+                            <button onclick="toggleReview(this)"
+                                class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 shadow-xl border-t-4 border-brandBrown flex flex-col h-full relative">
+                        <div class="flex text-brandYellow mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="mb-6 flex-grow flex flex-col items-start justify-start">
+                            <p
+                                class="text-brandDark font-medium text-sm leading-loose line-clamp-4 transition-all duration-300">
+                                横手焼きと横手やきそばをテイクアウトでいただきました。開店してすぐに伺ったこともありお客さんは店内にまだいらっしゃらない状態でした。覗いたところ席数はそれほど多くなく、アットホームな雰囲気で飲食を楽しめるお店なのかなと思いました。<br><br>肝心の味には間違いなく美味しいので、どこで横手やきそばを食べるか悩んでいる方にはとてもオススメできるお店です。
+                            </p>
+                            <button onclick="toggleReview(this)"
+                                class="text-brandRed text-xs font-bold mt-2 hover:underline focus:outline-none flex-shrink-0">続きを読む</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="text-center">
+                    <a href="https://www.google.com/search?q=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD+%E7%A7%8B%E7%94%B0&rlz=1C1VDKB_jaJP1161JP1162&oq=%E3%81%82%E3%81%A4%E3%81%82%E3%81%A4%E4%BA%AD%E3%80%80%E7%A7%8B%E7%94%B0&gs_lcrp=EgZjaHJvbWUyCAgAEEUYHhg5MgcIARAAGO8FMgoIAhAAGIAEGKIE0gEINjcxMmowajeoAgiwAgHxBXEXuIeMIobe&sourceid=chrome&ie=UTF-8&sec_src=editors#lrd=0x5f8f0ffc87e32d25:0x951c611710a8118f,1,,,,"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center bg-brandRed text-white px-8 py-4 font-bold tracking-widest hover:bg-brandDark transition duration-300 shadow-md rounded-full">
+                        Googleのクチコミをもっと見る
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="py-16 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-6xl mb-8 reveal-up">
+                <div class="flex items-end gap-4">
+                    <h2 class="text-xl md:text-2xl font-bold font-serif tracking-widest text-brandDark">店内ギャラリー</h2>
+                    <span class="text-brandBrown text-xs font-bold tracking-widest uppercase mb-1">GALLERY</span>
+                </div>
+            </div>
+            <!-- Infinite Marquee -->
+            <div class="w-full overflow-hidden flex">
+                <div class="flex animate-marquee min-w-max gap-[20px]">
+                    <!-- Original Set -->
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery1.jpg')"><img src="img/gallery1.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery2.jpg')"><img src="img/gallery2.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery3.jpg')"><img src="img/gallery3.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery4.jpg')"><img src="img/gallery4.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery5.jpg')"><img src="img/gallery5.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery6.jpg')"><img src="img/gallery6.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+
+                    <!-- Duplicate Set -->
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery1.jpg')"><img src="img/gallery1.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery2.jpg')"><img src="img/gallery2.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery3.jpg')"><img src="img/gallery3.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery4.jpg')"><img src="img/gallery4.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery5.jpg')"><img src="img/gallery5.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                    <div class="w-[80vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] aspect-[4/3] flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300"
+                        onclick="openLightbox('img/gallery6.jpg')"><img src="img/gallery6.jpg" alt="Gallery"
+                            class="w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESSAGE SECTION -->
+        <section id="message" class="py-16 md:py-24 bg-white bg-opacity-70 border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <!-- Title -->
+                <div class="flex flex-col items-center justify-center mb-8 md:mb-12">
+                    <div class="flex items-center justify-center space-x-4 mb-2">
+                        <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                        <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark">スタッフ
+                        </h2>
+                        <svg class="w-6 h-6 text-brandDark transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="text-brandBrown text-xs tracking-widest uppercase font-bold">お客様へ</p>
+                </div>
+
+                <!-- Content -->
+                <div
+                    class="bg-brandLighter p-8 md:p-12 shadow-lg border-t-4 border-brandRed flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Image -->
+                    <div class="w-full md:w-5/12 flex-shrink-0 reveal-right">
+                        <img src="img/message.jpg" alt="オーナー・スタッフから一言"
+                            class="w-full h-auto object-cover rounded shadow-md aspect-square md:aspect-[4/3]">
+                    </div>
+                    <!-- Text -->
+                    <div
+                        class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left reveal-left delay-100">
+                        <h3 class="text-xl md:text-2xl font-bold font-serif text-brandRed mb-6 leading-relaxed">
+                            創業26年温かい料理で<br class="block md:hidden">お迎えします
+                        </h3>
+                        <p
+                            class="text-brandDark font-medium text-sm md:text-base leading-loose md:leading-loose inline-block text-left">
+                            横手市田中町で創業26年、いつでもお客様を温かくお迎えしてきました。<br>
+                            鉄板で丁寧に焼き上げるアツアツの料理で、心も体も温まっていただきたいと思っております。<br><br>
+                            皆様のご来店を心よりお待ちしております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESS SECTION -->
+        <section id="access" class="py-16 md:py-24 bg-brandLight bg-opacity-70 border-t border-brandBrown/10">
+            <div class="container mx-auto px-4 max-w-6xl reveal-up">
+                <!-- Title -->
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark mb-2">アクセス</h2>
+                    <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">ACCESS</span>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                    <!-- Address Info -->
+                    <div class="w-full lg:w-[20%] flex flex-col items-center lg:items-start gap-4 order-1">
+                        <div class="text-center lg:text-left">
+                            <p class="font-bold text-lg md:text-xl mb-2">あつあつ亭</p>
+                            <p class="text-sm md:text-base leading-relaxed mb-6">
+                                〒013-0024<br>
+                                秋田県横手市田中町２−１９<br>
+                                TEL: <a href="tel:05057953545" class="hover:text-brandRed transition">050-5795-3545</a>
+                            </p>
+                            <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-6 py-3 font-bold tracking-widest hover:opacity-90 transition duration-300 shadow-md text-sm rounded-md">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                                Instagramを見る
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Iframe -->
+                    <div class="w-full lg:w-[50%] order-3 lg:order-2">
+                        <div
+                            class="w-full aspect-[4/3] bg-gray-200 border border-brandBrown/20 flex items-center justify-center overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.0122687018425!2d140.5601378!3d39.3013157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8f0ffc87e32d25%3A0x951c611710a8118f!2z44GC44Gk44GC44Gk5Lqt!5e0!3m2!1sja!2sjp!4v1774925036680!5m2!1sja!2sjp"
+                                class="w-full h-full border-0 opacity-80" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Store Info -->
+                    <div
+                        class="w-full lg:w-[30%] relative bg-[#ebdbbd] p-6 md:p-8 shadow-sm border border-brandBrown/20 rounded-sm overflow-hidden order-2 lg:order-3">
+                        <!-- Spatula Watermark -->
+                        <svg class="absolute right-[-15%] bottom-[-15%] w-56 h-56 text-brandBrown opacity-10 transform rotate-45"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13 2h-2v10L7 16v6h10v-6l-4-4V2zm-1 16.5a1 1 0 110-2 1 1 0 010 2zm-2.5 1.5a1 1 0 110-2 1 1 0 010 2zm5 0a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+
+                        <h3
+                            class="font-bold text-lg md:text-xl border-b border-brandBrown/30 pb-3 mb-5 relative z-10 text-brandDark">
+                            店舗情報</h3>
+                        <div class="space-y-5 text-sm md:text-base font-bold relative z-10 text-brandDark">
+                            <div class="flex">
+                                <span class="w-24 md:w-28 text-brandDark/80">営業時間</span>
+                                <span class="leading-loose">11:30 ~ 14:00<br>17:00 ~ 22:30</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-24 md:w-28 text-brandDark/80">定休日</span>
+                                <span>日曜日</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER CTA -->
+        <section class="bg-brandRed bg-opacity-95 py-12 md:py-16">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:gap-12">
+                <h2
+                    class="text-2xl md:text-4xl font-bold text-white tracking-widest font-serif mb-6 md:mb-0 text-center md:text-left">
+                    今日も熱々で<br class="block md:hidden">お待ちしております。
+                </h2>
+                <a href="tel:0182-36-5525"
+                    class="inline-flex items-center justify-center bg-white text-brandRed px-8 py-4 font-bold tracking-widest hover:bg-brandDark hover:text-white transition duration-300 shadow-xl rounded-full text-lg">
+                    <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                    </svg>
+                    ご予約・お問い合わせ
+                    <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-brandBrown py-6 pb-24 md:pb-6 text-center text-white/50 text-xs tracking-widest">
+            &copy; あつあつ亭 All Rights Reserved.
+        </footer>
     </main>
 
     <!-- Lightbox Overlay -->
@@ -1327,6 +1339,35 @@
             class="max-w-[90%] max-h-[90%] object-contain shadow-2xl scale-95 transition-transform duration-300"
             onclick="event.stopPropagation()">
     </div>
+
+    <!-- SP Sticky Footer (Mobile Only) -->
+    <div class="fixed bottom-0 left-0 w-full z-40 md:hidden flex shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+        <a href="tel:05057953545"
+            class="flex-1 bg-brandRed text-white flex flex-col items-center justify-center py-3 font-bold hover:bg-brandDark transition duration-300">
+            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+            </svg>
+            <span class="text-xs tracking-widest">電話する</span>
+        </a>
+        <a href="https://www.instagram.com/atsuatsutei/" target="_blank" rel="noopener noreferrer"
+            class="flex-1 bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex flex-col items-center justify-center py-3 font-bold hover:opacity-90 transition duration-300">
+            <svg class="w-5 h-5 mb-1" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            <span class="text-xs tracking-widest">Instagram</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top"
+        class="fixed bottom-20 right-4 md:bottom-8 md:right-8 bg-brandDark text-brandYellow p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40 hover:bg-brandBrown">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
 
     <script>
         function toggleReview(btn) {
@@ -1389,6 +1430,27 @@
                 link.addEventListener('click', closeMobileMenu);
             });
         }
+
+        // Back to Top Button Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                    } else {
+                        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                    }
+                });
+
+                backToTopBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
 
         // Scroll Animations using Intersection Observer
         document.addEventListener('DOMContentLoaded', () => {

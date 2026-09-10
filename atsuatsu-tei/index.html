@@ -164,53 +164,82 @@
 
 
     <!-- TV (TARGET VIEW) SECTION -->
-    <section id="tv" class="py-16 md:py-24 bg-brandLight bg-opacity-70">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white border border-brandBrown/20 p-8 md:p-12 shadow-xl relative mt-8">
+    <section id="tv" class="relative py-16 md:py-24 w-full bg-[#f6ebd9] overflow-hidden">
+        <!-- Background with fade effect -->
+        <div class="absolute inset-0 z-0">
+            <!-- Fade mask for desktop -->
+            <div class="hidden md:block absolute right-0 top-0 w-[70%] h-full">
+                <img src="img/tv.jpg" class="w-full h-full object-cover" alt=""
+                    style="mask-image: linear-gradient(to right, transparent, black 30%); -webkit-mask-image: linear-gradient(to right, transparent, black 30%);">
+            </div>
+            <!-- Mobile subtle background -->
+            <div class="md:hidden absolute inset-0 opacity-20">
+                <img src="img/tv.jpg" class="w-full h-full object-cover object-center" alt="">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+            <div class="w-full md:w-1/2 lg:w-3/5">
+                <!-- Title Badge -->
                 <div
-                    class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-brandRed text-white px-8 py-3 font-bold font-serif tracking-widest shadow-md">
+                    class="inline-block bg-brandRed text-white px-8 py-3 font-bold font-serif tracking-widest shadow-md mb-10 text-xl">
                     こんな方におすすめ
                 </div>
 
-                <div class="mt-8 mb-8 space-y-6">
+                <!-- Text Content -->
+                <div
+                    class="mb-10 space-y-8 bg-white/70 md:bg-transparent p-6 md:p-0 rounded-lg backdrop-blur-md md:backdrop-blur-none">
                     <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brandYellow mt-1 mr-4 flex-shrink-0" fill="currentColor"
+                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <p class="text-lg md:text-xl font-bold text-brandDark tracking-wide leading-relaxed">
+                        <p
+                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
                             具材がぎっしり詰まった広島風お好み焼きを食べたい方</p>
                     </div>
                     <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brandYellow mt-1 mr-4 flex-shrink-0" fill="currentColor"
+                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <p class="text-lg md:text-xl font-bold text-brandDark tracking-wide leading-relaxed">
+                        <p
+                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
                             観光協会推奨店の本場の横手やきそばを味わいたい方</p>
                     </div>
                     <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brandYellow mt-1 mr-4 flex-shrink-0" fill="currentColor"
+                        <svg class="w-7 h-7 text-brandYellow mt-1 mr-4 flex-shrink-0 drop-shadow-sm" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <p class="text-lg md:text-xl font-bold text-brandDark tracking-wide leading-relaxed">
+                        <p
+                            class="text-lg md:text-xl font-bold text-brandDark tracking-wider leading-relaxed drop-shadow-sm">
                             ランチや仕事帰りの一杯に気軽に立ち寄りたい方</p>
                     </div>
                 </div>
 
-                <div class="text-center pt-8 border-t border-brandBrown/10">
-                    <p class="text-lg md:text-xl font-bold font-serif text-brandBrown tracking-widest leading-loose">
+                <div class="pt-8 border-t border-brandBrown/30">
+                    <p
+                        class="text-lg md:text-xl font-bold font-serif text-brandDark tracking-widest leading-loose drop-shadow-sm">
                         気兼ねなく立ち寄れる空間で、<br>皆様のお越しをお待ちしております。
                     </p>
                 </div>
             </div>
+        </div>
+
+        <!-- Vertical Banner Overlay (Desktop only) -->
+        <div class="hidden lg:block absolute right-[10%] top-1/2 transform -translate-y-1/2 bg-[#fdfbf6] p-8 shadow-2xl border border-brandBrown/10 z-10"
+            style="box-shadow: 10px 10px 30px rgba(0,0,0,0.3);">
+            <p class="vertical-text text-3xl font-bold font-brush text-brandDark tracking-widest leading-loose"
+                style="font-family: 'Yuji Syuku', serif;">
+                うまいもんで<br>みんな元気に
+            </p>
         </div>
     </section>
 
@@ -957,7 +986,7 @@
                 class="bg-brandLighter p-8 md:p-12 shadow-lg border-t-4 border-brandRed flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <!-- Image -->
                 <div class="w-full md:w-5/12 flex-shrink-0">
-                    <img src="img/message_img_01.jpg" alt="オーナー・スタッフから一言"
+                    <img src="img/message.jpg" alt="オーナー・スタッフから一言"
                         class="w-full h-auto object-cover rounded shadow-md aspect-square md:aspect-[4/3]">
                 </div>
                 <!-- Text -->

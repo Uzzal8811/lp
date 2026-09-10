@@ -1008,36 +1008,23 @@
     <!-- ACCESS SECTION -->
     <section id="access" class="py-16 md:py-24 bg-brandLight bg-opacity-70 border-t border-brandBrown/10">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                <!-- Left Title -->
-                <div class="lg:w-[15%] text-left">
-                    <h2 class="text-2xl md:text-3xl font-bold font-serif tracking-widest text-brandDark mb-2">アクセス</h2>
-                    <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">ACCESS</span>
-                </div>
+            <!-- Title -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark mb-2">アクセス</h2>
+                <span class="text-brandBrown text-xs font-bold tracking-widest uppercase">ACCESS</span>
+            </div>
 
-                <!-- Center Info & Button -->
-                <div class="w-full lg:w-[25%] flex flex-col items-start gap-4">
-                    <div>
-                        <p class="font-bold text-lg mb-1">あつあつ亭</p>
-                        <p class="text-sm leading-relaxed">〒013-0024<br>秋田県横手市田中町6-6</p>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                <!-- Address Info -->
+                <div class="w-full lg:w-[25%] flex flex-col items-center lg:items-start gap-4">
+                    <div class="text-center lg:text-left">
+                        <p class="font-bold text-lg md:text-xl mb-2">あつあつ亭</p>
+                        <p class="text-sm md:text-base leading-relaxed">〒013-0024<br>秋田県横手市田中町6-6</p>
                     </div>
                 </div>
 
-                <!-- Map Image / Iframe -->
-                <div class="w-full lg:w-[30%] flex flex-col gap-4">
-                    <a href="https://goo.gl/maps/something" target="_blank"
-                        class="w-full flex items-center justify-center bg-brandRed text-white px-6 py-3 font-bold tracking-widest hover:bg-brandDark transition duration-300 shadow-md text-sm">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                        </svg>
-                        Googleマップで見る
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </a>
-                    <!-- Placeholder map image, normally an iframe goes here -->
+                <!-- Map Iframe -->
+                <div class="w-full lg:w-[40%]">
                     <div
                         class="w-full aspect-[4/3] bg-gray-200 border border-brandBrown/20 flex items-center justify-center overflow-hidden">
                         <iframe
@@ -1046,16 +1033,16 @@
                     </div>
                 </div>
 
-                <!-- Right Store Info -->
-                <div class="w-full lg:w-[30%] bg-white p-6 shadow-md border border-brandBrown/10">
-                    <h3 class="font-bold text-lg border-b border-brandBrown/20 pb-2 mb-4">店舗情報</h3>
-                    <div class="space-y-4 text-sm font-bold">
+                <!-- Store Info -->
+                <div class="w-full lg:w-[35%] bg-white p-6 md:p-8 shadow-md border border-brandBrown/10">
+                    <h3 class="font-bold text-lg md:text-xl border-b border-brandBrown/20 pb-3 mb-5">店舗情報</h3>
+                    <div class="space-y-5 text-sm md:text-base font-bold">
                         <div class="flex">
-                            <span class="w-24 text-brandGray">営業時間</span>
-                            <span>17:00 ~ 23:00<br><span class="text-xs font-normal">(ラストオーダー 22:30)</span></span>
+                            <span class="w-24 md:w-28 text-brandGray">営業時間</span>
+                            <span>17:00 ~ 23:00<br><span class="text-xs md:text-sm font-normal text-gray-500 mt-1 block">(ラストオーダー 22:30)</span></span>
                         </div>
                         <div class="flex">
-                            <span class="w-24 text-brandGray">定休日</span>
+                            <span class="w-24 md:w-28 text-brandGray">定休日</span>
                             <span>不定休</span>
                         </div>
                     </div>

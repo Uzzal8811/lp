@@ -95,9 +95,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         .animate-fade-in {
             animation: fadeIn 2.5s ease-in-out forwards;
         }
@@ -152,7 +158,8 @@
         <!-- Mobile Image -->
         <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden animate-fade-in relative z-0">
         <!-- Desktop Video -->
-        <video id="fv-video" class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4" autoplay muted playsinline></video>
+        <video id="fv-video" class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4"
+            autoplay muted playsinline></video>
     </section>
 
 
@@ -224,7 +231,7 @@
             </div>
             <!-- Image Content -->
             <div class="w-full md:w-1/2 relative group">
-                <img src="img/10.jpg" alt="店内の様子" class="w-full h-auto object-cover shadow-2xl">
+                <img src="img/about.jpg" alt="店内の様子" class="w-full h-[400px] md:h-[600px] object-cover shadow-2xl">
                 <!-- Vertical Banner Overlay -->
                 <div
                     class="absolute -right-4 -bottom-4 md:right-8 md:-bottom-8 bg-[#F3E5AB] p-4 shadow-lg border border-brandBrown/10">
@@ -332,64 +339,81 @@
                         <ul class="space-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか天</span><span class="font-bold">￥900</span></li>
+                                <span>いか天</span><span class="font-bold">￥900</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>スタミナ <span
                                         class="text-xs text-gray-500 font-normal">(にんにくスライス・白ゴマ)</span></span><span
-                                    class="font-bold">￥900</span></li>
+                                    class="font-bold">￥900</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>めんたいこ</span><span class="font-bold">￥950</span></li>
+                                <span>めんたいこ</span><span class="font-bold">￥950</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ</span><span class="font-bold">￥950</span></li>
+                                <span>キムチ</span><span class="font-bold">￥950</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶた</span><span class="font-bold">￥800</span></li>
+                                <span>ぶた</span><span class="font-bold">￥800</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズ</span><span class="font-bold">￥900</span></li>
+                                <span>チーズ</span><span class="font-bold">￥900</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーン</span><span class="font-bold">￥900</span></li>
+                                <span>コーン</span><span class="font-bold">￥900</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ</span><span class="font-bold">￥1,000</span></li>
+                                <span>ビーフ</span><span class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>秋田きりたんぽ</span><span class="font-bold">￥1,000</span></li>
+                                <span>秋田きりたんぽ</span><span class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>ちから <span class="text-xs text-gray-500 font-normal">(もち)</span></span><span
-                                    class="font-bold">￥1,000</span></li>
+                                    class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>シーフード <span
                                         class="text-xs text-gray-500 font-normal">(イカ・エビ・ホタテ)</span></span><span
-                                    class="font-bold">￥1,000</span></li>
+                                    class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>フレッシュ <span
                                         class="text-xs text-gray-500 font-normal">(トマト丸ごと1コスライス)</span></span><span
-                                    class="font-bold">￥1,000</span></li>
+                                    class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>牡蠣</span><span class="font-bold">￥1,250</span></li>
+                                <span>牡蠣</span><span class="font-bold">￥1,250</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横手焼き</span><span class="font-bold">￥650</span></li>
+                                <span>横手焼き</span><span class="font-bold">￥650</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>横巻き</span><span class="font-bold">￥600</span></li>
+                                <span>横巻き</span><span class="font-bold">￥600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>おのみち焼き <span class="text-xs text-gray-500 font-normal">(鳥の砂肝入り)</span></span><span
-                                    class="font-bold">￥1,000</span></li>
+                                    class="font-bold">￥1,000</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>府中焼き <span class="text-xs text-gray-500 font-normal">(豚ひき肉)</span></span><span
-                                    class="font-bold">￥900</span></li>
+                                    class="font-bold">￥900</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -411,42 +435,54 @@
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>横手焼きそば <span class="text-xs text-gray-500 font-normal">(あつあつ亭
-                                        2011年度推奨店)</span></span><span class="font-bold">￥550</span></li>
+                                        2011年度推奨店)</span></span><span class="font-bold">￥550</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
                                 <span>横手焼きそば 特製ソース・麺 <span
                                         class="text-xs text-gray-500 font-normal">(豚ひき肉・福神漬け・目玉焼き)</span></span><span
-                                    class="font-bold">￥600</span></li>
+                                    class="font-bold">￥600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶた焼きそば</span><span class="font-bold">￥600</span></li>
+                                <span>ぶた焼きそば</span><span class="font-bold">￥600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>目玉焼きそば</span><span class="font-bold">￥680</span></li>
+                                <span>目玉焼きそば</span><span class="font-bold">￥680</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ焼きそば</span><span class="font-bold">￥780</span></li>
+                                <span>ビーフ焼きそば</span><span class="font-bold">￥780</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ焼きそば</span><span class="font-bold">￥850</span></li>
+                                <span>キムチ焼きそば</span><span class="font-bold">￥850</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ステーキ焼きそば</span><span class="font-bold">￥1,600</span></li>
+                                <span>ステーキ焼きそば</span><span class="font-bold">￥1,600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>シーフード</span><span class="font-bold">￥800</span></li>
+                                <span>シーフード</span><span class="font-bold">￥800</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>オムそば</span><span class="font-bold">￥780</span></li>
+                                <span>オムそば</span><span class="font-bold">￥780</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズオムそば</span><span class="font-bold">￥880</span></li>
+                                <span>チーズオムそば</span><span class="font-bold">￥880</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>焼きうどん</span><span class="font-bold">￥650</span></li>
+                                <span>焼きうどん</span><span class="font-bold">￥650</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ焼きうどん</span><span class="font-bold">￥850</span></li>
+                                <span>キムチ焼きうどん</span><span class="font-bold">￥850</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -468,52 +504,68 @@
                             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか</span><span class="font-bold">￥100</span></li>
+                                <span>いか</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>えび</span><span class="font-bold">￥100</span></li>
+                                <span>えび</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ほたて</span><span class="font-bold">￥100</span></li>
+                                <span>ほたて</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか天</span><span class="font-bold">￥100</span></li>
+                                <span>いか天</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズ</span><span class="font-bold">￥100</span></li>
+                                <span>チーズ</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーン</span><span class="font-bold">￥100</span></li>
+                                <span>コーン</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>にんにくスライス</span><span class="font-bold">￥100</span></li>
+                                <span>にんにくスライス</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>白ゴマ</span><span class="font-bold">￥100</span></li>
+                                <span>白ゴマ</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ビーフ</span><span class="font-bold">￥150</span></li>
+                                <span>ビーフ</span><span class="font-bold">￥150</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キムチ</span><span class="font-bold">￥150</span></li>
+                                <span>キムチ</span><span class="font-bold">￥150</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>きりたんぽ</span><span class="font-bold">￥150</span></li>
+                                <span>きりたんぽ</span><span class="font-bold">￥150</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>めんたいこ</span><span class="font-bold">￥150</span></li>
+                                <span>めんたいこ</span><span class="font-bold">￥150</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ちから</span><span class="font-bold">￥200</span></li>
+                                <span>ちから</span><span class="font-bold">￥200</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>トマト</span><span class="font-bold">￥200</span></li>
+                                <span>トマト</span><span class="font-bold">￥200</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>鳥の砂肝</span><span class="font-bold">￥200</span></li>
+                                <span>鳥の砂肝</span><span class="font-bold">￥200</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>カキ</span><span class="font-bold">￥500</span></li>
+                                <span>カキ</span><span class="font-bold">￥500</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -535,97 +587,128 @@
                             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-brandDark font-medium text-sm md:text-base relative z-10">
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>手羽めんたい</span><span class="font-bold">￥680</span></li>
+                                <span>手羽めんたい</span><span class="font-bold">￥680</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>キノコホイル焼き</span><span class="font-bold">￥620</span></li>
+                                <span>キノコホイル焼き</span><span class="font-bold">￥620</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>貝柱バター焼き</span><span class="font-bold">￥590</span></li>
+                                <span>貝柱バター焼き</span><span class="font-bold">￥590</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>豆腐</span><span class="font-bold">￥590</span></li>
+                                <span>豆腐</span><span class="font-bold">￥590</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>枝豆</span><span class="font-bold">￥580</span></li>
+                                <span>枝豆</span><span class="font-bold">￥580</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ソーセージ</span><span class="font-bold">￥530</span></li>
+                                <span>ソーセージ</span><span class="font-bold">￥530</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いそべ巻き</span><span class="font-bold">￥100</span></li>
+                                <span>いそべ巻き</span><span class="font-bold">￥100</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズいそべ</span><span class="font-bold">￥150</span></li>
+                                <span>チーズいそべ</span><span class="font-bold">￥150</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>焼きおにぎり</span><span class="font-bold">￥180</span></li>
+                                <span>焼きおにぎり</span><span class="font-bold">￥180</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>はんぺん</span><span class="font-bold">￥420</span></li>
+                                <span>はんぺん</span><span class="font-bold">￥420</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズはんぺん</span><span class="font-bold">￥490</span></li>
+                                <span>チーズはんぺん</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>肝焼き</span><span class="font-bold">￥490</span></li>
+                                <span>肝焼き</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ししゃも</span><span class="font-bold">￥490</span></li>
+                                <span>ししゃも</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いか焼き</span><span class="font-bold">￥630</span></li>
+                                <span>いか焼き</span><span class="font-bold">￥630</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>つくね</span><span class="font-bold">￥490</span></li>
+                                <span>つくね</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>とりなんこつ</span><span class="font-bold">￥490</span></li>
+                                <span>とりなんこつ</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>コーンバター</span><span class="font-bold">￥350</span></li>
+                                <span>コーンバター</span><span class="font-bold">￥350</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>きのこバター</span><span class="font-bold">￥390</span></li>
+                                <span>きのこバター</span><span class="font-bold">￥390</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>うめきゅう</span><span class="font-bold">￥390</span></li>
+                                <span>うめきゅう</span><span class="font-bold">￥390</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>チーズコーンバター</span><span class="font-bold">￥450</span></li>
+                                <span>チーズコーンバター</span><span class="font-bold">￥450</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>豚玉バター</span><span class="font-bold">￥490</span></li>
+                                <span>豚玉バター</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ホタテバター</span><span class="font-bold">￥690</span></li>
+                                <span>ホタテバター</span><span class="font-bold">￥690</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>いかバター</span><span class="font-bold">￥600</span></li>
+                                <span>いかバター</span><span class="font-bold">￥600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>一口餃子</span><span class="font-bold">￥490</span></li>
+                                <span>一口餃子</span><span class="font-bold">￥490</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶたキムチ</span><span class="font-bold">￥580</span></li>
+                                <span>ぶたキムチ</span><span class="font-bold">￥580</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ぶたロースティック</span><span class="font-bold">￥580</span></li>
+                                <span>ぶたロースティック</span><span class="font-bold">￥580</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>オムチーズ</span><span class="font-bold">￥590</span></li>
+                                <span>オムチーズ</span><span class="font-bold">￥590</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>手羽チーズ</span><span class="font-bold">￥660</span></li>
+                                <span>手羽チーズ</span><span class="font-bold">￥660</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>ステーキ</span><span class="font-bold">￥1,080</span></li>
+                                <span>ステーキ</span><span class="font-bold">￥1,080</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>牛すじうどん</span><span class="font-bold">￥600</span></li>
+                                <span>牛すじうどん</span><span class="font-bold">￥600</span>
+                            </li>
                             <li
                                 class="flex justify-between items-end border-b border-dashed border-brandBrown/30 pb-2 hover:bg-brandLighter/50 px-2 transition-colors -mx-2 rounded-sm">
-                                <span>大根サラダ</span><span class="font-bold">￥480</span></li>
+                                <span>大根サラダ</span><span class="font-bold">￥480</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1021,10 +1104,10 @@
         }
 
         // ビデオのループ時のカクつき（dakka）を防止するための処理
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const fvVideo = document.getElementById('fv-video');
             if (fvVideo) {
-                fvVideo.addEventListener('timeupdate', function() {
+                fvVideo.addEventListener('timeupdate', function () {
                     // ビデオの終了0.15秒前に再生位置を先頭に戻すことで、一瞬止まるカクつきを防ぐ
                     if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.15) {
                         fvVideo.currentTime = 0;

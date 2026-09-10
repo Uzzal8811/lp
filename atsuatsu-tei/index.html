@@ -126,33 +126,50 @@
             transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal-left {
             opacity: 0;
             transform: translateX(-40px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal-right {
             opacity: 0;
             transform: translateX(40px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal-in {
             opacity: 0;
             transition: all 1s ease-out;
         }
+
         .reveal-up.is-visible,
         .reveal-left.is-visible,
         .reveal-right.is-visible {
             opacity: 1;
             transform: translate3d(0, 0, 0);
         }
+
         .reveal-in.is-visible {
             opacity: 1;
         }
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
 
         @keyframes fadeIn {
             from {
@@ -172,7 +189,8 @@
 
 <body class="text-sm md:text-base text-brandDark font-sans relative">
     <!-- Safari Compatible Fixed Background -->
-    <div class="fixed inset-0 w-full h-full bg-cover bg-center z-[-10]" style="background-image: url('img/BodyBg.jpg');"></div>
+    <div class="fixed inset-0 w-full h-full bg-cover bg-center z-[-10]"
+        style="background-image: url('img/BodyBg.jpg');"></div>
 
     <!-- HEADER -->
     <header
@@ -278,8 +296,8 @@
         <!-- Mobile Image -->
         <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden relative z-0">
         <!-- Desktop Video -->
-        <video id="fv-video" class="hidden md:block w-full h-auto relative z-0" src="img/FvVid.mp4"
-            autoplay muted playsinline></video>
+        <video id="fv-video" class="hidden md:block w-full h-auto relative z-0" src="img/FvVid.mp4" autoplay muted
+            playsinline loop></video>
     </section>
 
     <!-- CTA SECTION 1 -->
@@ -402,7 +420,8 @@
 
     <!-- ABOUT SECTION -->
     <section id="about" class="py-16 md:py-24 bg-brandLight bg-opacity-70">
-        <div class="container mx-auto px-4 max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div
+            class="container mx-auto px-4 max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <!-- Text Content -->
             <div class="w-full md:w-1/2 pl-0 md:pl-10 reveal-right">
                 <h2 class="text-3xl md:text-4xl font-bold font-serif leading-snug mb-8 text-brandDark tracking-wide">
@@ -1174,7 +1193,8 @@
                         class="w-full h-auto object-cover rounded shadow-md aspect-square md:aspect-[4/3]">
                 </div>
                 <!-- Text -->
-                <div class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left reveal-left delay-100">
+                <div
+                    class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left reveal-left delay-100">
                     <h3 class="text-xl md:text-2xl font-bold font-serif text-brandRed mb-6 leading-relaxed">
                         「創業26年温かい料理でお迎えします」
                     </h3>
@@ -1357,33 +1377,6 @@
                 link.addEventListener('click', closeMobileMenu);
             });
         }
-
-        // ビデオのループ時のカクつき（dakka）を防止し、ソフトにループさせるための処理
-        document.addEventListener('DOMContentLoaded', function () {
-            const fvVideo = document.getElementById('fv-video');
-            if (fvVideo) {
-                fvVideo.style.transition = 'opacity 0.8s ease-in-out';
-                let isFadingOut = false;
-
-                fvVideo.addEventListener('timeupdate', function () {
-                    // 終了0.8秒前にフェードアウト開始
-                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.8 && !isFadingOut) {
-                        isFadingOut = true;
-                        fvVideo.style.opacity = '0';
-                    }
-                    // 終了0.1秒前に先頭に戻し、再度再生とフェードイン
-                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.1) {
-                        fvVideo.currentTime = 0;
-                        fvVideo.play();
-                        
-                        setTimeout(() => {
-                            fvVideo.style.opacity = '1';
-                            isFadingOut = false;
-                        }, 50);
-                    }
-                });
-            }
-        });
 
         // Scroll Animations using Intersection Observer
         document.addEventListener('DOMContentLoaded', () => {

@@ -523,6 +523,8 @@
                         class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">選ばれる理由</a>
                     <a href="#menu"
                         class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">お品書き</a>
+                    <a href="#reviews"
+                        class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">クチコミ</a>
                     <a href="#gallery"
                         class="text-xs xl:text-sm tracking-widest hover:text-brandRed transition-colors font-serif">ギャラリー</a>
                     <a href="#message"
@@ -558,9 +560,9 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <!-- Drawer Links -->
-        <nav class="flex flex-col items-center space-y-5 text-base tracking-widest font-serif">
+        <nav class="flex flex-col items-center space-y-4 text-base tracking-widest font-serif">
             <!-- Drawer Logo -->
-            <div class="mb-4">
+            <div class="mb-2">
                 <a href="#" class="text-2xl font-bold tracking-widest text-white font-serif" onclick="closeDrawer()">
                     居酒家<span class="text-brandRed">一喜</span>
                 </a>
@@ -569,13 +571,21 @@
             <a href="#recommend" class="drawer-link hover:text-brandRed transition-colors">RECOMMEND</a>
             <a href="#service" class="drawer-link hover:text-brandRed transition-colors">FEATURES</a>
             <a href="#menu" class="drawer-link hover:text-brandRed transition-colors">MENU</a>
+            <a href="#reviews" class="drawer-link hover:text-brandRed transition-colors">REVIEWS</a>
             <a href="#gallery" class="drawer-link hover:text-brandRed transition-colors">GALLERY</a>
             <a href="#message" class="drawer-link hover:text-brandRed transition-colors">MESSAGE</a>
             <a href="#contact" class="drawer-link hover:text-brandRed transition-colors">ACCESS</a>
 
-            <div class="pt-6 text-center flex flex-col items-center space-y-4">
+            <div class="pt-4 text-center flex flex-col items-center space-y-3">
+                <!-- TEL Button -->
+                <a href="tel:050-5385-5205"
+                    class="flex items-center justify-center gap-3 border border-brandRed/40 bg-black hover:bg-brandRed/20 text-white w-60 py-3 rounded-sm text-sm font-bold tracking-widest transition-all">
+                    <i class="fa-solid fa-phone text-brandRed text-base"></i>
+                    <span>050-5385-5205</span>
+                </a>
+                <!-- Hotpepper Button -->
                 <a href="jump01.html" target="_blank"
-                    class="block bg-brandRed text-white w-52 py-3 rounded-sm text-sm font-bold tracking-widest text-center">
+                    class="block bg-brandRed hover:bg-brandRed-dark text-white w-60 py-3 rounded-sm text-sm font-bold tracking-widest text-center shadow-lg transition-all">
                     ホットペッパー予約
                 </a>
             </div>
@@ -1073,7 +1083,7 @@
                         三重県松阪市宮町に位置する「居酒家 一喜」は、駅から徒歩約10分の場所にあるアットホームで和風な居酒屋です。
                     </p>
                     <p>
-                        昭和っぽい落ち着く雰囲気の店内で、お客様最優先の丁寧な対応を心がけております。流行りものはありませんが、安くて美味しい、自分や家族が行きたいと思えるお店づくりを大切にしています。
+                        昭和っぽい落ち着く雰囲気の店内で、お客様最優先の丁寧な対応を心がけております。<br>流行りものはありませんが、安くて美味しい、自分や家族が行きたいと思えるお店づくりを大切にしています。
                     </p>
                     <p>
                         お気軽に立ち寄っていただけるよう、当たり前の活気をもってお迎えいたします。
@@ -1246,8 +1256,7 @@
     </section>
 
     <!-- Menu Section (Sticky Parallax Background) -->
-    <section id="menu"
-        class="py-24 md:py-32 relative bg-fixed safari-fixed-bg bg-cover bg-center overflow-hidden z-0"
+    <section id="menu" class="py-24 md:py-32 relative bg-fixed safari-fixed-bg bg-cover bg-center overflow-hidden z-0"
         style="--bg-img: url('img/menubg.jpg'); background-image: var(--bg-img);">
         <!-- Glowing gradient effect behind menu -->
         <div class="absolute inset-0 bg-black/50 z-0 pointer-events-none"></div>
@@ -1370,6 +1379,175 @@
         </div>
     </section>
 
+    <!-- Reviews Section (Google Reviews) -->
+    <section id="reviews" class="py-24 md:py-32 relative bg-black-light border-b border-gray-900 overflow-hidden z-10">
+        <!-- Background Decor -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brandRed/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-40 -left-40 w-96 h-96 bg-brandGold/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12 md:mb-16 anim-from-top">
+                <span
+                    class="text-brandRed text-xs tracking-[0.2em] block mb-2 font-serif font-bold uppercase">VOICE</span>
+                <h2 class="text-2xl md:text-3xl tracking-widest font-bold font-serif text-white">
+                    Googleマップのクチコミ
+                </h2>
+
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                <!-- Review 1: K Ha -->
+                <div
+                    class="bg-[#161311]/90 border border-gray-800/80 hover:border-brandGold/40 p-6 md:p-7 rounded-sm shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+                    <div>
+                        <!-- User Header -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#795548] flex items-center justify-center text-white font-bold font-sans text-base shadow-sm flex-shrink-0">
+                                    K
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white font-sans text-sm">K Ha</div>
+                                    <div class="text-[11px] text-gray-400 font-sans">1件のクチコミ</div>
+                                </div>
+                            </div>
+                            <i
+                                class="fa-brands fa-google text-gray-600 group-hover:text-brandGold transition-colors text-sm"></i>
+                        </div>
+
+                        <!-- Rating & Date -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex text-[#F4B400] text-xs gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] text-gray-400 font-sans">3日前</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded">新規</span>
+                        </div>
+
+                        <!-- Review Text -->
+                        <p class="text-sm text-gray-300 leading-relaxed font-serif">
+                            じゃがいもコロッケが特にオススメ！<br>
+                            お肉しっかり入ってて、食べ応えあり！<br><br>
+                            店長さんも凄く良い人！<br>
+                            オープンしてまだ日が浅いので、店内もすごく綺麗です！
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review 2: こばやし 茂茂子 -->
+                <div
+                    class="bg-[#161311]/90 border border-gray-800/80 hover:border-brandGold/40 p-6 md:p-7 rounded-sm shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+                    <div>
+                        <!-- User Header -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#8D6E63] flex items-center justify-center text-white font-bold font-serif text-sm shadow-sm flex-shrink-0">
+                                    こ
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white font-sans text-sm">こばやし 茂茂子</div>
+                                    <div class="text-[11px] text-gray-400 font-sans">1件のクチコミ</div>
+                                </div>
+                            </div>
+                            <i
+                                class="fa-brands fa-google text-gray-600 group-hover:text-brandGold transition-colors text-sm"></i>
+                        </div>
+
+                        <!-- Rating & Date -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex text-[#F4B400] text-xs gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star text-gray-600"></i>
+                            </div>
+                            <span class="text-[11px] text-gray-400 font-sans">2週間前</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded">新規</span>
+                        </div>
+
+                        <!-- Review Text -->
+                        <p class="text-sm text-gray-300 leading-relaxed font-serif">
+                            値段もリーズナブルでおつまみも色々ありとても美味しく、雰囲気もとても良かったです
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review 3: ポッポ鳩中 -->
+                <div
+                    class="bg-[#161311]/90 border border-gray-800/80 hover:border-brandGold/40 p-6 md:p-7 rounded-sm shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+                    <div>
+                        <!-- User Header -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#2E7D32] flex items-center justify-center text-white font-bold font-sans text-base shadow-sm flex-shrink-0">
+                                    <i class="fa-solid fa-user text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white font-sans text-sm">ポッポ鳩中</div>
+                                    <div class="text-[11px] text-gray-400 font-sans">1件のクチコミ</div>
+                                </div>
+                            </div>
+                            <i
+                                class="fa-brands fa-google text-gray-600 group-hover:text-brandGold transition-colors text-sm"></i>
+                        </div>
+
+                        <!-- Rating & Date -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex text-[#F4B400] text-xs gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] text-gray-400 font-sans">2週間前</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded">新規</span>
+                        </div>
+
+                        <!-- Review Text -->
+                        <p class="text-sm text-gray-300 leading-relaxed font-serif">
+                            8月オープンの居酒屋さん<br><br>
+                            開店初日からちょこちょこ通っています<br>
+                            一般的な居酒屋メニューから<br>
+                            新鮮なお魚のお造りまで<br>
+                            メニューの幅が広くて最高です！<br>
+                            しかもどれを頼んでもうまい！！！<br>
+                            料理がうまいのでお酒を飲まずに定食屋に行く雰囲気でお食事させてもらってます(笑)<br><br>
+                            お気に入りは海鮮カルパッチョのサラダ<br>
+                            結構な種類の海鮮が乗っており<br>
+                            すごいお得感でした<br><br>
+                            また通います！
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jump Button (CTA) -->
+            <div class="text-center mt-12 md:mt-16 anim-from-bottom">
+                <a href="jump04.html" target="_blank"
+                    class="inline-flex items-center justify-center bg-gradient-to-r from-brandRed to-brandRed-dark hover:brightness-110 text-white px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold tracking-widest transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(185,28,28,0.4)] hover:shadow-[0_0_30px_rgba(185,28,28,0.7)] hover:-translate-y-1">
+                    <i class="fa-brands fa-google mr-2 text-base"></i>
+                    Googleマップでクチコミを見る
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Gallery Section -->
     <section id="gallery" class="py-24 bg-black border-t border-gray-900 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -1479,6 +1657,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Contact & Access Section (Sticky Parallax Background) -->
     <section id="contact"

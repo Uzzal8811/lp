@@ -1034,15 +1034,20 @@
                 </div>
 
                 <!-- Store Info -->
-                <div class="w-full lg:w-[35%] bg-white p-6 md:p-8 shadow-md border border-brandBrown/10">
-                    <h3 class="font-bold text-lg md:text-xl border-b border-brandBrown/20 pb-3 mb-5">店舗情報</h3>
-                    <div class="space-y-5 text-sm md:text-base font-bold">
+                <div class="w-full lg:w-[35%] relative bg-[#ebdbbd] p-6 md:p-8 shadow-sm border border-brandBrown/20 rounded-sm overflow-hidden">
+                    <!-- Spatula Watermark -->
+                    <svg class="absolute right-[-15%] bottom-[-15%] w-56 h-56 text-brandBrown opacity-10 transform rotate-45" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13 2h-2v10L7 16v6h10v-6l-4-4V2zm-1 16.5a1 1 0 110-2 1 1 0 010 2zm-2.5 1.5a1 1 0 110-2 1 1 0 010 2zm5 0a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+
+                    <h3 class="font-bold text-lg md:text-xl border-b border-brandBrown/30 pb-3 mb-5 relative z-10 text-brandDark">店舗情報</h3>
+                    <div class="space-y-5 text-sm md:text-base font-bold relative z-10 text-brandDark">
                         <div class="flex">
-                            <span class="w-24 md:w-28 text-brandGray">営業時間</span>
-                            <span>17:00 ~ 23:00<br><span class="text-xs md:text-sm font-normal text-gray-500 mt-1 block">(ラストオーダー 22:30)</span></span>
+                            <span class="w-24 md:w-28 text-brandDark/80">営業時間</span>
+                            <span>17:00 ~ 23:00<br><span class="text-xs md:text-sm font-normal text-brandDark/70 mt-1 block">(ラストオーダー 22:30)</span></span>
                         </div>
                         <div class="flex">
-                            <span class="w-24 md:w-28 text-brandGray">定休日</span>
+                            <span class="w-24 md:w-28 text-brandDark/80">定休日</span>
                             <span>不定休</span>
                         </div>
                     </div>

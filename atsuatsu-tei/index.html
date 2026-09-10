@@ -19,13 +19,13 @@
     <meta property="og:title" content="あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば">
     <meta property="og:description" content="秋田県横手市田中町にある創業26年の鉄板焼き食堂「あつあつ亭」。広島風お好み焼きや横手やきそばをご提供しています。<br>">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.png">
+    <meta property="og:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.jpg">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="あつあつ亭 | 秋田県横手市 駅近で評判のお好み焼きとやきそば">
     <meta name="twitter:description" content="秋田県横手市田中町にある創業26年の鉄板焼き食堂「あつあつ亭」。広島風お好み焼きや横手やきそばをご提供しています。<br>">
-    <meta name="twitter:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.png">
+    <meta name="twitter:image" content="https://atsuatsu-tei.happytry.fun/img/eyecatch.jpg">
 
     <!-- Favicon & Touch Icons -->
     <link rel="icon" href="https://atsuatsu-tei.happytry.fun/img/favicon.png" type="image/png">
@@ -107,17 +107,52 @@
 
         @keyframes marquee {
             0% {
-                transform: translateX(0);
+                transform: translate3d(0, 0, 0);
             }
 
             100% {
-                transform: translateX(-50%);
+                transform: translate3d(-50%, 0, 0);
             }
         }
 
         .animate-marquee {
             animation: marquee 30s linear infinite;
+            will-change: transform;
         }
+
+        /* Scroll Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-in {
+            opacity: 0;
+            transition: all 1s ease-out;
+        }
+        .reveal-up.is-visible,
+        .reveal-left.is-visible,
+        .reveal-right.is-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        .reveal-in.is-visible {
+            opacity: 1;
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
 
         @keyframes fadeIn {
             from {
@@ -135,8 +170,9 @@
     </style>
 </head>
 
-<body class="text-sm md:text-base text-brandDark font-sans bg-fixed bg-cover bg-center"
-    style="background-image: url('img/BodyBg.jpg');">
+<body class="text-sm md:text-base text-brandDark font-sans relative">
+    <!-- Safari Compatible Fixed Background -->
+    <div class="fixed inset-0 w-full h-full bg-cover bg-center z-[-10]" style="background-image: url('img/BodyBg.jpg');"></div>
 
     <!-- HEADER -->
     <header
@@ -366,9 +402,9 @@
 
     <!-- ABOUT SECTION -->
     <section id="about" class="py-16 md:py-24 bg-brandLight bg-opacity-70">
-        <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="container mx-auto px-4 max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <!-- Text Content -->
-            <div class="w-full md:w-1/2 pl-0 md:pl-10">
+            <div class="w-full md:w-1/2 pl-0 md:pl-10 reveal-right">
                 <h2 class="text-3xl md:text-4xl font-bold font-serif leading-snug mb-8 text-brandDark tracking-wide">
                     秋田県横手市田中町にある<br>鉄板焼き食堂
                 </h2>
@@ -379,7 +415,7 @@
                 </div>
             </div>
             <!-- Image Content -->
-            <div class="w-full md:w-1/2 relative group">
+            <div class="w-full md:w-1/2 relative group reveal-left">
                 <img src="img/about.jpg" alt="店内の様子" class="w-full h-[400px] md:h-[600px] object-cover shadow-2xl">
                 <!-- Vertical Banner Overlay -->
                 <div
@@ -397,7 +433,7 @@
     <section id="speciality" class="py-16 md:py-24 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
         <div class="container mx-auto px-4 max-w-6xl">
             <!-- Section Title -->
-            <div class="text-center mb-12 flex flex-col items-center justify-center">
+            <div class="text-center mb-12 flex flex-col items-center justify-center reveal-up">
                 <div class="flex items-center justify-center space-x-4 mb-2">
                     <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
@@ -413,7 +449,7 @@
             <!-- 3 Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col">
+                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-100">
                     <div class="h-64 overflow-hidden">
                         <img src="img/service1.jpg" alt="広島風お好み焼き" class="w-full h-full object-cover">
                     </div>
@@ -426,7 +462,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col">
+                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-200">
                     <div class="h-64 overflow-hidden">
                         <img src="img/service2.jpg" alt="横手やきそば" class="w-full h-full object-cover">
                     </div>
@@ -439,7 +475,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-white shadow-xl overflow-hidden flex flex-col">
+                <div class="bg-white shadow-xl overflow-hidden flex flex-col reveal-up delay-300">
                     <div class="h-64 overflow-hidden">
                         <img src="img/service3.jpg" alt="豊富な鉄板料理" class="w-full h-full object-cover">
                     </div>
@@ -493,9 +529,9 @@
     </section>
 
     <!-- MENU SECTION -->
-    <section id="menu" class="py-16 md:py-24 bg-brandLight bg-opacity-70 border-t border-brandBrown/10">
+    <section id="menu" class="py-16 md:py-24 bg-brandLight border-t border-brandBrown/10">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex flex-col items-center justify-center mb-12 gap-2 text-center">
+            <div class="flex flex-col items-center justify-center mb-12 gap-2 text-center reveal-up">
                 <div class="flex items-center justify-center space-x-4">
                     <svg class="w-6 h-6 text-brandDark transform -rotate-45" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C10.9 2 10 2.9 10 4V14L6 18V22H18V18L14 14V4C14 2.9 13.1 2 12 2Z" />
@@ -1059,7 +1095,7 @@
 
     <!-- GALLERY SECTION -->
     <section id="gallery" class="py-16 bg-brandLighter bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl mb-8">
+        <div class="container mx-auto px-4 max-w-6xl mb-8 reveal-up">
             <div class="flex items-end gap-4">
                 <h2 class="text-xl md:text-2xl font-bold font-serif tracking-widest text-brandDark">店内ギャラリー</h2>
                 <span class="text-brandBrown text-xs font-bold tracking-widest uppercase mb-1">GALLERY</span>
@@ -1133,12 +1169,12 @@
             <div
                 class="bg-brandLighter p-8 md:p-12 shadow-lg border-t-4 border-brandRed flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <!-- Image -->
-                <div class="w-full md:w-5/12 flex-shrink-0">
+                <div class="w-full md:w-5/12 flex-shrink-0 reveal-right">
                     <img src="img/message.jpg" alt="オーナー・スタッフから一言"
                         class="w-full h-auto object-cover rounded shadow-md aspect-square md:aspect-[4/3]">
                 </div>
                 <!-- Text -->
-                <div class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left">
+                <div class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left reveal-left delay-100">
                     <h3 class="text-xl md:text-2xl font-bold font-serif text-brandRed mb-6 leading-relaxed">
                         「創業26年温かい料理でお迎えします」
                     </h3>
@@ -1155,7 +1191,7 @@
 
     <!-- ACCESS SECTION -->
     <section id="access" class="py-16 md:py-24 bg-brandLight bg-opacity-70 border-t border-brandBrown/10">
-        <div class="container mx-auto px-4 max-w-6xl">
+        <div class="container mx-auto px-4 max-w-6xl reveal-up">
             <!-- Title -->
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-widest text-brandDark mb-2">アクセス</h2>
@@ -1334,6 +1370,27 @@
                     }
                 });
             }
+        });
+
+        // Scroll Animations using Intersection Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-in');
+            revealElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>

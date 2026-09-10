@@ -490,8 +490,10 @@
 
         @media (max-width: 767px) {
             #message {
-                --bg-pos: 85% 85%;
-                background-position: 85% 85% !important;
+                --bg-img: url('img/bodybgSp.jpg') !important;
+                background-image: url('img/bodybgSp.jpg') !important;
+                --bg-pos: center center;
+                background-position: center center !important;
             }
         }
     </style>
@@ -598,7 +600,7 @@
         <!-- SP Text Background Image -->
         <div class="absolute inset-0 z-0 md:hidden pointer-events-none">
             <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-80"
-                style="background-image: url('img/bodybg.jpg');"></div>
+                style="background-image: url('img/bodybgSp.jpg');"></div>
         </div>
         <div
             class="max-w-[1600px] mx-auto flex flex-col lg:grid lg:grid-cols-4 gap-[30px] lg:gap-3 h-auto lg:h-[calc(100dvh-130px)] relative z-10">

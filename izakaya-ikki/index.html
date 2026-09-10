@@ -452,6 +452,37 @@
         .gallery-img:hover {
             filter: brightness(1.15);
         }
+
+        .bg-black\/85 {
+            background-color: rgb(17 17 17 / 32%) !important;
+        }
+
+        /* --- Safari & iOS Compatibility Fixes for Sticky Parallax Background --- */
+        @supports (-webkit-touch-callout: none) {
+            .safari-fixed-bg {
+                background-attachment: scroll !important;
+                background-image: none !important;
+                position: relative;
+                clip-path: inset(0);
+                -webkit-clip-path: inset(0);
+                z-index: 0;
+            }
+
+            .safari-fixed-bg::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-image: var(--bg-img);
+                background-size: cover;
+                background-position: center;
+                z-index: -1;
+                pointer-events: none;
+                will-change: transform;
+            }
+        }
     </style>
 </head>
 
@@ -892,15 +923,12 @@
     </section>
 
 
-    <!-- Recommend Section -->
-    <section id="recommend" class="py-24 relative overflow-hidden z-0">
-        <!-- iOS Parallax BG -->
-        <div class="absolute inset-0 z-[-2] overflow-hidden">
-            <div class="sticky top-0 w-full h-[100dvh] bg-cover bg-center" style="background-image: url('img/tv.jpg');">
-            </div>
-        </div>
+    <!-- Recommend Section (Sticky Parallax Background) -->
+    <section id="recommend"
+        class="py-24 relative bg-fixed safari-fixed-bg bg-cover bg-center text-white overflow-hidden z-0"
+        style="--bg-img: url('img/tv.jpg'); background-image: var(--bg-img);">
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black/85 z-[-1]"></div>
+        <div class="absolute inset-0 bg-black/85 z-0 pointer-events-none" style="background-color: rgb(17 17 17 / 32%);"></div>
 
         <!-- Background Decor -->
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-brandRed/10 rounded-full blur-[120px] pointer-events-none">

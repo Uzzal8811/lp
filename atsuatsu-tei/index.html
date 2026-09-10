@@ -276,9 +276,9 @@
     <section class="w-full bg-brandDark bg-opacity-95 relative">
         <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
         <!-- Mobile Image -->
-        <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden animate-fade-in relative z-0">
+        <img src="img/SpFv.jpg" alt="あつあつ亭" class="w-full h-auto block md:hidden relative z-0">
         <!-- Desktop Video -->
-        <video id="fv-video" class="hidden md:block w-full h-auto animate-fade-in relative z-0" src="img/FvVid.mp4"
+        <video id="fv-video" class="hidden md:block w-full h-auto relative z-0" src="img/FvVid.mp4"
             autoplay muted playsinline></video>
     </section>
 
@@ -1358,15 +1358,28 @@
             });
         }
 
-        // ビデオのループ時のカクつき（dakka）を防止するための処理
+        // ビデオのループ時のカクつき（dakka）を防止し、ソフトにループさせるための処理
         document.addEventListener('DOMContentLoaded', function () {
             const fvVideo = document.getElementById('fv-video');
             if (fvVideo) {
+                fvVideo.style.transition = 'opacity 0.8s ease-in-out';
+                let isFadingOut = false;
+
                 fvVideo.addEventListener('timeupdate', function () {
-                    // ビデオの終了0.15秒前に再生位置を先頭に戻すことで、一瞬止まるカクつきを防ぐ
-                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.15) {
+                    // 終了0.8秒前にフェードアウト開始
+                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.8 && !isFadingOut) {
+                        isFadingOut = true;
+                        fvVideo.style.opacity = '0';
+                    }
+                    // 終了0.1秒前に先頭に戻し、再度再生とフェードイン
+                    if (fvVideo.duration && fvVideo.currentTime >= fvVideo.duration - 0.1) {
                         fvVideo.currentTime = 0;
                         fvVideo.play();
+                        
+                        setTimeout(() => {
+                            fvVideo.style.opacity = '1';
+                            isFadingOut = false;
+                        }, 50);
                     }
                 });
             }

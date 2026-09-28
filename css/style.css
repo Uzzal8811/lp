@@ -1777,8 +1777,12 @@ body.is-scroll-locked .fixed-cta {
   
   .recommend__price {
     padding: 15px 5px;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: -0.05em;
+  }
+  
+  .text-small {
+    font-size: 0.65em;
   }
   
   .info__table th {

@@ -143,6 +143,11 @@ p {
   text-align: center;
 }
 
+.text-small {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
 .sp-only {
   display: block;
 }

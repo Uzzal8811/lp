@@ -262,6 +262,12 @@ p {
     letter-spacing: 0.05em;
   }
 
+  .header__tel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header__cta .btn {
     padding: 10px 5px;
     font-size: 13px;
